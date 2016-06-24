@@ -21,12 +21,12 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics Documentation란?</h1>
       <h2>IT 보안 전문가가 지능형 목표 공격으로부터 기업을 보호하도록 도와주는 온-프레미스 제품인 Microsoft ATA(Advanced Threat Analytics)를 배포하고 관리하는 방법을 알아봅니다.</h2>
-      <h3>ATA의 새로운 기능 <a href="https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/" target="_blank">Microsoft 제품 웹 사이트 방문 &rarr;</a></h3>
+      <h3>ATA의 새로운 기능 <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Microsoft 제품 웹 사이트 방문 &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
       <p>실습 준비</p>
       <ol class="action-list">
-        <li><a href="https://www.microsoft.com/en-us/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">지금 사용해 보기</a></li>
+        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">지금 사용해 보기</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
@@ -191,6 +191,6 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 </article>
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 
