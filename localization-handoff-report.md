@@ -1,40 +1,66 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 4
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/DeployUse/configure-port-mirroring.md) | HandedOffSuccess | [Details](#a4befce4003951b18a5e1a9d8bc1addf9e7ea25510)
- [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md) | OutofSyncHandedBackSuccess | [Details](#91fe130cb37f40efd90d7e8023b93075f76a5ba4221)
+ [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc/ATADocs/PlanDesign/ata-prerequisites.md) | OutofSyncHandedBackSuccess | [Details](#da887431d8e63a7ae8ceeb3e7e22011d356e3590225)
+ [ATADocs\template.md](https://github.com/Microsoft/ATADocs-pr/blob/ce02b7f6d36035af66b8fe3380dc61dd1ec1caac/ATADocs/template.md) | OutofSyncHandedBackSuccess | [Details](#c4b9eb1106ff6ce6bf516cad665d49df5a5ee2d2320)
+ [ATADocs\Troubleshoot\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Troubleshoot/TOC.md) | OutofSyncHandedBackSuccess | [Details](#ff9ed644ccbfd378d191f8374cd45d30a943db4f417)
+ [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/TOC.md) | OutofSyncHandedBackSuccess | [Details](#6a9c12c520e1a6051395d39739ef64d78310e920522)
 
 ## Item Details
-##### <a name='a4befce4003951b18a5e1a9d8bc1addf9e7ea25510'></a> Source: [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/DeployUse/configure-port-mirroring.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0216982aff15c590b629dc3b9d5818693231aaf4/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.ko-kr.xlf)
-* Handoff Datetime: 2016-06-29 18:20:23
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='91fe130cb37f40efd90d7e8023b93075f76a5ba4221'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md)
+##### <a name='da887431d8e63a7ae8ceeb3e7e22011d356e3590225'></a> Source: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc/ATADocs/PlanDesign/ata-prerequisites.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0216982aff15c590b629dc3b9d5818693231aaf4/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.ko-kr.xlf)
-* Handoff Datetime: 2016-06-29 18:20:23
+* Handoff File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0a572c99e52304df4e1d4d68e9fbf6287a4c4fbd/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 15:16:07
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/7e457ef742d19e22db2bd53e86aca2a3520eae71/ATADocs/index.md)
-* Current Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/cb674db914fbdbc92f3fab4baa606de5794f2274/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.ko-kr.xlf)
-* Current Handback Datetime: 2016-06-24 16:54:57
+* Current Target File: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/e3595c8219abca183b2cd3565fe5e0e195333654/ATADocs/PlanDesign/ata-prerequisites.md)
+* Current Handback File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/1845c90e522c5f19258730db784d59a92e538244/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.ko-kr.xlf)
+* Current Handback Datetime: 2016-06-08 08:04:33
+* [Back to Top](#report-top)
+
+##### <a name='c4b9eb1106ff6ce6bf516cad665d49df5a5ee2d2320'></a> Source: [ATADocs\template.md](https://github.com/Microsoft/ATADocs-pr/blob/ce02b7f6d36035af66b8fe3380dc61dd1ec1caac/ATADocs/template.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: [ATADocs\template.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/83d0509ad777bcf10ce42b83a1b8f13c81cba11d/ATADocs/template.md)
+* Handoff File: [template.5bdcb9582e246047532a26eee5064c933576bdd2.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0a572c99e52304df4e1d4d68e9fbf6287a4c4fbd/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/template.5bdcb9582e246047532a26eee5064c933576bdd2.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 15:16:07
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [template.5bdcb9582e246047532a26eee5064c933576bdd2.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/90c3c51309e475a4512dbd0b7acf5e76c8e89350/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/template.5bdcb9582e246047532a26eee5064c933576bdd2.ko-kr.xlf)
+* Handback Datetime: 2016-06-30 13:06:27
+* [Back to Top](#report-top)
+
+##### <a name='ff9ed644ccbfd378d191f8374cd45d30a943db4f417'></a> Source: [ATADocs\Troubleshoot\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Troubleshoot/TOC.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: [ATADocs\Troubleshoot\TOC.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/83d0509ad777bcf10ce42b83a1b8f13c81cba11d/ATADocs/Troubleshoot/TOC.md)
+* Handoff File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0a572c99e52304df4e1d4d68e9fbf6287a4c4fbd/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 15:16:07
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/90c3c51309e475a4512dbd0b7acf5e76c8e89350/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.ko-kr.xlf)
+* Handback Datetime: 2016-06-30 13:06:27
+* [Back to Top](#report-top)
+
+##### <a name='6a9c12c520e1a6051395d39739ef64d78310e920522'></a> Source: [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Understand/TOC.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: [ATADocs\Understand\TOC.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/83d0509ad777bcf10ce42b83a1b8f13c81cba11d/ATADocs/Understand/TOC.md)
+* Handoff File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0a572c99e52304df4e1d4d68e9fbf6287a4c4fbd/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.ko-kr.xlf)
+* Handoff Datetime: 2016-06-30 15:16:07
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/90c3c51309e475a4512dbd0b7acf5e76c8e89350/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/TOC.602662a4c6e9c6b6819467b610eac5b1ea8b47e7.ko-kr.xlf)
+* Handback Datetime: 2016-06-30 13:06:27
 * [Back to Top](#report-top)
 
 
