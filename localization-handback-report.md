@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata-step6.md) | InSyncHandedBackSuccess | [Details](#76305bc5f55e956c787fe3e8bd954a56f40fc56f17)
- [ATADocs\Troubleshoot\troubleshooting-ata-using-ata-database.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md) | InSyncHandedBackSuccess | [Details](#7de189008765d24e88a224d027146bf44fb6abbf419)
 
 ## Item Details
-##### <a name='76305bc5f55e956c787fe3e8bd954a56f40fc56f17'></a> Source: [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/install-ata-step6.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\DeployUse\install-ata-step6.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/07c4277702e5e1366f188c5e2a80dab939308f37/ATADocs/DeployUse/install-ata-step6.md)
-* Handoff File: [install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0d038358e710ec24ec6d0d12e70318773bbec79a/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.ko-kr.xlf)
-* Handoff Datetime: 2016-06-27 15:56:28
-* Handoff Reason: Include
-* Archive File: [install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/abbd11c04f63d1a5312e81c3fc174d7638cdcef6/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/archive/install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.ko-kr.xlf)
-* Archive Datetime: 2016-07-02 01:36:57
-* Handback File: [install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/51a51cb6a262aa262e0c9538efba849786a362f5/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/install-ata-step6.cfd714775f8ca0497152aded917d1a1b0b009143.ko-kr.xlf)
-* Handback Datetime: 2016-07-02 22:56:47
-* [Back to Top](#report-top)
-
-##### <a name='7de189008765d24e88a224d027146bf44fb6abbf419'></a> Source: [ATADocs\Troubleshoot\troubleshooting-ata-using-ata-database.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\Troubleshoot\troubleshooting-ata-using-ata-database.md](https://github.com/Microsoft/ATADocs-pr.ko-kr/blob/07c4277702e5e1366f188c5e2a80dab939308f37/ATADocs/Troubleshoot/troubleshooting-ata-using-ata-database.md)
-* Handoff File: [troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/0d038358e710ec24ec6d0d12e70318773bbec79a/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.ko-kr.xlf)
-* Handoff Datetime: 2016-06-27 15:56:28
-* Handoff Reason: Include
-* Archive File: [troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.ko-kr.xlf](https://github.com/Microsoft/EM.handoff/blob/abbd11c04f63d1a5312e81c3fc174d7638cdcef6/ol-handoff/Microsoft/ATADocs-pr.ko-kr/master/archive/troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.ko-kr.xlf)
-* Archive Datetime: 2016-07-02 01:36:57
-* Handback File: [troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.ko-kr.xlf](https://github.com/Microsoft/EM.handback/blob/51a51cb6a262aa262e0c9538efba849786a362f5/ol-handback/Microsoft/ATADocs-pr.ko-kr/master/troubleshooting-ata-using-ata-database.59180de16ff041e4081a27aa3918a2ea95a29245.ko-kr.xlf)
-* Handback Datetime: 2016-07-02 22:56:47
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
