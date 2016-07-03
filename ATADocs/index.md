@@ -1,9 +1,8 @@
 ---
 asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
 layout: HubPage
-
 title: Advanced Threat Analytics Documentation
-description: Microsoft Intune 모바일 장치 및 응용 프로그램 관리에 대한 기술 문서
+description: "Microsoft Intune 모바일 장치 및 응용 프로그램 관리에 대한 기술 문서"
 keywords: Advanced Threat Analytics Documentation, ATA documentation
 author: msstevenpo
 manager: stevenpo
@@ -14,6 +13,10 @@ ms.service: advanced-threat-analytics
 ms.technology: security
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+translationtype: Human Translation
+ms.sourcegitcommit: 121f54e6d8da8220f1827188039e9a89c038f7ac
+ms.openlocfilehash: 91fe130cb37f40efd90d7e8023b93075f76a5ba4
+
 
 ---
 # Microsoft Advanced Threat Analytics Documentation란?
@@ -105,7 +108,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
                 </li>
                 <li class="column-third">
                   <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA 필수 구성 요소<h3>
+                    <h3>ATA 필수 구성 요소</h3>
                     <p>환경에 ATA를 올바르게 배포하는 데 필요한 요구 사항을 계획합니다.</p>
                   </a>
                 </li>
@@ -191,6 +194,7 @@ ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 </article>
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Jun16_HO5-->
 
 
