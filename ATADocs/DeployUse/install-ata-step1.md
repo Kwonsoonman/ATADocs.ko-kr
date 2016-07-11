@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 설치 - 1단계 | Microsoft Advanced Threat Analytics
-description: ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운로드하여 선택한 서버에 설치하는 과정이 포함됩니다.
-keywords:
+title: "ATA 설치 - 1단계 | Microsoft Advanced Threat Analytics"
+description: "ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운로드하여 선택한 서버에 설치하는 과정이 포함됩니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+
 
 ---
 
@@ -33,14 +27,15 @@ ms.suite: ems
 
 이 설치 절차에서는 ATA 1.6을 새로 설치하는 데 필요한 지침을 제공합니다. 기존의 ATA 배포를 이전 버전에서 업데이트하는 방법에 대한 내용은 [ATA 버전 1.6 마이그레이션 가이드](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)를 참조하세요.
 
-> [!IMPORTANT] 설치를 시작하기 전에 ATA Center 및 ATA Gateway 서버에 KB2934520을 설치합니다. 그렇지 않으면 ATA 설치에서 이 업데이트를 설치하므로 ATA 설치 도중에 다시 시작해야 합니다.
+> [!IMPORTANT] 
+> 설치를 시작하기 전에 ATA Center 및 ATA Gateway 서버에 KB2934520을 설치합니다. 그렇지 않으면 ATA 설치에서 이 업데이트를 설치하므로 ATA 설치 도중에 다시 시작해야 합니다.
 
 ## 1단계. ATA Center 다운로드 및 설치
 서버가 요구 사항을 충족하는지 확인한 후 ATA Center 설치를 진행할 수 있습니다.
 
 ATA Center 서버에서 다음 단계를 수행합니다.
 
-1.  [Microsoft 볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 또는 [TechNet 평가 센터](http://www.microsoft.com/en-us/evalcenter/) 또는 [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads)에서 ATA를 다운로드합니다.
+1.  [Microsoft 볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 또는 [TechNet 평가 센터](http://www.microsoft.com/evalcenter/) 또는 [MSDN](https://msdn.microsoft.com/subscriptions/downloads)에서 ATA를 다운로드합니다.
 
 2.  ATA 센터를 설치할 컴퓨터에 로컬 관리자 그룹의 구성원인 사용자로 로그인합니다.
 
@@ -94,17 +89,20 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 
 
->[!div class="step-by-step"] [« 사전 설치](preinstall-ata.md)
+>[!div class="step-by-step"]
+[« 설치 전](preinstall-ata.md)
 [2단계 »](install-ata-step2.md)
 
 ## 참고 항목
 
-- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해보세요.](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

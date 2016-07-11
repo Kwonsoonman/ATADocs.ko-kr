@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 상태 관리 센터 | Microsoft Advanced Threat Analytics
-description: ATA 상태 관리 센터를 사용하면 ATA 서비스의 작동 상태를 확인하고 문제 가능성에 대한 경고를 받을 수 있습니다.
-keywords:
+title: "ATA 상태 관리 센터 | Microsoft Advanced Threat Analytics"
+description: "ATA 상태 관리 센터를 사용하면 ATA 서비스의 작동 상태를 확인하고 문제 가능성에 대한 경고를 받을 수 있습니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: b38b96f0b2e6061e97d8b46163a04d2310709491
+
 
 ---
 
@@ -31,10 +25,10 @@ ATA 상태 관리 센터에서는 ATA 서비스의 작동 상태를 확인하고
 ## ATA 상태 관리 센터 사용
 ATA 상태 관리 센터에서는 메뉴 모음의 상태 관리 센터 아이콘 위에 경고(빨간 점)를 표시하여 문제가 있음을 알려 줍니다.
 
-![ATA 상태 관리 센터 빨간 점 이미지](media/ATA-Health-Center-Alert-red-dot.png)
+![ATA 상태 관리 센터 빨간 점 도구 모음](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### ATA 상태 관리
-시스템의 전반적인 상태를 확인하려면 메뉴 모음에서 상태 관리 센터 아이콘을 클릭합니다. ![ATA 상태 관리 센터 아이콘](media/ATA-red-dot.png).
+시스템의 전반적인 상태를 확인하려면 메뉴 모음에서 상태 관리 센터 아이콘을 클릭합니다. ![ATA 상태 관리 센터 아이콘](media/ATA-red-dot.png)
 
 -   열려 있는 모든 경고는 **해결됨** 또는 **해제됨**으로 설정하여 관리할 수 있습니다. 이렇게 하려면 경고에서 **열림**을 클릭한 다음 아래쪽의 **해결됨** 또는 **해제됨**으로 스크롤합니다.
 
@@ -47,9 +41,11 @@ ATA 상태 관리 센터에서는 메뉴 모음의 상태 관리 센터 아이�
 ## 참고 항목
 - [ATA 검색 설정 사용](working-with-detection-settings.md)
 - [의심스러운 활동 관련 작업](working-with-suspicious-activities.md)
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해보세요.](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

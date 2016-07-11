@@ -12,8 +12,9 @@ ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.sourcegitcommit: 283d8383a6e7674e3a9fba06f3a8f73dcb038ea2
-ms.openlocfilehash: a5efa3f2b838af537126945aaf71ae522ce8a8d2
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: a5efa3f2b838af537126945aaf71ae522ce8a8d2
 
 
 ## ATA는 어떤 방식으로 사용이 허가되나요?
-라이선스 정보는 [고급 위협 분석을 구입하는 방법](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)을 참조하세요.
+라이선스 정보는 [고급 위협 분석을 구입하는 방법](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx)을 참조하세요.
 
 
 ## ATA 게이트웨이가 시작되지 않으면 어떻게 해야 하나요?
@@ -47,7 +48,7 @@ LDAPS, IPSEC ESP 등의 암호화된 트래픽은 분석되지 않습니다.
 FAST(유동 인증 보안 터널링)라고도 하는 Kerberos 아머링(armoring)은 ATA에서 지원됩니다. 단, 해시 검색 통과는 작동하지 않습니다.
 ## ATA 게이트웨이는 몇 개나 필요한가요?
 
-먼저 수용 가능한 모든 도메인 컨트롤러에 ATA 경량 게이트웨이를 사용하는 것이 좋습니다. 수용 가능 여부를 확인하려면 [ATA 경량 게이트웨이 크기 조정](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing)을 참조하세요. 
+먼저 수용 가능한 모든 도메인 컨트롤러에 ATA 경량 게이트웨이를 사용하는 것이 좋습니다. 수용 가능 여부를 확인하려면 [ATA 경량 게이트웨이 크기 조정](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing)을 참조하세요. 
 
 모든 도메인 컨트롤러를 ATA 경량 게이트웨이로 다룰 수 있는 경우 ATA 게이트웨이는 필요하지 않습니다.
 
@@ -94,7 +95,7 @@ ATA 게이트웨이에는 최소 2개의 네트워크 어댑터가 필요합니�
 다음과 같이 ATA를 SIEM과 양방향으로 통합할 수 있습니다.
 
 1. 의심스러운 활동이 발생하면 CEF 형식을 사용하여 모든 SIEM 서버로 Syslog 경고를 보내도록 ATA를 구성할 수 있습니다.
-2. [이러한 SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support)에서 ID가 4776인 각 Windows 이벤트에 대해 Syslog 메시지를 받도록 ATA를 구성할 수 있습니다.
+2. [이러한 SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support)에서 ID가 4776인 각 Windows 이벤트에 대해 Syslog 메시지를 받도록 ATA를 구성할 수 있습니다.
 
 ## ATA는 IaaS 솔루션에 표시되는 도메인 컨트롤러를 모니터링할 수 있나요?
 
@@ -136,11 +137,11 @@ Microsoft Advanced Threat Analytics는 일반 공급 시 포리스트 경계가 
 - [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

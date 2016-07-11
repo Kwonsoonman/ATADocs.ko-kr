@@ -12,8 +12,9 @@ ms.technology: security
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.sourcegitcommit: 224f3c29c4a3e0ff62b9b3f42837c648dc838e3c
-ms.openlocfilehash: b7f4b07796ee90d45b40bc00b749b56c5f11c83b
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 2d753060f30cbcc7d16959355b86d64fdaa2ecd8
 
 
 ---
@@ -89,7 +90,7 @@ ATA 센터는 ATA 게이트웨이 및 ATA 경량 게이트웨이에서 구문 �
 
 -   각 ATA 센터는 Active Directory 포리스트 하나를 모니터링할 수 있습니다. Active Directory 포리스트가 둘 이상인 경우에는 Active Directory 포리스트당 최소 하나의 ATA 센터가 필요합니다.
 
--    대규모 Active Directory 배포에서는 ATA 센터 하나가 모든 도메인 컨트롤러의 트래픽을 모두 처리하지 못할 수도 있습니다. 이 경우 ATA 센터가 여러 개 있어야 합니다. ATA 센터의 수는 [ATA 용량 계획](ata-capacity-planning.md)에 따라 결정해야 합니다..
+-    대규모 Active Directory 배포에서는 ATA 센터 하나가 모든 도메인 컨트롤러의 트래픽을 모두 처리하지 못할 수도 있습니다. 이 경우 ATA 센터가 여러 개 있어야 합니다. ATA 센터의 수는 [ATA 용량 계획](ata-capacity-planning.md)에 따라 결정해야 합니다.
 
 ## ATA 게이트웨이 및 ATA 경량 게이트웨이
 
@@ -166,20 +167,20 @@ ATA 게이트웨이를 사용하는 경우 실제 또는 가상 스위치를 사
 ### 이벤트
 Pass-the-Hash, Brute Force, Honey Token을 개선하려면 ATA에서 Windows 이벤트 로그 ID 4776을 사용해야 합니다. 두 가지 방법으로 ATA 게이트웨이에 이 ID를 전달할 수 있습니다. 그중 하나는 ATA 게이트웨이가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 Windows 이벤트 전달을 사용하는 것입니다.
 
--   SIEM 이벤트를 수신하도록 ATA 게이트웨이 구성 <br>특정 Windows 이벤트를 ATA로 전달하도록 SIEM을 구성합니다. ATA는 다수의 SIEM 공급업체를 지원합니다. 자세한 내용은 [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)을 참조하세요..
+-   SIEM 이벤트를 수신하도록 ATA 게이트웨이 구성 <br>특정 Windows 이벤트를 ATA로 전달하도록 SIEM을 구성합니다. ATA는 다수의 SIEM 공급업체를 지원합니다. 자세한 내용은 [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)을 참조하세요.
 
--   Windows 이벤트 전달 구성<br>ATA가 이벤트를 받을 수 있도록 하는 또 다른 방법은, Windows 이벤트 4776을 ATA 게이트웨이로 전달하도록 도메인 컨트롤러를 구성하는 것입니다. SIEM이 없거나 SIEM이 현재 ATA에서 지원되지 않는 경우 이 방법을 사용하면 특히 유용합니다. ATA의 Windows 이벤트 전달 기능에 대한 자세한 내용은 [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)을 참조하세요..
+-   Windows 이벤트 전달 구성<br>ATA가 이벤트를 받을 수 있도록 하는 또 다른 방법은, Windows 이벤트 4776을 ATA 게이트웨이로 전달하도록 도메인 컨트롤러를 구성하는 것입니다. SIEM이 없거나 SIEM이 현재 ATA에서 지원되지 않는 경우 이 방법을 사용하면 특히 유용합니다. ATA의 Windows 이벤트 전달 기능에 대한 자세한 내용은 [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)을 참조하세요.
 
 ## 참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO4-->
 
 
