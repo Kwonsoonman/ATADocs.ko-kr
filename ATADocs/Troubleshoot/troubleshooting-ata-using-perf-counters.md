@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: 성능 카운터를 사용하여 ATA 문제 해결 | Microsoft Advanced Threat Analytics
-description: 성능 카운터를 사용하여 ATA 문제를 해결하는 방법을 설명합니다.
-keywords:
+title: "성능 카운터를 사용하여 ATA 문제 해결 | Microsoft Advanced Threat Analytics"
+description: "성능 카운터를 사용하여 ATA 문제를 해결하는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 21d87591c9c791aa431c273479921e1c11825e09
+
 
 ---
 
 # 성능 카운터를 사용하여 ATA 문제 해결
-ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제공합니다.
+ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제공합니다. ATA의 구성 요소는 데이터를 순차적으로 처리하므로 문제가 발생할 경우 구성 요소 체인에 따라 어딘가에 부분적으로 삭제된 트래픽을 유발할 수 있습니다. 이 문제를 해결하려면 역효과를 낳는 구성 요소를 파악하고 연쇄 반응의 시작이 되는 문제를 해결해야 합니다. 성능 카운터에서 찾은 데이터를 사용하여 각 구성 요소의 작동 방식을 이해합니다.
+내부 ATA 구성 요소의 흐름을 이해하려면 [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)를 참조하세요.
 
 **ATA 구성 요소 프로세스**:
 
@@ -36,10 +31,11 @@ ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제�
 
 3.  이는 더 이상 엔터티를 전달할 수 없을 때 트래픽을 삭제하는 초기 NetworkListener 구성 요소까지 거슬러 올라갑니다.
 
-    즉, 트래픽 삭제를 일으키는 체인 반응을 해결하려면 체인 끝단의 문제를 해결해야 합니다.
-    내부 ATA 구성 요소의 흐름을 이해하려면 [ATA 아키텍처](/advanced-threat-analytics/Understand/ata-architecture)를 참조하세요.
 
 ## ATA Gateway 성능 카운터
+
+이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다.
+
 ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 상태를 관찰할 수 있습니다.
 이 작업을 수행하려면 "성능 모니터"를 열고 ATA Gateway에 대한 모든 카운터를 추가합니다. 성능 카운터 개체의 이름은 "Microsoft ATA Gateway"입니다.
 
@@ -49,11 +45,9 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
-|NetworkListener Captured Parser Messages/Sec|ATA Gateway가 1초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
-|NetworkListener Captured Dropped Messages/Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|NetworkListener Captured Dropped ETW Real Time Buffers/Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|NetworkListener Captured Dropped ETW Log Buffers/Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|NetworkListener Captured Dropped ETW Events/Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|NetworkListener PEF Parser Messages/Sec|ATA Gateway가 1초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
+|NetworkListener PEF Dropped Events/Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|NetworkListener ETW Dropped Events/Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |NetworkActivityTranslator Message Data # Block Size|NA(네트워크 활동)로 변환되기 위해 큐에서 대기 중인 트래픽 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 100,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |EntityResolver Activity Block Size|해결을 위해 큐에서 대기 중인 NA(네트워크 활동) 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |EntitySender Entity Batch Block Size|ATA Center로 전송되기 위해 큐에서 대기 중인 NA(네트워크 활동) 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 1,000,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
@@ -64,7 +58,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 > -   경우에 따라 "보고서" 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
 ## ATA Center 성능 카운터
-ATA Center의 성능 카운터를 추가하여 ATA Center의 실시간 성능 상태를 관찰할 수 있습니다.
+ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 상태를 관찰할 수 있습니다.
 
 이 작업을 수행하려면 "성능 모니터"를 열고 ATA Center에 대한 모든 카운터를 추가합니다. 성능 카운터 개체의 이름은 "Microsoft ATA Center"입니다.
 
@@ -74,16 +68,17 @@ ATA Center의 성능 카운터를 추가하여 ATA Center의 실시간 성능 �
 
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
-|EntityReceiver Entity Batch Block Size|ATA Center에서 큐에 넣은 엔터티 일괄 처리 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 100).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다.  위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|NetworkActivityProcessor Network Activity Block Size|처리를 위해 큐에서 대기 중인 NA(네트워크 활동) 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|EntityReceiver Entity Batch Block Size|ATA Center에서 큐에 넣은 엔터티 일괄 처리 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다.  위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|NetworkActivityProcessor Network Activity Block Size|처리를 위해 큐에서 대기 중인 NA(네트워크 활동) 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 50,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |EntityProfiler Network Activity Block Size|프로파일링을 위해 큐에서 대기 중인 NA(네트워크 활동) 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|CenterDatabaseClient &#42; Block Size|데이터베이스에 기록되기 위해 큐에서 대기 중인 특정 유형의 네트워크 활동 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 50,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|DetectionEngine Detection Time|결정적 검색의 마지막 전체 주기에 소요된 총 시간입니다.|900,000(15분) 미만이어야 합니다.|CPU, 메모리 또는 저장소에 문제가 없는지 확인합니다.|
+|CenterDatabase &#42; Block Size|데이터베이스에 기록되기 위해 큐에서 대기 중인 특정 유형의 네트워크 활동 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 50,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+
 
 > [!NOTE]
 > -   시간 카운터는 밀리초 단위입니다.
 > -   경우에 따라 보고서에 대한 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
+## 운영 체제 카운터
 다음은 주의해야 하는 주 운영 체제 카운터 목록입니다.
 
 |카운터|설명|Threshold|문제 해결|
@@ -96,10 +91,18 @@ ATA Center의 성능 카운터를 추가하여 ATA Center의 실시간 성능 �
 |LogicalDisk(&#42;)\Avg. Disk sec/Write|디스크에 데이터를 쓰는 평균 대기 시간입니다(데이터베이스 드라이브를 인스턴스로 선택해야 함).|10밀리초 미만이어야 합니다.|데이터베이스 드라이브를 예상보다 많이 활용하는 특정 프로세스가 있는지 확인합니다.<br /><br />저장소 팀/공급업체에 이 드라이브가 10밀리초 미만의 대기 시간 동안 현재 워크로드를 전달할 수 있는지 문의합니다. 현재 워크로드는 디스크 사용률 카운터를 사용하여 확인할 수 있습니다.|
 |\LogicalDisk(&#42;)\Disk Reads/sec|디스크에 대한 읽기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
 |\LogicalDisk(&#42;)\Disk Read Bytes/sec|초당 디스크에서 읽은 바이트 수입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
-|\LogicalDisk(&#42;)\Disk Writes/sec|디스크에 대한 쓰기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터(저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있음)|
+|\LogicalDisk&#42;\Disk Writes/sec|디스크에 대한 쓰기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터(저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있음)|
 |\LogicalDisk(&#42;)\Disk Write Bytes/sec|초당 디스크에 쓴 바이트 수입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
 
+## 참고 항목
+- [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 

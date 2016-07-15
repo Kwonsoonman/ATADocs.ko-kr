@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 구성 변경 - 도메인 연결 암호 | Microsoft Advanced Threat Analytics
-description: ATA 게이트웨이의 도메인 연결 암호를 변경하는 방법에 대해 설명합니다.
-keywords:
+title: "ATA 구성 변경 - 도메인 연결 암호 | Microsoft Advanced Threat Analytics"
+description: "ATA 게이트웨이의 도메인 연결 암호를 변경하는 방법에 대해 설명합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: df1dbed75ad0c88de5a6c51d2e5d7e521a2577c4
+
 
 ---
 
@@ -29,10 +23,10 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« IIS 인증서](modifying-ata-config-iiscert.md)
-[캡처 네트워크 어댑터의 이름 »](modifying-ata-config-nicname.md)
+
 
 ## 도메인 연결 암호 변경
-도메인 연결 암호를 수정하는 경우 입력한 암호가 올바른지 확인합니다. 올바르지 않으면 ATA 서비스가 ATA 게이트웨이에서 더 이상 실행되지 않습니다.
+도메인 연결 암호를 수정하는 경우 입력한 암호가 올바른지 확인합니다. 올바르지 않으면 ATA 게이트웨이 서비스가 ATA 게이트웨이에서 더 이상 실행되지 않습니다.
 
 이 문제가 발생한 것으로 의심되면 ATA 게이트웨이의 Microsoft.Tri.Gateway Errors.log 파일에서 다음을 확인합니다.
 `The supplied credential is invalid.`
@@ -45,11 +39,11 @@ ms.suite: ems
 
     ![ATA 구성 설정 아이콘](media/ATA-config-icon.JPG)
 
-3.  **ATA 게이트웨이**를 선택합니다.
+3.  **일반**을 선택합니다.
 
     ![ATAA 게이트웨이 암호 변경 이미지](media/ATA-GW-change-DC-password.JPG)
 
-4.  **도메인 연결 설정** 아래에서 암호를 변경합니다.
+4.  **일반**에서 암호를 변경합니다.
 
 5.  **저장**을 클릭합니다.
 
@@ -57,14 +51,14 @@ ms.suite: ems
 
 >[!div class="step-by-step"]
 [« IIS 인증서](modifying-ata-config-iiscert.md)
-[캡처 네트워크 어댑터의 이름 »](modifying-ata-config-nicname.md)
 
 ## 참고 항목
-- [ATA 콘솔 작업](/advanced-threat-analytics/understand/working-with-ata-console)
+- [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 설치](install-ata.md)
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

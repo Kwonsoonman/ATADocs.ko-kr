@@ -19,7 +19,7 @@
 #### [ATA 센터 인증서 변경](modifying-ata-config-centercert.md)
 #### [ATA 콘솔 IP 주소 변경](modifying-ata-config-consoleip.md)
 #### [IIS 인증서 변경](modifying-ata-config-iiscert.md)
-#### [도메인 컨트롤러 암호 변경](modifying-ata-config-dcpassword.md)
+#### [도메인 연결 암호 변경](modifying-ata-config-dcpassword.md)
 ### [ATA 콘솔 작업](working-with-ata-console.md)
 ### [ATA 경고 설정](setting-ata-alerts.md)
 ### [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
@@ -31,6 +31,6 @@
 # [문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

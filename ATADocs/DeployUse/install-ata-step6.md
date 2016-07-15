@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 설치 | Microsoft Advanced Threat Analytics
-description: ATA 설치의 마지막 단계에서는 단기 임대 서브넷과 허니토큰 사용자를 구성합니다.
-keywords:
+title: "ATA 설치 | Microsoft Advanced Threat Analytics"
+description: "ATA 설치의 마지막 단계에서는 단기 임대 서브넷과 허니토큰 사용자를 구성합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 76305bc5f55e956c787fe3e8bd954a56f40fc56f
+
 
 ---
 
@@ -42,7 +36,7 @@ ms.suite: ems
 3.  허니토큰 계정 SID에는 네트워크 활동이 없는 사용자의 SID를 입력하고 더하기 기호를 클릭합니다. 예를 들면 `S-1-5-21-72081277-1610778489-2625714895-10511`과 다음과 같습니다.
 
     > [!NOTE]
-    > 사용자의 SID를 찾으려면 Windows PowerShell cmdlet `Get-ADUser UserName`을 실행합니다.
+    > 사용자에 대한 SID를 찾으려면 ATA 콘솔에서 사용자를 검색한 다음 **계정 정보** 탭을 클릭합니다. 
 
 4.  제외를 구성합니다. 특정한 의심스러운 활동에서 제외할 IP 주소를 구성할 수 있습니다. 자세한 내용은 [ATA 검색 설정 작업](working-with-detection-settings.md)을 참조하세요.
 
@@ -54,7 +48,7 @@ ms.suite: ems
 
 공격 타임라인에서 검색된 의심스러운 활동을 보고, 사용자 또는 컴퓨터를 검색하여 해당 프로필을 확인하세요.
 
-ATA에서 동작 프로필을 만드는 데 최소 3주가 걸리므로 처음 3주 동안에는 의심스러운 동작 활동이 표시되지 않습니다.
+ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부 의심스러운 동작과 같은 일부 활동은 ATA에서 동작 프로필을 작성할 시간(최소 3주)을 소요한 다음에야 사용할 수 있습니다.
 
 
 >[!div class="step-by-step"]
@@ -63,11 +57,13 @@ ATA에서 동작 프로필을 만드는 데 최소 3주가 걸리므로 처음 3
 
 ## 참고 항목
 
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [이벤트 수집 구성](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [ATA 필수 구성 요소](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [이벤트 수집 구성](configure-event-collection.md)
+- [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 

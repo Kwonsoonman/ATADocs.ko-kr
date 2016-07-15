@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 구성 변경 - ATA 센터 인증서 | Microsoft Advanced Threat Analytics
-description: ATA 센터 서버에서 로컬 컴퓨터 저장소의 인증서를 갱신하거나 바꾸기 위한 2단계 프로세스에 대해 설명합니다. 
-keywords:
+title: "ATA 구성 변경 - ATA 센터 인증서 | Microsoft Advanced Threat Analytics"
+description: "ATA 센터 서버에서 로컬 컴퓨터 저장소의 인증서를 갱신하거나 바꾸기 위한 2단계 프로세스에 대해 설명합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+
 
 ---
 
@@ -58,6 +52,10 @@ ms.suite: ems
 6.  최신 구성과 동기화된 ATA 게이트웨이 수에 대한 알림이 표시됩니다.
 
 7.  모든 ATA 게이트웨이가 동기화된 후 **활성화**를 클릭하여 새 인증서를 활성화합니다.
+    >[!IMPORTANT]
+    >새 구성을 활성화하기 전에 모든 ATA 게이트웨이가 최신 구성으로 동기화되었는지 확인하세요. 모든 ATA 게이트웨이가 동기화되기 전에 새 구성을 활성화하면 ATA 게이트웨이가 예상대로 작동하지 않을 수 있습니다. ATA 게이트웨이가 동기화되지 않은 경우 활성화를 클릭하면 다음과 같은 오류가 표시됩니다.
+    >
+    >    ![ATA 게이트웨이 동기화 오류](media/ataGW-not-synced.png)
 
 8.  변경 내용이 활성화된 후 모든 ATA 게이트웨이가 해당 구성을 동기화할 수 있는지 확인합니다.
 
@@ -66,11 +64,12 @@ ms.suite: ems
 [ATA 콘솔 IP 주소 »](modifying-ata-config-consoleip.md)
 
 ## 참고 항목
-- [ATA 콘솔 작업](/advanced-threat-analytics/understand/working-with-ata-console)
+- [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 설치](install-ata.md)
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

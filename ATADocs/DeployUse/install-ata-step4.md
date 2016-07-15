@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 설치 - 4단계 | Microsoft Advanced Threat Analytics
-description: ATA 설치 4단계에서는 ATA Gateway를 설치합니다.
-keywords:
+title: "ATA 설치 - 4단계 | Microsoft Advanced Threat Analytics"
+description: "ATA 설치 4단계에서는 ATA Gateway를 설치합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+
 
 ---
 
@@ -32,7 +26,9 @@ ms.suite: ems
 [5단계 »](install-ata-step5.md)
 
 ## 4단계. ATA Gateway 설치
-ATA Gateway를 설치하기 전에 포트 미러링이 올바르게 구성되어 있는지와 ATA Gateway에서 도메인 컨트롤러로 들어오고 나가는 트래픽을 볼 수 있는지를 확인합니다. 자세한 내용은 [포트 미러링 유효성 검사](/advanced-threat-analytics/plandesign/validate-port-mirroring)를 참조하세요.
+
+전용 서버에 ATA Gateway를 설치하기 전에 포트 미러링이 올바르게 구성되어 있는지와 ATA Gateway에서 도메인 컨트롤러로 들어오고 나가는 트래픽을 볼 수 있는지를 확인합니다. 자세한 내용은 [포트 미러링 유효성 검사](validate-port-mirroring.md)를 참조하세요.
+
 
 > [!IMPORTANT]
 > [KB2919355](http://support.microsoft.com/kb/2919355/)가 설치되었는지 확인합니다.  다음 PowerShell cmdlet을 실행하여 핫픽스가 설치되어 있는지 확인합니다.
@@ -41,9 +37,11 @@ ATA Gateway를 설치하기 전에 포트 미러링이 올바르게 구성되어
 
 ATA Gateway 서버에서 다음 단계를 수행합니다.
 
-1.  zip 파일에서 파일을 추출합니다.
+1.  zip 파일에서 파일을 추출합니다. 
+> [!NOTE] 
+> Zip 파일에서 직접 설치할 수 없습니다.
 
-2.  관리자 명령 프롬프트에서 Microsoft ATA Gateway Setup.exe를 실행하고 설치 마법사를 따릅니다.
+2.  관리자 권한 명령 프롬프트에서 **Microsoft ATA Gateway Setup.exe**를 실행하고 설치 마법사를 따릅니다.
 
 3.  **시작** 페이지에서 언어를 선택하고 **다음**을 클릭합니다.
 
@@ -61,7 +59,7 @@ ATA Gateway 서버에서 다음 단계를 수행합니다.
     -   KB 3047154
 
         > [!IMPORTANT]
-        > -   가상화 호스트에 KB 3047154를 설치하지 마세요. 포트 미러링이 제대로 작동하지 않을 수 있습니다.
+        > -   가상화 호스트에 KB 3047154를 설치하지 마세요(가상화를 실행 중인 호스트, 가상 컴퓨터에서 실행하는 것은 문제 없음). 포트 미러링이 제대로 작동하지 않을 수 있습니다. 
         > -   메시지 분석기, Wireshark 또는 기타 네트워크 캡처 소프트웨어를 ATA Gateway에 설치하지 마세요. 네트워크 트래픽을 캡처해야 하는 경우 Microsoft Network Monitor 3.4를 설치하고 사용합니다.
 
     -   ATA Gateway 서비스
@@ -70,7 +68,7 @@ ATA Gateway 서버에서 다음 단계를 수행합니다.
 
     -   사용자 지정 성능 모니터 데이터 컬렉션 집합
 
-5.  설치가 완료되면 **시작**을 클릭하여 브라우저를 열고 ATA 콘솔에 로그인합니다.
+5.  설치가 완료되면 ATA 게이트웨이의 경우 **시작**을 클릭하여 브라우저를 열고 ATA 콘솔에 로그인합니다. ATA 경량 게이트웨이의 경우 **마침**을 클릭합니다.
 
 
 >[!div class="step-by-step"]
@@ -79,11 +77,13 @@ ATA Gateway 서버에서 다음 단계를 수행합니다.
 
 ## 참고 항목
 
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [이벤트 수집 구성](/advanced-threat-analytics/plandesign/configure-event-collection)
-- [ATA 필수 구성 요소](/advanced-threat-analytics/plandesign/ata-prerequisites)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [이벤트 수집 구성](configure-event-collection.md)
+- [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
 
 
