@@ -1,5 +1,5 @@
 ---
-title: "ATA 콘솔 작업 | Microsoft Advanced Threat Analytics"
+title: "ATA 콘솔 작업 | Microsoft ATA"
 description: "ATA 콘솔 및 콘솔의 구성 요소에 로그인하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 7f9ca7dcb227f5dde1225c55150fd1c737722ce1
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 7e40a2a6b3d5c4acb926dcab310b95bd7dd5b7af
 
 
 ---
@@ -124,6 +124,6 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

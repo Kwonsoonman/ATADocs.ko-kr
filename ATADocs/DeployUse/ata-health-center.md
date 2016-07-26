@@ -1,5 +1,5 @@
 ---
-title: "ATA 상태 관리 센터 | Microsoft Advanced Threat Analytics"
+title: "ATA 상태 관리 센터 | Microsoft ATA"
 description: "ATA 상태 관리 센터를 사용하면 ATA 서비스의 작동 상태를 확인하고 문제 가능성에 대한 경고를 받을 수 있습니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: b38b96f0b2e6061e97d8b46163a04d2310709491
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 87c92ce4ca7834df7483071a18f78ca6c6bfccd0
 
 
 ---
@@ -41,11 +41,10 @@ ATA 상태 관리 센터에서는 메뉴 모음의 상태 관리 센터 아이�
 ## 참고 항목
 - [ATA 검색 설정 사용](working-with-detection-settings.md)
 - [의심스러운 활동 관련 작업](working-with-suspicious-activities.md)
-- [ATA 포럼을 확인해보세요.](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

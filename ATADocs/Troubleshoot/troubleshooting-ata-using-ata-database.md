@@ -1,5 +1,5 @@
 ---
-title: "ATA 데이터베이스를 사용하여 ATA 문제 해결 | Microsoft Advanced Threat Analytics"
+title: "ATA 데이터베이스를 사용하여 ATA 문제 해결 | Microsoft ATA"
 description: "ATA 데이터베이스를 사용하여 문제를 해결하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 7de189008765d24e88a224d027146bf44fb6abbf
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: d2d6549c731a90fb0cdd21ba910c1238d131bc43
 
 
 ---
@@ -64,6 +64,6 @@ ATA의 구성은 데이터베이스의 "SystemProfile" 컬렉션에 저장됩니
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

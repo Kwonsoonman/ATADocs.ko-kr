@@ -1,5 +1,5 @@
 ---
-title: "ATA 구성 변경 - IIS 인증서 | Microsoft Advanced Threat Analytics"
+title: "ATA 구성 변경 - IIS 인증서 | Microsoft ATA"
 description: "IIS에서 ATA 센터에 대해 사용하는 인증서를 변경하는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: e58a0390-57ef-4c68-a987-2e75e5f3d6b3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 07888a46e26a7f87dc3b6424d97aba0813b43d02
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 6516500f3134228cc92e269ef5ea8bfe4faa19d9
 
 
 ---
@@ -62,6 +62,6 @@ ATA 센터에 대해 IIS에서 사용되는 인증서를 수정해야 하는 경
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

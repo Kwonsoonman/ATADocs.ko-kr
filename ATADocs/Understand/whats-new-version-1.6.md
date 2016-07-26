@@ -1,5 +1,5 @@
 ---
-title: "ATA 버전 1.6의 새로운 기능 | Microsoft Advanced Threat Analytics"
+title: "ATA 버전 1.6의 새로운 기능 | Microsoft ATA"
 description: "알려진 문제와 함께 ATA 버전 1.6의 새로운 기능을 나열합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: eee114a62e1854b5821c0ca4a6f276e9dcd121c8
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 6d153c67d8baa50f297b690970d8e5827f85a807
 
 
 ---
@@ -146,6 +146,6 @@ ATA 업데이트 절차에서는 향후 조사를 위해 원하는 경우 데이
 [버전 1.6으로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

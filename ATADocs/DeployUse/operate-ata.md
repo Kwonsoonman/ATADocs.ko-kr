@@ -1,5 +1,5 @@
 ---
-title: "ATA 작동 - 전체 | Microsoft Advanced Threat Analytics"
+title: "ATA 작동 - 전체 | Microsoft ATA"
 description: "ATA 및 일상적인 작업 사용을 안내합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 44c755364a08b2aab9739b5a219e01f21d441b07
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 347ad9b5e2992699e3c5f83932e7061f32751919
 
 
 ---
@@ -48,6 +48,6 @@ ms.openlocfilehash: 44c755364a08b2aab9739b5a219e01f21d441b07
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

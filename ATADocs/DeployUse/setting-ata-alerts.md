@@ -1,5 +1,5 @@
 ---
-title: "ATA 알림 설정 | Microsoft Advanced Threat Analytics"
+title: "ATA 알림 설정 | Microsoft ATA"
 description: "의심스러운 활동이 감지되었을 때 알림을 받도록 ATA 경고를 설정하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: a32799b68d9a8b2949033ab5d1fc5910cff71258
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 03f6f184e7f34d6985103f503b8d88a3fc820c18
 
 
 ---
@@ -71,6 +71,6 @@ Syslog 알림을 수신하려면 다음을 설정합니다.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

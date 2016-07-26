@@ -1,5 +1,5 @@
 ---
-title: "ATA 릴리스 정보 | Microsoft Advanced Threat Analytics"
+title: "ATA 릴리스 정보 | Microsoft ATA"
 description: "알려진 문제 및 마이그레이션 가이드와 함께 각 버전에서 업데이트된 내용 나열"
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 2f35fd0267299a17f54a123d239d965a4b40b26d
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 75942f8b06415668c6e40e72b033f31134d817f5
 
 
 ---
@@ -35,6 +35,6 @@ ms.openlocfilehash: 2f35fd0267299a17f54a123d239d965a4b40b26d
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

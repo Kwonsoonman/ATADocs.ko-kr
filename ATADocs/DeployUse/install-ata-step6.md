@@ -1,5 +1,5 @@
 ---
-title: "ATA 설치 | Microsoft Advanced Threat Analytics"
+title: "ATA 설치 | Microsoft ATA"
 description: "ATA 설치의 마지막 단계에서는 단기 임대 서브넷과 허니토큰 사용자를 구성합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 76305bc5f55e956c787fe3e8bd954a56f40fc56f
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 461b59e0f03bd6ba6d982767fa78bb415d2c16e0
 
 
 ---
@@ -64,6 +64,6 @@ ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

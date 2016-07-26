@@ -1,5 +1,5 @@
 ---
-title: "포트 미러링 유효성 검사 | Microsoft Advanced Threat Analytics"
+title: "포트 미러링 유효성 검사 | Microsoft ATA"
 description: "포트 미러링이 올바르게 구성되었는지 확인하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: e1ce20c48323e1fca04211c2691f6dfb6fa57fe5
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 004732f86de15f5cf0058fdfa1759cd4b57a9128
 
 
 ---
@@ -224,6 +224,6 @@ ATA 게이트웨이에서 대상 IP 주소가 ATA 콘솔에서 입력한 DC IP �
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

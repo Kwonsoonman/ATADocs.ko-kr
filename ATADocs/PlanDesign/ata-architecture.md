@@ -1,5 +1,5 @@
 ---
-title: "ATA 아키텍처 | Microsoft Advanced Threat Analytics"
+title: "ATA 아키텍처 | Microsoft ATA"
 description: "Microsoft Advanced Threat Analytics(ATA)의 아키텍처에 대해 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 2d753060f30cbcc7d16959355b86d64fdaa2ecd8
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 814034ac54f1831cf58700e250ad6b21edeeaa9a
 
 
 ---
@@ -181,6 +181,6 @@ Pass-the-Hash, Brute Force, Honey Token을 개선하려면 ATA에서 Windows 이
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

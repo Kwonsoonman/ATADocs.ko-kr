@@ -1,5 +1,5 @@
 ---
-title: "ATA 구성 변경 - ATA 센터 인증서 | Microsoft Advanced Threat Analytics"
+title: "ATA 구성 변경 - ATA 센터 인증서 | Microsoft ATA"
 description: "ATA 센터 서버에서 로컬 컴퓨터 저장소의 인증서를 갱신하거나 바꾸기 위한 2단계 프로세스에 대해 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: cda6fe75998149a42739907ae5a161d67392a509
 
 
 ---
@@ -70,6 +70,6 @@ ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

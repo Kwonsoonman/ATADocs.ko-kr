@@ -1,5 +1,5 @@
 ---
-title: "ATA 설치 - 1단계 | Microsoft Advanced Threat Analytics"
+title: "ATA 설치 - 1단계 | Microsoft ATA"
 description: "ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운로드하여 선택한 서버에 설치하는 과정이 포함됩니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
-ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 756c01d4fc4fbe7950cbbfc66fd65cf32b3bc44a
 
 
 ---
@@ -95,14 +95,13 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 ## 참고 항목
 
-- [ATA 포럼을 확인해보세요.](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

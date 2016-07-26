@@ -1,5 +1,5 @@
 ---
-title: "ATA 데이터베이스 관리 | Microsoft Advanced Threat Analytics"
+title: "ATA 데이터베이스 관리 | Microsoft ATA"
 description: "ATA 데이터베이스를 이동, 백업 또는 복원할 수 있는 절차를 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 6c0e2abe43da5351568cf8db4e6ffe6fa919d835
+ms.sourcegitcommit: 115ec28877665c79e5cbcd557528da156c8d7149
+ms.openlocfilehash: fd00623f9be396b3a2c384cce436996b5093cc3f
 
 
 ---
@@ -52,8 +52,7 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 
 8.  다음 명령을 실행합니다. `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
 
-
-    여기서 `&lt;New DB Location&gt;`는 <New DB Location> 대신 새 폴더 경로입니다.
+   여기서 `&lt;New DB Location&gt;`는 <New DB Location> 대신 새 폴더 경로입니다.
 
 9.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath를 새 폴더 경로로 업데이트합니다.
 
@@ -62,12 +61,11 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 ## 참고 항목
 - [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [ATA 포럼을 확인해보세요.](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

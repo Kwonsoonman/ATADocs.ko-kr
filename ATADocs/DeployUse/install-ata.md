@@ -1,5 +1,5 @@
 ---
-title: "ATA 설치 - 계산 | Microsoft Advanced Threat Analytics"
+title: "ATA 설치 - 전체 | Microsoft ATA"
 description: "ATA를 배포, 구성 및 실행하는 데 필요한 단계를 안내합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 697da5ddc701c353ab1cc1b39c15939af9964497
+ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
+ms.openlocfilehash: 4587b384314bbc1ee89a82134386ce1ffd5beef5
 
 
 ---
@@ -41,14 +41,13 @@ ATA를 구성하려면 다음 단계를 따르세요.
 
 ## 참고 항목
 
-- [ATA 포럼을 확인해보세요.](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

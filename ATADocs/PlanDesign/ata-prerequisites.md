@@ -1,5 +1,5 @@
 ---
-title: "ATA 필수 구성 요소 | Microsoft Advanced Threat Analytics"
+title: "ATA 필수 조건 | Microsoft ATA"
 description: "환경에서 ATA를 올바르게 배포하기 위한 요구 사항을 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc
-ms.openlocfilehash: da887431d8e63a7ae8ceeb3e7e22011d356e3590
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: e3fd607681c7209409bd8bf7a06dffb5aaea21ec
 
 
 ---
@@ -273,6 +273,6 @@ ATA 센터를 쉽게 설치하려면 ATA 센터 설치하는 동안 자체 서�
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

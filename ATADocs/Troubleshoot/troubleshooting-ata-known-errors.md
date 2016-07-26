@@ -1,5 +1,5 @@
 ---
-title: "ATA 오류 로그 문제 해결 | Microsoft Advanced Threat Analytics"
+title: "ATA 오류 로그 문제 해결 | Microsoft ATA"
 description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 351541d28e0f30a33d76990f2ac00a4d506f5450
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: cf2e1ab1fec4906e0bf2df8e0407b1951081e62f
 
 
 ---
@@ -53,11 +53,11 @@ ms.openlocfilehash: 351541d28e0f30a33d76990f2ac00a4d506f5450
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
+- [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

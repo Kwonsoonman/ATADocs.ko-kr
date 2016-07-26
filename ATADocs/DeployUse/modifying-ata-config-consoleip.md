@@ -1,5 +1,5 @@
 ---
-title: "ATA 구성 변경 - ATA 콘솔 IP 주소 | Microsoft Advanced Threat Analytics"
+title: "ATA 구성 변경 - ATA 콘솔 IP 주소 | Microsoft ATA"
 description: "ATA 게이트웨이에서 ATA 콘솔 바로 가기를 만드는 데 사용되는 ATA 콘솔의 IP 주소를 변경하는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: 3c02459e6a0cde359e632bf966948cf3a72170a2
 
 
 ---
@@ -83,6 +83,6 @@ ATA 콘솔에 대해 IIS에서 사용되는 IP 주소를 수정해야 하는 경
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
