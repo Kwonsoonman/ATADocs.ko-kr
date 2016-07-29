@@ -3,18 +3,18 @@ title: "ATA 콘솔 작업 | Microsoft ATA"
 description: "ATA 콘솔 및 콘솔의 구성 요소에 로그인하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 7e40a2a6b3d5c4acb926dcab310b95bd7dd5b7af
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
 
 
 ---
@@ -124,6 +124,6 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

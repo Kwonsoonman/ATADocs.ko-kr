@@ -3,18 +3,18 @@ title: "ATA 알림 설정 | Microsoft ATA"
 description: "ATA가 의심스러운 활동을 검색할 때 알리는 방식(메일 또는 ATA 이벤트 전달)을 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 5864070fe3ad5aedf1ff79d8386caba4b6a79adc
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 10a7f4c003bc974d344129756f30df990dadf13d
 
 
 ---
@@ -78,6 +78,6 @@ ATA는 의심스러운 활동이 검색되면 Syslog 서버에 알림을 전송�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

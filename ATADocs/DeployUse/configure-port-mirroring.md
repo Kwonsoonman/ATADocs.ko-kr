@@ -3,18 +3,18 @@ title: "포트 미러링 구성 | Microsoft ATA"
 description: "포트 미러링 옵션과 ATA에 대해 이러한 옵션을 구성하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 18b6ceb2c2d3eacb51cc150d5c7faaac5791a3d0
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 92d14179f9177aba824dd5c42c2ef5797af108cb
 
 
 ---
@@ -46,9 +46,9 @@ ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들�
 |가상|같은 호스트의 가상|가상 스위치가 포트 미러링을 지원해야 합니다.<br /><br />자체적으로 가상 컴퓨터 중 하나를 다른 호스트로 이동하면 포트 미러링이 중단될 수 있습니다.|
 |가상|다른 호스트의 가상|가상 스위치가 이 시나리오를 지원해야 합니다.|
 |가상|물리적|전용 네트워크 어댑터가 필요합니다. 그렇지 않으면 ATA Center로 전송되는 트래픽을 포함하여 호스트에서 들어오고 나가는 모든 트래픽이 ATA에 표시됩니다.|
-|물리적|가상|가상 스위치가 이 시나리오를 지원하고 시나리오에 따라 물리적 스위치의 포트 미러링 구성을 지원해야 합니다.<br /><br />가상 호스트가 동일한 물리적 스위치에 있는 경우 스위치 수준 범위를 구성해야 합니다.<br /><br />가상 호스트가 다른 스위치에 있는 경우 RSPAN 또는 ERSPAN& #42;을 구성해야 합니다.|
+|물리적|가상|가상 스위치가 이 시나리오를 지원하고 시나리오에 따라 물리적 스위치의 포트 미러링 구성을 지원해야 합니다.<br /><br />가상 호스트가 동일한 물리적 스위치에 있는 경우 스위치 수준 범위를 구성해야 합니다.<br /><br />가상 호스트가 다른 스위치에 있는 경우 RSPAN 또는 ERSPAN&#42;을 구성해야 합니다.|
 |물리적|같은 스위치의 물리적|물리적 스위치가 SPAN/포트 미러링을 지원해야 합니다.|
-|물리적|다른 스위치의 물리적|물리적 스위치가 RSPAN 또는 ERSPAN& #42;을 지원해야 합니다.|
+|물리적|다른 스위치의 물리적|물리적 스위치가 RSPAN 또는 ERSPAN&#42;을 지원해야 합니다.|
 &#42; ERSPAN은 ATA에서 트래픽을 분석하기 전에 캡슐화 해제가 수행되는 경우에만 지원됩니다.
 
 > [!NOTE]
@@ -71,6 +71,6 @@ ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,18 +3,18 @@ title: "ATA 필수 조건 | Microsoft ATA"
 description: "환경에서 ATA를 올바르게 배포하기 위한 요구 사항을 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: e3fd607681c7209409bd8bf7a06dffb5aaea21ec
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 87891f6ad683ed9536d3d3f27449feac9bd9dee1
 
 
 ---
@@ -273,6 +273,6 @@ ATA 센터를 쉽게 설치하려면 ATA 센터 설치하는 동안 자체 서�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,18 +3,18 @@ title: "ATA 릴리스 정보 | Microsoft ATA"
 description: "알려진 문제 및 마이그레이션 가이드와 함께 각 버전에서 업데이트된 내용 나열"
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 75942f8b06415668c6e40e72b033f31134d817f5
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
 
 
 ---
@@ -35,6 +35,6 @@ ms.openlocfilehash: 75942f8b06415668c6e40e72b033f31134d817f5
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

@@ -3,18 +3,18 @@ title: "성능 카운터를 사용하여 ATA 문제 해결 | Microsoft ATA"
 description: "성능 카운터를 사용하여 ATA 문제를 해결하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 95ba9fd4bee28d96715f7ba7cd04c7ebe788ef7b
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 4b4ff22df77b904a654b57aca824c154ea935560
 
 
 ---
@@ -103,6 +103,6 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

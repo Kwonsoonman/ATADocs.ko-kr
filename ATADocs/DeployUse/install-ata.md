@@ -3,18 +3,18 @@ title: "ATA 설치 - 전체 | Microsoft ATA"
 description: "ATA를 배포, 구성 및 실행하는 데 필요한 단계를 안내합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
-ms.openlocfilehash: 4587b384314bbc1ee89a82134386ce1ffd5beef5
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 9448e5cf619e30f7ebae135e45c7a2fbab58332d
 
 
 ---
@@ -48,6 +48,6 @@ ATA를 구성하려면 다음 단계를 따르세요.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

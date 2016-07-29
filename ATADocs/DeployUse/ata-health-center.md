@@ -3,18 +3,18 @@ title: "ATA 상태 관리 센터 | Microsoft ATA"
 description: "ATA 상태 관리 센터를 사용하면 ATA 서비스의 작동 상태를 확인하고 문제 가능성에 대한 경고를 받을 수 있습니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c512fd20f913c53ac936f7de288eb024d91cf9f1
-ms.openlocfilehash: 87c92ce4ca7834df7483071a18f78ca6c6bfccd0
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3f357d2b21c453e0057370f3dfbbe45e39f3ba97
 
 
 ---
@@ -45,6 +45,6 @@ ATA 상태 관리 센터에서는 메뉴 모음의 상태 관리 센터 아이�
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

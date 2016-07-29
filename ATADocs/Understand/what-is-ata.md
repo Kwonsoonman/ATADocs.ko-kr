@@ -3,18 +3,18 @@ title: "Microsoft ATA(Advanced Threat Analytics)란? | Microsoft ATA"
 description: "Microsoft ATA(Advanced Threat Analytics)의 정의와 검색할 수 있는 의심스러운 활동의 종류를 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 58afbae96bce0075f0a58be648e82744ce279997
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 074b6df258f7fd56bbd9a16f94fa5b2cde8869cb
 
 
 ---
@@ -129,6 +129,6 @@ ATA는 다음과 같이 공격자가 사용한 알려진 기술에 대한 검색
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

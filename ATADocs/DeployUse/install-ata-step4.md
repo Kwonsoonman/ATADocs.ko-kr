@@ -3,18 +3,18 @@ title: "ATA 설치 - 4단계 | Microsoft ATA"
 description: "ATA 설치 4단계에서는 ATA Gateway를 설치합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 1cd9bafa0bfcd00e9801e252553382d98d3905f8
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 6052a911c12f8dbb757ab8445f9e0c6ec09b530e
 
 
 ---
@@ -84,6 +84,6 @@ ATA Gateway 서버에서 다음 단계를 수행합니다.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

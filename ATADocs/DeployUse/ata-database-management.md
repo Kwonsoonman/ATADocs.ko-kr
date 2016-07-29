@@ -3,18 +3,18 @@ title: "ATA 데이터베이스 관리 | Microsoft ATA"
 description: "ATA 데이터베이스를 이동, 백업 또는 복원할 수 있는 절차를 설명합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 115ec28877665c79e5cbcd557528da156c8d7149
-ms.openlocfilehash: fd00623f9be396b3a2c384cce436996b5093cc3f
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
 
 
 ---
@@ -66,6 +66,6 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
