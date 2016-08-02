@@ -3,18 +3,18 @@ title: "ATA 설치 - 5단계 | Microsoft ATA"
 description: "ATA 설치 5단계에서는 ATA Gateway에 대한 설정을 구성합니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3e9f68e9868dc9aaf20fe9d1c4fe2b8bdd685291
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3580e748d21db73b6fa8384d84e03b9954b823f8
 
 
 ---
@@ -36,10 +36,11 @@ ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 
   - **설명**: <br>ATA Gateway에 대한 설명을 입력합니다.
   - **FQDN(Port Mirrored Domain Controller)**(ATA 게이트웨이에 필요하며 ATA 경량 게이트웨이에는 설정할 수 없음): <br>도메인 컨트롤러의 전체 FQDN을 입력하고 더하기 기호를 클릭하여 목록에 추가합니다. 예를 들면  **dc01.contoso.com**과 같습니다.<br /><br />![예제 FDQN 이미지](media/ATAGWDomainController.png)
 
-다음 정보는 **도메인 컨트롤러** 목록에 입력하는 서버에 적용됩니다. - ATA Gateway에서 포트 미러링을 통해 모니터링하는 트래픽의 모든 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되어야 합니다. 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되지 않은 경우 의심스러운 활동 검색이 예상대로 작동하지 않을 수 있습니다.
-- 목록에 있는 하나 이상의 도메인 컨트롤러는 글로벌 카탈로그 서버입니다. 이를 통해 ATA는 포리스트의 다른 도메인에 있는 컴퓨터 및 사용자 개체를 확인할 수 있습니다.
+다음 정보는 **도메인 컨트롤러** 목록에 입력한 서버에 적용됩니다.
 
- - **네트워크 어댑터 캡처**(필수):<br>
+- ATA Gateway에서 포트 미러링을 통해 모니터링하는 트래픽의 모든 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되어야 합니다. 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되지 않은 경우 의심스러운 활동 검색이 예상대로 작동하지 않을 수 있습니다.
+- 목록에 있는 하나 이상의 도메인 컨트롤러는 글로벌 카탈로그 서버입니다. 이를 통해 ATA는 포리스트의 다른 도메인에 있는 컴퓨터 및 사용자 개체를 확인할 수 있습니다.
+- **네트워크 어댑터 캡처**(필수):<br>
      - 전용 서버의 ATA 게이트웨이의 경우 대상 미러 포트로 구성된 네트워크 어댑터를 선택합니다. 해당 어댑터는 미러링된 도메인 컨트롤러 트래픽을 수신하게 됩니다.
      - ATA 경량 게이트웨이의 경우 조직에서 다른 컴퓨터와의 통신에 사용되는 모든 네트워크 어댑터가 여기 해당되어야 합니다.
 
@@ -92,6 +93,6 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
