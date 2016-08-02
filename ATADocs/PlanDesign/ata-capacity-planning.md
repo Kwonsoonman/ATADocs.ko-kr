@@ -3,26 +3,43 @@ title: "ATA 배포 계획 | Microsoft ATA"
 description: "배포를 계획하고 네트워크를 지원하는 데 필요한 ATA 서버의 수를 결정하는 데 도움이 됩니다."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: a43184e0efa1de110f5c287c6079e80e1a9dd3de
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
 
 
 ---
 
 # ATA 용량 계획
-이 항목은 필요한 ATA 게이트웨이 및 ATA 경량 게이트웨이 수와 ATA 센터 및 ATA 게이트웨이에 대한 서버 용량을 이해하는 것을 포함하여 네트워크를 지원하는 데 필요한 ATA 서버 수를 결정하는 데 도움이 됩니다.
+이 항목은 필요한 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이 수와 ATA 센터 및 ATA 게이트웨이에 대한 서버 용량을 이해하는 것을 포함하여 네트워크를 모니터링하는 데 필요한 ATA 서버 수를 결정하는 데 도움이 됩니다.
 
-## ATA 센터 크기 결정
+##크기 조정 도구 사용
+ATA 배포의 용량을 결정할 때 가장 간단한 권장 방법은 [ATA Sizing Tool](http://aka.ms/atasizingtool)(ATA 크기 조정 도구)을 사용하는 것입니다. ATA 크기 조정 도구를 실행하고 Excel 파일 결과에서 다음 필드를 사용하여 필요한 ATA 용량을 결정합니다.
+
+- ATA 센터 CPU 및 메모리: 결과 파일의 ATA 센터 테이블에 있는 **Busy Packets/sec**(사용 중인 패킷/초) 필드를 [ATA 센터 테이블](#ata-center-sizing)의 **PACKETS PER SECOND**(패킷/초) 필드와 비교합니다.
+
+- 데이터 센터 저장소: 결과 파일의 ATA 센터 테이블에 있는 **Avg Packets/sec**(평균 패킷/초) 필드를 [ATA 센터 테이블](#ata-center-sizing)의 **PACKETS PER SECOND**(패킷/초) 필드와 비교합니다.
+- ATA 게이트웨이: 결과 파일의 ATA 센터 테이블에 있는 **Busy Packets/sec**(사용 중인 패킷/초) 필드를 [선택한 게이트웨이 유형](#choosing-the-right-gateway-type-for-your-deployment)에 따라 [ATA 게이트웨이 테이블](#ata-gateway-sizing) 또는 [ATA 경량 게이트웨이 테이블](#ata-lightweight-gateway-sizing)의 **PACKETS PER SECOND**(패킷/초) 필드와 비교합니다.
+
+
+![샘플 용량 계획 도구](media/capacity tool.png)
+
+
+
+어떤 이유로든 ATA 크기 조정 도구를 사용할 수 없으면 24시간 동안 매우 짧은 수집 간격(약 5초)으로 모든 도메인 컨트롤러에서 패킷/초 카운터 정보를 수동으로 수집해야 합니다. 그런 다음 각 도메인 컨트롤러에 대해 일일 평균과 최대 사용 기간(15분) 평균을 계산해야 합니다.
+다음 섹션에서는 하나의 도메인 컨트롤러에서 패킷/초 카운터를 수집하는 방법에 대해 지침을 제공합니다.
+
+
+
+### ATA 센터 크기 결정
 사용자 동작을 분석하려면 ATA 센터에 최소 30일 분량(권장)의 데이터가 필요합니다. 아래에는 도메인 컨트롤러당 ATA 데이터베이스에 필요한 디스크 공간이 정의되어 있습니다. 도메인 컨트롤러가 여러 개 있으면 도메인 컨트롤러당 필요한 디스크 공간을 합하여 ATA 데이터베이스에 필요한 공간의 전체 크기를 계산하세요.
 > [!NOTE] 
 > 가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
@@ -74,7 +91,7 @@ ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 - 본사 데이터 센터(초당 10,000 패킷보다 많은 도메인 컨트롤러 보유)
 
 
-## ATA 경량 게이트웨이 크기 조정
+### ATA 경량 게이트웨이 크기 조정
 
 하나의 ATA 경량 게이트웨이는 도메인 컨트롤러에서 생성되는 네트워크 트래픽 양에 따라 하나의 도메인 컨트롤러에 대한 모니터링을 지원할 수 있습니다. 
 > [!NOTE] 
@@ -95,7 +112,7 @@ ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 > ATA 경량 게이트웨이에 필요한 만큼의 리소스가 도메인 컨트롤러에 없으면 도메인 컨트롤러 성능에는 영향을 주지 않지만 ATA 경량 게이트웨이가 예상대로 작동하지 않을 수 있습니다.
 
 
-## ATA 게이트웨이 크기 결정
+### ATA 게이트웨이 크기 결정
 
 배포할 ATA 게이트웨이의 수를 결정할 때는 다음 사항을 고려하세요.
 
@@ -184,6 +201,6 @@ ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
