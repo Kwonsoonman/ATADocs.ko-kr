@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 구성 변경 - ATA 콘솔 IP 주소 | Microsoft Advanced Threat Analytics
-description: ATA 게이트웨이에서 ATA 콘솔 바로 가기를 만드는 데 사용되는 ATA 콘솔의 IP 주소를 변경하는 방법에 대해 설명합니다.
-keywords:
+title: "ATA 구성 변경 - ATA 콘솔 IP 주소 | Microsoft Advanced Threat Analytics"
+description: "ATA 게이트웨이에서 ATA 콘솔 바로 가기를 만드는 데 사용되는 ATA 콘솔의 IP 주소를 변경하는 방법에 대해 설명합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+
 
 ---
 
@@ -67,11 +61,11 @@ ATA 콘솔에 대해 IIS에서 사용되는 IP 주소를 수정해야 하는 경
 
 7.  관리자 명령 프롬프트를 열고 다음 명령을 입력하여 HTTP.SYS 드라이버를 업데이트합니다.
 
-    -   새 IP 주소 추가: `netsh http add iplisten ipaddress=newipaddress`
+    -   새 IP 주소 추가 - `netsh http add iplisten ipaddress=newipaddress`
 
-    -   새 주소가 사용되는지 확인: `netsh http show iplisten`
+    -   새 주소가 사용되는지 확인 -  `netsh http show iplisten`
 
-    -   이전 IP 주소 삭제: `netsh http delete iplisten ipaddress=oldipaddress`
+    -   이전 IP 주소 삭제 -  `netsh http delete iplisten ipaddress=oldipaddress`
 
 8.  ATA 콘솔 URL이 여전히 IP 주소를 사용하고 있는 경우 ATA 콘솔 URL을 새 IP 주소로 업데이트하고 새 ATA 게이트웨이를 배포하기 전에 ATA 게이트웨이 설치 패키지를 다운로드합니다.
 
@@ -83,11 +77,12 @@ ATA 콘솔에 대해 IIS에서 사용되는 IP 주소를 수정해야 하는 경
 
 
 ## 참고 항목
-- [ATA 콘솔 작업](/advanced-threat-analytics/understand/working-with-ata-console)
+- [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 설치](install-ata.md)
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

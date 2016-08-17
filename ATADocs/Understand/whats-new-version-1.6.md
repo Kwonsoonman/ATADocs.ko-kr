@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 버전 1.6의 새로운 기능 | Microsoft Advanced Threat Analytics
-description: 알려진 문제와 함께 ATA 버전 1.6의 새로운 기능을 나열합니다.
-keywords:
+title: "ATA 버전 1.6의 새로운 기능 | Microsoft Advanced Threat Analytics"
+description: "알려진 문제와 함께 ATA 버전 1.6의 새로운 기능을 나열합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: eee114a62e1854b5821c0ca4a6f276e9dcd121c8
+
 
 ---
 
@@ -147,10 +141,11 @@ ATA 1.6으로 업데이트할 때 다음 오류 코드로 인해 업데이트 �
 ATA 업데이트 절차에서는 향후 조사를 위해 원하는 경우 데이터를 JSON 파일로 `<Center Installation Path>\Migration`에 내보냅니다.
 
 ## 참고 항목
-[ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [버전 1.6으로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.6-migration-guide.md)
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

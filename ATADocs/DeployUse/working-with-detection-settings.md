@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 검색 설정 작업 | Microsoft Advanced Threat Analytics
-description: 일반적이지 않은 상황에 사용되고 네트워크의 다른 엔터티와 다르게 처리해야 하는 IP 주소 및 서브넷 목록을 구성하는 방법을 설명합니다.
-keywords:
+title: "ATA 검색 설정 작업 | Microsoft Advanced Threat Analytics"
+description: "일반적이지 않은 상황에 사용되고 네트워크의 다른 엔터티와 다르게 처리해야 하는 IP 주소 및 서브넷 목록을 구성하는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 3840a5f7abdd496ad245a3f1c2589ad1855fddb5
+
 
 ---
 
@@ -44,9 +38,10 @@ ms.suite: ems
 ## 참고 항목
 - [의심스러운 활동 작업](working-with-suspicious-activities.md)
 - [ATA 구성 수정](modifying-ata-configuration.md)
-- [지원이 필요한 경우 포럼을 확인하세요.](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

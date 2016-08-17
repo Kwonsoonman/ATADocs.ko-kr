@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: ATA 오류 로그 문제 해결 | Microsoft Advanced Threat Analytics
-description: ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다. 
-keywords:
+title: "ATA 오류 로그 문제 해결 | Microsoft Advanced Threat Analytics"
+description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 351541d28e0f30a33d76990f2ac00a4d506f5450
+
 
 ---
 
@@ -50,7 +44,7 @@ ms.suite: ems
 ## 배포 오류
 |오류|설명|해결 방법|
 |-------------|----------|---------|
-|오류 0x800713ec와 함께 .NET Framework 4.6.1 설치 실패|.Net Framework 4.6.1의 필수 조건이 서버에 설치되어 있지 않습니다. |ATA를 설치하기 전에 Windows 업데이트 [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) 및 [KB2919355](https://support.microsoft.com/en-us/kb/2919355)가 서버에 설치되어 있는지 확인합니다.|
+|오류 0x800713ec와 함께 .NET Framework 4.6.1 설치 실패|.Net Framework 4.6.1의 필수 조건이 서버에 설치되어 있지 않습니다. |ATA를 설치하기 전에 Windows 업데이트 [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) 및 [KB2919355](https://support.microsoft.com/kb/2919355)가 서버에 설치되어 있는지 확인합니다.|
 
 ![ATA .NET 설치 오류 이미지](media/netinstallerror.png)
 
@@ -60,9 +54,10 @@ ms.suite: ems
 - [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
-- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
