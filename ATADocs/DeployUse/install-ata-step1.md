@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 29b3abd4308ec766e8b01b0b07f384130e1d14eb
+ms.sourcegitcommit: d89f6c5e0ac9712ce2fde057c9ef8e4025e8a144
+ms.openlocfilehash: 41d538039a8fa0511a74dd6cd5d840a1dea516e8
 
 
 ---
@@ -22,7 +22,6 @@ ms.openlocfilehash: 29b3abd4308ec766e8b01b0b07f384130e1d14eb
 # ATA 설치 - 1단계
 
 >[!div class="step-by-step"]
-
 [2단계 »](install-ata-step2.md)
 
 이 설치 절차에서는 ATA 1.6을 새로 설치하는 데 필요한 지침을 제공합니다. 기존의 ATA 배포를 이전 버전에서 업데이트하는 방법에 대한 내용은 [ATA 버전 1.6 마이그레이션 가이드](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)를 참조하세요.
@@ -102,6 +101,6 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
