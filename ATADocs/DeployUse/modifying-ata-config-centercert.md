@@ -4,7 +4,7 @@ description: "ATA 센터 서버에서 로컬 컴퓨터 저장소의 인증서를
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,20 +13,24 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 구성 변경 - ATA 센터 인증서
 
 >[!div class="step-by-step"]
 [« ATA 센터 서버 IP 주소](modifying-ata-config-centerip.md)
-[ATA 콘솔 IP 주소 »](modifying-ata-config-consoleip.md)
+[ATA 콘솔 URL»](modifying-ata-config-consoleurl.md)
 
 ## ATA 센터 인증서 변경
-인증서가 만료되었거나, ATA 센터 서버의 로컬 컴퓨터 저장소에서 새 인증서를 설치한 후 인증서를 갱신 또는 바꾸어야 할 경우 다음 2단계 프로세스를 진행하여 인증서를 바꿉니다.
+인증서가 만료되거나, ATA 센터 서버의 로컬 컴퓨터 저장소에서 새 인증서를 설치한 후 인증서를 갱신 또는 바꾸어야 할 경우 다음 2단계 프로세스를 진행하여 인증서를 바꿉니다.
 
 -   첫 번째 단계 – ATA 센터에서 사용할 인증서를 업데이트합니다. 이때 ATA 센터 서비스는 여전히 원래 인증서에 바인딩되어 있습니다. ATA 게이트웨이는 구성을 동기화하는 경우 상호 인증에 사용할 수 있는 두 가지 잠재적인 인증서를 갖게 됩니다. ATA 게이트웨이는 원래 인증서를 사용하여 연결할 수 있으면 새 인증서 사용을 시도하지 않습니다.
 
@@ -35,6 +39,7 @@ ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
 > [!NOTE]
 > -   ATA 게이트웨이가 첫 번째 단계 동안 오프라인 상태가 되어 업데이트된 구성을 받지 못하면 ATA 게이트웨이에서 구성 JSON 파일을 수동으로 업데이트해야 합니다.
 > -   ATA 게이트웨이에서 신뢰하는 인증서를 사용해야 합니다.
+> -   인증서는 또한 ATA 콘솔에서도 사용되므로 브라우저 경고 방지를 위해 ATA 콘솔 주소가 일치해야 합니다.
 > -   새 인증서를 활성화한 후 새 데이터 게이트웨이 배포해야 하는 경우 ATA 게이트웨이 설치 패키지를 다시 다운로드해야 합니다.
 
 1.  ATA 콘솔을 엽니다.
@@ -43,7 +48,7 @@ ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
 
     ![ATA 구성 설정 아이콘](media/ATA-config-icon.JPG)
 
-3.  **ATA 센터**를 선택합니다.
+3.  **Center**(센터)를 클릭합니다.
 
 4.  **인증서** 아래에서 목록에 있는 인증서 중 하나를 선택합니다.
 
@@ -61,15 +66,15 @@ ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
 
 >[!div class="step-by-step"]
 [« ATA 센터 서버 IP 주소](modifying-ata-config-centerip.md)
-[ATA 콘솔 IP 주소 »](modifying-ata-config-consoleip.md)
+[ATA 콘솔 URL»](modifying-ata-config-consoleurl.md)
 
 ## 참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 설치](install-ata.md)
-- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

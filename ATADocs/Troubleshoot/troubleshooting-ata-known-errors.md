@@ -4,7 +4,7 @@ description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 �
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 6be26fd2d0348557fa7b1c78533eed8a2be1a39f
+ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
+ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 오류 로그 문제 해결
 이 섹션에서는 ATA 배포 시 발생할 수 있는 오류와 이러한 문제를 해결하는 데 필요한 단계에 대해 자세히 설명합니다.
@@ -33,10 +37,14 @@ ms.openlocfilehash: 6be26fd2d0348557fa7b1c78533eed8a2be1a39f
 |Microsoft.Tri.Infrastructure.ContractException: 계약 예외|ATA 게이트웨이가 ATA 센터에서 구성을 동기화하지 못했습니다.|ATA 콘솔에서 ATA 게이트웨이의 구성을 완료합니다.|
 |System.Reflection.ReflectionTypeLoadException: 요청된 형식 중 하나 이상을 로드할 수 없습니다. 자세한 내용은 LoaderExceptions 속성을 검색하세요.|Message Analyzer는 ATA 게이트웨이에 설치됩니다.| Message Analyzer를 제거하세요.|
 |오류 [레이아웃] System.OutOfMemoryException: 'System.OutOfMemoryException' 유형의 예외가 발생했습니다.|ATA 게이트웨이의 메모리가 부족합니다.|도메인 컨트롤러의 메모리 양을 늘리세요.|
-|라이브 소비자 시작 실패  ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: PEFNDIS 이벤트 공급자가 준비되지 않았습니다.|PEF(Message Analyzer)가 올바르게 설치되지 않았습니다.|지원 서비스에 해결 방법을 문의하세요.|
+|라이브 소비자 시작 실패  ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: PEFNDIS 이벤트 공급자가 준비되지 않았습니다.|PEF(Message Analyzer)가 올바르게 설치되지 않았습니다.|그렇지 않고 Hyper-V를 사용하여 Hyper-V 통합 서비스를 업그레이드하려면 지원 서비스에 해결 방법을 문의하세요.|
 |오류 0x80070652가 발생하여 설치가 실패했습니다.|컴퓨터에서 보류 중인 다른 설치가 있습니다.|다른 설치가 완료될 때까지 기다리고 필요한 경우 컴퓨터를 다시 시작하세요.|
+|System.InvalidOperationException: 지정한 범주에 'Microsoft.Tri.Gateway' 인스턴스가 없습니다.|ATA 게이트웨이에서 프로세스 이름에 PID를 사용하도록 설정되어 있습니다.|프로세스 이름에서 PID를 사용하도록 설정하지 않으려면 [KB281884](https://support.microsoft.com/en-us/kb/281884)를 사용하세요.|
+|System.InvalidOperationException: 범주가 없습니다.|레지스트리에서 카운터를 사용하지 않도록 설정했을 수 있습니다.|성능 카운터를 다시 작성하려면 [KB2554336](https://support.microsoft.com/en-us/kb/2554336)를 사용하세요.|
+|System.ApplicationException: ETW 세션 MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329를 시작할 수 없습니다.|컴퓨터의 짧은 이름을 가리키는 HOSTS 파일에 호스트 항목이 있습니다.|C:\Windows\System32\drivers\etc\HOSTS 파일에서 호스트 항목을 제거하거나 FQDN으로 변경하세요.|
 
-## ATA 콘솔 오류
+
+## ATA IIS 오류(ATA v1.7 이상에는 해당되지 않음)
 |오류|설명|해결 방법|
 |-------------|----------|---------|
 |HTTP 오류 500.19 - 내부 서버 오류|IIS URL 재작성 모듈이 제대로 설치되지 않았습니다.|IIS URL 재작성 모듈을 제거했다가 다시 설치합니다.<br>[IIS URL 재작성 모듈을 다운로드합니다.](http://go.microsoft.com/fwlink/?LinkID=615137)|
@@ -58,6 +66,6 @@ ms.openlocfilehash: 6be26fd2d0348557fa7b1c78533eed8a2be1a39f
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

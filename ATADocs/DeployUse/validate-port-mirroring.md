@@ -4,7 +4,7 @@ description: "포트 미러링이 올바르게 구성되었는지 확인하는 �
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # 포트 미러링 유효성 검사
 > [!NOTE] 
@@ -27,8 +31,8 @@ ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
 
 ## Windows PowerShell 스크립트를 사용하여 포트 미러링 유효성 검사
 
-1. 이 스크립트의 텍스트를 ATAdiag.ps1이라는 파일에 저장합니다.
-2. ATA 게이트웨이에서 이 스크립트를 실행합니다.
+1. 이 스크립트의 텍스트를 *ATAdiag.ps1*이라는 파일에 저장합니다.
+2. 유효성을 검사할 ATA 게이트웨이에서 이 스크립트를 실행합니다.
 이 스크립트는 ATA 게이트웨이와 도메인 컨트롤러 간에 ICMP 트래픽을 생성하고 도메인 컨트롤러의 캡처 NIC에서 해당 트래픽을 찾습니다.
 ATA 게이트웨이에서 대상 IP 주소가 ATA 콘솔에서 입력한 DC IP 주소와 동일한 ICMP 트래픽을 확인하면 포트 미러링이 구성된 것으로 간주합니다. 
 
@@ -188,7 +192,7 @@ ATA 게이트웨이에서 대상 IP 주소가 ATA 콘솔에서 입력한 DC IP �
     
     
 ## Net Mon을 사용하여 포트 미러링 유효성 검사
-1.  [Microsoft 네트워크 모니터 3.4](http://www.microsoft.com/download/details.aspx?id=4865)를 설치합니다.
+1.  유효성을 검사할 ATA 게이트웨이에서 [Microsoft 네트워크 모니터 3.4](http://www.microsoft.com/download/details.aspx?id=4865)를 설치합니다.
 
     > [!IMPORTANT]
     > Microsoft 메시지 분석기 또는 기타 네트워크 캡처 소프트웨어를 ATA Gateway에 설치하지 마세요.
@@ -224,6 +228,6 @@ ATA 게이트웨이에서 대상 IP 주소가 ATA 콘솔에서 입력한 DC IP �
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

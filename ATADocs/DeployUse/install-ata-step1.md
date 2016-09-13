@@ -4,7 +4,7 @@ description: "ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,21 +13,25 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d89f6c5e0ac9712ce2fde057c9ef8e4025e8a144
-ms.openlocfilehash: 41d538039a8fa0511a74dd6cd5d840a1dea516e8
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7365b09e98d422a8670725b47a1c2380f00e23fb
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 설치 - 1단계
 
 >[!div class="step-by-step"]
 [2단계 »](install-ata-step2.md)
 
-이 설치 절차에서는 ATA 1.6을 새로 설치하는 데 필요한 지침을 제공합니다. 기존의 ATA 배포를 이전 버전에서 업데이트하는 방법에 대한 내용은 [ATA 버전 1.6 마이그레이션 가이드](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)를 참조하세요.
+이 설치 절차에서는 ATA 1.7을 새로 설치하는 데 필요한 지침을 제공합니다. 기존의 ATA 배포를 이전 버전에서 업데이트하는 방법에 대한 내용은 [ATA 버전 1.7 마이그레이션 가이드](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide)를 참조하세요.
 
 > [!IMPORTANT] 
-> 설치를 시작하기 전에 ATA Center 및 ATA Gateway 서버에 KB2934520을 설치합니다. 그렇지 않으면 ATA 설치에서 이 업데이트를 설치하므로 ATA 설치 도중에 다시 시작해야 합니다.
+> Windows 2012 R2를 사용할 경우 설치를 시작하기 전에 ATA Center 및 ATA Gateway 서버에 KB2934520을 설치할 수 있습니다. 그렇지 않으면 ATA 설치에서 이 업데이트를 설치하므로 ATA 설치 도중에 다시 시작해야 합니다.
 
 ## 1단계. ATA Center 다운로드 및 설치
 서버가 요구 사항을 충족하는지 확인한 후 ATA Center 설치를 진행할 수 있습니다.
@@ -57,19 +61,16 @@ ATA Center 서버에서 다음 단계를 수행합니다.
     |---------|---------------|------------|
     |설치 경로|ATA Center를 설치할 위치입니다. 기본적으로 %programfiles%\Microsoft Advanced Threat Analytics\Center입니다.|기본값을 그대로 둡니다.|
     |데이터베이스 데이터 경로|MongoDB 데이터베이스 파일이 있는 위치입니다. 기본적으로 %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data입니다.|크기 조정에 따라 증가할 여유가 있는 곳으로 위치를 변경합니다. **참고:** <ul><li>프로덕션 환경에서는 용량 계획에 따라 충분한 공간이 있는 드라이브를 사용해야 합니다.</li><li>대규모 배포의 경우 데이터베이스는 별도의 물리적 디스크에 있어야 합니다.</li></ul>크기 조정에 대한 자세한 내용은 [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)을 참조하세요.|
-    |ATA Center 서비스 IP 주소: 포트|ATA Center 서비스가 ATA Gateway 통신을 위해 수신 대기할 IP 주소입니다.<br /><br />**기본 포트:** 443|ATA Center 서비스에서 사용할 IP 주소를 선택하려면 아래쪽 화살표를 클릭합니다.<br /><br />ATA Center 서비스의 IP 주소 및 포트는 ATA 콘솔의 IP 주소 및 포트와 같을 수 없습니다. ATA 콘솔의 포트를 변경해야 합니다.|
-    |ATA Center 서비스 SSL 인증서|ATA Center 서비스에서 사용할 인증서입니다.|열쇠 아이콘을 클릭하여 설치된 인증서를 선택하거나, 랩 환경에 배포하는 경우 자체 서명된 인증서를 선택합니다.|
-    |ATA 콘솔 IP 주소|ATA 콘솔용 IIS에서 사용할 IP 주소입니다.|ATA 콘솔에서 사용하는 IP 주소를 선택하려면 아래쪽 화살표를 클릭합니다. **참고:** ATA Gateway에서 ATA 콘솔에 보다 쉽게 액세스하려면 이 IP 주소를 적어 두세요.|
-    |ATA 콘솔 SSL 인증서|IIS에서 사용할 인증서입니다.|열쇠 아이콘을 클릭하여 설치된 인증서를 선택하거나, 랩 환경에 배포하는 경우 자체 서명된 인증서를 선택합니다.|
-
-    ![ATA Center 구성 이미지](media/ATA-Center-Configuration.JPG)
+    |센터 서비스 IP 주소: 포트|ATA Center 서비스가 ATA Gateway 통신을 위해 수신 대기할 IP 주소입니다.<br /><br />**기본 포트:** 443|ATA Center 서비스에서 사용할 IP 주소를 선택하려면 아래쪽 화살표를 클릭합니다.<br /><br />ATA Center 서비스의 IP 주소 및 포트는 ATA 콘솔의 IP 주소 및 포트와 같을 수 없습니다. ATA 콘솔의 포트를 변경해야 합니다.|
+    |센터 서비스 SSL 인증서|ATA 콘솔 및 ATA 센터 서비스에서 사용할 인증서입니다.|열쇠 아이콘을 클릭하여 설치된 인증서를 선택하거나, 랩 환경에 배포하는 경우 자체 서명된 인증서를 선택합니다.|
+    |콘솔 IP 주소|ATA 콘솔에서 사용할 IP 주소입니다.|ATA 콘솔에서 사용하는 IP 주소를 선택하려면 아래쪽 화살표를 클릭합니다. **참고:** ATA Gateway에서 ATA 콘솔에 보다 쉽게 액세스하려면 이 IP 주소를 적어 두세요.|
+    
+    ![ATA Center 구성 이미지](media/ATA-Center-Configuration.png)
 
 10.  **설치**를 클릭하여 ATA 센터 및 해당 구성 요소를 설치합니다.
     ATA Center 설치 중에 다음 구성 요소가 설치되고 구성됩니다.
 
-    -   IIS(인터넷 정보 서비스)
-
-    -   ATA Center 서비스 및 ATA 콘솔 IIS 사이트
+    -   ATA 센터 서비스
 
     -   MongoDB
 
@@ -101,6 +102,6 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 
