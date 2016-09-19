@@ -4,7 +4,7 @@ description: "ATA 콘솔 및 콘솔의 구성 요소에 로그인하는 방법�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,22 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 콘솔 작업
 
 ATA 콘솔을 사용하여 ATA에서 검색한 의심스러운 활동을 모니터링하고 대응할 수 있습니다.
 
 ## ATA 콘솔에 대한 액세스 설정
-ATA Center 서버에서 로컬 관리자 그룹의 구성원인 모든 사용자는 ATA 콘솔에 로그인하고 ATA 설정을 관리할 수 있는 권한이 있습니다.
-사용자를 로컬 관리자로 지정하지 않고 ATA 콘솔에 로그인하도록 허용하려면 해당 사용자를 **Microsoft Advanced Threat Analytics Administrators** 로컬 그룹에 추가합니다.
+ATA 콘솔에 로그인하려면 ATA 콘솔에 액세스할 수 있는 적절한 ATA 역할을 할당한 사용자로 로그인해야 합니다. ATA에서 RBAC(역할 기반 액세스 제어)에 대한 자세한 내용은 [ATA 역할 그룹 작업](ata-role-groups.md)을 참조하세요.
 
 ## ATA 콘솔 로그인
 
@@ -38,10 +41,8 @@ ATA Center 서버에서 로컬 관리자 그룹의 구성원인 모든 사용자
 
 2.  사용자 이름과 암호를 입력하고 **로그인**을 클릭합니다.
 
-![ATA 로그인 화면 이미지](media/ATA-log-in-screen.jpg)
+![ATA 로그인 화면 이미지](media/ATA-log-in-screen.png)
 
-> [!NOTE]
-> 로컬 관리자 그룹 또는 Microsoft Advanced Threat Analytics Administrators 그룹의 구성원인 사용자로 로그인해야 합니다.
 
 ## ATA 콘솔
 
@@ -54,7 +55,7 @@ ATA 콘솔은 모든 의심스러운 활동에 대한 빠른 보기를 시간순
 
 ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. 기본적으로 해결되지 않은 모든 의심스러운 활동이 공격 타임라인에 표시됩니다. 모두, 미해결, 해제됨 또는 해결됨 상태의 의심스러운 활동을 표시하도록 공격 타임라인을 필터링할 수 있습니다. 또한 각 활동에 할당된 심각도를 볼 수 있습니다.
 
-![ATA 공격 타임라인 이미지](media/attack-timeline.png)
+![ATA 공격 타임라인 이미지](media/attack-timeline-1.7.png)
 
 자세한 내용은 [의심스러운 활동 작업](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities)을 참조하세요.
 
@@ -62,7 +63,7 @@ ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. �
 
 새로운 의심스러운 활동이 검색된 경우 오른쪽에 알림 표시줄이 자동으로 열립니다. 마지막으로 로그인한 시간 이후에 새로운 의심스러운 활동이 있는 경우에는 로그인에 성공한 후에 알림 표시줄이 열립니다. 언제든지 오른쪽에 있는 화살표를 클릭하여 알림 표시줄에 액세스할 수 있습니다.
 
-![ATA 알림 표시줄 이미지](media/notification-bar.png)
+![ATA 알림 표시줄 이미지](media/notification-bar-1.7.png)
 
 ### 필터링 패널
 
@@ -78,7 +79,7 @@ ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. �
 
 상태 관리 센터에서는 ATA 배포에서 제대로 작동하지 않는 요소가 있는 경우 경고를 제공합니다.
 
-![ATA 상태 관리 센터 이미지](media/health-center.png)
+![ATA 상태 관리 센터 이미지](media/ATA-Health-Issue.jpg)
 
 시스템에서 연결 오류 또는 ATA Gateway 연결 끊김 등의 문제가 발생할 때마다 상태 관리 센터 아이콘에 빨간색 점이 표시됩니다. ![ATA 상태 관리 센터 빨간색 점 이미지](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -111,7 +112,7 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 -   사진
 
--   전자 메일
+-   메일
 
 -   전화
 
@@ -124,6 +125,6 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

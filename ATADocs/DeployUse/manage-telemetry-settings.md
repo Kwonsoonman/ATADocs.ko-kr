@@ -4,7 +4,7 @@ description: "ATA에 의해 수집되는 데이터를 설명하고 데이터 수
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 7e849e9d902873cec7140a14b6f0709d3ef9ddd1
+ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
+ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # 원격 분석 설정 관리
 ATA(Advanced Threat Analytics)는 ATA에 대한 익명화된 원격 분석 데이터를 수집하여 HTTPS 연결을 통해 Microsoft 서버로 전송합니다.  이 데이터는 Microsoft에서 이후 버전의 ATA를 개선하는 데 사용됩니다.
@@ -63,6 +67,21 @@ ATA(Advanced Threat Analytics)는 ATA에 대한 익명화된 원격 분석 데�
 
     -   제공된 입력
 
+- 각 상태 문제 대해 다음과 같은 익명화된 데이터가 수집됩니다.
+
+    (컴퓨터 이름, 사용자 이름 및 IP 주소는 수집되지 않음)
+
+    -   상태 문제 유형
+
+    -   상태 문제 ID
+
+    -   상태
+
+    -   시작 및 종료 시간
+
+- ATA 콘솔 URL 주소 - ATA 콘솔을 사용할 때 URL 주소(예: ATA 콘솔에서 방문한 페이지).
+
+
 ### 데이터 수집 해제
 원격 분석 데이터를 수집하여 Microsoft로 전송하는 작업을 중지하려면 다음 단계를 수행합니다.
 
@@ -76,6 +95,6 @@ ATA(Advanced Threat Analytics)는 ATA에 대한 익명화된 원격 분석 데�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

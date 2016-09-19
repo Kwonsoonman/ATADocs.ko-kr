@@ -4,7 +4,7 @@ description: "ATA 데이터베이스를 사용하여 문제를 해결하는 방�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
+ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
+ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 데이터베이스를 사용하여 ATA 문제 해결
 ATA는 MongoDB를 데이터베이스로 사용합니다.
@@ -45,15 +49,6 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 `db.UniqueEntity.find({Name: "John Doe"})`<br>"`_id`" 값으로 표시된 ID를 적어둡니다. 우리가 사용하는 예제에서는 이 ID를 "`123bdd24-b269-h6e1-9c72-7737as875351`"(으)로 가정합니다.<br>그런 다음, 찾는 날짜 이전의 가장 가까운 날짜에 해당하는 컬렉션을 검색합니다(현재 예제에서는 2015년 10월 20일).<br>그런 다음 John Doe의 계정 NTLM 활동을 검색합니다. 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## ATA 구성 파일
-ATA의 구성은 데이터베이스의 "SystemProfile" 컬렉션에 저장됩니다.
-이 컬렉션은 ATA 센터 서비스에 의해 "SystemProfile.json" 파일에 1시간 간격으로 백업됩니다. 이 파일은 "Backup"이라는 하위 폴더에 있습니다. 기본 ATA 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json**에서 찾을 수 있습니다. 
-
-**고**: ATA를 대폭 변경할 경우에는 이 파일을 백업하는 것이 좋습니다.
-
-다음 명령을 실행하여 모든 설정을 복원할 수 있습니다.
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## 참고 항목
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
@@ -64,6 +59,6 @@ ATA의 구성은 데이터베이스의 "SystemProfile" 컬렉션에 저장됩니
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

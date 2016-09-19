@@ -4,7 +4,7 @@ description: "ATA 센터의 IP 주소, 포트 또는 인증서를 변경하는 �
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 구성 변경 - ATA 센터 IP 주소
 
@@ -46,9 +50,9 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 
     ![ATA 구성 설정 아이콘](media/ATA-config-icon.JPG)
 
-3.  **일반**을 선택합니다.
+3.  **Center**(센터)를 클릭합니다.
 
-4.  **ATA 센터 서비스 IP 주소: 포트**에서 기존 IP 주소 중 하나를 선택하거나 **사용자 지정 IP 주소 추가**를 선택하고 IP 주소를 입력합니다.
+4.  **Center service IP address : port**(센터 서비스 IP 주소: 포트)에서 기존 IP 주소 중 하나를 선택하거나 **Add custom IP address**(사용자 지정 IP 주소 추가)를 선택하고 IP 주소를 입력합니다.
 
 5.  **저장**을 클릭합니다.
 
@@ -76,10 +80,10 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 ## 참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 설치](install-ata.md)
-- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

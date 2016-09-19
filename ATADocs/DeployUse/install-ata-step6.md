@@ -4,7 +4,7 @@ description: "ATA 설치의 마지막 단계에서는 단기 임대 서브넷과
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,36 +13,47 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9712b0ad8d67b1e618cb75b14785f8079020864
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 57fe1272e95f69ef9d614505bbef0bb6c1d8ccb6
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 설치 - 6단계
 
 >[!div class="step-by-step"]
 [« 5단계](install-ata-step5.md)
 
-## 6단계. 단기 임대 서브넷 및 허니토큰 사용자 구성
-단기 임대 서브넷은 IP 주소 할당이 매우 빠르게(몇 초 내지 몇 분 이내) 변경되는 서브넷입니다. 예를 들어 VPN에 사용되는 IP 주소와 Wi-Fi IP 주소가 여기에 해당합니다. 조직에서 사용되는 단기 임대 서브넷 목록을 입력하려면 다음 단계를 따르세요.
+## 6단계. IP 주소 제외 및 허니 토큰 사용자 구성
+ATA에서는 **DNS 정찰** 및 **Pass-the-Ticket** 두 가지 유형의 검색에서 특정 IP 주소 및 IP 서브넷을 제외할 수 있습니다. 
 
-1.  ATA Gateway 컴퓨터의 ATA 콘솔에서 설정 아이콘을 클릭하고 **구성**을 선택합니다.
+예를 들어 한 **DNS 정찰 제외**는 검색 메커니즘으로 DNS를 사용하는 보안 스캐너일 수 있습니다. 이 제외를 통해 ATA에서 이러한 스캐너를 무시할 수 있습니다. *Pass-the-Ticket* 예외의 예로는 NAT 장치가 있습니다.    
+
+ATA에서는 허니 토큰 사용자를 구성하여 악의적인 행위자에 대한 트랩으로 사용됩니다. 즉 경고를 트리거하는 이 계정(일반적으로 유휴 상태)과 연관된 인증이 됩니다.
+
+이를 구성하려면 다음이 단계를 따르세요.
+
+1.  ATA 콘솔에서 설정 아이콘을 클릭하고 **구성**을 선택합니다.
 
     ![ATA 구성 설정](media/ATA-config-icon.JPG)
 
-2.  **검색** 아래에서 단기 임대 서브넷에 대해 다음을 입력합니다. 슬래시 표기법 형식(예: `192.168.0.0/24`)을 사용하여 단기 임대 서브넷을 입력하고 더하기 기호를 클릭합니다.
+2.  **Detection exclusions**(검색 제외)에서 *DNS 정찰* 또는 *Pass-the-Ticket* IP 주소에 다음을 입력합니다. 예를 들어 CIDR 형식`192.168.1.0/24`를 사용하고 *더하기* 기호를 클릭합니다.
 
-3.  허니토큰 계정 SID에는 네트워크 활동이 없는 사용자의 SID를 입력하고 더하기 기호를 클릭합니다. 예를 들면 `S-1-5-21-72081277-1610778489-2625714895-10511`과 다음과 같습니다.
+    ![변경 내용 저장](media/ATA-exclusions.png)
+
+3.  **Detection settings**(감지 설정)에서 허니 토큰 계정 SID를 입력하고 더하기 기호를 클릭합니다. 예: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+
+    ![ATA 구성 설정](media/ATA-honeytoken.png)
 
     > [!NOTE]
     > 사용자에 대한 SID를 찾으려면 ATA 콘솔에서 사용자를 검색한 다음 **계정 정보** 탭을 클릭합니다. 
 
-4.  제외를 구성합니다. 특정한 의심스러운 활동에서 제외할 IP 주소를 구성할 수 있습니다. 자세한 내용은 [ATA 검색 설정 작업](working-with-detection-settings.md)을 참조하세요.
+4.  **저장**을 클릭합니다.
 
-5.  **저장**을 클릭합니다.
-
-![변경 내용 저장](media/ATA-VPN-Subnets.JPG)
 
 축하합니다. Microsoft Advanced Threat Analytics를 성공적으로 배포했습니다.
 
@@ -64,6 +75,6 @@ ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
