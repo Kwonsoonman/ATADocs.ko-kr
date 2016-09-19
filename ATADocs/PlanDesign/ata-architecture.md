@@ -4,7 +4,7 @@ description: "Microsoft Advanced Threat Analytics(ATA)의 아키텍처에 대해
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,16 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 18ce237fad1bb0de8e50cd640231ce1b36ab9a6b
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
+
 
 # ATA 아키텍처
 아래 다이어그램에는 Advanced Threat Analytics 아키텍처가 자세히 나와 있습니다.
@@ -35,7 +40,7 @@ ATA는 다음 구성 요소로 이루어져 있습니다.
 
 -   **ATA Center** <br>
 ATA 센터는 사용자가 배포하는 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이에서 데이터를 수신합니다.
--   **ATA Gateway**<br>
+-   **ATA 게이트웨이**<br>
 ATA 게이트웨이는 포트 미러링 또는 네트워크 TAP를 사용하여 도메인 컨트롤러의 트래픽을 모니터링하는 전용 서버에 설치됩니다.
 -   **ATA 경량 게이트웨이**<br>
 ATA 경량 게이트웨이는 도메인 컨트롤러에 직접 설치되며 전용 서버 또는 포트 미러링 구성 없이 트래픽을 직접 모니터링합니다. ATA 게이트웨이를 대신합니다.
@@ -181,6 +186,6 @@ Pass-the-Hash, Brute Force, Honey Token을 개선하려면 ATA에서 Windows 이
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

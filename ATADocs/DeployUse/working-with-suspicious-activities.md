@@ -4,7 +4,7 @@ description: "ATA에서 식별된 의심스러운 활동을 검토하는 방법�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e07ab99454133eab0480277ec2e54a1c3253a621
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # 의심스러운 활동 작업
 이 항목에서는 Advanced Threat Analytics를 사용하는 방법에 대한 기본 사항을 설명합니다.
@@ -113,6 +117,6 @@ ATA에서 사용자 네트워크를 학습할 수 있도록 하기 위해 일부
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

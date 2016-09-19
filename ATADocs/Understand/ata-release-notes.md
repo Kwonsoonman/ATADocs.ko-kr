@@ -13,8 +13,8 @@ ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
+ms.sourcegitcommit: fd63e2011a1608532474f9f3940c4e2fe02ba8c5
+ms.openlocfilehash: dd5f1f49cd11ea8a4a2b8fc0bb7ff614ee463aab
 
 
 ---
@@ -22,6 +22,8 @@ ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
 # 릴리스 정보
 지원되는 버전은 다음과 같습니다.
 
+- [ATA 버전 1.7의 새로운 기능](whats-new-version-1.7.md)
+   - [ATA 1.7로 업데이트 - 마이그레이션 가이드](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide)
 - [ATA 버전 1.6의 새로운 기능](whats-new-version-1.6.md)
    - [ATA 1.6으로 업데이트 - 마이그레이션 가이드](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)
 - [ATA 버전 1.5의 새로운 기능](whats-new-version-1.5.md)
@@ -35,6 +37,6 @@ ms.openlocfilehash: 090537e1065fcb742ed51ebcee46fdded63c90a3
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

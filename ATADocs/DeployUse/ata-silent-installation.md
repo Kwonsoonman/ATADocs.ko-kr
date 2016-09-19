@@ -13,17 +13,21 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: dce4cbaf894d383851a7039b6457a98c1d5ba5d4
+ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
+ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 ---
+
+*적용 대상: Advanced Threat Analytics 버전 1.7*
+
+
 
 # ATA 자동 설치
 이 문서에는 ATA 자동 설치에 대한 지침이 있습니다.
 ## 필수 구성 요소
 
-Microsoft ATA v1.6을 사용하려면 Microsoft .NET Framework 4.6.1이 설치되어 있어야 합니다. 
+Microsoft ATA v1.7을 사용하려면 Microsoft .NET Framework 4.6.1이 설치되어 있어야 합니다. 
 
 ATA를 설치하거나 업데이트하면 Microsoft ATA 배포의 일부로 .Net Framework 4.6.1이 자동으로 설치됩니다.
 
@@ -43,7 +47,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
     
 **설치 옵션**:
 
-|이름|구문|자동 설치에 필수인가요?|설명|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
 |NoRestart|/norestart|아니요|다시 시작하지 않습니다. 기본적으로 다시 시작하기 전에 UI가 표시됩니다.|
@@ -53,7 +57,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 
 **설치 매개 변수**:
 
-|이름|구문|자동 설치에 필수인가요?|설명|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath=“<InstallPath>”|아니요|ATA 이진 파일을 설치할 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center입니다.|
 |DatabaseDataPath|DatabaseDataPath= “<DBPath>”|아니요|ATA 데이터베이스 데이터 폴더 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data입니다.|
@@ -84,7 +88,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 
 **설치 옵션**:
 
-|이름|구문|자동 설치에 필수인가요?|설명|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
 |NoRestart|/norestart|아니요|다시 시작하지 않습니다. 기본적으로 다시 시작하기 전에 UI가 표시됩니다.|
@@ -107,7 +111,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
 **설치 옵션**:
 
-|이름|구문|자동 제거에 필수입니까?|설명|
+|Name|구문|자동 제거에 필수입니까?|설명|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 제거 프로그램을 실행합니다.|
 |제거|/uninstall|예|서버에서 ATA 센터 자동 제거를 실행합니다.|
@@ -116,7 +120,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
 **설치 매개 변수**:
 
-|이름|구문|자동 제거에 필수입니까?|설명|
+|Name|구문|자동 제거에 필수입니까?|설명|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|아니요|기존 데이터베이스에 있는 모든 파일을 삭제합니다.|
 
@@ -136,7 +140,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
 **설치 옵션**:
 
-|이름|구문|자동 설치에 필수인가요?|설명|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
 |NoRestart|/norestart|아니요|다시 시작하지 않습니다. 기본적으로 다시 시작하기 전에 UI가 표시됩니다.|
@@ -146,7 +150,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
 **설치 매개 변수**:
 
-|이름|구문|자동 설치에 필수인가요?|설명|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
 |GatewayCertificateThumbprint|GatewayCertificateThumbprint=“<CertThumbprint >”|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
 |ConsoleAccountName|ConsoleAccountName=“<AccountName>”|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 이름을 설정합니다.|
@@ -169,7 +173,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
 **설치 옵션**:
 
-|이름|구문|자동 설치에 필수인가요?|설명|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
 |NoRestart|/norestart|아니요|다시 시작하지 않습니다. 기본적으로 다시 시작하기 전에 UI가 표시됩니다.|
@@ -189,7 +193,7 @@ ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합�
     
 **설치 옵션**:
 
-|이름|구문|자동 제거에 필수입니까?|설명|
+|Name|구문|자동 제거에 필수입니까?|설명|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 제거 프로그램을 실행합니다.|
 |제거|/uninstall|예|서버에서 ATA 게이트웨이 자동 제거를 실행합니다.|
@@ -217,6 +221,6 @@ ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합�
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
