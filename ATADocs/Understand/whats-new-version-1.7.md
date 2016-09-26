@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 579e49a8dd9a5cc67961af14259bb8bb27130de5
+ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
+ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
 
 
 ---
@@ -63,10 +63,53 @@ ATA 1.7 업데이트에서는 다음 영역에 대한 향상된 기능을 제공
 ### 게이트웨이 자동 업데이트가 실패할 수 있음
 **증상:** 속도가 느린 WAN 연결을 사용하는 환경에서 ATA 게이트웨이 업데이트가 업데이트 시간 제한(100초)에 도달하여 완료되지 않을 수 있습니다.
 ATA 콘솔에서 ATA 게이트웨이의 상태가 장시간동안 "업데이트 중(패키지 다운로드 중)"일 경우 결국 실패합니다.
+
 **해결 방법:** 이 문제를 해결하려면 ATA 콘솔에서 최신 ATA 게이트웨이 패키지를 다운로드하고 ATA 게이트웨이를 수동으로 업데이트합니다.
 
- > [!IMPORTANT]
- ATA에서 사용하는 인증서에 대한 인증서 자동 갱신은 지원되지 않습니다. 이러한 인증서를 사용할 경우 인증서가 자동으로 갱신될 때 ATA가 작동하지 않을 수 있습니다. 
+### ATA 1.6에서 업데이트할 때 마이그레이션 실패
+ATA 1.7로 업데이트할 때 오류 코드 *0x80070643*로 인해 업데이트 프로세스가 실패할 수 있습니다.
+
+![1.7로 ATA 업데이트 오류](media/ata-update-error.png)
+
+배포 로그를 검토하고 오류의 원인을 찾습니다. 배포 로그는 **%temp%\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log**에 위치합니다. 
+
+아래 표에는 찾을 오류와 해당 오류를 수정하는 Mongo 스크립트가 나와 있습니다. Mongo 스크립트를 실행하는 방법은 표 아래에 있는 예제를 참조하세요.
+
+| 배포 로그 파일의 오류                                                                                                                  | Mongo 스크립트                                                                                                                                                                         |
+|---|---|
+| System.FormatException: 크기 {size}이(가) MaxDocumentSize 16777216보다 큽니다. <br>파일의 더 아래쪽 내용:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
+| System.OutOfMemoryException: 'System.OutOfMemoryException' 형식의 예외가 발생했습니다.<br>파일의 더 아래쪽 내용:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
+|System.Security.Cryptography.CryptographicException: 잘못된 길이<br>파일의 더 아래쪽 내용:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
+
+
+적절한 스크립트를 실행하려면 다음 단계를 수행하세요. 
+
+1.  관리자 권한 명령 프롬프트에서 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 위치로 이동합니다.
+2.  형식 –**Mongo.exe ATA**를 입력합니다(*참고*: ATA는 대문자여야 함).
+3.  위 표에서 배포 로그의 오류와 일치하는 스크립트를 붙여 넣습니다.
+
+![ATA Mongo 스크립트](media/ATA-mongoDB-script.png)
+
+이제 업그레이드를 다시 시작할 수 있습니다.
+
+### ATA에서 “*디렉터리 서비스 열거를 사용한 정찰*”로 의심되는 활동을 다수 보고함:
+ 
+이 문제는 조직의 클라이언트 컴퓨터 전부 또는 다수에서 네트워크 검색이 실행 중인 경우 발생할 가능성이 높습니다. 이 문제가 발생하는 경우 다음과 같이 하세요.
+
+1. 문제의 원인이나 클라이언트 컴퓨터에서 실행 중인 특정 응용 프로그램을 식별할 수 있는 경우 Microsoft.com의 ATAEval에 해당 정보를 포함하여 전자 메일을 보냅니다.
+2. 다음 mongo 스크립트를 사용하여 이러한 이벤트를 모두 해제합니다(mongo 스크립트를 실행하는 방법은 위 내용 참조).
+
+db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
+
+### ATA에서 해제된 의심스러운 활동에 대한 알림을 보냄:
+알림을 구성한 경우 ATA에서 해제된 의심스러운 활동에 대한 알림(전자 메일, syslog 및 이벤트 로그)을 계속 보낼 수 있습니다.
+현재 이 문제에 대한 해결 방법은 없습니다. 
+
+### TLS 1.0 및 TLS 1.1을 사용하지 않도록 설정하는 경우 ATA 게이트웨이가 ATA 센터에 등록하지 못할 수 있음:
+ATA 게이트웨이(또는 경량 게이트웨이)에서 TLS 1.0 및 TLS 1.1을 사용하지 않도록 설정하는 경우 게이트웨이가 ATA 센터에 등록하지 못할 수 있습니다.
+
+### ATA에서 사용하는 인증서에 대한 인증서 자동 갱신은 지원되지 않습니다.
+자동 인증서 갱신을 사용할 경우 인증서가 자동으로 갱신될 때 ATA가 작동하지 않을 수 있습니다. 
 
 
 ## 참고 항목
@@ -77,6 +120,6 @@ ATA 콘솔에서 ATA 게이트웨이의 상태가 장시간동안 "업데이트 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 
