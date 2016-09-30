@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
-ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
+ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
+ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 
 ---
@@ -83,7 +83,7 @@ ATA 게이트웨이 수는 사용 중인 네트워크 레이아웃, 패킷 볼�
 다음의 두 가지 항목을 백업합니다.
 
 -   ATA에서 저장하는 트래픽과 이벤트. 지원되는 모든 데이터베이스 백업 절차를 사용하여 이러한 항목을 백업할 수 있습니다. 자세한 내용은 [ATA 데이터베이스 관리](/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요. 
--   ATA 구성. 데이터베이스에 저장되며, ATA 센터 배포 위치의 **백업** 폴더에서 1시간마다 자동으로 백업됩니다.  자세한 내용은 [ATA 데이터베이스 관리](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요.
+-   ATA 구성. 데이터베이스에 저장되며, ATA 센터 배포 위치의 **백업** 폴더에서 1시간마다 자동으로 백업됩니다.  자세한 내용은 [ATA 데이터베이스 관리](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요.
 ## ATA는 어떤 항목을 검색할 수 있나요?
 ATA는 알려진 악의적인 공격 및 기법, 보안 문제, 위험을 검색합니다.
 전체 ATA 검색 목록은 [ATA에서 수행하는 검색은 무엇인가요?](ata-threats.md)를 참조하세요.
@@ -144,6 +144,6 @@ Microsoft Advanced Threat Analytics는 포리스트 경계가 동일한 다중 �
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
