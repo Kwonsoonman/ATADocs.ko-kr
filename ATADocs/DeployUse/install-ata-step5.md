@@ -13,8 +13,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 168a41182128a1fc91d92a4ef11b873c04ecc6b7
+ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
+ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 ---
@@ -45,9 +45,9 @@ ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 
   - **설명**: ATA 게이트웨이에 대한 설명을 입력합니다(옵션).
   - **FQDN(Port Mirrored Domain Controller)** (ATA 게이트웨이에 필요하며 ATA 경량 게이트웨이에는 설정할 수 없음): 도메인 컨트롤러의 전체 FQDN을 입력하고 더하기 기호를 클릭하여 목록에 추가합니다. 예를 들면  **dc01.contoso.com**과 같습니다.
 
-        The following information applies to the servers you enter in the **Domain Controllers** list:
-        - All domain controllers whose traffic is being monitored via port mirroring by the ATA Gateway must be listed in the **Domain Controllers** list. If a domain controller is not listed in the **Domain Controllers** list, detection of suspicious activities might not function as expected.
-        - At least one domain controller in the list should be a global catalog. This will enable ATA to resolve computer and user objects in other domains in the forest.
+      다음 정보는 **도메인 컨트롤러** 목록에 입력한 서버에 적용됩니다.
+      - ATA Gateway에서 포트 미러링을 통해 모니터링하는 트래픽의 모든 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되어야 합니다. 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되지 않은 경우 의심스러운 활동 검색이 예상대로 작동하지 않을 수 있습니다.
+      - 목록에 있는 하나 이상의 도메인 컨트롤러는 글로벌 카탈로그여야 합니다. 이를 통해 ATA는 포리스트의 다른 도메인에 있는 컴퓨터 및 사용자 개체를 확인할 수 있습니다.
 
 - **네트워크 어댑터 캡처**(필수):
   - 전용 서버의 ATA 게이트웨이의 경우 대상 미러 포트로 구성된 네트워크 어댑터를 선택합니다. 해당 어댑터는 미러링된 도메인 컨트롤러 트래픽을 수신하게 됩니다.
@@ -96,6 +96,6 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
