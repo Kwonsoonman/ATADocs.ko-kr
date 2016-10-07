@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87cb9534a45d3a8ca29d6a803ca399a33a3d3ea6
+ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
+ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
 
 
 ---
@@ -71,23 +71,25 @@ ATA 버전 1.6으로 업데이트하려면 다음 단계를 수행합니다.
 
 2.  설치 파일인 Microsoft ATA 센터 Setup.exe를 실행하고 화면의 지침에 따라 업데이트를 설치합니다.
 
-    1.  ATA 1.6을 사용하려면 .Net Framework 4.6.1을 설치해야 합니다. 아직 설치하지 않은 경우 ATA를 설치할 때 설치의 일부로 .Net Framework 4.6.1이 설치됩니다.<br>
-    > [!NOTE]
-    > .NET Framework 4.6.1을 설치하려면 서버를 다시 시작해야 할 수 있습니다. ATA 설치는 서버를 다시 시작한 후에만 진행됩니다.
-5.  **시작** 페이지에서 언어를 선택하고 **다음**을 클릭합니다.
+    1.  ATA 1.6을 사용하려면 .Net Framework 4.6.1을 설치해야 합니다. 아직 설치하지 않은 경우 ATA를 설치할 때 설치의 일부로 .Net Framework 4.6.1이 설치됩니다.
+    
+        > [!NOTE] 
+            .NET Framework 4.6.1을 설치하려면 서버를 다시 시작해야 할 수 있습니다. ATA 설치는 서버를 다시 시작한 후에만 진행됩니다.
+    
+    2.  **시작** 페이지에서 언어를 선택하고 **다음**을 클릭합니다.
 
-    6.  최종 사용자 사용권 계약을 읽고 조건에 동의하는 경우 **다음**을 클릭합니다.
+    3.  최종 사용자 사용권 계약을 읽고 조건에 동의하는 경우 **다음**을 클릭합니다.
 
-    7.  ATA에 대한 Microsoft 업데이트를 사용하여 최신 상태로 유지할 수 있습니다.  Microsoft 업데이트 페이지에서 **업데이트를 확인할 때 Microsoft 업데이트 사용(권장)**을 선택합니다.
+    4.  ATA에 대한 Microsoft 업데이트를 사용하여 최신 상태로 유지할 수 있습니다.  Microsoft 업데이트 페이지에서 **업데이트를 확인할 때 Microsoft 업데이트 사용(권장)**을 선택합니다.
     ![ATA를 최신 이미지로 유지](media/ata_ms_update.png) 여기에 보이는 것처럼 다른 Microsoft 제품(ATA 포함)에 대한 업데이트를 사용하도록 Windows 설정을 조정합니다. 
      ![Windows 자동 업데이트 이미지](media/ata_installupdatesautomatically.png)
 
-    8.  설치를 시작하기 전에 ATA에서 준비 검사를 수행합니다. 검사 결과를 검토하여 필수 구성 요소가 구성되어 있고 디스크 공간이 최소 크기 이상인지 확인합니다. 
+    5.  설치를 시작하기 전에 ATA에서 준비 검사를 수행합니다. 검사 결과를 검토하여 필수 구성 요소가 구성되어 있고 디스크 공간이 최소 크기 이상인지 확인합니다. 
     ![ATA 준비 상태 확인 이미지](media/ata_install_readinesschecks.png)
 
-    3.  **업데이트**를 클릭합니다. 업데이트를 클릭하면 업데이트 절차가 완료될 때까지 ATA가 오프라인으로 설정됩니다.
+    6.  **업데이트**를 클릭합니다. 업데이트를 클릭하면 업데이트 절차가 완료될 때까지 ATA가 오프라인으로 설정됩니다.
 
-4.  ATA 센터를 업데이트하고 나면 ATA 게이트웨이가 오래된 상태임을 보고합니다.
+3.  ATA 센터를 업데이트하고 나면 ATA 게이트웨이가 오래된 상태임을 보고합니다.
 
     ![오래된 게이트웨이 이미지](media/ATA-center-outdated.png)
 
@@ -140,6 +142,6 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
