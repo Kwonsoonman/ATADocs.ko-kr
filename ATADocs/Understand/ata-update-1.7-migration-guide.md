@@ -92,6 +92,6 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

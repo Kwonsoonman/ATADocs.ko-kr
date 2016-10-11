@@ -4,7 +4,7 @@ description: "ATA를 사용하여 이벤트 수집을 구성하는 옵션을 설
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 09/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
