@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
-ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
+ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
+ms.openlocfilehash: 175fdf824812bd4280422f90e4eec506ddd278e4
 
 
 ---
@@ -22,10 +22,6 @@ ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 # ATA 질문과 대답
 이 문서에서는 ATA에 대한 질문과 관련 정보 및 대답의 목록을 제공합니다.
-
-
-## ATA는 어떤 방식으로 사용이 허가되나요?
-라이선스 정보는 [고급 위협 분석을 구입하는 방법](https://www.microsoft.com/cloud-platform/advanced-threat-analytics-pricing)을 참조하세요.
 
 
 ## ATA 게이트웨이가 시작되지 않으면 어떻게 해야 하나요?
@@ -144,6 +140,6 @@ Microsoft Advanced Threat Analytics는 포리스트 경계가 동일한 다중 �
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

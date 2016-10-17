@@ -13,8 +13,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
+ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
+ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 ---
@@ -42,7 +42,7 @@ ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
     |**사용자 이름**(필수)|읽기 전용 사용자 이름을 입력합니다(예: **ATAuser**).|
     |**암호**(필수)|읽기 전용 사용자에 대한 암호를 입력합니다(예: **Pencil1**).|
     |**도메인**(필수)|읽기 전용 사용자에 대한 도메인을 입력합니다(예: **contoso.com**). **참고:** 사용자가 있는 도메인의 전체 FQDN을 입력해야 합니다. 예를 들어 사용자의 계정이 corp.contoso.com 도메인에 있는 경우 contoso.com이 아니라 `corp.contoso.com`을 입력해야 합니다.|
-    |모든 ATA 게이트웨이 자동 업데이트 |이 설정을 사용하면 이후 버전 릴리스에서 ATA 센터를 업데이트할 때 모든 ATA 게이트웨이가 자동으로 업데이트됩니다.|
+    
 
     저장되고 나면 콘솔에서 시작 메시지가 다음과 같이 변경됩니다. ![ATA 시작 1단계가 완료됨](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -62,6 +62,6 @@ ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 

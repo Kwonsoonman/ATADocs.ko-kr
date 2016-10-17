@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
+ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
+ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
 
 
 ---
@@ -73,6 +73,12 @@ ATA 콘솔에서 ATA 게이트웨이의 상태가 장시간동안 "업데이트 
 ### 브라우저에서 JIS 인코딩이 지원되지 않음
 **증상:** JIS 인코딩을 사용하는 브라우저에서 ATA 콘솔이 예상대로 작동하지 않을 수 있습니다. **해결 방법:** 브라우저의 인코딩을 Unicode UTF-8로 변경합니다.
  
+### VMware 사용 시 포트 미러 트래픽 삭제
+
+VMware에 경량 게이트웨이를 사용하는 경우 포트 미러 트래픽 경고 삭제
+
+도메인 컨트롤러를 VMware 가상 컴퓨터에서 사용하는 경우, **삭제된 포트 미러 네트워크 트래픽**에 대한 경고를 받을 수 있습니다. VMware의 구성이 일치하지 않아서 발생하는 문제일 수 있습니다. 이러한 경고를 방지하기 위해 다음 설정이 0 또는 사용 안 함으로 설정되어 있는지 확인하세요.: TsoEnable, LargeSendOffload, IPv4, TSO Offload IPv4 Giant TSO Offload도 사용하지 않도록 설정하는 것이 좋습니다. 자세한 내용은 VMware 설명서를 참조하세요.
+
 ## 사소한 변경 사항
 
 - 이제 ATA에서 ATA 콘솔에 IIS 대신 OWIN을 사용합니다.
@@ -87,6 +93,6 @@ ATA 콘솔에서 ATA 게이트웨이의 상태가 장시간동안 "업데이트 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
