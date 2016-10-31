@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 5c20c41c3fe587f18087d64f4f84c1df65072fde
+ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
+ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
 
 
 ---
@@ -28,6 +28,7 @@ ATA 1.7 업데이트에서는 다음 영역에 대한 향상된 기능을 제공
   
 
 ## 버전 1.7로 ATA 업데이트
+
 > [!NOTE] 
 > 사용 중인 환경에 ATA가 설치되어 있지 않으면 버전 1.7이 포함된 처음 사용자용 ATA를 다운로드한 다음 [ATA 설치](/advanced-threat-analytics/deploy-use/install-ata)에서 설명하는 표준 설치 절차를 수행하세요.
 
@@ -81,8 +82,8 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
 > ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 > 모든 게이트웨이에 구성된 Syslog 수신기 포트가 514로 변경됩니다.
  
-    > [!NOTE] 
-    > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4) .
+> [!NOTE] 
+> 새 ATA 게이트웨이를 설치하려면 **게이트웨이** 화면으로 가서 **게이트웨이 설치 다운로드**를 클릭한 후 ATA 1.7 설치 패키지를 받고 [4 단계에 설명된 대로 새 게이트웨이 설치에 대한 지침을 따릅니다. ATA Gateway 설치](/advanced-threat-analytics/deploy-use/install-ata-step4) .
 
 
 
@@ -92,6 +93,6 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 
