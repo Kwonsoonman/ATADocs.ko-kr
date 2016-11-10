@@ -3,10 +3,11 @@
 ## [ATA 아키텍처](ata-architecture.md)
 ## [ATA 용량 계획](ata-capacity-planning.md)
 ## [ATA 필수 구성 요소](ata-prerequisites.md)
-# [배포 및 사용](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [배포](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [사용](/advanced-threat-analytics/deploy-use/operate-ata)
+# [문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 

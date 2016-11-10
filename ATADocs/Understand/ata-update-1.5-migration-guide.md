@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: be23c15ce709b710dc48b333fc464aa190772573
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
 
 
 ---
@@ -44,7 +44,7 @@ ATA 버전 1.4를 이미 배포한 경우 이 절차에서는 설치한 버전�
 
 ATA 버전 1.5로 업데이트하려면 다음 단계를 수행합니다.
 
-1.  [업데이트 1.5 버전을 다운로드합니다.](http://aka.ms/ata1_5update)
+1.  VLSC 또는 MSDN에서 ATA v1.5를 다운로드합니다.
       > [!NOTE]
          업데이트된 ATA 정식 버전을 사용하여 버전 1.5로의 업데이트를 수행할 수도 있습니다.
 
@@ -134,6 +134,6 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

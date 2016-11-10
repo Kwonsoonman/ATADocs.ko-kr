@@ -4,7 +4,7 @@ description: "ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
-ms.openlocfilehash: 7365b09e98d422a8670725b47a1c2380f00e23fb
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 ---
@@ -43,6 +43,9 @@ ATA Center 서버에서 다음 단계를 수행합니다.
 2.  ATA 센터를 설치할 컴퓨터에 로컬 관리자 그룹의 구성원인 사용자로 로그인합니다.
 
 3.  **Microsoft ATA 센터 Setup.EXE**를 실행하고 설치 마법사를 따릅니다.
+
+> [!NOTE]   
+> 설치 과정에서 다시 부팅해야 하는 경우 문제를 방지하려면 탑재된 ISO 파일이 아니라 로컬 드라이브에서 설치 파일을 실행해야 합니다.   
 
 4.  설치를 시작할 때 Microsoft .Net Framework가 설치되지 않은 경우 설치하라는 메시지가 표시됩니다. .NET Framework를 설치하고 나면 다시 부팅하라는 메시지가 표시될 수 있습니다.
 5.  **시작** 페이지에서 ATA 설치 화면에 사용할 언어를 선택하고 **다음**을 클릭합니다.
@@ -102,6 +105,6 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
