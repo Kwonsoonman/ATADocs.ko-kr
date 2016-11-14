@@ -13,8 +13,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: 3f78d0dd6b1e3f419c7e72e0449f77e7d2b3167d
 
 
 ---
@@ -42,11 +42,12 @@ ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
     |**사용자 이름**(필수)|읽기 전용 사용자 이름을 입력합니다(예: **ATAuser**).|
     |**암호**(필수)|읽기 전용 사용자에 대한 암호를 입력합니다(예: **Pencil1**).|
     |**도메인**(필수)|읽기 전용 사용자에 대한 도메인을 입력합니다(예: **contoso.com**). **참고:** 사용자가 있는 도메인의 전체 FQDN을 입력해야 합니다. 예를 들어 사용자의 계정이 corp.contoso.com 도메인에 있는 경우 contoso.com이 아니라 `corp.contoso.com`을 입력해야 합니다.|
-    
+
+2. 필요에 따라 **연결 테스트**를 클릭하여 도메인 연결을 테스트하고 제공된 자격 증명으로 액세스할 수 있는지 확인할 수 있습니다. 이 작업은 ATA 센터가 도메인에 연결되어 있는 경우에만 수행할 수 있습니다.   
 
     저장되고 나면 콘솔에서 시작 메시지가 다음과 같이 변경됩니다. ![ATA 시작 1단계가 완료됨](media/ATA_1.7-welcome-provide-username-finished.png)
 
-2. 콘솔에서 **Download Gateway setup and install the first Gateway**(게이트웨이 설치 프로그램을 다운로드하여 첫 번째 게이트웨이 설치)를 클릭하여 계속합니다.
+3. 콘솔에서 **Download Gateway setup and install the first Gateway**(게이트웨이 설치 프로그램을 다운로드하여 첫 번째 게이트웨이 설치)를 클릭하여 계속합니다.
 
 
 >[!div class="step-by-step"]
@@ -62,6 +63,6 @@ ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Oct16_HO5-->
 
 
