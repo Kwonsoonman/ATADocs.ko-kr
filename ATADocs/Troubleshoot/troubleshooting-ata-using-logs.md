@@ -13,8 +13,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee5f60e43f50562e7a7309eafa3b52cf946b0d3b
-ms.openlocfilehash: 493f255ae09b51d27079a186bb802f0f3f9706bc
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 ---
@@ -29,7 +29,7 @@ ATA 로그는 ATA의 각 구성 요소가 주어진 시점에 수행하는 작�
 ## ATA 게이트웨이 로그
 이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다. 
 
-ATA 게이트웨이 로그는 ATA가 설치된 서브 폴더(**Logs**)에 있습니다. 기본 위치는 다음과 같습니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
+ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
 
 ATA 게이트웨이에는 다음 로그가 있습니다.
 
@@ -40,7 +40,7 @@ ATA 게이트웨이에는 다음 로그가 있습니다.
 -   **Microsoft.Tri.Gateway-Errors.log** – 이 로그는 ATA 게이트웨이에서 발생한 오류만 포함합니다. 기본 사용: 상태 검사를 수행하고 특정 시간과 상호 연결해야 하는 문제를 조사합니다.
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 그룹화하고 개수를 측정합니다.
-    이 파일은 ATA 게이트웨이 서비스가 시작될 때마다 빈 상태로 시작한 후 1분 간격으로 업데이트됩니다. 기본적으로 ATA 게이트웨이와 관련해서 새로운 오류나 문제가 있는지 파악하기 위해 사용됩니다. 오류가 보다 읽기 쉽게 그룹화되며 새로운 유형의 오류나 문제가 있는지 쉽고 빠르게 파악할 수 있습니다.
+    이 파일은 ATA 게이트웨이 서비스가 시작될 때마다 빈 상태로 시작한 후 1분 간격으로 업데이트됩니다. 기본적으로 ATA 게이트웨이와 관련해서 새로운 오류나 문제가 있는지 파악하기 위해 사용됩니다. 오류가 그룹화되므로 보다 읽기 쉽고 새로운 문제가 있는지 쉽게 파악할 수 있습니다.
 -   **Microsoft.Tri.Gateway.Updater.log** - 이 로그는 게이트웨이 업데이트 프로그램 프로세스에서 사용되며, 자동으로 수행 하도록 구성하는 경우 게이트웨이를 업데이트하는 역할을 합니다. ATA 경량 게이트웨이의 경우 게이트웨이 업데이트 프로그램 프로세스도 ATA 경량 게이트웨이의 리소스 제한에 대한 책임을 집니다.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 함께 그룹화하고 개수를 측정합니다. 이 파일은 ATA 업데이트 프로그램 서비스가 시작될 때마다 빈 상태로 시작한 후 1분 간격으로 업데이트됩니다. 이를 통해 ATA 업데이트 프로그램에 새로운 오류 또는 문제가 있는지 파악할 수 있습니다. 오류가 그룹화되며 새로운 유형의 오류나 문제가 있는지 쉽고 빠르게 파악할 수 있습니다.
 
@@ -72,17 +72,17 @@ ATA 배포 로그는 제품을 설치한 사용자에 대한 임시 디렉터리
 
 ATA 센터 배포 로그:
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213.log** - 이 로그는 ATA 센터의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 센터 배포 프로세스를 추적합니다.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS.log** - 이 로그는 ATA 센터의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 센터 배포 프로세스를 추적합니다.
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213_0_MongoDBPackage.log** - 이 로그는 ATA 센터의 MongoDB 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: MongoDB 배포 프로세스를 추적합니다.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_0_MongoDBPackage.log** - 이 로그는 ATA 센터의 MongoDB 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: MongoDB 배포 프로세스를 추적합니다.
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213_1_MsiPackage.log** - 이 로그 파일은 ATA 센터 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 센터 이진 파일의 배포를 추적합니다.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_1_MsiPackage.log** - 이 로그 파일은 ATA 센터 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 센터 이진 파일의 배포를 추적합니다.
 
 ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** - 이 로그는 ATA 게이트웨이의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 배포 프로세스를 추적합니다.
+-   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS.log** - 이 로그는 ATA 게이트웨이의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 배포 프로세스를 추적합니다.
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** - 이 로그는 ATA 게이트웨이 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 이진 파일의 배포를 추적합니다.
+-   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - 이 로그는 ATA 게이트웨이 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 이진 파일의 배포를 추적합니다.
 
 
 ## 참고 항목
@@ -94,6 +94,6 @@ ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
