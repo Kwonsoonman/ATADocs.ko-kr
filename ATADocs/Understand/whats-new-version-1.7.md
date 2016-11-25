@@ -1,20 +1,21 @@
 ---
-title: "ATA 버전 1.7의 새로운 기능 | Microsoft ATA"
+title: "ATA 버전 1.7의 새로운 기능 | Microsoft 문서"
 description: "알려진 문제와 함께 ATA 버전 1.7의 새로운 기능을 나열합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 
+ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
 
 
 ---
@@ -77,7 +78,13 @@ ATA 콘솔에서 ATA 게이트웨이의 상태가 장시간동안 "업데이트 
 
 VMware에 경량 게이트웨이를 사용하는 경우 포트 미러 트래픽 경고 삭제
 
-도메인 컨트롤러를 VMware 가상 컴퓨터에서 사용하는 경우, **삭제된 포트 미러 네트워크 트래픽**에 대한 경고를 받을 수 있습니다. VMware의 구성이 일치하지 않아서 발생하는 문제일 수 있습니다. 이러한 경고를 방지하기 위해 다음 설정이 0 또는 사용 안 함으로 설정되어 있는지 확인하세요.: TsoEnable, LargeSendOffload, IPv4, TSO Offload IPv4 Giant TSO Offload도 사용하지 않도록 설정하는 것이 좋습니다. 자세한 내용은 VMware 설명서를 참조하세요.
+도메인 컨트롤러를 VMware 가상 컴퓨터에서 사용하는 경우, **삭제된 포트 미러 네트워크 트래픽**에 대한 경고를 받을 수 있습니다. VMware의 구성이 일치하지 않아서 발생하는 문제일 수 있습니다. 이러한 경고를 방지하기 위해 가상 컴퓨터에서 다음 설정이 0 또는 사용 안 함으로 설정되어 있는지 확인하세요.  
+
+- TsoEnable
+- LargeSendOffload(IPv4)
+- IPv4 TSO Offload
+
+IPv4 Giant TSO Offload도 사용하지 않도록 설정하는 것이 좋습니다. 자세한 내용은 VMware 설명서를 참조하세요.
 
 ### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>1.7 업데이트 1로 업데이트할 때 자동 게이트웨이 업데이트 실패
 
@@ -110,6 +117,6 @@ ATA 1.7에서 ATA 1.7 업데이트 1로 업데이트할 때 자동 ATA 게이트
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
