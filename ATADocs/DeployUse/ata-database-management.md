@@ -1,20 +1,21 @@
 ---
-title: "ATA 데이터베이스 관리 | Microsoft ATA"
+title: "ATA 데이터베이스 관리 | Microsoft 문서"
 description: "ATA 데이터베이스를 이동, 백업 또는 복원할 수 있는 절차를 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
+ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: e295e0a0a8b5adbd40ddeb7e389ff82c7482c6d9
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 9d7e2a03633acc97d6f918c97f9b67b553d5202e
 
 
 ---
@@ -35,6 +36,9 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 ## <a name="moving-the-ata-database-to-another-drive"></a>다른 드라이브로 ATA 데이터베이스 이동
 
 1.  **Microsoft Advanced Threat Analytics 센터** 서비스를 중지합니다.
+
+> [!Important] 
+> 다음 단계로 넘어가기 전에 ATA 센터 서비스가 중지되었는지 확인합니다.
 
 2.  **MongoDB** 서비스를 중지합니다.
 
@@ -60,6 +64,6 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

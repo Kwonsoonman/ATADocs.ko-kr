@@ -1,25 +1,26 @@
 ---
-title: "버전 1.7으로의 ATA 업데이트 마이그레이션 가이드 | Microsoft ATA"
+title: "버전 1.7로의 ATA 업데이트 마이그레이션 가이드 | Microsoft 문서"
 description: "버전 1.7으로 ATA를 업데이트하는 절차"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
-ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 4fa8b77aeffff327672396e9819215cc536af918
 
 
 ---
 
-# 버전 1.7으로의 ATA 업데이트 마이그레이션 가이드
+# <a name="ata-update-to-17-migration-guide"></a>버전 1.7으로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.7 업데이트에서는 다음 영역에 대한 향상된 기능을 제공합니다.
 
 -   새 검색
@@ -27,7 +28,7 @@ ATA 1.7 업데이트에서는 다음 영역에 대한 향상된 기능을 제공
 -   기존 검색 기능 개선
   
 
-## 버전 1.7로 ATA 업데이트
+## <a name="updating-ata-to-version-17"></a>버전 1.7로 ATA 업데이트
 
 > [!NOTE] 
 > 사용 중인 환경에 ATA가 설치되어 있지 않으면 버전 1.7이 포함된 처음 사용자용 ATA를 다운로드한 다음 [ATA 설치](/advanced-threat-analytics/deploy-use/install-ata)에서 설명하는 표준 설치 절차를 수행하세요.
@@ -39,7 +40,7 @@ ATA 버전 1.6을 이미 배포한 경우 이 절차에서는 배포를 업데�
 
 ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
 
-1.  [업데이트 1.7 버전을 다운로드합니다.](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [업데이트 1.7을 다운로드합니다.](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 이 버전에서는 새 ATA 배포 설치와 기존 배포 업그레이드에 동일한 설치 파일(Microsoft ATA 센터 Setup.exe)이 사용됩니다.
 
 2.  ATA 센터를 업데이트합니다.
@@ -49,7 +50,7 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
     > [!IMPORTANT]
     > ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### 1단계: ATA 센터 업데이트
+### <a name="step-1-update-the-ata-center"></a>1단계: ATA 센터 업데이트
 
 1.  원하는 경우 데이터베이스를 백업합니다.
 
@@ -87,12 +88,12 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
 
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

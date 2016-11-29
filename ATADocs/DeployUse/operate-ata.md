@@ -1,20 +1,21 @@
 ---
-title: "ATA 작동 - 전체 | Microsoft ATA"
+title: "ATA 작동 - 전체 | Microsoft 문서"
 description: "ATA 및 일상적인 작업 사용을 안내합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
+ms.assetid: cf6fcd3a-0295-450e-bd40-8cd4909f0cae
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23aea01f07de4fc52fa404304df7698370c75cb9
-ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
 
 
 
-# ATA 작동
+# <a name="operate-ata"></a>ATA 작동
 
 다음은 ATA를 사용하여 수행할 수 있는 작업입니다.
 
@@ -43,7 +44,7 @@ ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
 - [ATA 원격 분석 관리](manage-telemetry-settings.md)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
 - [이벤트 수집 구성](configure-event-collection.md)
@@ -52,6 +53,6 @@ ms.openlocfilehash: 5f011486d7dff8aa70720351a465ce4db823cc66
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -1,8 +1,9 @@
 ---
-title: "ATA 오류 로그 문제 해결 | Microsoft ATA"
+title: "ATA 오류 로그 문제 해결 | Microsoft 문서"
 description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
+ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
+ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
 
 
 ---
@@ -42,6 +43,7 @@ ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 |System.InvalidOperationException: 지정한 범주에 'Microsoft.Tri.Gateway' 인스턴스가 없습니다.|ATA 게이트웨이에서 프로세스 이름에 PID를 사용하도록 설정되어 있습니다.|프로세스 이름에서 PID를 사용하도록 설정하지 않으려면 [KB281884](https://support.microsoft.com/en-us/kb/281884)를 사용하세요.|
 |System.InvalidOperationException: 범주가 없습니다.|레지스트리에서 카운터를 사용하지 않도록 설정했을 수 있습니다.|성능 카운터를 다시 작성하려면 [KB2554336](https://support.microsoft.com/en-us/kb/2554336)를 사용하세요.|
 |System.ApplicationException: ETW 세션 MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329를 시작할 수 없습니다.|컴퓨터의 짧은 이름을 가리키는 HOSTS 파일에 호스트 항목이 있습니다.|C:\Windows\System32\drivers\etc\HOSTS 파일에서 호스트 항목을 제거하거나 FQDN으로 변경하세요.|
+|System.IO.IOException: 원격 상대방이 전송 스트림을 닫아서 인증에 실패했습니다.|TLS 1.0이 ATA 게이트웨이에서 사용하지 않도록 설정되어 있지만 .Net은 TLS 1.2를 사용하도록 설정되어 있음|다음 옵션 중 하나를 사용합니다. </br> ATA 게이트웨이에서 TLS 1.0을 사용하도록 설정 </br>다음과 같이 LLS 및 TLS에 대한 운영 체제 기본값을 사용하도록 레지스트리 키를 설정하여 .Net에서 TLS 1.2를 사용하도록 설정합니다. `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
 
 
 
@@ -75,6 +77,6 @@ ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO4-->
 
 
