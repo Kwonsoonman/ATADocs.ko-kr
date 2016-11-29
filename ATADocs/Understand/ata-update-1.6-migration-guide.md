@@ -1,25 +1,26 @@
 ---
-title: "버전 1.6으로의 ATA 업데이트 마이그레이션 가이드 | Microsoft ATA"
+title: "버전 1.6으로의 ATA 업데이트 마이그레이션 가이드 | Microsoft 문서"
 description: "버전 1.6으로 ATA를 업데이트하는 절차"
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
-ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: e361c1b659210934b9fcd70c7c438a47030eeeba
 
 
 ---
 
-# 버전 1.6으로의 ATA 업데이트 마이그레이션 가이드
+# <a name="ata-update-to-16-migration-guide"></a>버전 1.6으로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.6 업데이트에서는 다음 영역에 대한 향상된 기능을 제공합니다.
 
 -   새 검색
@@ -36,7 +37,7 @@ ATA 1.6 업데이트에서는 다음 영역에 대한 향상된 기능을 제공
 
 -   IBM QRadar 지원
 
-## 버전 1.6으로 ATA 업데이트
+## <a name="updating-ata-to-version-16"></a>버전 1.6으로 ATA 업데이트
 > [!NOTE] 
 > 사용 중인 환경에 ATA가 설치되어 있지 않으면 버전 1.6이 포함된 처음 사용자용 ATA를 다운로드한 다음 [ATA 설치](/advanced-threat-analytics/deploy-use/install-ata)에서 설명하는 표준 설치 절차를 수행하세요.
 
@@ -49,7 +50,7 @@ ATA 버전 1.6으로 업데이트하려면 다음 단계를 수행합니다.
 
 1. 업그레이드 문제를 방지하려면 [ATA 버전 1.6의 새로운 기능](whats-new-version-1.6.md)에 설명된 **ATA 버전 1.6으로 업데이트할 때 마이그레이션 실패**의 8~10단계를 수행해야 합니다.
 2. 업그레이드를 완료하는 데 필요한 사용 가능한 공간이 있는지 확인하세요. 준비 검사까지 설치 단계를 수행하여 사용 가능한 공간이 얼마나 필요한지 확인한 다음 필요한 디스크 공간을 할당한 후 업그레이드를 다시 시작할 수 있습니다.
-1.  [업데이트 1.6 버전을 다운로드합니다.](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
+1.  [업데이트 1.6을 다운로드합니다.](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)<br>
 이 버전에서는 새 ATA 배포 설치와 기존 배포 업그레이드에 동일한 설치 파일(Microsoft ATA 센터 Setup.exe)이 사용됩니다.
 
 2.  ATA 센터를 업데이트합니다.
@@ -61,7 +62,7 @@ ATA 버전 1.6으로 업데이트하려면 다음 단계를 수행합니다.
     > [!IMPORTANT]
     > ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### 1단계: ATA 센터 업데이트
+### <a name="step-1-update-the-ata-center"></a>1단계: ATA 센터 업데이트
 
 1.  원하는 경우 데이터베이스를 백업합니다.
 
@@ -96,7 +97,7 @@ ATA 버전 1.6으로 업데이트하려면 다음 단계를 수행합니다.
 > [!IMPORTANT] 
 > ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### 2단계. ATA Gateway 설치 패키지 다운로드
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>2단계. ATA Gateway 설치 패키지 다운로드
 도메인 연결 설정을 구성하고 나면 ATA Gateway 설치 패키지를 다운로드할 수 있습니다.
 
 ATA Gateway 패키지를 다운로드하려면 다음 단계를 수행합니다.
@@ -117,7 +118,7 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 -   ATA 센터에 연결하는 데 필요한 정보가 포함된 구성 설정 파일
 
-### 3단계: ATA 게이트웨이 업데이트
+### <a name="step-3-update-the-ata-gateways"></a>3단계: ATA 게이트웨이 업데이트
 
 1.  각 ATA 게이트웨이에서 ATA 게이트웨이 패키지의 파일을 추출한 다음 **Microsoft ATA Gateway Setup.exe**를 실행합니다.
 
@@ -136,12 +137,12 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 ![업데이트된 게이트웨이 이미지](media/ATA-gw-updated.png)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
