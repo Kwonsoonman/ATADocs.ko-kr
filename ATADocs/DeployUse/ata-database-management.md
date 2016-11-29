@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -36,7 +36,6 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 ## <a name="moving-the-ata-database-to-another-drive"></a>다른 드라이브로 ATA 데이터베이스 이동
 
 1.  **Microsoft Advanced Threat Analytics 센터** 서비스를 중지합니다.
-
 > [!Important] 
 > 다음 단계로 넘어가기 전에 ATA 센터 서비스가 중지되었는지 확인합니다.
 
