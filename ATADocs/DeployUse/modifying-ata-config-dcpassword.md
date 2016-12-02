@@ -1,10 +1,11 @@
 ---
-title: "ATA 구성 변경 - 도메인 연결 암호 | Microsoft ATA"
+title: "ATA 구성 변경 - 도메인 연결 암호 | Microsoft 문서"
 description: "ATA 게이트웨이의 도메인 연결 암호를 변경하는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 7cee457a8959526b25a68c50efea2976bafbef75
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: a6dbdb0d53a0a7f6903ec858bb44054c624ae226
 
 
 ---
@@ -23,17 +24,16 @@ ms.openlocfilehash: 7cee457a8959526b25a68c50efea2976bafbef75
 
 
 
-# ATA 구성 변경 - 도메인 연결 암호
+# <a name="change-ata-configuration---domain-connectivity-password"></a>ATA 구성 변경 - 도메인 연결 암호
 
 >[!div class="step-by-step"]
-[« ATA 웹 콘솔 URL](modifying-ata-config-consoleurl.md)
+[« ATA 콘솔 URL](modifying-ata-config-consoleurl.md)
 
 
-## 도메인 연결 암호 변경
+## <a name="change-the-domain-connectivity-password"></a>도메인 연결 암호 변경
 도메인 연결 암호를 수정하는 경우 입력한 암호가 올바른지 확인합니다. 올바르지 않으면 ATA 게이트웨이 서비스가 ATA 게이트웨이에서 더 이상 실행되지 않습니다.
 
-이 문제가 발생한 것으로 의심되면 ATA 게이트웨이의 Microsoft.Tri.Gateway Errors.log 파일에서 다음을 확인합니다.
-`The supplied credential is invalid.`
+이 문제가 발생한 것으로 의심되면 ATA 게이트웨이의 Microsoft.Tri.Gateway Errors.log 파일에서 다음을 확인합니다. `The supplied credential is invalid.`
 
 이 문제를 해결하려면 다음 절차에 따라 ATA 센터에서 도메인 연결 암호를 업데이트합니다.
 
@@ -56,15 +56,14 @@ ms.openlocfilehash: 7cee457a8959526b25a68c50efea2976bafbef75
 6.  암호를 변경한 후 ATA 게이트웨이 서비스가 ATA 게이트웨이 서버에서 실행되 고 있는지를 수동으로 확인합니다.
 
 >[!div class="step-by-step"]
-[« ATA 웹 콘솔 URL](modifying-ata-config-consoleurl.md)
+[« ATA 콘솔 URL](modifying-ata-config-consoleurl.md)
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
-- [ATA 설치](install-ata.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

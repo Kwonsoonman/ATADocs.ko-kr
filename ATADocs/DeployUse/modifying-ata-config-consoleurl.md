@@ -3,8 +3,9 @@ title: "ATA 구성 변경 - ATA 콘솔 IP 주소 | Microsoft Advanced Threat Ana
 description: "ATA 게이트웨이에서 ATA 콘솔 바로 가기를 만드는 데 사용되는 ATA 콘솔의 IP 주소를 변경하는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: stevenpo
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 8f816c8eda0a1b11a42314a18b1c8c39ac6a7ba8
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
 
 
 
-# ATA 구성 변경 - ATA 콘솔 URL
+# <a name="change-ata-configuration---ata-console-url"></a>ATA 구성 변경 - ATA 콘솔 URL
 
 >[!div class="step-by-step"]
 [« ATA 센터 인증서](modifying-ata-config-centercert.md)
 [도메인 연결 암호 »](modifying-ata-config-dcpassword.md)
 
-## ATA 콘솔 URL 변경
+## <a name="change-the-ata-console-url"></a>ATA 콘솔 URL 변경
 기본적으로 ATA 콘솔 URL은 ATA 센터를 설치할 때 ATA 콘솔 IP 주소에 대해 선택한 IP 주소입니다.
 
 이 URL은 다음 시나리오에서 사용됩니다.
@@ -60,6 +61,9 @@ ATA 콘솔에 대한 URL을 수정해야 하는 경우 ATA 센터 서버에서 �
 5.  필요에 따라 **콘솔 URL**에서 URL을 수정합니다.
 
     ![ATA 콘솔 URL](media/ATA-chge-center-URL.png)
+> [!NOTE]
+> URL 끝에 슬래시(/)를 포함하지 마세요.
+
 6.  **저장**을 클릭합니다.
 
 >[!div class="step-by-step"]
@@ -67,13 +71,12 @@ ATA 콘솔에 대한 URL을 수정해야 하는 경우 ATA 센터 서버에서 �
 [도메인 연결 암호 »](modifying-ata-config-dcpassword.md)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
-- [ATA 설치](install-ata.md)
 - [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
