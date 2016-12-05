@@ -1,10 +1,11 @@
 ---
-title: "ATA 구성 변경 - ATA 센터 IP 주소 | Microsoft ATA"
+title: "ATA 구성 변경 - ATA 센터 IP 주소 | Microsoft 문서"
 description: "ATA 센터의 IP 주소, 포트 또는 인증서를 변경하는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 
-# ATA 구성 변경 - ATA 센터 IP 주소
+# <a name="change-ata-configuration---ata-center-ip-address"></a>ATA 구성 변경 - ATA 센터 IP 주소
 
 >[!div class="step-by-step"]
 [ATA 센터 인증서 »](modifying-ata-config-centercert.md)
 
 초기 배포 후 ATA 센터를 수정할 때는 신중하게 해야 합니다. IP 주소와 포트 또는 인증서를 업데이트할 때는 다음 절차를 사용합니다.
 
-## ATA 센터 서버에서 사용하는 IP 주소 변경
+## <a name="change-the-ip-address-used-by-the-ata-center-server"></a>ATA 센터 서버에서 사용하는 IP 주소 변경
 ATA 센터 IP 주소와 포트 또는 인증서를 변경해야 하는 경우 다음 사항을 고려합니다.
 
 ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 저장합니다. ATA 게이트웨이는 정기적으로 ATA 센터에 연결하고 구성 변경 내용을 끌어옵니다. ATA 게이트웨이가 ATA 센터에 연결하는 방법은 두 단계로 변경합니다.
@@ -77,13 +78,12 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 [ATA 센터 인증서 변경 »](modifying-ata-config-centercert.md)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
-- [ATA 설치](install-ata.md)
 - [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
