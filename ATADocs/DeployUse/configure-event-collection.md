@@ -1,10 +1,11 @@
 ---
-title: "이벤트 수집 구성 | Microsoft ATA"
+title: "이벤트 수집 구성 | Microsoft 문서"
 description: "ATA를 사용하여 이벤트 수집을 구성하는 옵션을 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d2c1c00ff649557c1a0a16385e025c9d597c3bbf
-ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 91ce3a3fef27673712a708aa1e92c32298cedd84
 
 
 
-# 이벤트 수집 구성
+# <a name="configure-event-collection"></a>이벤트 수집 구성
 검색 기능을 강화하려면 ATA에 Windows 이벤트 로그 ID 4776이 있어야 합니다. 두 가지 방법으로 ATA Gateway에 이 ID를 전달할 수 있습니다. 그 중 하나는 ATA Gateway가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 [Windows 이벤트 전달을 구성](#configuring-windows-event-forwarding)하는 것입니다.
 
-## 이벤트 수집
+## <a name="event-collection"></a>이벤트 수집
 ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 수집 및 분석할 수 있을 뿐 아니라 Windows 이벤트 4776을 사용하여 ATA Pass-the-Hash 검색 기능을 추가로 개선할 수 있습니다. 이 이벤트는 SIEM에서 수신될 수도 있고 도메인 컨트롤러에서 Windows 이벤트 전달을 설정하여 수신할 수도 있습니다. 수집된 이벤트는 도메인 컨트롤러 네트워크 트래픽을 통해서는 사용할 수 없는 추가 정보를 ATA에 제공합니다.
 
-### SIEM/Syslog
+### <a name="siemsyslog"></a>SIEM/Syslog
 ATA가 Syslog 서버에서 데이터를 사용할 수 있도록 하려면 다음을 수행해야 합니다.
 
 -   SIEM/Syslog 서버에서 전달되는 이벤트를 수신하고 수락하도록 ATA Gateway 서버를 구성합니다.
@@ -42,10 +43,10 @@ ATA가 Syslog 서버에서 데이터를 사용할 수 있도록 하려면 다음
 
 다른 서버로의 특정 이벤트 전달을 구성하는 방법은 SIEM/Syslog 서버의 제품 설명서를 참조하세요. 
 
-### Windows 이벤트 전달
+### <a name="windows-event-forwarding"></a>Windows 이벤트 전달
 SIEM/Syslog 서버를 사용하지 않는 경우 ATA에서 수집하고 분석할 Windows 이벤트 ID 4776을 전달하도록 Windows 도메인 컨트롤러를 구성할 수 있습니다. Windows 이벤트 ID 4776에서는 NTLM 인증에 대한 데이터를 제공합니다.
 
-## SIEM 이벤트를 수신하도록 ATA 게이트웨이 구성
+## <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>SIEM 이벤트를 수신하도록 ATA 게이트웨이 구성
 
 1.  ATA 구성의 "이벤트" 탭에서 **Syslog**를 사용하도록 설정하고 **저장**을 누릅니다.
 
@@ -53,10 +54,10 @@ SIEM/Syslog 서버를 사용하지 않는 경우 ATA에서 수집하고 분석�
 
 2.  ATA 게이트웨이 중 IP 주소 하나로 Windows 이벤트 ID 4776을 전달하도록 SIEM 또는 Syslog 서버를 구성합니다. SIEM을 구성하는 방법에 대한 자세한 내용은 SIEM 온라인 도움말 또는 각 SIEM 서버의 특정 형식 지정 요구 사항에 대한 기술 지원 옵션을 참조하세요.
 
-### SIEM 지원
+### <a name="siem-support"></a>SIEM 지원
 ATA는 다음 형식의 SIEM 이벤트를 지원합니다.  
 
-#### RSA 보안 분석
+#### <a name="rsa-security-analytics"></a>RSA 보안 분석
 &lt;Syslog 헤더&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Syslog 헤더는 선택 사항입니다.
@@ -85,7 +86,7 @@ ATA는 다음 형식의 SIEM 이벤트를 지원합니다.
 
 -   순서가 중요하며, 그 밖에 어떤 것도 메시지에 포함되어서는 안 됩니다.
 
-#### HP Arcsight
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   프로토콜 정의를 준수해야 합니다.
@@ -116,7 +117,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
     -   “Reason or Error Code” = NTLM의 결과 코드
 
-#### Splunk
+#### <a name="splunk"></a>Splunk
 &lt;Syslog 헤더&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 The computer attempted to validate the credentials for an account.
@@ -153,7 +154,7 @@ Error Code:         0x0
 
 -   키=값 쌍에는 순서가 중요하지 않습니다.
 
-#### QRadar
+#### <a name="qradar"></a>QRadar
 QRadar는 에이전트를 통해 이벤트 컬렉션을 사용하도록 설정합니다. 에이전트를 사용하여 데이터를 수집하는 경우 시간 형식은 밀리초 데이터 없이 수집됩니다. ATA에는 밀리초 단위의 데이터가 필요하기 때문에 에이전트 없는 Windows 이벤트 컬렉션을 사용하도록 QRadar를 설정해야 합니다. 자세한 내용은 [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol(QRadar: MSRPC 프로토콜을 사용하는 에이전트 없는 Windows 이벤트 컬렉션)")을 참조하세요.
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -175,9 +176,9 @@ Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
 >[!NOTE] 
 > Windows 이벤트 컬렉션용 WinCollect는 사용할 수 없습니다.
 
-## Windows 이벤트 전달 구성
+## <a name="configuring-windows-event-forwarding"></a>Windows 이벤트 전달 구성
 
-### 포트 미러링으로 ATA 게이트웨이에 대한 WEF 구성
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>포트 미러링으로 ATA 게이트웨이에 대한 WEF 구성
 
 도메인 컨트롤러에서 ATA 게이트웨이로의 미러링을 구성하고 나면 원본에서 시작된 구성을 사용하여 아래 지침에 따라 Windows 이벤트 전달을 구성합니다. 이것이 Windows 이벤트 전달을 구성하는 한 가지 방법입니다. 
 
@@ -237,7 +238,7 @@ Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
    6.   몇 분 후 이벤트 4776이 ATA 게이트웨이에서 전달된 이벤트에 표시되는지 확인합니다.
 
 
-### ATA 경량 게이트웨이에 대한 WEF 구성
+### <a name="wef-configuration-for-the-ata-lightweight-gateway"></a>ATA 경량 게이트웨이에 대한 WEF 구성
 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하는 경우 자신에게 이벤트가 전달되도록 도메인 컨트롤러를 설정할 수 있습니다. ATA 경량 게이트웨이를 사용하는 경우 Windows 이벤트 전달을 구성하려면 다음 단계를 수행합니다. 이것이 Windows 이벤트 전달을 구성하는 한 가지 방법입니다.  
 
 **1단계: 도메인 Event Log Readers 그룹에 네트워크 서비스 계정 추가** 
@@ -280,12 +281,12 @@ Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
 
 자세한 내용은 [이벤트를 전달하고 수집하도록 컴퓨터 구성](https://technet.microsoft.com/library/cc748890)을 참조하세요.
 
-## 참고 항목
-- [ATA 설치](install-ata.md)
+## <a name="see-also"></a>참고 항목
+- [ATA 설치](install-ata-step1.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

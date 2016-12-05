@@ -1,10 +1,11 @@
 ---
-title: "포트 미러링 구성 | Microsoft ATA"
+title: "포트 미러링 구성 | Microsoft 문서"
 description: "포트 미러링 옵션과 ATA에 대해 이러한 옵션을 구성하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
 
 
 
-# 포트 미러링 구성
+# <a name="configure-port-mirroring"></a>포트 미러링 구성
 > [!NOTE] 
 > 이 문서는 ATA 경량 게이트웨이 대신 ATA 게이트웨이를 배포하는 경우에만 해당합니다. ATA 게이트웨이를 사용해야 하는지 확인하려면 [배포에 사용할 올바른 게이트웨이 선택](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment)을 참조하세요.
  
@@ -43,7 +44,7 @@ ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들�
 > [!NOTE]
 > 포트 미러링되는 도메인 컨트롤러가 WAN 링크를 통해 연결된 경우 WAN 링크에서 ERSPAN 트래픽의 추가 부하를 처리할 수 있는지 확인합니다.
 
-## 지원되는 포트 미러링 옵션
+## <a name="supported-port-mirroring-options"></a>지원되는 포트 미러링 옵션
 
 |ATA Gateway|도메인 컨트롤러|고려 사항|
 |---------------|---------------------|------------------|
@@ -68,13 +69,12 @@ ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들�
 
 포트 미러링을 구성한 후에는 ATA Gateway를 설치하기 전에 포트 미러링이 작동하는지 확인합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [포트 미러링 유효성 검사](validate-port-mirroring.md)
-- [ATA 설치](install-ata.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
