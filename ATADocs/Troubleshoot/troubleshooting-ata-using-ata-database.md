@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: bff3224736981f38616172a6b1717d7d125c3c0a
+ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
+ms.openlocfilehash: fd2cc788ec3fb2c64d47694997762f740f5af503
 
 
 ---
@@ -41,13 +41,12 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 |사용자/컴퓨터/그룹(UniqueEntity)의 세부 정보(예: 사용자 ID)를 가져옵니다.|`db.UniqueEntity.find({SearchNames: "<name of entity in lower case>"})`||
 |특정 날에 특정 컴퓨터에서 시작된 Kerberos 인증 트래픽을 찾습니다.|`db.KerberosAs_<datetime>.find({SourceComputerId: "<Id of the source computer>"})`|&lt;원본 컴퓨터의 ID&gt;를 가져오려면 예제와 같이 UniqueEntity 컬렉션을 쿼리할 수 있습니다.<br /><br />각 네트워크 활동 유형(예: Kerberos 인증)에는 UTC 날짜마다 고유한 컬렉션이 있습니다.|
 |특정 날에 특정 계정에 관련된 특정 컴퓨터에서 시작된 NTLM 트래픽을 찾습니다.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|&lt;원본 컴퓨터의 ID&gt; 및 &lt;계정의 ID&gt;를 가져오려면 예제와 같이 UniqueEntity 컬렉션을 쿼리할 수 있습니다.<br /><br />각 네트워크 활동 유형(예: NTLM 인증)에는 UTC 날짜마다 고유한 컬렉션이 있습니다.|
-|계정의 활성화 날짜와 같은 고급 속성을 검색합니다. |`db.UniqueEntityProfile.find({UniqueEntityId: "<Id of the account>")`|&lt;계정의 ID&gt;를 가져오려면 예제와 같이 UniqueEntity 컬렉션을 쿼리할 수 있습니다.<br>계정이 활성 상태인 날짜를 표시하는 속성 이름을 "ActiveDates"라고 합니다. <br>
-예를 들어 비정상 동작 기계 학습 알고리즘이 실행될 수 있도록 하기 위해 계정에 적어도 21일 동안의 활동이 있는지 확인하려고 할 수 있습니다.|
+|계정의 활성화 날짜와 같은 고급 속성을 검색합니다. |`db.UniqueEntityProfile.find({UniqueEntityId: "<Id of the account>")`|&lt;계정의 ID&gt;를 가져오려면 예제와 같이 UniqueEntity 컬렉션을 쿼리할 수 있습니다.<br>계정이 활성 상태인 날짜를 표시하는 속성 이름을 "ActiveDates"라고 합니다. 예를 들어 비정상 동작 기계 학습 알고리즘이 실행될 수 있도록 하기 위해 계정에 적어도 21일 동안의 활동이 있는지 확인하려고 할 수 있습니다.|
 |고급 구성을 옵션합니다. 이 예제에서 모든 ATA 게이트웨이에 대한 전송 큐 크기를 10,000으로 변경합니다.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
 다음 예제에서는 위에 제공된 구문을 사용하는 샘플 코드를 제공합니다. 2015년 10월 20일에 발생한 의심스러운 활동을 조사하고 있으며 "John Doe"가 해당 날짜에 수행한 NTLM 활동에 대해 자세히 알아보려는 경우<br /><br />먼저 "John Doe"의 ID를 찾습니다.
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>"`_id`" 값으로 표시된 ID를 적어둡니다. 우리가 사용하는 예제에서는 이 ID를 "`123bdd24-b269-h6e1-9c72-7737as875351`"(으)로 가정합니다.<br>그런 다음, 찾는 날짜 이전의 가장 가까운 날짜에 해당하는 컬렉션을 검색합니다(현재 예제에서는 2015년 10월 20일).<br>그런 다음 John Doe의 계정 NTLM 활동을 검색합니다. 
+`db.UniqueEntity.find({Name: "John Doe"})`<br>`_id` 값으로 표시된 ID를 적어둡니다. 우리가 사용하는 예제에서는 이 ID를 `123bdd24-b269-h6e1-9c72-7737as875351`(으)로 가정합니다.<br>그런 다음, 찾는 날짜 이전의 가장 가까운 날짜에 해당하는 컬렉션을 검색합니다(현재 예제에서는 2015년 10월 20일).<br>그런 다음 John Doe의 계정 NTLM 활동을 검색합니다. 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
@@ -60,6 +59,6 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 

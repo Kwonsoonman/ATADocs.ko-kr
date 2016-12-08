@@ -5,14 +5,13 @@
 ### [포트 미러링 구성](configure-port-mirroring.md)
 ### [포트 미러링 유효성 검사](validate-port-mirroring.md)
 ### [이벤트 수집 구성](configure-event-collection.md)
-## [ATA 설치](install-ata.md)
-### [1단계](install-ata-step1.md)
-### [2단계](install-ata-step2.md)
-### [3단계](install-ata-step3.md)
-### [4단계](install-ata-step4.md)
-### [5단계](install-ata-step5.md)
-### [6단계](install-ata-step6.md)
-### [자동 설치](ata-silent-installation.md)
+## [ATA 설치 - 1단계](install-ata-step1.md)
+## [ATA 설치 - 2단계](install-ata-step2.md)
+## [ATA 설치 - 3단계](install-ata-step3.md)
+## [ATA 설치 - 4단계](install-ata-step4.md)
+## [ATA 설치 - ATA 설치 - 5단계](install-ata-step5.md)
+## [ATA 설치 - 6단계](install-ata-step6.md)
+## [자동 설치](ata-silent-installation.md)
 # [사용](modifying-ata-config-centerip.md)
 ## [ATA 센터 IP 주소 변경](modifying-ata-config-centerip.md)
 ## [ATA 센터 인증서 변경](modifying-ata-config-centercert.md)
@@ -21,16 +20,16 @@
 ## [ATA 콘솔 작업](working-with-ata-console.md)
 ## [ATA 역할 그룹](ata-role-groups.md)
 ## [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
-## [ATA 경고 설정](setting-ata-alerts.md)
+## [ATA 알림 설정](setting-ata-alerts.md)
 ## [검색 설정 사용](working-with-detection-settings.md)
 ## [ATA 상태 관리 센터](ata-health-center.md)
 ## [의심스러운 활동 작업](working-with-suspicious-activities.md)
 ## [ATA 데이터베이스 관리](ata-database-management.md)
-## [ATA 구성 파일](ata-configuration-file.md)
+## [ATA 구성 내보내기/가져오기](ata-configuration-file.md)
 ## [ATA 원격 분석 관리](manage-telemetry-settings.md)
 # [문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
