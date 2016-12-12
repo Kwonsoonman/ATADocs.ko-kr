@@ -14,26 +14,26 @@ ms.technology:
 ms.suite: ems
 ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
 translationtype: Human Translation
-ms.sourcegitcommit: 6d95045842d8bb19dba2e8d0fe13b1bf96e2e304
-ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
+ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
+ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
 
 
 ---
-# Microsoft Advanced Threat Analytics Documentation란?
+# <a name="microsoft-advanced-threat-analytics-documentation"></a>Microsoft Advanced Threat Analytics Documentation란?
 <article id="main">
     <section id="hero-content">
       <h1>Microsoft Advanced Threat Analytics Documentation란?</h1>
       <h2>IT 보안 전문가가 지능형 목표 공격으로부터 기업을 보호하도록 도와주는 온-프레미스 제품인 Microsoft ATA(Advanced Threat Analytics)를 배포하고 관리하는 방법을 알아봅니다.</h2>
-      <h3>ATA의 새로운 기능 <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Microsoft 제품 웹 사이트 방문 &rarr;</a></h3>
+      <h3>ATA의 새로운 기능 <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Microsoft 제품 웹 사이트 방문&rarr;</a></h3>
     </section>
     <aside class="alert section-border">
-      <p>실습 준비</p>
+      <p>실습할 준비가 되셨나요?</p>
       <ol class="action-list">
         <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">지금 사용해 보기</a></li>
       </ol>
     </aside>
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> 주요 콘텐츠</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span> 추천 콘텐츠</h2>
       <div class="features row">
         <ul class="column column-half">
           <li><mark><b>새</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">ATA 버전 1.7 릴리스</a></li>
@@ -53,7 +53,7 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
               <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>이해 및 탐색</p>
+                  <p>이해 &amp; 탐색</p>
                 </div>
                 <p class="description column-two-thirds">개략적인 개념, 기능 및 Microsoft Advanced Threat Analytics의 기능에 대해 알아봅니다.
                 </p>
@@ -136,7 +136,7 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
                   </a>
                 </li>
                 <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata">
+                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
                     <h3>ATA 설치</h3>
                     <p>자세한 단계별 설치 가이드를 따르세요.</p>
                   </a>
@@ -196,6 +196,6 @@ ms.openlocfilehash: be7f4c021a6da9d58bb7e8329d9320db9ae19716
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
