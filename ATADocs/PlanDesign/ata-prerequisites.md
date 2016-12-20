@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
+ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
+ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
 
 
 ---
@@ -142,6 +142,9 @@ Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업�
 
 ATA 게이트웨이가 설치된 가상 컴퓨터를 사용하는 방법에 대한 자세한 내용은 [포트 미러링 구성](/advanced-threat-analytics/deploy-use/configure-port-mirroring)을 참조하세요.
 
+> [!NOTE]
+> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) 및 [성능 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)에 필요한 공간이 포함됩니다.
+
 ### <a name="server-specifications"></a>서버 사양
 성능을 최적화하려면 ATA 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽의 양에 따라 ATA 게이트웨이 하나가 여러 도메인 컨트롤러를 모니터링할 수 있습니다.
@@ -212,12 +215,15 @@ ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설
 ## <a name="ata-lightweight-gateway-requirements"></a>ATA 경량 게이트웨이 요구 사항
 이 섹션에서는 ATA 경량 게이트웨이 요구 사항에 대해 설명합니다.
 ### <a name="general"></a>일반
-ATA 경량 게이트웨이는 Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016(Nano가 아닌 Core 포함)을 실행하는 도메인 컨트롤러에 대한 설치를 지원합니다.
+ATA 경량 게이트웨이는 Windows Server 2008 R2 SP1(Server Core 제외), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016(Core 포함, Nano 제외)을 실행하는 도메인 컨트롤러에 대한 설치를 지원합니다.
 
 도메인 컨트롤러는 RODC(읽기 전용 도메인 컨트롤러)만 될 수 있습니다.
 
 Windows Server 2012 R2 SP1을 실행하는 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
 Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
+
+> [!NOTE]
+> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) 및 [성능 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
 
 ### <a name="server-specifications"></a>서버 사양
 
@@ -282,6 +288,6 @@ ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

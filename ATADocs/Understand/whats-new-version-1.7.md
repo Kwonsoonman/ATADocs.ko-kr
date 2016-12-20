@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
+ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
+ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
 
 
 ---
@@ -30,14 +30,14 @@ ATA 1.7 업데이트에서는 다음 영역에 대한 향상된 기능을 제공
 
 -   역할 기반 액세스 제어
 
--   Windows Server 2016 및 Windows Server Core에 대한 지원
+-   Windows Server 2016 및 Windows Server 2016 Core에 대한 지원
 
 -   사용자 환경 향상
 
 -   사소한 변경 사항
 
 
-### <a name="new-updated-detections"></a>새롭거나 업데이트된 검색 기능
+### <a name="new--updated-detections"></a>새롭거나 업데이트된 검색 기능
 
 
 - **디렉터리 서비스 열거를 사용하여 정찰** 정찰 단계 중 하나로 곡격자는 다양한 방법으로 네트워크에서 엔터티 정보를 수집합니다. SAM-R 프로토콜을 사용하는 디렉터리 서비스 열거 방식을 통해 공격자는 도메인에서 사용자와 그룹 목록을 가져와 다양한 엔터티 간 상호 작용을 이해할 수 있습니다. 
@@ -55,7 +55,7 @@ ATA 1.7 업데이트에서는 다음 영역에 대한 향상된 기능을 제공
 
 - **역할 기반 액세스 제어** RBAC(역할 기반 액세스 제어) 기능입니다. ATA 1.7에는 3개의 역할 ATA 관리자, ATA 분석가 및 ATA 경영진 역할이 있습니다.
 
-- **Windows Server 2016 및 Windows Server Core에 대한 지원** ATA 1.7은 Windows Server 2012 Server Core 및 Windows Server 2012 R2 Server Core를 실행하는 도메인 컨트롤러에 경량 게이트웨이 배포를 지원합니다. 또한 이 릴리스는 ATA 센터 및 ATA 데이터 센터 구성 요소에 대한 Windows Server 2016을 모두 지원합니다.
+- **Windows Server 2016 및 Windows Server Core에 대한 지원** ATA 1.7은 Windows Server 2008 R2 SP1(Server Core 제외), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016(Core 포함, Nano 제외)을 실행하는 도메인 컨트롤러에 경량 게이트웨이 배포를 지원합니다. 또한 이 릴리스는 ATA 센터 및 ATA 데이터 센터 구성 요소에 대한 Windows Server 2016을 모두 지원합니다.
 
 ### <a name="user-experience"></a>사용자 환경
 - **구성 환경** 이 릴리스에서는 더 나은 사용자 환경과 여러 ATA 게이트웨이 사용을 통한 더 나은 환경 지원을 위해 ATA 구성 환경이 다시 설계되었습니다. 이 릴리스에는 또한 다양한 게이트웨이에 대한, 간단하지만 더 나은 자동 업데이트 관리를 위해 ATA 게이트웨이 업데이트 페이지가 도입되었습니다.
@@ -102,6 +102,12 @@ ATA 1.7에서 ATA 1.7 업데이트 1로 업데이트할 때 자동 ATA 게이트
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>의심스러운 활동 정보를 Excel로 내보내기에 실패할 수 있음
+의심스러운 활동 정보를 Excel 파일로 내보내려고 할 때 다음과 같은 오류와 함께 작업에 실패할 수 있습니다. *오류 [BsonClassMapSerializer`1] System.FormatException: Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity 클래스의 활동 속성을 역직렬화하는 동안 오류가 발생했습니다. 'ResourceIdentifier' 요소가 Microsoft.Tri.Common.Data.EventActivities.NtlmEvent 클래스의 속성이나 필드와 일치하지 않습니다. ---> System.FormatException: 'ResourceIdentifier' 요소가 Microsoft.Tri.Common.Data.EventActivities.NtlmEvent 클래스의 속성이나 필드와 일치하지 않습니다.*
+
+이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 위치로 이동하고 다음을 실행합니다.
+1.  **Mongo.exe ATA**(ATA는 대문자여야 함)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>사소한 변경 사항
 
@@ -117,6 +123,6 @@ ATA 1.7에서 ATA 1.7 업데이트 1로 업데이트할 때 자동 ATA 게이트
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,10 +1,11 @@
 ---
-title: "ATA 알림 설정 | Microsoft ATA"
+title: "ATA 알림 설정 | Microsoft 문서"
 description: "의심스러운 활동이 감지되었을 때 알림을 받도록 ATA 경고를 설정하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 35fa7afeb673ec2b1aa295e576865cdd5c073c85
-ms.openlocfilehash: a5787be5a5a0df96651b3be8e056bcdd4340df94
+ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
+ms.openlocfilehash: f069f910e99c537e08b34b9a0b65aab7dcd08452
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: a5787be5a5a0df96651b3be8e056bcdd4340df94
 
 
 
-# ATA 알림 설정
+# <a name="set-ata-notifications"></a>ATA 알림 설정
 ATA는 의심스러운 활동을 감지하면 메일을 통해 또는 ATA 이벤트 전달 기능을 사용한 후 이벤트를 SIEM/syslog 서버에 전달하여 알릴 수 있습니다. 수신하려는 알림을 선택하기 전에 [메일 서버 및 Syslog 서버를 설정](setting-syslog-email-server-settings.md)해야 합니다.
 
 > [!NOTE]
 > -   전자 메일 알림에는 발견된 의심스러운 활동으로 사용자를 직접 이동하는 링크가 포함됩니다. 링크의 호스트 이름 부분은 ATA 센터 페이지에서 ATA 콘솔 URL을 설정하여 가져옵니다. 기본적으로 ATA 콘솔 URL은 ATA 센터의 설치 중에 선택한 IP 주소입니다.  메일 알림을 구성하려는 경우 FQDN을 ATA 콘솔 URL로 사용하는 것이 좋습니다.
 > -   알림은 ATA 센터에서 SMTP 서버 또는 Syslog 서버로 전송됩니다.
 
-## 메일 알림
+## <a name="mail-notifications"></a>메일 알림
 메일 알림을 수신하려면 다음을 설정합니다.
 
 
@@ -39,21 +40,20 @@ ATA는 의심스러운 활동을 감지하면 메일을 통해 또는 ATA 이벤
 
 2. **알림** 섹션에서 **설정**을 선택합니다.
 3. **메일 받는 사람**에서 메일을 통해 알림을 받을 수신자를 지정합니다.
-
-    [!참고:] 의심스러운 활동에 대한 메일 경고는 의심스러운 활동이 생성될 때만 전송됩니다.
+>   [!NOTE]
+>   의심스러운 활동에 대한 전자 메일 경고는 의심스러운 활동이 생성될 때만 전송됩니다.
 
 4. **Notify when:**(다음과 같은 경우 알림 보내기)에서 토글을 사용하여 전송해야 하는 알림을 선택합니다.
-
-    - 새로운 의심스러운 활동이 검색되는 경우
-    - 새로운 상태 문제가 검색되는 경우
-    - 새 소프트웨어 업데이트를 사용할 수 있는 경우
+  - 새로운 의심스러운 활동이 검색되는 경우
+  - 새로운 상태 문제가 검색되는 경우
+  - 새 소프트웨어 업데이트를 사용할 수 있는 경우
 
 5. **저장**을 클릭합니다.
 
 ![ATA 메일 알림 설정 이미지](media/ATA-mail-notification-settings-1.7.png)
 
 
-## Syslog 알림
+## <a name="syslog-notification"></a>Syslog 알림
 
 Syslog 알림을 수신하려면 다음을 설정합니다.
 
@@ -69,16 +69,17 @@ Syslog 알림을 수신하려면 다음을 설정합니다.
     - 기존의 의심스러운 활동이 업데이트되는 경우
     - 새로운 상태 문제가 검색되는 경우
 5. **저장**을 클릭합니다.
+
 ![ATA 알림 설정 이미지](media/ATA-syslog-notification-settings-1.7.png)
 
 
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 12/08/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
+ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
+ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
 
 
 ---
@@ -34,7 +34,8 @@ ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 �
 ATA가 Syslog 서버에서 데이터를 사용할 수 있도록 하려면 다음을 수행해야 합니다.
 
 -   SIEM/Syslog 서버에서 전달되는 이벤트를 수신하고 수락하도록 ATA Gateway 서버를 구성합니다.
-
+> [!NOTE]
+> ATA는 IPv4에서만 수신하며 IPv6에서 수신하지 않습니다. 
 -   ATA Gateway로 특정 이벤트를 전달하도록 SIEM/Syslog 서버를 구성합니다.
 
 > [!IMPORTANT]
@@ -287,6 +288,6 @@ Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 

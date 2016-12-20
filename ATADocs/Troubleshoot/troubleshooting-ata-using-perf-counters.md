@@ -1,8 +1,9 @@
 ---
-title: "성능 카운터를 사용하여 ATA 문제 해결 | Microsoft ATA"
+title: "성능 카운터를 사용하여 ATA 문제 해결 | Microsoft 문서"
 description: "성능 카운터를 사용하여 ATA 문제를 해결하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: e1ff02f8d78eacc5c4fccdc1cc973d8a07f9c6ca
+ms.sourcegitcommit: 2e7e6d5b731723449ce275f810343b1e8957f6d0
+ms.openlocfilehash: a9ee5fd9a57d484e4bfe06f42766f895063ad727
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: e1ff02f8d78eacc5c4fccdc1cc973d8a07f9c6ca
 
 
 
-# 성능 카운터를 사용하여 ATA 문제 해결
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>성능 카운터를 사용하여 ATA 문제 해결
 ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제공합니다. ATA의 구성 요소는 데이터를 순차적으로 처리하므로 문제가 발생할 경우 구성 요소 체인에 따라 어딘가에 부분적으로 삭제된 트래픽을 유발할 수 있습니다. 이 문제를 해결하려면 역효과를 낳는 구성 요소를 파악하고 연쇄 반응의 시작이 되는 문제를 해결해야 합니다. 성능 카운터에서 찾은 데이터를 사용하여 각 구성 요소의 작동 방식을 이해합니다.
 내부 ATA 구성 요소의 흐름을 이해하려면 [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)를 참조하세요.
 
@@ -36,7 +37,7 @@ ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제�
 3.  이는 더 이상 엔터티를 전달할 수 없을 때 트래픽을 삭제하는 NetworkListener 구성 요소까지 거슬러 올라갑니다.
 
 
-## ATA Gateway 성능 카운터
+## <a name="ata-gateway-performance-counters"></a>ATA Gateway 성능 카운터
 
 이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다.
 
@@ -47,7 +48,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway\NetworkListener PEF Parser Messages\Sec|ATA Gateway가 1초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
+|Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec|ATA Gateway가 1초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
 |NetworkListener PEF Dropped Events\Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Gateway\NetworkListener ETW Dropped Events\Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Gateway\NetworkActivityTranslator Message Data # Block Size|NA(네트워크 활동)로 변환되기 위해 큐에서 대기 중인 트래픽 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 100,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
@@ -59,11 +60,11 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 > -   시간 카운터는 밀리초 단위입니다.
 > -   경우에 따라 "보고서" 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
-## ATA 경량 게이트웨이 성능 카운터
+## <a name="ata-lightweight-gateway-performance-counters"></a>ATA 경량 게이트웨이 성능 카운터
 성능 카운터는 ATA가 설치된 도메인 컨트롤러에서 너무 많은 리소스를 사용되지 않도록 경량 게이트웨이에서 할당량 관리에 사용할 수 있습니다.
-경량 게이트웨이에서 ATA가 적용하는 리소스 제한을 확인하려면 다음 카운터를 추가합니다.
+경량 게이트웨이에서 ATA가 적용하는 리소스 제한을 확인하려면 이 카운터를 추가합니다.
 
-"성능 모니터"를 열고 ATA 경량 게이트웨이에 대한 모든 카운터를 추가합니다. 성능 카운터 개체 이름은 "Microsoft ATA Gateway" 및 "Microsoft ATA Gateway Updater"입니다.
+이 작업을 수행하려면 "성능 모니터"를 열고 ATA 경량 게이트웨이에 대한 모든 카운터를 추가합니다. 성능 카운터 개체 이름은 "Microsoft ATA Gateway" 및 "Microsoft ATA Gateway Updater"입니다.
 
 
 |카운터|설명|Threshold|문제 해결|
@@ -84,7 +85,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 |Process(Microsoft.Tri.Gateway)\Private Bytes|경량 게이트웨이 프로세스에서 실제로 사용하는 커밋된 메모리 크기(바이트)입니다.|임계값 없음 | 이 카운터 결과를 GatewayUpdaterResourceManager Commit Memory Max Size의 한도와 비교합니다. 시간이 지날수록 프로세스가 자주 최대 한도에 도달하면(프로세스가 한도에 도달하면 트래픽 삭제가 시작됨) 좀 더 많은 리소스를 경량 게이트웨이 전용으로 사용해야 한다는 것을 의미합니다.| 
 |Process(Microsoft.Tri.Gateway)\Working Set|경량 게이트웨이 프로세스에서 실제로 사용하는 실제 메모리 크기(바이트)입니다.|임계값 없음 |이 카운터 결과를 GatewayUpdaterResourceManager Working Set Limit Size의 한도와 비교합니다. 시간이 지날수록 프로세스가 자주 최대 한도에 도달하면(프로세스가 한도에 도달하면 트래픽 삭제가 시작됨) 좀 더 많은 리소스를 경량 게이트웨이 전용으로 사용해야 한다는 것을 의미합니다.|
 
-## ATA Center 성능 카운터
+## <a name="ata-center-performance-counters"></a>ATA Center 성능 카운터
 ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 상태를 관찰할 수 있습니다.
 
 이 작업을 수행하려면 "성능 모니터"를 열고 ATA Center에 대한 모든 카운터를 추가합니다. 성능 카운터 개체의 이름은 "Microsoft ATA Center"입니다.
@@ -96,14 +97,14 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|ATA Center에서 큐에 넣은 엔터티 일괄 처리 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다.  위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Center\NetworkActivityProcessor Network Activity Block Size|처리를 위해 큐에서 대기 중인 NA(네트워크 활동) 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 50,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Center\EntityProfiler Network Activity Block Size|프로파일링을 위해 큐에서 대기 중인 NA(네트워크 활동) 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|Microsoft ATA Center\CenterDatabase &#42; Block Size|데이터베이스에 기록되기 위해 큐에서 대기 중인 특정 유형의 네트워크 활동 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 50,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|Microsoft ATA Center\Database &#42; Block Size|데이터베이스에 기록되기 위해 큐에서 대기 중인 특정 유형의 네트워크 활동 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 50,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 
 
 > [!NOTE]
 > -   시간 카운터는 밀리초 단위입니다.
 > -   경우에 따라 보고서에 대한 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
-## 운영 체제 카운터
+## <a name="operating-system-counters"></a>운영 체제 카운터
 다음은 주의해야 하는 주 운영 체제 카운터 목록입니다.
 
 |카운터|설명|Threshold|문제 해결|
@@ -119,7 +120,7 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 |\LogicalDisk&#42;\Disk Writes\sec|디스크에 대한 쓰기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터(저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있음)|
 |\LogicalDisk(&#42;)\Disk Write Bytes\sec|초당 디스크에 쓴 바이트 수입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -128,6 +129,6 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
