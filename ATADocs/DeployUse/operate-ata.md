@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: cf6fcd3a-0295-450e-bd40-8cd4909f0cae
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
+ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
+ms.openlocfilehash: 301169138f99bd523303ad703e868abbad94d71f
 
 
 ---
@@ -35,7 +35,7 @@ ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
   - [도메인 컨트롤러 암호 변경](modifying-ata-config-dcpassword.md)
 - [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 역할 그룹](ata-role-groups.md)
-- [ATA 경고 설정](setting-ata-alerts.md)
+- [ATA 알림 설정](setting-ata-alerts.md)
 - [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
 - [검색 설정 사용](working-with-detection-settings.md)
 - [ATA 상태 관리 센터](ata-health-center.md)
@@ -53,6 +53,6 @@ ms.openlocfilehash: 737173f9d485004ca1a92dbede364048d450faa3
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO5-->
 
 
