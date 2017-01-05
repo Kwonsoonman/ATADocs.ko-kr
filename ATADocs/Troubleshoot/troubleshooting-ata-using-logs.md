@@ -1,8 +1,9 @@
 ---
-title: "ATA 로그를 사용하여 ATA 문제 해결 | Microsoft ATA"
+title: "ATA 로그를 사용하여 ATA 문제 해결 | Microsoft 문서"
 description: "ATA 로그를 사용하여 문제를 해결하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 3a2ae61ba1b54efd5dca5f0f71dc71b98872145d
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 
-# ATA 로그를 사용하여 ATA 문제 해결
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>ATA 로그를 사용하여 ATA 문제 해결
 ATA 로그는 ATA의 각 구성 요소가 주어진 시점에 수행하는 작업을 이해할 수 있도록 도와줍니다.
 
-## ATA 게이트웨이 로그
+## <a name="ata-gateway-logs"></a>ATA 게이트웨이 로그
 이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다. 
 
 ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
@@ -47,7 +48,7 @@ ATA 게이트웨이에는 다음 로그가 있습니다.
 > [!NOTE]
 > 처음 세 개의 로그 파일에 최대 50MB까지 할당됩니다. 이 크기에 도달하면 새 로그 파일이 열리고 이전 로그 파일의 이름은 "&lt;원래 파일 이름&gt;-Archived-00000"으로 바뀝니다. 여기서 번호는 이름이 바뀔 때마다 커집니다. 기본적으로 형식이 동일한 파일이 10개가 넘는 경우 가장 오래된 파일부터 삭제됩니다.
 
-## ATA 센터 로그
+## <a name="ata-center-logs"></a>ATA 센터 로그
 ATA 센터 로그는 **Logs**라는 하위 폴더에 있습니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**에서 찾을 수 있습니다.
 > [!Note]
 > 이전에 IIS 로그에 있었던 ATA 콘솔이 이제 ATA 센터 로그에 위치합니다.
@@ -67,7 +68,7 @@ ATA 센터에는 다음 로그가 있습니다.
 > 처음 세 개의 로그 파일에 최대 50MB까지 할당됩니다. 이 크기에 도달하면 새 로그 파일이 열리고 이전 로그 파일의 이름은 "&lt;원래 파일 이름&gt;-Archived-00000"으로 바뀝니다. 여기서 번호는 이름이 바뀔 때마다 커집니다. 기본적으로 형식이 동일한 파일이 10개가 넘는 경우 가장 오래된 파일부터 삭제됩니다.
 
 
-## ATA 배포 로그
+## <a name="ata-deployment-logs"></a>ATA 배포 로그
 ATA 배포 로그는 제품을 설치한 사용자에 대한 임시 디렉터리에 있습니다. 기본 설치 위치에서는 **C:\Users\Administrator\AppData\Local\Temp**(또는 %temp% 위의 디렉터리)에서 찾을 수 있습니다.
 
 ATA 센터 배포 로그:
@@ -85,7 +86,7 @@ ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - 이 로그는 ATA 게이트웨이 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 이진 파일의 배포를 추적합니다.
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -94,6 +95,6 @@ ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

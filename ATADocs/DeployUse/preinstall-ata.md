@@ -1,8 +1,9 @@
 ---
-title: "ATA를 설치하기 전에 - 전체 단계 | Microsoft ATA"
+title: "ATA를 설치하기 전에 - 전체 단계 | Microsoft 문서"
 description: "ATA 배포 전에 완료해야 하는 필수 단계를 안내합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 0c1a53ff7192ec5a343330750d600d545c0e0237
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 731a3a2d404c2449b7e84bf40b47bfba29053316
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 0c1a53ff7192ec5a343330750d600d545c0e0237
 
 
 
-# ATA를 설치하기 전에
+# <a name="before-you-install-ata"></a>ATA를 설치하기 전에
 
 ATA를 설치하기 전에 다음 단계를 완료해야 합니다.
 
@@ -33,7 +34,7 @@ ATA를 설치하기 전에 다음 단계를 완료해야 합니다.
 
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
@@ -42,6 +43,6 @@ ATA를 설치하기 전에 다음 단계를 완료해야 합니다.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
