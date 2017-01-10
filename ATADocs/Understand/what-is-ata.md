@@ -23,7 +23,7 @@ ms.openlocfilehash: 70d66bccfda484722afa63a7f85dc8f85013f54f
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
-## <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics란?
+# <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics란?
 ATA(Advanced Threat Analytics)는 여러 유형으로 대상이 지정된 고급 사이버 공격과 내부자 위협으로부터 기업을 보호하는 온-프레미스 플랫폼입니다.
 
 ## <a name="how-ata-works"></a>ATA의 작동 방법

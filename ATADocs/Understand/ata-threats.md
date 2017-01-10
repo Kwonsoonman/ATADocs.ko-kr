@@ -22,7 +22,7 @@ ms.openlocfilehash: 2671937cf0ed9ff2865073b97ee735da99fa7d7f
 
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
-## <a name="what-threats-does-ata-look-for"></a>ATA에서 찾는 위협
+# <a name="what-threats-does-ata-look-for"></a>ATA에서 찾는 위협
 
 ATA는 지능형 공격의 여러 단계(정찰, 자격 증명 손상, 측면 확대, 권한 상승, 도메인 우위 등)에 대한 검색을 제공합니다. 이러한 검색은 조직에 피해를 주기 전에 지능형 공격과 내부자 위협을 검색하는 것을 목표로 합니다.
 각 단계의 검색에서는 단계와 관련된 몇 가지 의심스러운 활동을 문제로 처리하고, 각 의심스러운 활동은 가능한 공격의 여러 특성과 상호 관련됩니다.

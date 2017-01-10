@@ -24,7 +24,7 @@ ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 
-## <a name="provide-ata-with-up-your-email-server-settings"></a>ATA에 메일 서버 설정 제공
+# <a name="provide-ata-with-up-your-email-server-settings"></a>ATA에 메일 서버 설정 제공
 ATA는 의심스러운 활동을 검색한 경우 알림을 제공할 수 있습니다. ATA에서 메일 알림을 보낼 수 있도록 하려면 먼저 **메일 서버 설정**을 구성해야 합니다.
 
 1.  ATA 센터 서버의 바탕 화면에서 **Microsoft Advanced Threat Analytics 관리** 아이콘을 클릭합니다.
