@@ -1,8 +1,9 @@
 ---
-title: "Microsoft ATA(Advanced Threat Analytics)란? | Microsoft ATA"
+title: "Microsoft ATA(Advanced Threat Analytics)란? | Microsoft 문서"
 description: "Microsoft ATA(Advanced Threat Analytics)의 정의와 검색할 수 있는 의심스러운 활동의 종류를 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/28/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 70d66bccfda484722afa63a7f85dc8f85013f54f
 
 
 ---
@@ -22,10 +23,10 @@ ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
-## Advanced Threat Analytics란?
+# <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics란?
 ATA(Advanced Threat Analytics)는 여러 유형으로 대상이 지정된 고급 사이버 공격과 내부자 위협으로부터 기업을 보호하는 온-프레미스 플랫폼입니다.
 
-## ATA의 작동 방법
+## <a name="how-ata-works"></a>ATA의 작동 방법
 ATA는 네트워크의 로그와 이벤트에서 여러 데이터 소스의 정보를 사용하여 사용자 동작과 조직의 다른 엔티티를 학습하고 이에 대한 동작 프로필을 만듭니다.
 ATA는 다음으로부터 이벤트와 로그를 받을 수 있습니다.
 
@@ -39,7 +40,7 @@ ATA는 다음으로부터 이벤트와 로그를 받을 수 있습니다.
 
 ATA 아키텍처에 대한 자세한 내용은 [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)를 참조하세요.
 
-## ATA의 기능
+## <a name="what-does-ata-do"></a>ATA의 기능
 
 ATA 기술에서는 다음과 같이 사이버 공격를 적극 대처하는 여러 단계에 중점을 두고 여러 의심스러운 활동을 검색합니다.
 
@@ -90,17 +91,17 @@ ATA는 또한 다음을 포함하여 **보안 문제 및 위험**을 검색합�
   ![샘플 ATA 화면 손상된 신뢰](media/sample screen broken trust.png)
 
 
-## 다음 단계
+## <a name="whats-next"></a>다음 단계
 
 -   ATA가 네트워크에 적용되는 방식에 대한 자세한 내용은 [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)를 참조하세요.
 
 -   ATA 배포를 시작하려면 [ATA 설치](/advanced-threat-analytics/deploy-use/install-ata)를 참조하세요.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

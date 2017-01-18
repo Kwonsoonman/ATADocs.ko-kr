@@ -1,8 +1,9 @@
 ---
-title: "ATA 아키텍처 | Microsoft ATA"
+title: "ATA 아키텍처 | Microsoft 문서"
 description: "Microsoft Advanced Threat Analytics(ATA)의 아키텍처에 대해 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 06cc0de7e335a120d9e4c988dcc6a74087f027c6
 
 
 ---
@@ -24,7 +25,7 @@ ms.openlocfilehash: c416fba5aace73cf585e7f6ca604a8c61c3c6fcc
 
 
 
-# ATA 아키텍처
+# <a name="ata-architecture"></a>ATA 아키텍처
 아래 다이어그램에는 Advanced Threat Analytics 아키텍처가 자세히 나와 있습니다.
 
 ![ATA 아키텍처 토폴로지 다이어그램](media/ATA-architecture-topology.jpg)
@@ -35,10 +36,10 @@ ATA는 실제 또는 가상 스위치를 사용하는 ATA 게이트웨이에 포
 
 ![ATA 트래픽 흐름 다이어그램](media/ATA-traffic-flow.jpg)
 
-## ATA 구성 요소
+## <a name="ata-components"></a>ATA 구성 요소
 ATA는 다음 구성 요소로 이루어져 있습니다.
 
--   **ATA Center** <br>
+-   **ATA 센터** <br>
 ATA 센터는 사용자가 배포하는 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이에서 데이터를 수신합니다.
 -   **ATA 게이트웨이**<br>
 ATA 게이트웨이는 포트 미러링 또는 네트워크 TAP를 사용하여 도메인 컨트롤러의 트래픽을 모니터링하는 전용 서버에 설치됩니다.
@@ -48,7 +49,7 @@ ATA 경량 게이트웨이는 도메인 컨트롤러에 직접 설치되며 전�
 ATA 배포는 모든 ATA 게이트웨이, 모든 ATA 경량 게이트웨이 또는 ATA 게이트웨이와 ATA 경량 게이트웨이의 조합과 연결된 단일 ATA 센터로 구성될 수 있습니다.
 
 
-## 배포 옵션
+## <a name="deployment-options"></a>배포 옵션
 ATA는 다음과 같은 게이트웨이 조합을 사용하여 배포할 수 있습니다.
 
 -   **ATA 게이트웨이만 사용** <br>
@@ -63,7 +64,7 @@ ATA 배포에 ATA 게이트웨이와 ATA 경량 게이트웨이가 둘 다 포�
 
 
 
-## ATA Center
+## <a name="ata-center"></a>ATA Center
 **ATA 센터**는 다음 기능을 수행합니다.
 
 -   ATA 게이트웨이 및 ATA 경량 게이트웨이 구성 설정 관리
@@ -97,9 +98,9 @@ ATA 센터는 ATA 게이트웨이 및 ATA 경량 게이트웨이에서 구문 �
 
 -    대규모 Active Directory 배포에서는 ATA 센터 하나가 모든 도메인 컨트롤러의 트래픽을 모두 처리하지 못할 수도 있습니다. 이 경우 ATA 센터가 여러 개 있어야 합니다. ATA 센터의 수는 [ATA 용량 계획](ata-capacity-planning.md)에 따라 결정해야 합니다.
 
-## ATA 게이트웨이 및 ATA 경량 게이트웨이
+## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA 게이트웨이 및 ATA 경량 게이트웨이
 
-### 게이트웨이 핵심 기능
+### <a name="gateway-core-functionality"></a>게이트웨이 핵심 기능
 **ATA 게이트웨이** 및 **ATA 경량 게이트웨이** 둘 다 다음과 같은 동일한 핵심 기능이 있습니다.
 
 -   도메인 컨트롤러 네트워크 트래픽(ATA 게이트웨이 경우 포트 미러링된 트래픽 및 ATA 경량 게이트웨이 경우 도메인 컨트롤러의 로컬 트래픽) 캡처 및 검사 
@@ -125,7 +126,7 @@ ATA 게이트웨이는 네트워크에서 네트워크 트래픽과 Windows 이�
 |엔터티 확인자|엔터티 확인자는 구문 분석된 데이터(네트워크 트래픽 및 이벤트)를 가져와 Active Directory에서 확인하여 계정 및 ID 정보를 찾습니다. 그러면 해당 정보가 구문 분석된 데이터에 있는 IP 주소와 연결됩니다. 패킷 헤더를 효율적으로 검사하고, 인증 패킷에서 컴퓨터 이름/속성/ID를 구문 분석할 수 있도록 설정합니다. 구문 분석된 인증 패킷을 실제 패킷의 데이터와 결합합니다.|
 |엔터티 발신자|엔터티 발신자는 구문 분석되어 일치 여부가 확인된 데이터를 ATA 센터로 보냅니다.|
 
-## ATA 경량 게이트웨이 기능
+## <a name="ata-lightweight-gateway-features"></a>ATA 경량 게이트웨이 기능
 
 다음 기능은 ATA 게이트웨이 또는 ATA 경량 게이트웨이 실행 여부에 따라 다르게 작동합니다.
 
@@ -158,10 +159,10 @@ Active Directory에 더 많은 계산이 필요한 경우 ATA 경량 게이트�
 
 
 
-## 네트워크 구성 요소
+## <a name="your-network-components"></a>네트워크 구성 요소
 ATA를 사용하려면 다음 사항을 확인해야 합니다.
 
-### 포트 미러링
+### <a name="port-mirroring"></a>포트 미러링
 ATA 게이트웨이를 사용하는 경우 실제 또는 가상 스위치를 사용하여 ATA 게이트웨이를 대상으로 모니터링하고 설정할 도메인 컨트롤러에 대해 포트 미러링을 설정해야 합니다. 또 다른 옵션은 네트워크 TAP를 사용하는 것입니다. 도메인 컨트롤러 전체가 아닌 일부를 모니터링하는 경우 ATA가 작동되지만 검색 효율성은 떨어집니다.
 
 포트 미러링이 ATA 게이트웨이에 대한 모든 도메인 컨트롤러 네트워크 트래픽을 미러링하지만 해당 트래픽 중 극히 일부분만이 분석을 위해 압축되어 ATA 센터로 전송됩니다.
@@ -169,14 +170,14 @@ ATA 게이트웨이를 사용하는 경우 실제 또는 가상 스위치를 사
 도메인 컨트롤러와 ATA 게이트웨이는 실제 하드웨어일 수도 있고 가상 하드웨어일 수도 있습니다. 자세한 내용은 [포트 미러링 구성](/advanced-threat-analytics/deploy-use/configure-port-mirroring)을 참조하세요.
 
 
-### 이벤트
+### <a name="events"></a>이벤트
 Pass-the-Hash, Brute Force, Honey Token을 개선하려면 ATA에서 Windows 이벤트 로그 ID 4776을 사용해야 합니다. 두 가지 방법으로 ATA 게이트웨이에 이 ID를 전달할 수 있습니다. 그중 하나는 ATA 게이트웨이가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 Windows 이벤트 전달을 사용하는 것입니다.
 
 -   SIEM 이벤트를 수신하도록 ATA 게이트웨이 구성 <br>특정 Windows 이벤트를 ATA로 전달하도록 SIEM을 구성합니다. ATA는 다수의 SIEM 공급업체를 지원합니다. 자세한 내용은 [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)을 참조하세요.
 
 -   Windows 이벤트 전달 구성<br>ATA가 이벤트를 받을 수 있도록 하는 또 다른 방법은, Windows 이벤트 4776을 ATA 게이트웨이로 전달하도록 도메인 컨트롤러를 구성하는 것입니다. SIEM이 없거나 SIEM이 현재 ATA에서 지원되지 않는 경우 이 방법을 사용하면 특히 유용합니다. ATA의 Windows 이벤트 전달 기능에 대한 자세한 내용은 [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)을 참조하세요.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
@@ -186,6 +187,6 @@ Pass-the-Hash, Brute Force, Honey Token을 개선하려면 ATA에서 Windows 이
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
