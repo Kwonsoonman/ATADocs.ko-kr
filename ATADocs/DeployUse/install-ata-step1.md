@@ -1,10 +1,11 @@
 ---
-title: "ATA 설치 - 1단계 | Microsoft ATA"
+title: "ATA 설치 - 1단계 | Microsoft 문서"
 description: "ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운로드하여 선택한 서버에 설치하는 과정이 포함됩니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
+ms.sourcegitcommit: b73fb769438a7290053c27766c233010079dca78
+ms.openlocfilehash: 313ae02742d4acc68c52d5481fdc24c0aa508681
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 
-# ATA 설치 - 1단계
+# <a name="install-ata---step-1"></a>ATA 설치 - 1단계
 
 >[!div class="step-by-step"]
 [2단계 »](install-ata-step2.md)
@@ -33,7 +34,7 @@ ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 > [!IMPORTANT] 
 > Windows 2012 R2를 사용할 경우 설치를 시작하기 전에 ATA Center 및 ATA Gateway 서버에 KB2934520을 설치할 수 있습니다. 그렇지 않으면 ATA 설치에서 이 업데이트를 설치하므로 ATA 설치 도중에 다시 시작해야 합니다.
 
-## 1단계. ATA Center 다운로드 및 설치
+## <a name="step-1-download-and-install-the-ata-center"></a>1단계. ATA Center 다운로드 및 설치
 서버가 요구 사항을 충족하는지 확인한 후 ATA Center 설치를 진행할 수 있습니다.
 
 ATA Center 서버에서 다음 단계를 수행합니다.
@@ -85,7 +86,7 @@ ATA Center 서버에서 다음 단계를 수행합니다.
 이때 **일반** 설정 페이지로 자동으로 이동됩니다. 여기에서 ATA Gateway 구성 및 배포를 계속할 수 있습니다.
 IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 관련된 경고 메시지가 표시되는데, 이는 정상이며 **이 웹 사이트를 계속 탐색**을 클릭해야 합니다.
 
-### 설치 유효성 검사
+### <a name="validate-installation"></a>설치 유효성 검사
 
 1.  **Microsoft Advanced Threat Analytics Center** 서비스가 실행 중인지 확인합니다.
 2.  바탕 화면에서 **Microsoft Advanced Threat Analytics** 바로 가기를 클릭하여 ATA 콘솔에 연결합니다. ATA Center를 설치하는 데 사용한 것과 동일한 사용자 자격 증명으로 로그인합니다.
@@ -93,10 +94,10 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 
 >[!div class="step-by-step"]
-[« 설치 전](preinstall-ata.md)
+[« 설치 전](configure-port-mirroring.md)
 [2단계 »](install-ata-step2.md)
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
@@ -105,6 +106,6 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
-title: "의심스러운 활동 관련 작업 | Microsoft ATA"
+title: "의심스러운 활동 관련 작업 | Microsoft 문서"
 description: "ATA에서 식별된 의심스러운 활동을 검토하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 29a8b5b76b4b435157f0907f0dc98731dacbc53a
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
 
 
 
-# 의심스러운 활동 작업
+# <a name="working-with-suspicious-activities"></a>의심스러운 활동 작업
 이 항목에서는 Advanced Threat Analytics를 사용하는 방법에 대한 기본 사항을 설명합니다.
 
-## 공격 타임라인에서 의심스러운 활동 검토
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>공격 타임라인에서 의심스러운 활동 검토
 ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동으로 열립니다. 의심스러운 활동은 최신 활동이 타임라인의 맨 위에 오도록 시간 순으로 나열됩니다.
 각 의심스러운 활동에는 다음과 같은 정보가 있습니다.
 
@@ -56,7 +57,7 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
 
 ![ATA 의심스러운 활동 타임라인 이미지](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## 의심스러운 활동 목록 필터링
+## <a name="filter-suspicious-activities-list"></a>의심스러운 활동 목록 필터링
 의심스러운 활동 목록을 필터링하려면
 
 1.  화면의 왼쪽의 **필터링 기준** 창에서 **모두**, **미해결**, **해결됨** 또는 **해제됨**을 선택합니다.
@@ -69,11 +70,11 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
 
     악의적인 사용자 또는 소프트웨어가 조직 데이터에 대한 액세스 권한을 얻도록 설계된 공격으로 이어질 수 있는 의심스러운 활동을 나타냅니다.
 
--   **중형**
+-   **중간**
 
     특정 ID를 ID 도용 또는 권한 상승을 초래하는 보다 심각한 공격의 위험에 노출시킬 수 있는 의심스러운 활동을 나타냅니다.
 
--   **높은**
+-   **높음**
 
     ID 도용, 권한 상승 또는 기타 강력한 공격으로 이어질 수 있는 의심스러운 활동을 나타냅니다.
 
@@ -83,7 +84,7 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
 
     새로운 의심스러운 활동이 모두 이 목록에 표시됩니다.
 
--   **Resolved**
+-   **해결됨**
 
     식별, 조사 및 완화한 의심스러운 활동을 추적하는 데 사용됩니다.
 
@@ -94,7 +95,7 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
 
     수동으로 해제한 활동입니다. ATA에서 유사한 의심스러운 활동을 검색한 경우 새 검색이 만들어집니다.
 
-## 의심스러운 활동에 대한 입력 제공
+## <a name="provide-input-on-a-suspicious-activity"></a>의심스러운 활동에 대한 입력 제공
 ATA에서 사용자 네트워크를 학습할 수 있도록 하기 위해 일부 의심스러운 활동(DNS 정찰, Pass the Ticket, SMB 세션 열거, 비정상적인 동작 및 원격 실행)에는 향후 의심스러운 활동 검색을 개선할 수 있는 사용자 입력이 요청됩니다.
 
 1.  입력을 제공할 수 있는 의심스러운 활동의 경우 입력 질문이 자동으로 열립니다. 네트워크에서 활동 및 이러한 활동을 의심스러운 것으로 간주해야 하는지 여부에 대한 질문에 대답해야 합니다. 아래 예제에서는 특정 컴퓨터에서 검사 도구 실행이 허용되는지 여부를 묻습니다.
@@ -107,16 +108,16 @@ ATA에서 사용자 네트워크를 학습할 수 있도록 하기 위해 일부
 
 4.  모르는 경우 **취소**를 클릭할 수 있습니다.
 
-## 의심스러운 활동의 상태 변경
+## <a name="change-the-status-of-a-suspicious-activity"></a>의심스러운 활동의 상태 변경
 의심스러운 활동의 현재 상태를 클릭하고 **미해결**, **해결됨** 또는 **해제됨**을 선택하여 의심스러운 활동의 상태를 변경할 수 있습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [ATA 검색 설정 사용](working-with-detection-settings.md)
+- [ATA 검색 설정 작업](working-with-detection-settings.md)
 - [ATA 구성 수정](modifying-ata-configuration.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

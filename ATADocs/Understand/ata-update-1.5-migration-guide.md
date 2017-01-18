@@ -1,8 +1,9 @@
 ---
-title: "버전 1.5로의 ATA 업데이트 마이그레이션 가이드 | Microsoft ATA"
+title: "버전 1.5로의 ATA 업데이트 마이그레이션 가이드 | Microsoft 문서"
 description: "버전 1.5로 ATA를 업데이트하는 절차를 설명합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: 637d847af82d15a5b88fb43274f606a9b89da445
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c23512e159c2f01bc0a930f71373aa5315f0310c
 
 
 ---
 
-# 버전 1.5로의 ATA 업데이트 마이그레이션 가이드
+# <a name="ata-update-to-15-migration-guide"></a>버전 1.5로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.5로 업데이트하는 경우 다음 영역에서 기능이 개선됩니다.
 
 -   검색 시간 단축
@@ -36,7 +37,7 @@ ATA 1.5로 업데이트하는 경우 다음 영역에서 기능이 개선됩니�
 
 -   모니터링 및 문제 해결 기능 향상을 위한 추가 성능 모니터 제공
 
-## 버전 1.5로 ATA 업데이트
+## <a name="updating-ata-to-version-15"></a>버전 1.5로 ATA 업데이트
 > [!NOTE]
 > 사용 중인 환경에 ATA가 설치되어 있지 않으면 버전 1.5가 포함된 처음 사용자용 ATA를 다운로드한 다음 [ATA 설치](/advanced-threat-analytics/deploy-use/install-ata)에서 설명하는 표준 설치 절차를 수행하세요.
 
@@ -58,7 +59,7 @@ ATA 버전 1.5로 업데이트하려면 다음 단계를 수행합니다.
     > [!IMPORTANT]
     > ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### 1단계: ATA 센터 업데이트
+### <a name="step-1-update-the-ata-center"></a>1단계: ATA 센터 업데이트
 
 1.  원하는 경우 데이터베이스를 백업합니다.
 
@@ -89,7 +90,7 @@ ATA 버전 1.5로 업데이트하려면 다음 단계를 수행합니다.
 > [!IMPORTANT]
 > - ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### 2단계. ATA 게이트웨이 설치 패키지 다운로드
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>2단계. ATA 게이트웨이 설치 패키지 다운로드
 도메인 연결 설정을 구성하고 나면 ATA Gateway 설치 패키지를 다운로드할 수 있습니다.
 
 ATA 게이트웨이 패키지를 다운로드하려면 다음 단계를 수행합니다.
@@ -110,7 +111,7 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 -   ATA 센터에 연결하는 데 필요한 정보가 포함된 구성 설정 파일
 
-### 3단계: ATA 게이트웨이 업데이트
+### <a name="step-3-update-the-ata-gateways"></a>3단계: ATA 게이트웨이 업데이트
 
 1.  각 ATA 게이트웨이에서 ATA 게이트웨이 패키지의 파일을 추출한 다음 Microsoft ATA 게이트웨이 설치 파일을 실행합니다.
 
@@ -128,12 +129,12 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 ![업데이트된 게이트웨이 이미지](media/ATA-gw-updated.png)
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

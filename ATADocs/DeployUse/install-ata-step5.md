@@ -1,8 +1,9 @@
 ---
-title: "ATA 설치 - 5단계 | Microsoft ATA"
+title: "ATA 설치 - 5단계 | Microsoft 문서"
 description: "ATA 설치 5단계에서는 ATA Gateway에 대한 설정을 구성합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
-ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: b30fe6bc977184fb8cc297e10724c7fe48ee6934
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 
-# ATA 설치 - 5단계
+# <a name="install-ata---step-5"></a>ATA 설치 - 5단계
 
 >[!div class="step-by-step"]
 [« 4단계](install-ata-step4.md)
 [6단계 »](install-ata-step6.md)
 
 
-## 5단계. ATA Gateway 설정 구성
+## <a name="step-5-configure-the-ata-gateway-settings"></a>5단계. ATA Gateway 설정 구성
 ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 대한 설정을 구성합니다.
 
 1.  ATA 콘솔에서 **구성**으로 이동하고 **시스템**에서 **게이트웨이**를 선택합니다.
@@ -67,7 +68,7 @@ ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 
 3. **저장**을 클릭합니다.
 
 
-## 설치 유효성 검사
+## <a name="validate-installations"></a>설치 유효성 검사
 ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 다음을 확인합니다.
 
 1.  **Microsoft Advanced Threat Analytics Gateway** 서비스가 실행 중인지 확인합니다. ATA 게이트웨이 설정을 저장한 후 서비스를 시작하는 데 몇 분 정도 걸릴 수 있습니다.
@@ -87,7 +88,7 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 [« 4단계](install-ata-step4.md)
 [6단계 »](install-ata-step6.md)
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
@@ -96,6 +97,6 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

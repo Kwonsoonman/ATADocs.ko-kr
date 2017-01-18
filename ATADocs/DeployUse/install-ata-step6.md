@@ -1,8 +1,9 @@
 ---
-title: "ATA 설치 | Microsoft ATA"
+title: "ATA 설치 | Microsoft 문서"
 description: "ATA 설치의 마지막 단계에서는 허니 토큰 사용자를 구성합니다."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 9ee2f36d8f0b7eae061873e8735139ccc4da00d1
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 17833f000135337fce82d69efb63fc6e1f9ea307
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 9ee2f36d8f0b7eae061873e8735139ccc4da00d1
 
 
 
-# ATA 설치 - 6단계
+# <a name="install-ata---step-6"></a>ATA 설치 - 6단계
 
 >[!div class="step-by-step"]
 [« 5단계](install-ata-step5.md)
 
-## 6단계. IP 주소 제외 및 허니 토큰 사용자 구성
-ATA에서는 **DNS 정찰** 및 **Pass-the-Ticket** 두 가지 유형의 검색에서 특정 IP 주소 및 IP 서브넷을 제외할 수 있습니다. 
+## <a name="step-6-configure--ip-address-exclusions-and-honeytoken-user"></a>6단계. IP 주소 제외 및 허니 토큰 사용자 구성
+ATA에서는 **DNS 정찰** 및 **Pass-the-Ticket** 두 가지 유형의 검색에서 특정 IP 주소를 제외할 수 있습니다. 
 
 예를 들어 한 **DNS 정찰 제외**는 검색 메커니즘으로 DNS를 사용하는 보안 스캐너일 수 있습니다. 이 제외를 통해 ATA에서 이러한 스캐너를 무시할 수 있습니다. *Pass-the-Ticket* 예외의 예로는 NAT 장치가 있습니다.    
 
@@ -41,7 +42,7 @@ ATA에서는 허니 토큰 사용자를 구성하여 악의적인 행위자에 �
 
     ![ATA 구성 설정](media/ATA-config-icon.JPG)
 
-2.  **Detection exclusions**(검색 제외)에서 *DNS 정찰* 또는 *Pass-the-Ticket* IP 주소에 다음을 입력합니다. 예를 들어 CIDR 형식`192.168.1.0/24`를 사용하고 *더하기* 기호를 클릭합니다.
+2.  **검색 제외**에서 *DNS 정찰* 또는 *Pass-the-Ticket*에 대한 IP 주소를 입력하고 *더하기* 기호를 클릭합니다.
 
     ![변경 내용 저장](media/ATA-exclusions.png)
 
@@ -66,7 +67,7 @@ ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부
 [« 5단계](install-ata-step5.md)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
@@ -75,6 +76,6 @@ ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
