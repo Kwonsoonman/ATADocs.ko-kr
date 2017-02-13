@@ -1,201 +1,145 @@
 ---
-asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
-layout: HubPage
-title: "Advanced Threat Analytics 설명서"
-description: "Microsoft 보안 서비스인 Advanced Threat Analytics에 대한 기술 설명서입니다."
-keywords: "Advanced Threat Analytics 설명서, ATA 설명서"
-author: msmbaldwin
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: hubpage
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.suite: ems
-ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+layout: LandingPage
+description: "Advanced Threat Analytics를 사용하는 법을 알아보세요."
 translationtype: Human Translation
-ms.sourcegitcommit: dc1bfcd10b1856a7b92189f5cfd3b7492cf15bcb
-ms.openlocfilehash: 22af8d46b375e86c203da1cadd89416b42c45db7
-
+ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
+ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
 
 ---
-# <a name="microsoft-advanced-threat-analytics-documentation"></a>Microsoft Advanced Threat Analytics Documentation란?
-<article id="main">
-    <section id="hero-content">
-      <h1>Microsoft Advanced Threat Analytics Documentation란?</h1>
-      <h2>IT 보안 전문가가 지능형 목표 공격으로부터 기업을 보호하도록 도와주는 온-프레미스 제품인 Microsoft ATA(Advanced Threat Analytics)를 배포하고 관리하는 방법을 알아봅니다.</h2>
-      <h3>ATA의 새로운 기능 <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Microsoft 제품 웹 사이트 방문&rarr;</a></h3>
-    </section>
-    <aside class="alert section-border">
-      <p>실습할 준비가 되셨나요?</p>
-      <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">지금 사용해 보기</a></li>
-      </ol>
-    </aside>
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> 추천 콘텐츠</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><mark><b>새</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">ATA 버전 1.7 릴리스</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Advanced Threat Analytics란?</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">질문과 대답</a></li>
-        </ul>
-        <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">ATA 아키텍처</a></li>
-          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">ATA 용량 계획</a></li>        </ul>
-      </div>
-    </section>
-    <div id="journeys">
-      <section class="container">
-        <ul class="journeys-list">
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>이해 &amp; 탐색</p>
+# <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics Documentation
+
+회사 외부에서 공유하는 메일, 문서 및 중요한 데이터를 제어하고 보호하세요. 쉬운 분류부터 포함된 레이블 및 권한에 이르기까지 어디에 저장되었든 누구와 공유하든지 간에 Azure Information Protection으로 항상 데이터 보호를 강화하세요.
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>새로운 기능은 무엇입니까?</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">개략적인 개념, 기능 및 Microsoft Advanced Threat Analytics의 기능에 대해 알아봅니다.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                    <h3>ATA란?</h3>
-                    <p>ATA를 통해 IT 보안 전문가가 지능형 목표 공격으로부터 기업을 보호하는 방법에 대해 알아봅니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">
-                    <h3>질문과 대답</h3>
-                    <p>ATA에 관한 모든 기술 관련 질문에 대한 답변을 얻을 수 있습니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
-                    <h3>ATA 릴리스 정보</h3>
-                    <p>알려진 문제 및 마이그레이션 가이드와 함께 최신 버전의 새로운 기능을 확인하세요.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>계획 및 디자인</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics에 대해 자세히 알아보세요.</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">ATA를 계획 및 디자인합니다.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                    <h3>ATA 아키텍처</h3>
-                    <p>ATA를 지원하는 데 필요한 아키텍처를 이해합니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">
-                    <h3>용량 계획</h3>
-                    <p>네트워크를 지원하는 데 필요한 ATA 서버 수를 확인합니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>ATA 필수 구성 요소</h3>
-                    <p>환경에 ATA를 올바르게 배포하는 데 필요한 요구 사항을 계획합니다.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
-                <div class="title column-third">
-                  <span class="step-number">3</span>
-                  <p>배포 및 사용</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_support.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>질문과 대답</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">ATA를 배포하고 사용합니다.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/configure-port-mirroring">
-                    <h3>ATA를 설치하기 전에</h3>
-                    <p>ATA를 설치하기 전에 다음 단계를 수행합니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
-                    <h3>ATA 설치</h3>
-                    <p>자세한 단계별 설치 가이드를 따르세요.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip">
-                    <h3>ATA 작동</h3>
-                    <p>ATA 구성을 수정하고 ATA를 사용하여 일상적인 모니터링을 수행합니다.</p>
-                  </a>
-                </li>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                <div class="title column-third">
-                  <span class="step-number">4</span>
-                  <p>문제 해결</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/plan-design/ata-architecture"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_architecture.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics 아키텍처</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">ATA 문제를 해결합니다.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                    <h3>ATA의 알려진 오류 해결</h3>
-                    <p>ATA의 알려진 오류를 해결하는 단계를 검토합니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs">
-                    <h3>로그를 사용하여 문제 해결</h3>
-                    <p>ATA의 각 구성 요소가 주어진 시점에 수행하는 작업을 이해합니다.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters">
-                    <h3>성능 카운터를 사용하여 문제 해결</h3>
-                    <p>ATA 각 구성 요소의 성능을 이해합니다.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>ATA 관련 뉴스 계속 확인</p>
-      <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">공식 Microsoft ATA 블로그</a></li>
-      </ol>
-    </aside>
-</article>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_tasks.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics 용량 계획</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://blogs.technet.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_blog.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Advanced Threat Analytics 블로그</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+---
+
+<h3>지금 사용해 보기</h3>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">평가</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>  
+</ul>
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
