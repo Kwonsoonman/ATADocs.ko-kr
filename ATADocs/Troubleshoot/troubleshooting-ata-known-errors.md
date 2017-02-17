@@ -1,11 +1,11 @@
 ---
-title: "ATA 오류 로그 문제 해결 | Microsoft 문서"
+title: "Advanced Threat Analytics 오류 로그 문제 해결 | Microsoft 문서"
 description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
-ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
 
 
 ---
@@ -77,6 +77,6 @@ ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

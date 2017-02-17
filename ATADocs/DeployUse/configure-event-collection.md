@@ -1,11 +1,11 @@
 ---
-title: "이벤트 수집 구성 | Microsoft 문서"
+title: "Advanced Threat Analytics에서 이벤트 수집 구성 | Microsoft 문서"
 description: "ATA를 사용하여 이벤트 수집을 구성하는 옵션을 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/08/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
-ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: bc9bee71273fba1df0b62dbaf162570b22c49b44
 
 
 ---
@@ -288,6 +288,6 @@ Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

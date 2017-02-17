@@ -1,11 +1,11 @@
 ---
-title: "ATA 필수 조건 | Microsoft 문서"
+title: "Advanced Threat Analytics 필수 구성 요소 | Microsoft 문서"
 description: "환경에서 ATA를 올바르게 배포하기 위한 요구 사항을 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 2/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
-ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
+ms.sourcegitcommit: 88ca89f2311bf4e73b3d0b57db3e4377e99fd8b2
+ms.openlocfilehash: eae08c573fafaa3fa8643a2e115f7fc710e4d3f9
 
 
 ---
@@ -96,10 +96,10 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 
 -   두 개의 IP 주소(필수는 아니지만 권장됨)
 
-ATA 센터와 ATA 게이트웨이 간의 통신은 포트 443에서 SSL을 사용하여 암호화됩니다. 또한 ATA 콘솔은 포트 443에서도 SSL을 사용합니다. **IP 주소 2개**를 사용하는 것이 좋습니다. ATA 센터 서비스는 포트 443을 첫 번째 IP 주소에 바인딩하고, ATA 콘솔은 포트 443을 두 번째 IP 주소에 바인딩합니다.
+ATA 센터와 ATA 게이트웨이 간의 통신은 포트 443에서 SSL을 사용하여 암호화됩니다. 또한 ATA 콘솔은 포트 443에서도 SSL을 사용합니다. **IP 주소&2;개**를 사용하는 것이 좋습니다. ATA 센터 서비스는 포트 443을 첫 번째 IP 주소에 바인딩하고, ATA 콘솔은 포트 443을 두 번째 IP 주소에 바인딩합니다.
 
 > [!NOTE]
-> IP 주소 하나와 서로 다른 포트 2개를 사용할 수도 있지만, IP 주소를 2개 사용하는 것이 좋습니다.
+> IP 주소 하나와 서로 다른 포트&2;개를 사용할 수도 있지만, IP 주소를&2;개 사용하는 것이 좋습니다.
 
 ### <a name="ports"></a>포트
 아래 표에는 ATA 센터가 정상적으로 작동하도록 하려면 열어야 하는 최소한의 포트가 나와 있습니다.
@@ -219,8 +219,9 @@ ATA 경량 게이트웨이는 Windows Server 2008 R2 SP1(Server Core 제외), Wi
 
 도메인 컨트롤러는 RODC(읽기 전용 도메인 컨트롤러)만 될 수 있습니다.
 
-Windows Server 2012 R2 SP1을 실행하는 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
-Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
+Windows Server 2012 R2 SP1을 실행하는 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 및 [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1,-windows-8.1,-and-windows-server-2012-r2) 업데이트가 순서대로 설치되었는지 확인합니다. 
+
+Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355] [Get-HotFix -Id KB3000850]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
 
 > [!NOTE]
 > 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) 및 [성능 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
@@ -288,6 +289,6 @@ ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

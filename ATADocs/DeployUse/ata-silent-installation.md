@@ -1,11 +1,11 @@
 ---
-title: "ATA 자동 설치 | Microsoft 문서"
+title: "Advanced Threat Analytics 자동 설치 | Microsoft 문서"
 description: "ATA를 자동으로 설치하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7f9dac8c00f213ee0cefc9ff93f2c9ca40cd28b
-ms.openlocfilehash: 7d7eeaf450a38a23c5c3a4d6d192a773f4cd036c
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 31fca93099bbd44f6429f9274c941ed65556d588
 
 
 ---
@@ -221,6 +221,6 @@ ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합�
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

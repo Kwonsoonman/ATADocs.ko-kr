@@ -1,11 +1,11 @@
 ---
-title: "버전 1.5로의 ATA 업데이트 마이그레이션 가이드 | Microsoft 문서"
+title: "버전 1.5로 Advanced Threat Analytics 업데이트 마이그레이션 가이드 | Microsoft 문서"
 description: "버전 1.5로 ATA를 업데이트하는 절차를 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: c23512e159c2f01bc0a930f71373aa5315f0310c
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: c0efec3abdec8e44c8cf5005d756f973e64312e7
 
 
 ---
@@ -77,7 +77,7 @@ ATA 버전 1.5로 업데이트하려면 다음 단계를 수행합니다.
 
         ![전체 마이그레이션 또는 부분 마이그레이션 선택](media/ATA-center-fullpartial.png)
 
-        -   **부분** 마이그레이션을 선택하면 수집된 네트워크 트래픽과 ATA에서 분석하여 전달된 Windows 이벤트가 모두 삭제되며 사용자 동작 프로필을 다시 학습해야 합니다. 이 과정은 최소 3주가 소요됩니다. 디스크 공간이 부족하다면 **부분** 마이그레이션을 실행하는 것이 적절합니다.
+        -   **부분** 마이그레이션을 선택하면 수집된 네트워크 트래픽과 ATA에서 분석하여 전달된 Windows 이벤트가 모두 삭제되며 사용자 동작 프로필을 다시 학습해야 합니다. 이 과정은 최소&3;주가 소요됩니다. 디스크 공간이 부족하다면 **부분** 마이그레이션을 실행하는 것이 적절합니다.
 
         -   **전체** 마이그레이션을 실행하는 경우에는 추가 디스크 공간(업그레이드 페이지에서 자동으로 계산됨)이 필요하며 네트워크 트래픽에 따라 마이그레이션 시간이 더 오래 걸릴 수 있습니다. 전체 마이그레이션에서는 이전에 수집한 모든 데이터와 사용자 동작 프로필이 유지됩니다. 따라서 ATA가 동작 프로필을 학습하는 데 시간이 추가로 소요되지 않으며, 업데이트 이후 비정상 동작을 즉시 검색할 수 있습니다.
 
@@ -135,6 +135,6 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

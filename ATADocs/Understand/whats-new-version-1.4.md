@@ -1,11 +1,11 @@
 ---
-title: "ATA 버전 1.4의 새로운 기능 | Microsoft 문서"
+title: "Advanced Threat Analytics 버전 1.4의 새로운 기능 | Microsoft 문서"
 description: "알려진 문제와 함께 ATA 버전 1.4의 새로운 기능을 나열합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 3bb1b12088e4871bf65bb67cdfb432d1c414792a
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 69127773d9c3130bd07dee0b65956b93848ec399
 
 
 ---
@@ -102,6 +102,6 @@ ATA Center 또는 ATA Gateway를 제거할 때 제거 대신 ATA 설치가 열�
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 
