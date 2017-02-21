@@ -14,8 +14,8 @@ ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8ffbbfd96507612b8ec44f232f4ece42988eb588
-ms.openlocfilehash: 3bc9e48f1d8843aef40016a2c5a82f6c7510be3c
+ms.sourcegitcommit: e3f763f7c1cce6c451a1cc969771b73543c76673
+ms.openlocfilehash: 0669ccb78207dde1ede06a229af896bed0b19d28
 
 
 ---
@@ -30,7 +30,7 @@ ms.openlocfilehash: 3bc9e48f1d8843aef40016a2c5a82f6c7510be3c
 >[!NOTE]
 > 설명하는 프로세스에서는 이전에 검색한 의심스러운 활동을 복구하지는 않지만 ATA 센터의 기능을 완전하게 복원합니다. 또한 일부 동작 검색에 필요한 학습 기간이 다시 시작되지만, ATA에서 제공하는 대부분의 검색은 ATA 센터가 복원된 후 작동합니다. 
 
-## <a name="how-to-recovery-your-ata-center-after-disaster"></a>재해 후 ATA 센터를 복구하는 방법
+## <a name="how-to-recover-your-ata-center-after-a-disaster"></a>재해 후 ATA 센터를 복구하는 방법
 
 1. ATA 센터 구성은 매시간 파일로 백업됩니다. ATA 센터 구성의 최신 백업 복사본을 찾아서 별도 컴퓨터에 저장하세요. 이러한 파일을 찾는 방법에 대한 자세한 내용은 [ATA 구성 내보내기 및 가져오기 ](/advanced-threat-analytics/deploy-use/ata-configuration-file)를 참조하세요. 
 2. ATA 센터 인증서를 내보냅니다.
@@ -72,6 +72,6 @@ ms.openlocfilehash: 3bc9e48f1d8843aef40016a2c5a82f6c7510be3c
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

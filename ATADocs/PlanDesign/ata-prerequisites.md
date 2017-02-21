@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/7/2017
+ms.date: 2/16/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 88ca89f2311bf4e73b3d0b57db3e4377e99fd8b2
-ms.openlocfilehash: eae08c573fafaa3fa8643a2e115f7fc710e4d3f9
+ms.sourcegitcommit: f61bbb895e4a2f239f91328f8d8b2b5260452cc2
+ms.openlocfilehash: 764d20fd113b8d40d359a8976c175e889f554dba
 
 
 ---
@@ -219,9 +219,13 @@ ATA 경량 게이트웨이는 Windows Server 2008 R2 SP1(Server Core 제외), Wi
 
 도메인 컨트롤러는 RODC(읽기 전용 도메인 컨트롤러)만 될 수 있습니다.
 
-Windows Server 2012 R2 SP1을 실행하는 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 및 [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1,-windows-8.1,-and-windows-server-2012-r2) 업데이트가 순서대로 설치되었는지 확인합니다. 
+Windows Server 2012 R2를 실행하는 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
 
-Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355] [Get-HotFix -Id KB3000850]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
+Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
+
+Windows server 2012 R2 Server Core에 대한 설치의 경우  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2) 업데이트도 설치되어 있어야 합니다.
+
+ Windows PowerShell cmdlet `[Get-HotFix -Id kb3000850]`을 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
 
 > [!NOTE]
 > 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) 및 [성능 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
@@ -289,6 +293,6 @@ ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
