@@ -47,8 +47,9 @@
 ## [로그를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 ## [성능 카운터를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [데이터베이스를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+## [재해 복구](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
