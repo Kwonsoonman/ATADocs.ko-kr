@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 31fca93099bbd44f6429f9274c941ed65556d588
+ms.sourcegitcommit: 9d26567a0a9a00d4cb1a9421a4ef2e30a52c11a8
+ms.openlocfilehash: 9e550cf8fe795cb679fbcfe10ef40d2ede7875b4
 
 
 ---
@@ -43,8 +43,8 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 
 **구문**:
 
-    “Microsoft ATA Center Setup.exe” [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments=”/q”] [InstallationPath=“<InstallPath>”] [DatabaseDataPath= “<DBPath>”] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint=“<CertThumbprint>”] 
-    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint=”<CertThumbprint >”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **설치 옵션**:
 
@@ -60,23 +60,23 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 
 |Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|InstallationPath|InstallationPath=“<InstallPath>”|아니요|ATA 이진 파일을 설치할 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center입니다.|
+|InstallationPath|InstallationPath="<InstallPath>"|아니요|ATA 이진 파일을 설치할 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center입니다.|
 |DatabaseDataPath|DatabaseDataPath= “<DBPath>”|아니요|ATA 데이터베이스 데이터 폴더 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data입니다.|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|예|ATA 센터 서비스의 IP 주소를 설정합니다.|
 |CenterPort|CenterPort=<CenterPort>|예|ATA 센터 서비스의 네트워크 포트를 설정합니다.|
-|CenterCertificateThumbprint|CenterCertificateThumbprint=“<CertThumbprint>”|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|예|ATA 콘솔의 IP 주소를 설정합니다.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint=“<CertThumbprint >”|아니요|ATA 콘솔용 인증서 지문을 지정합니다. 이 인증서는 ATA 콘솔 웹 사이트의 ID를 확인하는 데 사용됩니다. 지정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|아니요|ATA 콘솔용 인증서 지문을 지정합니다. 이 인증서는 ATA 콘솔 웹 사이트의 ID를 확인하는 데 사용됩니다. 지정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
 
 **예**: 기본 설치 경로 및 단일 IP 주소를 사용하여 ATA 센터를 설치하려면 다음을 수행합니다.
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
 기본 설치 경로, 두 개의 IP 주소, 사용자 정의 인증서 지문을 사용하여 ATA 센터를 설치하려면 다음을 수행합니다.
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
-    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
+    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
 ## <a name="update-the-ata-center"></a>ATA 센터를 업데이트합니다.
 
@@ -84,7 +84,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 
 **구문**:
 
-    Microsoft ATA Center Setup.exe” [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments=”/q”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **설치 옵션**:
@@ -101,7 +101,7 @@ ATA를 업데이트할 때 설치 관리자가 서버에 ATA가 이미 설치되
 
 **예**: ATA 센터를 자동으로 업데이트하려면 다음을 수행합니다. 대규모 환경에서는 ATA 센터 업데이트를 완료하는 데 시간이 걸릴 수 있습니다. ATA 로그를 모니터링하여 업데이트 진행 상태를 추적합니다.
 
-        “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-center-silently"></a>ATA 센터 자동 제거
 
@@ -128,7 +128,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 **예**: 서버에서 ATA 센터를 자동으로 제거하기 위해 다음과 같이 기존 데이터베이스의 모든 데이터를 제거합니다.
 
 
-    “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
+    "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>ATA 게이트웨이 자동 설치
 다음 명령을 사용하여 ATA 게이트웨이를 자동으로 설치합니다.
@@ -136,8 +136,8 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 **구문**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint=”<CertThumbprint >”] [ConsoleAccountName=”<AccountName>”] 
-    [ConsoleAccountPassword=”<AccountPassword>”]
+    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountPassword="<AccountPassword>"]
 
 **설치 옵션**:
 
@@ -152,14 +152,14 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
 |Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=“<CertThumbprint >”|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
-|ConsoleAccountName|ConsoleAccountName=“<AccountName>”|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정((user@domain.com))의 이름을 설정합니다.|
-|ConsoleAccountPassword|ConsoleAccountPassword=“<AccountPassword>”|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정((user@domain.com))의 암호를 설정합니다.|
+|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
+|ConsoleAccountName|ConsoleAccountName="<AccountName>"|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 이름을 설정합니다.|
+|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 암호를 설정합니다.|
 
 **예**: 자동으로 ATA 게이트웨이를 설치하고 지정된 자격 증명을 사용하여 ATA 센터에 등록하려면 다음을 수행합니다.
 
-    “Microsoft ATA Gateway Setup.exe” /quiet NetFrameworkCommandLineArguments="/q" 
-    ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
+    "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
 ## <a name="update-the-ata-gateway"></a>ATA 게이트웨이 업데이트
@@ -221,6 +221,6 @@ ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합�
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
