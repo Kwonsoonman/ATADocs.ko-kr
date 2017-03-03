@@ -1,11 +1,11 @@
 ---
-title: "ATA 설치 - 5단계 | Microsoft 문서"
-description: "ATA 설치 5단계에서는 ATA Gateway에 대한 설정을 구성합니다."
+title: "Advanced Threat Analytics 설치 - 5단계 | Microsoft 문서"
+description: "ATA 설치&5;단계에서는 ATA Gateway에 대한 설정을 구성합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: b30fe6bc977184fb8cc297e10724c7fe48ee6934
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 5856a5e658ed18cbf82d25247f8c39e48ccd2185
 
 
 ---
@@ -97,6 +97,6 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

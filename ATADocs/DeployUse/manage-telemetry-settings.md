@@ -1,11 +1,11 @@
 ---
-title: "원격 분석 설정 관리 | Microsoft 문서"
+title: "Advanced Threat Analytics 원격 분석 설정 관리 | Microsoft 관리"
 description: "ATA에 의해 수집되는 데이터를 설명하고 데이터 수집을 해제하는 단계를 제공합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: c7366dcc2cbd7a9eba1503e5af3290ec4ac73c32
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 1b6da432e81bc42b772b2146213d2f24bee6231a
 
 
 ---
@@ -96,6 +96,6 @@ ATA(Advanced Threat Analytics)는 ATA에 대한 익명화된 원격 분석 데�
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

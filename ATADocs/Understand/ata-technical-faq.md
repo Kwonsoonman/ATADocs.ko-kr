@@ -1,11 +1,11 @@
 ---
-title: "ATA 질문과 대답 | Microsoft 문서"
+title: "Advanced Threat Analytics 질문과 대답 | Microsoft 문서"
 description: "ATA에 대한 질문과 관련 대답 목록을 제공합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
+ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
+ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
 
 
 ---
@@ -27,6 +27,7 @@ ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>ATA 게이트웨이가 시작되지 않으면 어떻게 해야 하나요?
 최신 오류 로그에서 가장 최근의 오류를 확인합니다. 오류 로그는 ATA가 설치되어 있는 위치의 “Logs” 폴더에 있습니다.
+
 ## <a name="how-can-i-test-ata"></a>ATA를 테스트하려면 어떻게 해야 하나요?
 다음 작업 중 하나를 수행하여 종단 간 테스트를 통해 의심스러운 활동을 시뮬레이트할 수 있습니다.
 
@@ -54,6 +55,7 @@ ATA는 SIEM과 Windows 이벤트 전달에서 수집된 이벤트뿐 아니라 �
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Kerberos 아머링(armoring)에 대해 ATA가 작동하나요?
 FAST(유동 인증 보안 터널링)라고도 하는 Kerberos 아머링(armoring)은 ATA에서 지원됩니다. 단, 해시 검색 통과는 작동하지 않습니다.
+
 ## <a name="how-many-ata-gateways-do-i-need"></a>ATA 게이트웨이는 몇 개나 필요한가요?
 
 ATA 게이트웨이 수는 사용 중인 네트워크 레이아웃, 패킷 볼륨과 ATA에서 캡처된 이벤트 볼륨에 따라 다릅니다. 정확한 수를 확인하려면 [ATA 경량 게이트웨이 크기 조정](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing)을 참조하세요. 
@@ -80,8 +82,12 @@ ATA 게이트웨이 수는 사용 중인 네트워크 레이아웃, 패킷 볼�
 다음의 두 가지 항목을 백업합니다.
 
 -   ATA에서 저장하는 트래픽과 이벤트. 지원되는 모든 데이터베이스 백업 절차를 사용하여 이러한 항목을 백업할 수 있습니다. 자세한 내용은 [ATA 데이터베이스 관리](/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요. 
--   ATA 구성. 데이터베이스에 저장되며, ATA 센터 배포 위치의 **백업** 폴더에서 1시간마다 자동으로 백업됩니다.  자세한 내용은 [ATA 데이터베이스 관리](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요.
+-   ATA 구성. 데이터베이스에 저장되며, ATA 센터 배포 위치의 **백업** 폴더에서&1;시간마다 자동으로 백업됩니다.  자세한 내용은 [ATA 데이터베이스 관리](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요.
+
+
+
 ## <a name="what-can-ata-detect"></a>ATA는 어떤 항목을 검색할 수 있나요?
+
 ATA는 알려진 악의적인 공격 및 기법, 보안 문제, 위험을 검색합니다.
 전체 ATA 검색 목록은 [ATA에서 수행하는 검색은 무엇인가요?](ata-threats.md)를 참조하세요.
 
@@ -89,7 +95,7 @@ ATA는 알려진 악의적인 공격 및 기법, 보안 문제, 위험을 검색
 디스크 액세스 대기 시간이 짧고(10밀리초 미만) 빠른 저장소(7200RPM 디스크는 권장하지 않음)가 좋습니다. RAID 구성에서 높은 쓰기 부하(RAID-5/6 및 해당 파생 항목은 권장하지 않음)를 지원해야 합니다.
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>ATA 게이트웨이에는 NIC가 몇 개나 필요한가요?
-ATA 게이트웨이에는 최소 2개의 네트워크 어댑터가 필요합니다.<br>1. 내부 네트워크와 ATA 센터에 연결하기 위한 NIC<br>2. 포트 미러링을 통해 도메인 컨트롤러 네트워크 트래픽을 캡처하는 데 사용될 NIC<br>* 기본적으로 도메인 컨트롤러에서 사용하는 네트워크 어댑터를 모두 사용하는 ATA 경량 게이트웨이에는 적용되지 않습니다.
+ATA 게이트웨이에는 최소&2;개의 네트워크 어댑터가 필요합니다.<br>1. 내부 네트워크와 ATA 센터에 연결하기 위한 NIC<br>2. 포트 미러링을 통해 도메인 컨트롤러 네트워크 트래픽을 캡처하는 데 사용될 NIC<br>* 기본적으로 도메인 컨트롤러에서 사용하는 네트워크 어댑터를 모두 사용하는 ATA 경량 게이트웨이에는 적용되지 않습니다.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>ATA는 SIEM과 어떤 유형으로 통합할 수 있나요?
 다음과 같이 ATA를 SIEM과 양방향으로 통합할 수 있습니다.
@@ -98,7 +104,6 @@ ATA 게이트웨이에는 최소 2개의 네트워크 어댑터가 필요합니�
 2. [이러한 SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support)에서 ID가 4776인 각 Windows 이벤트에 대해 Syslog 메시지를 받도록 ATA를 구성할 수 있습니다.
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>ATA는 IaaS 솔루션에 표시되는 도메인 컨트롤러를 모니터링할 수 있나요?
-
 예. ATA 경량 게이트웨이를 사용하여 모든 IaaS 솔루션에 있는 도메인 컨트롤러를 모니터링할 수 있습니다.
 
 ## <a name="is-this-an-on-premises-or-in-cloud-offering"></a>ATA는 온-프레미스 제품인가요? 아니면 클라우드 제품인가요?
@@ -108,7 +113,7 @@ Microsoft Advanced Threat Analytics는 온-프레미스 제품입니다.
 이 솔루션은 현재 독립 실행형 제품으로 제공되며 Azure Active Directory 또는 온-프레미스 Active Directory에 포함되지 않습니다.
 
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>규칙을 직접 작성하고 임계값/기준을 만들어야 하나요?
-Microsoft Advanced Threat Analytics를 사용할 때는 규칙, 임계값 또는 기준을 작성한 다음 미세 조정할 필요가 없습니다. ATA는 사용자, 장치 및 리소스의 동작과 이러한 항목 간의 관계를 분석하며 의심스러운 활동과 알려진 공격을 빠르게 검색할 수 있습니다. 배포 후 3주가 지나면 ATA는 동작이 의심스러운 활동 검색을 시작합니다. 그리고 알려진 악의적 공격 및 보안 문제는 배포 직후부터 검색하기 시작합니다.
+Microsoft Advanced Threat Analytics를 사용할 때는 규칙, 임계값 또는 기준을 작성한 다음 미세 조정할 필요가 없습니다. ATA는 사용자, 장치 및 리소스의 동작과 이러한 항목 간의 관계를 분석하며 의심스러운 활동과 알려진 공격을 빠르게 검색할 수 있습니다. 배포 후&3;주가 지나면 ATA는 동작이 의심스러운 활동 검색을 시작합니다. 그리고 알려진 악의적 공격 및 보안 문제는 배포 직후부터 검색하기 시작합니다.
 
 ## <a name="if-you-are-already-breached-will-microsoft-advanced-threat-analytics-be-able-to-identify-abnormal-behavior"></a>이미 보안이 위반된 경우 Microsoft Advanced Threat Analytics가 비정상 동작을 식별할 수 있나요?
 예. ATA는 보안이 위반된 후에 설치하더라도 해커의 의심스러운 활동을 검색할 수 있습니다. ATA는 사용자 동작 자체를 확인할 뿐 아니라, 동작을 조직 보안 맵의 다른 사용자와 대조하여 확인하는 작업도 수행합니다. 초기 분석 시간 중에 확인되는 공격자의 비정상 동작은 "이상값"으로 식별되며 ATA는 비정상 동작을 계속 보고합니다. 또한 ATA는 해커가 Pass-the-Ticket 등의 방식으로 다른 사용자의 자격 증명 도용을 시도하거나 도메인 컨트롤러 중 하나에서 원격 실행을 수행하려는 경우에도 의심스러운 활동을 검색할 수 있습니다.
@@ -127,6 +132,7 @@ SPAN(Switched Port Analyzer)이라고도 하는 포트 미러링은 네트워크
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>ATA는 다중 도메인 및 다중 포리스트를 지원할 수 있나요?
 Microsoft Advanced Threat Analytics는 포리스트 경계가 동일한 다중 도메인 환경을 지원할 예정입니다. 여러 포리스트를 모니터링하려면 별도의 ATA를 배포해야 합니다.
+
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>배포의 전반적인 상태를 확인할 수 있나요?
 예. 배포의 전반적인 상태와 구성/연결 등에 관련된 특정 문제를 모두 확인할 수 있으며, 문제 발생 시 경고가 표시됩니다.
 
@@ -141,6 +147,6 @@ Microsoft Advanced Threat Analytics는 포리스트 경계가 동일한 다중 �
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

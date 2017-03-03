@@ -1,11 +1,11 @@
 ---
-title: "ATA 구성 변경 | Microsoft 문서"
+title: "Advanced Threat Analytics 구성 변경 | Microsoft 문서"
 description: "ATA 구성 업데이트할 수 있는 방법 목록을 제공합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: f1e0939160cfdc54d4474f43e01582893cda82ef
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 823d773efd85a453c3e0bf8f263f86ac02aaa237
 
 
 ---
@@ -42,6 +42,6 @@ ATA의 초기 설치 및 배포 후 구성을 업데이트하거나 변경해야
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

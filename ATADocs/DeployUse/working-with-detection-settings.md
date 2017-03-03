@@ -1,11 +1,11 @@
 ---
-title: "ATA 검색 설정 작업 | Microsoft 문서"
+title: "Advanced Threat Analytics 검색 설정 | Microsoft 문서"
 description: "일반적이지 않은 상황에 사용되고 네트워크의 다른 엔터티와 다르게 처리해야 하는 IP 주소 및 서브넷 목록을 구성하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 93f2a72c9623674c73b3ee83ecf12be8e0766365
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: c88d74793c6210704f2a187df6508bf525907118
 
 
 ---
@@ -55,6 +55,6 @@ ms.openlocfilehash: 93f2a72c9623674c73b3ee83ecf12be8e0766365
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

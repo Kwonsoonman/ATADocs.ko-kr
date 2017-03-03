@@ -1,11 +1,11 @@
 ---
-title: "버전 1.7로의 ATA 업데이트 마이그레이션 가이드 | Microsoft 문서"
+title: "버전 1.7로 Advanced Threat Analytics 업데이트 마이그레이션 가이드 | Microsoft 문서"
 description: "버전 1.7으로 ATA를 업데이트하는 절차"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 4fa8b77aeffff327672396e9819215cc536af918
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 3dd8cdfca31f8177b9c915fe85e5b8ecb33b4d58
 
 
 ---
@@ -66,7 +66,7 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
     ![ATA를 최신 이미지로 유지](media/ata_ms_update.png) 여기에 보이는 것처럼 다른 Microsoft 제품(ATA 포함)에 대한 업데이트를 사용하도록 Windows 설정을 조정합니다. 
      ![Windows 자동 업데이트 이미지](media/ata_installupdatesautomatically.png)
 
-    -  **데이터 마이그레이션** 화면에서 데이터 전체를 마이그레이션할지, 데이터 일부를 마이그레이션할지 선택합니다. 일부 데이터만 마이그레이션하기로 선택한 경우에는 이전에 캡처된 네트워크 트래픽 및 동작 프로파일이 마이그레이션되지 않습니다. 비정상적인 동작 검색에서 이상 활동 검색을 사용하도록 설정할 전체 프로파일이 생성되는데 3주가 걸린다는 것을 의미합니다. 3주 동안 다른 모든 ATA 검색은 제대로 작동합니다. **부분** 데이터 마이그레이션은 설치하는 데 시간이 훨씬 더 적게 걸립니다. **전체** 데이터 마이그레이션을 선택하면 설치를 완료하는 데 상당한 시간이 걸릴 수 있습니다. **데이터 마이그레이션** 화면에 나열된 예상된 시간과 필요한 디스크 공간 크기는 이전 버전의 ATA에 저장해 놓은 이전에 캡처된 네트워크 트래픽의 양에 따라 달라 집니다. **부분** 또는 **전체**를 선택하기 전에 이러한 요구 사항을 확인해야 합니다.  
+    -  **데이터 마이그레이션** 화면에서 데이터 전체를 마이그레이션할지, 데이터 일부를 마이그레이션할지 선택합니다. 일부 데이터만 마이그레이션하기로 선택한 경우에는 이전에 캡처된 네트워크 트래픽 및 동작 프로파일이 마이그레이션되지 않습니다. 비정상적인 동작 검색에서 이상 활동 검색을 사용하도록 설정할 전체 프로파일이 생성되는데&3;주가 걸린다는 것을 의미합니다. 3주 동안 다른 모든 ATA 검색은 제대로 작동합니다. **부분** 데이터 마이그레이션은 설치하는 데 시간이 훨씬 더 적게 걸립니다. **전체** 데이터 마이그레이션을 선택하면 설치를 완료하는 데 상당한 시간이 걸릴 수 있습니다. **데이터 마이그레이션** 화면에 나열된 예상된 시간과 필요한 디스크 공간 크기는 이전 버전의 ATA에 저장해 놓은 이전에 캡처된 네트워크 트래픽의 양에 따라 달라 집니다. **부분** 또는 **전체**를 선택하기 전에 이러한 요구 사항을 확인해야 합니다.  
     
     ![ATA 데이터 마이그레이션](media/migration data migration.png)
 
@@ -94,6 +94,6 @@ ATA 버전 1.7로 업데이트하려면 다음 단계를 수행합니다.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 
