@@ -20,12 +20,12 @@
 ### [2. 포트 미러링 유효성 검사](validate-port-mirroring.md)
 ### [3. 이벤트 수집 구성](configure-event-collection.md)
 ## ATA 설치
-### [1단계](install-ata-step1.md)
-### [2단계](install-ata-step2.md)
-### [3단계](install-ata-step3.md)
-### [4단계](install-ata-step4.md)
-### [5단계](install-ata-step5.md)
-### [6단계](install-ata-step6.md)
+### [1 단계 다운로드 및 설치 센터](install-ata-step1.md)
+### [2 단계 AD에 연결](install-ata-step2.md)
+### [3 단계 GW 패키지 다운로드](install-ata-step3.md)
+### [4 단계 GW 설치](install-ata-step4.md)
+### [5 단계 GW 구성](install-ata-step5.md)
+### [6 단계 제외 사항 및 허니 토큰](install-ata-step6.md)
 ### [자동 설치](ata-silent-installation.md)
 # 관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의
 ## [ATA 센터 IP 주소 변경](modifying-ata-config-centerip.md)
@@ -47,8 +47,8 @@
 ## [로그를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 ## [성능 카운터를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [데이터베이스를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+## [재해 복구](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

@@ -1,11 +1,11 @@
 ---
-title: "ATA 설치 - 3단계 | Microsoft 문서"
-description: "ATA 설치 3단계에서는 ATA Gateway 설치 패키지를 다운로드합니다."
+title: "Advanced Threat Analytics 설치 - 3단계 | Microsoft 문서"
+description: "ATA 설치&3;단계에서는 ATA Gateway 설치 패키지를 다운로드합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: c8f3f5453757fbc7a95aa2377a84c3a133d38181
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 40a7e5344ca3e8b99d70d1ef63a1cd5a2f0ce09c
 
 
 ---
@@ -65,6 +65,6 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

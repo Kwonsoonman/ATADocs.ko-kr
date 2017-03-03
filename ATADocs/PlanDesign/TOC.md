@@ -20,12 +20,12 @@
 ### [2. 포트 미러링 유효성 검사](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
 ### [3. 이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## ATA 설치
-### [1단계](/advanced-threat-analytics/deploy-use/install-ata-step1)
-### [2단계](/advanced-threat-analytics/deploy-use/install-ata-step2)
-### [3단계](/advanced-threat-analytics/deploy-use/install-ata-step3)
-### [4단계](/advanced-threat-analytics/deploy-use/install-ata-step4)
-### [5단계](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [6단계](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [1 단계 다운로드 및 설치 센터](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [2 단계 AD에 연결](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [3 단계 GW 패키지 다운로드](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [4 단계 GW 설치](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [5 단계 GW 구성](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [6 단계 제외 사항 및 허니 토큰](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [자동 설치](/advanced-threat-analytics/deploy-use/ata-silent-installation)
 # 관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의
 ## [ATA 센터 IP 주소 변경](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
@@ -50,6 +50,6 @@
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

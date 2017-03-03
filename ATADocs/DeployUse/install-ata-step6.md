@@ -1,11 +1,11 @@
 ---
-title: "ATA 설치 | Microsoft 문서"
+title: "Advanced Threat Analytics 설치 - 6단계 | Microsoft 문서"
 description: "ATA 설치의 마지막 단계에서는 허니 토큰 사용자를 구성합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 17833f000135337fce82d69efb63fc6e1f9ea307
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: b5954bd6f0cd9ef8c8b0b958a92840e905189d71
 
 
 ---
@@ -60,7 +60,7 @@ ATA에서는 허니 토큰 사용자를 구성하여 악의적인 행위자에 �
 
 공격 타임라인에서 검색된 의심스러운 활동을 보고, 사용자 또는 컴퓨터를 검색하여 해당 프로필을 확인하세요.
 
-ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부 의심스러운 동작과 같은 일부 활동은 ATA에서 동작 프로필을 작성할 시간(최소 3주)을 소요한 다음에야 사용할 수 있습니다.
+ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부 의심스러운 동작과 같은 일부 활동은 ATA에서 동작 프로필을 작성할 시간(최소&3;주)을 소요한 다음에야 사용할 수 있습니다.
 
 
 >[!div class="step-by-step"]
@@ -76,6 +76,6 @@ ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

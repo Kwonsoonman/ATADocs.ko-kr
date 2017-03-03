@@ -1,11 +1,11 @@
 ---
-title: "포트 미러링 구성 | Microsoft 문서"
+title: "Advanced Threat Analytics 배포 시 포트 미러링 구성 | Microsoft 문서"
 description: "포트 미러링 옵션과 ATA에 대해 이러한 옵션을 구성하는 방법을 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 8e18bcefc023f1c37b2255000c244bc54bca4fe7
 
 
 ---
@@ -75,6 +75,6 @@ ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들�
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

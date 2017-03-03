@@ -1,11 +1,11 @@
 ---
-title: "ATA 구성 변경 - ATA 센터 IP 주소 | Microsoft 문서"
+title: "Advanced Threat Analytics 구성 변경 - 센터 IP 주소 | Microsoft 문서"
 description: "ATA 센터의 IP 주소, 포트 또는 인증서를 변경하는 방법에 대해 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 6ad9e90fc05ce284868542df7e61585f37324fad
 
 
 ---
@@ -36,7 +36,7 @@ ATA 센터 IP 주소와 포트 또는 인증서를 변경해야 하는 경우 �
 
 ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 저장합니다. ATA 게이트웨이는 정기적으로 ATA 센터에 연결하고 구성 변경 내용을 끌어옵니다. ATA 게이트웨이가 ATA 센터에 연결하는 방법은 두 단계로 변경합니다.
 
--   첫 번째 단계 – ATA 센터 서비스에서 사용할 IP 주소 및 포트를 업데이트합니다. 이때 ATA 센터는 여전히 원래 IP 주소에서 수신 대기하고, ATA 게이트웨이가 다음 번에 해당 구성을 동기화할 때 ATA 센터용 IP 주소를 2개 갖게 됩니다. ATA 게이트웨이는 원래(첫 번째) IP 주소를 사용하여 연결할 수 있으면 새 IP 주소 및 포트의 사용을 시도하지 않습니다.
+-   첫 번째 단계 – ATA 센터 서비스에서 사용할 IP 주소 및 포트를 업데이트합니다. 이때 ATA 센터는 여전히 원래 IP 주소에서 수신 대기하고, ATA 게이트웨이가 다음 번에 해당 구성을 동기화할 때 ATA 센터용 IP 주소를&2;개 갖게 됩니다. ATA 게이트웨이는 원래(첫 번째) IP 주소를 사용하여 연결할 수 있으면 새 IP 주소 및 포트의 사용을 시도하지 않습니다.
 
 -   두 번째 단계 – 모든 ATA 게이트웨이가 업데이트된 구성과 동기화된 후에는 ATA 센터가 수신 대기하는 새 IP 주소 및 포트를 활성화합니다. 새 IP 주소를 활성화하면 ATA 센터 서비스가 해당 새 IP 주소에 바인딩됩니다. ATA 게이트웨이는 원래 주소에 연결할 수 없으며, 이제 ATA 센터에 대한 두 번째(새) IP 주소로 연결을 시도합니다. ATA 게이트웨이는 새 IP 주소로 ATA 센터 서비스에 연결한 후에 최신 구성을 끌어오고 ATA 센터에 대해 단일 IP 주소를 갖게 됩니다. (해당 프로세스를 다시 시작하지 않은 경우)
 
@@ -84,6 +84,6 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
