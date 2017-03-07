@@ -14,7 +14,7 @@
 ## [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)
 ## [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 ## [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-# 배포:
+# 배포
 ## 사전 설치 단계
 ### [1. 포트 미러링 구성](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
 ### [2. 포트 미러링 유효성 검사](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
@@ -47,9 +47,4 @@
 ## [로그를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 ## [성능 카운터를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [데이터베이스를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
+## [재해 복구](/advanced-threat-analytics/troubleshoot/disaster-recovery)
