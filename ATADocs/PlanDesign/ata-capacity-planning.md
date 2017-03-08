@@ -12,13 +12,10 @@ ms.prod:
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
-ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
-
-
+ms.openlocfilehash: 4e0a6dd325c172ba4eb3b68fe4d4aab96f20684b
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -211,9 +208,3 @@ ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 아키텍처](ata-architecture.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

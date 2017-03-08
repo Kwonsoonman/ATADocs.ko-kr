@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: b1668f6d1d0c2107fc7116fb486d9e822552c852
-
-
+ms.openlocfilehash: 258c7dd816c61f3622f234f97d64527e9a90cbe2
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="ata-update-to-16-migration-guide"></a>버전 1.6으로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.6 업데이트에서는 다음 영역에 대한 향상된 기능을 제공합니다.
 
@@ -140,9 +137,3 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 ## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

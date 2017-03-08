@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 782c066e6a7ef8a5da9e2b8ceb16742da6f52506
-
-
+ms.openlocfilehash: 06aa85cededdc3647aadaaca7d594ce3bbbb0723
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -40,7 +37,7 @@ ATA는 의심스러운 활동을 감지하면 메일을 통해 또는 ATA 이벤
 
 2. **알림** 섹션에서 **설정**을 선택합니다.
 3. **메일 받는 사람**에서 메일을 통해 알림을 받을 수신자를 지정합니다.
->   [!NOTE]
+>    [!NOTE]
 >   의심스러운 활동에 대한 전자 메일 경고는 의심스러운 활동이 생성될 때만 전송됩니다.
 
 4. **Notify when:**(다음과 같은 경우 알림 보내기)에서 토글을 사용하여 전송해야 하는 알림을 선택합니다.
@@ -77,9 +74,3 @@ Syslog 알림을 수신하려면 다음을 설정합니다.
 
 ## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

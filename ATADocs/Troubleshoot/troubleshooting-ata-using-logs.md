@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 58df6ec3473118d0e11a5128eabd8feaa29f9fd2
-
-
+ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -42,8 +39,8 @@ ATA 게이트웨이에는 다음 로그가 있습니다.
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 그룹화하고 개수를 측정합니다.
     이 파일은 ATA 게이트웨이 서비스가 시작될 때마다 빈 상태로 시작한 후&1;분 간격으로 업데이트됩니다. 기본적으로 ATA 게이트웨이와 관련해서 새로운 오류나 문제가 있는지 파악하기 위해 사용됩니다. 오류가 그룹화되므로 보다 읽기 쉽고 새로운 문제가 있는지 쉽게 파악할 수 있습니다.
--   **Microsoft.Tri.Gateway.Updater.log** - 이 로그는 게이트웨이 업데이트 프로그램 프로세스에서 사용되며, 자동으로 수행 하도록 구성하는 경우 게이트웨이를 업데이트하는 역할을 합니다. ATA 경량 게이트웨이의 경우 게이트웨이 업데이트 프로그램 프로세스도 ATA 경량 게이트웨이의 리소스 제한에 대한 책임을 집니다.
--   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 함께 그룹화하고 개수를 측정합니다. 이 파일은 ATA 업데이트 프로그램 서비스가 시작될 때마다 빈 상태로 시작한 후&1;분 간격으로 업데이트됩니다. 이를 통해 ATA 업데이트 프로그램에 새로운 오류 또는 문제가 있는지 파악할 수 있습니다. 오류가 그룹화되며 새로운 유형의 오류나 문제가 있는지 쉽고 빠르게 파악할 수 있습니다.
+-    **Microsoft.Tri.Gateway.Updater.log** - 이 로그는 게이트웨이 업데이트 프로그램 프로세스에서 사용되며, 자동으로 수행 하도록 구성하는 경우 게이트웨이를 업데이트하는 역할을 합니다. ATA 경량 게이트웨이의 경우 게이트웨이 업데이트 프로그램 프로세스도 ATA 경량 게이트웨이의 리소스 제한에 대한 책임을 집니다.
+-    **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 함께 그룹화하고 개수를 측정합니다. 이 파일은 ATA 업데이트 프로그램 서비스가 시작될 때마다 빈 상태로 시작한 후&1;분 간격으로 업데이트됩니다. 이를 통해 ATA 업데이트 프로그램에 새로운 오류 또는 문제가 있는지 파악할 수 있습니다. 오류가 그룹화되며 새로운 유형의 오류나 문제가 있는지 쉽고 빠르게 파악할 수 있습니다.
 
 > [!NOTE]
 > 처음 세 개의 로그 파일에 최대 50MB까지 할당됩니다. 이 크기에 도달하면 새 로그 파일이 열리고 이전 로그 파일의 이름은 "&lt;원래 파일 이름&gt;-Archived-00000"으로 바뀝니다. 여기서 번호는 이름이 바뀔 때마다 커집니다. 기본적으로 형식이 동일한 파일이 10개가 넘는 경우 가장 오래된 파일부터 삭제됩니다.
@@ -92,9 +89,3 @@ ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
