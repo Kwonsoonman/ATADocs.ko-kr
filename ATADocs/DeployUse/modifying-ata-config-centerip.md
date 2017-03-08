@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 6ad9e90fc05ce284868542df7e61585f37324fad
-
-
+ms.openlocfilehash: c90f34b0567df43d977ca23e38319eafe01c51e3
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -81,9 +78,3 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 ## <a name="see-also"></a>참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

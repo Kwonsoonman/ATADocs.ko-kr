@@ -13,13 +13,10 @@ ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 5f662793ae0c758becb08c3fd91b79587124d99a
-
-
+ms.openlocfilehash: db179445a0ea80411a0462e639f1d8c890bf21b0
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -74,9 +71,3 @@ ATA 콘솔에 대한 URL을 수정해야 하는 경우 ATA 센터 서버에서 �
 ## <a name="see-also"></a>참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
