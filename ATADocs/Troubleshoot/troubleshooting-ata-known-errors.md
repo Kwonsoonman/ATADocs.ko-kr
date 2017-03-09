@@ -1,22 +1,15 @@
 ---
-title: "Advanced Threat Analytics 오류 로그 문제 해결 | Microsoft 문서"
-description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-ms.reviewer: bennyl
-ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
+# <a name="required-metadata"></a>필수 메타데이터
 
+제목: Advanced Threat Analytics 오류 로그 문제 해결 | Microsoft 문서 설명: ATA 키워드의 일반적인 오류를 해결할 수는 방법에 대한 설명: 작성자: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 1/23/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+
+# <a name="optional-metadata"></a>선택적 메타데이터
+
+#<a name="robots"></a>ROBOTS:
+#<a name="audience"></a>대상 그룹:
+#<a name="msdevlang"></a>ms.devlang:
+ms.reviewer: arzinger ms.suite: ems#ms.tgt_pltfrm:
+#<a name="mscustom"></a>ms.custom:
 
 ---
 
@@ -74,9 +67,3 @@ ms.openlocfilehash: 47fe467a9244d6ea8925a255552aa0f5c785dce3
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
