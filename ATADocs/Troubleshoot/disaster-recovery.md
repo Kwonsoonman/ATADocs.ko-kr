@@ -13,8 +13,8 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 3f9ca1e33c9e82f730d199f92b2f9778519ac973
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: e315e9731fa9715c3b41b9292349ee5aca13fbce
+ms.sourcegitcommit: 4f5927f30089655e3984d69623ea4439b7c36845
 translationtype: HT
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.7*
@@ -31,7 +31,7 @@ translationtype: HT
 
 1. ATA 센터 구성은 매시간 파일로 백업됩니다. ATA 센터 구성의 최신 백업 복사본을 찾아서 별도 컴퓨터에 저장하세요. 이러한 파일을 찾는 방법에 대한 자세한 내용은 [ATA 구성 내보내기 및 가져오기 ](/advanced-threat-analytics/deploy-use/ata-configuration-file)를 참조하세요. 
 2. ATA 센터 인증서를 내보냅니다.
-    1. 인증서 관리자에서 **인증서(로컬 컴퓨터)** -> **개인** ->**인증서**로 이동하고 **ATA Center**(ATA 센터)를 선택합니다.
+    1. 인증서 관리자(`certlm.msc`)에서 **인증서(로컬 컴퓨터)** -> **개인** ->**인증서**로 이동하고 **ATA Center**(ATA 센터)를 선택합니다.
     2. **ATA Center**(ATA 센터)를 마우스 오른쪽 단추로 클릭하고 **All Tasks**(모든 작업), **내보내기**를 차례로 선택합니다. 
      ![ATA 센터 인증서](media/ata-center-cert.png)
     3. 지침에 따라 인증서를 내보내고 개인 키도 내보냈는지 확인합니다.
@@ -44,12 +44,12 @@ translationtype: HT
 
 1. 이전 ATA 센터 컴퓨터와 동일한 IP 주소 및 컴퓨터 이름을 사용하여 새 Windows Server 컴퓨터를 만듭니다.
 4. 위에서 백업한 인증서를 새 서버에 가져옵니다.
-5. 새로 만든 Windows Server에서 [ATA 센터 배포](/advanced-threat-analytics/deploy-use/install-ata-step1)에 대한 지침을 따릅니다. ATA 게이트웨이는 다시 배포하지 않아도 됩니다. 인증서에 대한 메시지가 표시되면 ATA 센터 구성을 백업할 때 내보낸 인증서를 제공하세요. 
+5. 새로 만든 Windows Server에서 [ATA 센터 배포](/advanced-threat-analytics/deploy-use/install-ata-step1)에 대한 지침을 따릅니다. 이전 센터와 동일한 IP 주소와 포트를 선택해야 합니다. ATA 게이트웨이는 다시 배포하지 않아도 됩니다. 인증서에 대한 메시지가 표시되면 ATA 센터 구성을 백업할 때 내보낸 인증서를 제공하세요. 
 ![ATA 센터 복원](media/ata-center-restore.png)
 6. 백업된 ATA 센터 구성을 가져옵니다.
     1. MongoDB에서 기본 ATA 센터 시스템 프로필 문서를 제거합니다. 
         1. **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**으로 이동합니다. 
-        2. `mongo.exe`을 실행합니다. 
+        2. `mongo.exe ATA`을 실행합니다. 
         3. 기본 시스템 프로필을 제거하려면 이 명령을 실행하세요.`db.SystemProfile.remove({})`
     2. 1단계의 백업 파일을 사용하여 다음 명령을 실행합니다. `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`</br>
     백업 파일을 찾고 가져오는 방법에 대한 자세한 설명은 [ATA 구성 내보내기 및 가져오기](/advanced-threat-analytics/deploy-use/ata-configuration-file)를 참조하세요. 
