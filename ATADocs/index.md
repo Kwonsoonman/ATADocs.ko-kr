@@ -1,13 +1,13 @@
 ---
 layout: LandingPage
 description: "Advanced Threat Analytics를 사용하는 법을 알아보세요."
-ms.openlocfilehash: d81c3fcc7e8de6a0c73ef78a7fc827e21fe662c5
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: af0cd91660b33f2d9a38e713085576e1ed180b8f
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
 translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics Documentation
 
-회사 외부에서 공유하는 메일, 문서 및 중요한 데이터를 제어하고 보호하세요. 쉬운 분류부터 포함된 레이블 및 권한에 이르기까지 어디에 저장되었든 누구와 공유하든지 간에 Azure Information Protection으로 항상 데이터 보호를 강화하세요.
+Advanced Threat Analytics(ATA)는 네트워크의 여러 데이터 소스로부터의 정보를 사용하여 조직의 사용자와 다른 엔터티의 동작을 학습하고 이에 대한 동작 프로필을 만들고, 여러 프로토콜의 네트워크 트래픽을 캡처하고 구문 분석하기 위해 ATA의 독점 네트워크를 활용하여 기업을 지능형 목표 사이버 공격 및 내부 위협의 여러 가지 유형으로부터 보호하는 온-프레미스 플랫폼입니다.
 
 <ul class="panelContent cardsFTitle">
     <li>
