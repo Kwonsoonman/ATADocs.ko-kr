@@ -1,28 +1,32 @@
---
-# <a name="required-metadata"></a>필수 메타데이터
-
-제목: Advanced Threat Analytics 오류 로그 문제 해결 | Microsoft 문서 설명: ATA의 일반적인 오류를 해결할 수 있는 방법에 대한 설명 키워드: 작성자: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 3/14/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# <a name="optional-metadata"></a>선택적 메타데이터
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>대상 그룹:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger
-
-ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-#<a name="mscustom"></a>ms.custom:
-
 ---
-
+title: "Advanced Threat Analytics 오류 로그 문제 해결 | Microsoft 문서"
+description: "ATA의 일반적인 오류를 해결할 수는 방법에 대해 설명합니다."
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 3/14/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.reviewer: arzinger
+ms.suite: ems
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
+---
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>ATA 오류 로그 문제 해결
+
 이 섹션에서는 ATA 배포 시 발생할 수 있는 오류와 이러한 문제를 해결하는 데 필요한 단계에 대해 자세히 설명합니다.
+
 ## <a name="ata-gateway-errors"></a>ATA 게이트웨이 오류
+
 |오류|설명|해결 방법|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: 로컬 오류가 발생했습니다.|ATA 게이트웨이가 도메인 컨트롤러에 대해 인증하지 못했습니다.|1. DNS 서버에서 도메인 컨트롤러의 DNS 레코드가 올바르게 구성되어 있는지 확인합니다. <br>2. ATA 게이트웨이의 시간이 도메인 컨트롤러의 시간과 동기화되어 있는지 확인합니다.|
