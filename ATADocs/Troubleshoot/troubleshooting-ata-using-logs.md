@@ -27,7 +27,7 @@ ATA 로그는 ATA의 각 구성 요소가 주어진 시점에 수행하는 작�
 ## <a name="ata-gateway-logs"></a>ATA 게이트웨이 로그
 이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다. 
 
-ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
+ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는**C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
 
 ATA 게이트웨이에는 다음 로그가 있습니다.
 
