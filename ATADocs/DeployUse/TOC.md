@@ -27,7 +27,7 @@
 ### [5 단계 GW 구성](install-ata-step5.md)
 ### [6 단계 제외 사항 및 허니 토큰](install-ata-step6.md)
 ### [자동 설치](ata-silent-installation.md)
-# 관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의
+# 사용
 ## [ATA 센터 IP 주소 변경](modifying-ata-config-centerip.md)
 ## [ATA 센터 인증서 변경](modifying-ata-config-centercert.md)
 ## [ATA 콘솔 URL 변경](modifying-ata-config-consoleurl.md)
