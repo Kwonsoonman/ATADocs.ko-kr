@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 2c4ae574b3ce7346ba05abb357c23cfdab6482a4
-
-
+ms.openlocfilehash: 489d85e7e8250dffe8d40225b31ed308a9a79969
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -52,11 +49,11 @@ ATA 배포는 모든 ATA 게이트웨이, 모든 ATA 경량 게이트웨이 또�
 ## <a name="deployment-options"></a>배포 옵션
 ATA는 다음과 같은 게이트웨이 조합을 사용하여 배포할 수 있습니다.
 
--   **ATA 게이트웨이만 사용** <br>
+-    **ATA 게이트웨이만 사용** <br>
 ATA 배포에 ATA 경량 게이트웨이 없이 ATA 게이트웨이만 포함된 경우 ATA 게이트웨이에 대해 포트 미러링을 사용하도록 모든 도메인 컨트롤러를 구성하거나, 네트워크 TAP가 준비되어 있어야 합니다.
--   **ATA 경량 게이트웨이만 사용**<br>
+-    **ATA 경량 게이트웨이만 사용**<br>
 ATA 배포에 ATA 경량 게이트웨이만 포함된 경우 ATA 경량 게이트웨이가 각 도메인 컨트롤러에 배포되며, 서버 또는 포트 미러링을 추가로 구성하지 않아도 됩니다.
--   **ATA 게이트웨이와 ATA 경량 게이트웨이 사용**<br>
+-    **ATA 게이트웨이와 ATA 경량 게이트웨이 사용**<br>
 ATA 배포에 ATA 게이트웨이와 ATA 경량 게이트웨이가 둘 다 포함되는 경우 ATA 경량 게이트웨이는 일부 도메인 컨트롤(예: 분기 사이트의 모든 도메인 컨트롤)에 설치되고, 기타 도메인 컨트롤러(예: 기본 데이터 센터에 있는 더 큰 도메인 컨트롤러)는 ATA 게이트웨이에서 모니터링합니다.
 
 3개 시나리오 모두 모든 게이트웨이에서 ATA 센터로 데이터를 보냅니다.
@@ -130,7 +127,7 @@ ATA 게이트웨이는 네트워크에서 네트워크 트래픽과 Windows 이�
 
 다음 기능은 ATA 게이트웨이 또는 ATA 경량 게이트웨이 실행 여부에 따라 다르게 작동합니다.
 
--   **도메인 동기화 장치 후보**<br>
+-    **도메인 동기화 장치 후보**<br>
 도메인 동기화 게이트웨이는 특정 Active Directory 도메인의 모든 엔터티를 적극적으로 동기화합니다(도메인 컨트롤러 자체에서 복제에 사용하는 메커니즘과 유사). 후보 목록에서 하나의 게이트웨이가 임의로 선택되어 도메인 동기화 장치 역할을 합니다. <br><br>
 동기화 장치가 30분 이상 오프라인 상태인 경우 다른 후보가 대신 선택됩니다. 특정 도메인에 사용할 수 있는 도메인 동기화 장치가 없는 경우 ATA는 엔터티 및 해당 변경 사항을 사전에 동기화할 수 없지만, 모니터링되는 트래픽에서 감지되는 경우 새 엔터티를 사후에 검색합니다. 
 <br>사용 가능한 도메인 동기화 장치가 없고 관련된 트래픽이 없는 엔터티를 검색하는 경우 검색 결과가 표시되지 않습니다.<br><br>
@@ -138,7 +135,7 @@ ATA 게이트웨이는 네트워크에서 네트워크 트래픽과 Windows 이�
 모든 ATA 경량 게이트웨이는 분기 사이트 및 작은 도메인 컨트롤러에 배포될 가능성이 더 높기 때문에 기본적으로 동기화 장치 후보가 아닙니다.
 
 
--   **리소스 제한 사항**<br>
+-    **리소스 제한 사항**<br>
 ATA 경량 게이트웨이에는 이 게이트웨이가 실행되고 있는 도메인 컨트롤러에서 사용 가능한 계산 및 메모리 용량을 평가하는 모니터링 구성 요소가 포함됩니다. 모니터링 프로세스는 10초 마다 실행되며, 도메인 컨트롤러에 특정 시점에 사용 가능한 계산 및 메모리 리소스의 15% 이상이 있도록 ATA 경량 게이트웨이 프로세스에 대한 CPU 및 메모리 사용률 할당량을 동적으로 업데이트합니다.<br><br>
 도메인 컨트롤러에 수행되는 작업에 관계없이 이 프로세스는 항상 도메인 컨트롤러의 핵심 기능에 영향을 주지 않도록 리소스를 확보합니다.<br><br>
 이로 인해 ATA 경량 게이트웨이에 리소스 부족이 발생하면 일부 트래픽만 모니터링되고, 상태 페이지에 "Dropped port mirrored network traffic(포트 미러링된 네트워크 트래픽 삭제됨)"이라는 모니터링 경고가 표시됩니다.
@@ -183,10 +180,4 @@ Pass-the-Hash, Brute Force, Honey Token을 개선하려면 ATA에서 Windows 이
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

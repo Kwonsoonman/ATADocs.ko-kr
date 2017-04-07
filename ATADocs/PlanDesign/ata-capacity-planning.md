@@ -5,26 +5,26 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/5/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
-ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
-
-
+ms.openlocfilehash: ce017adf26e30a5fde3c89a30c33f87d71716a4c
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA 용량 계획
 이 항목은 필요한 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이 수와 ATA 센터 및 ATA 게이트웨이에 대한 서버 용량을 이해하는 것을 포함하여 네트워크를 모니터링하는 데 필요한 ATA 서버 수를 결정하는 데 도움이 됩니다.
+
+> [!NOTE] 
+> 이 문서에 설명된 성능 요구 사항에 충족하기만 하면 모든 IaaS 공급 업체에 ATA Center를 배포할 수 있습니다.
 
 ##<a name="using-the-sizing-tool"></a>크기 조정 도구 사용
 ATA 배포의 용량을 결정할 때 가장 간단한 권장 방법은 [ATA Sizing Tool](http://aka.ms/atasizingtool)(ATA 크기 조정 도구)을 사용하는 것입니다. ATA 크기 조정 도구를 실행하고 Excel 파일 결과에서 다음 필드를 사용하여 필요한 ATA 용량을 결정합니다.
@@ -63,6 +63,7 @@ ATA 배포의 용량을 결정할 때 가장 간단한 권장 방법은 [ATA Siz
 > -   ATA 센터는 모니터링되는 모든 도메인 컨트롤러에서 최대 400,000개의 누적 FPS(초당 프레임)를 처리할 수 있습니다. 일부 환경에서는 동일한 ATA 데이터 센터에서 400,000개 이상의 전체 트래픽을 처리할 수 있습니다. 이러한 환경에 대한 지원은 askcesec@microsoft.com으로 문의하세요.
 > -   위의 표에 나와 있는 저장소의 양은 순수 저장소 값이므로 향후 확장을 고려하여 데이터베이스가 있는 디스크에 20% 이상의 사용 가능한 공간을 확보해 두어야 합니다.
 > -   사용 가능한 공간이 최소값인 20% 또는 100GB에 도달하면 가장 오래된 데이터 컬렉션이 삭제됩니다. 5%나 50GB의 사용 가능한 공간만이 남을 때까지 이 삭제 작업은 계속 수행되며, 그 이후에는 데이터 수집의 작동이 중지됩니다.
+> - 이 문서에 설명된 성능 요구 사항에 충족하기만 하면 모든 IaaS 공급 업체에 ATA Center를 배포할 수 있습니다.
 > -   읽기 및 쓰기 활동에 대한 저장소 대기 시간은 10ms 미만이어야 합니다.
 > -   읽기와 쓰기 활동의 비율은 초당 패킷 수가 100,000개 미만인 경우 약 1:3이고 100,000개를 초과하는 경우에는 1:6입니다.
 > -   가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
@@ -211,9 +212,3 @@ ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 아키텍처](ata-architecture.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 301e57f7bd66a0e557054d9b7a641c4c1c200142
-
-
+ms.openlocfilehash: 671812b59ee00b27a329c72d09c00317a81d06be
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -56,9 +53,3 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

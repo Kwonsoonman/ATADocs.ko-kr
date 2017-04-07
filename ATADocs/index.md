@@ -1,14 +1,13 @@
 ---
 layout: LandingPage
 description: "Advanced Threat Analytics를 사용하는 법을 알아보세요."
-translationtype: Human Translation
-ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
-ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
-
+ms.openlocfilehash: ddf06db756bd991c49200ba35b6a515832ccc3cb
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
+translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Advanced Threat Analytics Documentation
 
-회사 외부에서 공유하는 메일, 문서 및 중요한 데이터를 제어하고 보호하세요. 쉬운 분류부터 포함된 레이블 및 권한에 이르기까지 어디에 저장되었든 누구와 공유하든지 간에 Azure Information Protection으로 항상 데이터 보호를 강화하세요.
+Advanced Threat Analytics(ATA)는 네트워크의 여러 데이터 소스로부터의 정보를 사용하여 조직의 사용자와 다른 엔터티의 동작을 학습하고 이에 대한 동작 프로필을 만들고, 여러 프로토콜의 네트워크 트래픽을 캡처하고 구문 분석하기 위해 ATA의 독점 네트워크를 활용하여 기업을 지능형 목표 사이버 공격 및 내부 위협의 여러 가지 유형으로부터 보호하는 온-프레미스 플랫폼입니다.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -131,15 +130,10 @@ ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
                 <div class="card">
                     <div class="cardText">
                         <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">평가</a></p>
+                        <p><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook">ATA 공격 시뮬레이션 플레이북 체크 아웃</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </li>  
 </ul>
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-
