@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: e31dabc43ada8eac4ebed86af0ac4b43dc410246
-
-
+ms.openlocfilehash: ac10d24c443e0278a1d0995598fb9c1cf0fb4de6
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="whats-new-in-ata-version-16"></a>ATA 버전 1.6의 새로운 기능
 이 릴리스 정보에서는 이 버전의 Advanced Threat Analytics에서 알려진 문제에 대한 정보를 제공합니다.
 
@@ -108,21 +105,21 @@ ATA 1.6으로 업데이트할 때 다음 오류 코드로 인해 업데이트 �
 
 **해결 방법**: 
 
-1.  "data_old" 폴더를 임시 폴더(일반적으로 %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin에 있음)로 이동합니다.
-2.  ATA 센터 v1.5를 제거하고 모든 데이터베이스 데이터를 삭제합니다.
+1.    "data_old" 폴더를 임시 폴더(일반적으로 %ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin에 있음)로 이동합니다.
+2.    ATA 센터 v1.5를 제거하고 모든 데이터베이스 데이터를 삭제합니다.
 ![ATA 1.5 제거](http://i.imgur.com/x4nJycx.png)
-3.  ATA 센터 v1.5를 다시 설치합니다. 이전 ATA 1.5 설치와 동일한 구성(인증서, IP 주소, DB 경로 등)을 사용해야 합니다.
-4.  다음 서비스를 다음 순서대로 중지합니다.
-    1.  Microsoft Advanced Threat Analytics Center
-    2.  MongoDB
-5.  MongoDB 데이터베이스 파일을 "data_old" 폴더의 파일로 바꿉니다.
-6.  다음 서비스를 다음 순서대로 시작합니다.
-    1.  MongoDB
-    2.  Microsoft Advanced Threat Analytics Center
-7.  로그를 검토하여 제품이 오류 없이 실행되고 있는지 확인합니다.
-8.  "RemoveDuplicateProfiles.exe" 도구를 [다운로드](http://aka.ms/ataremoveduplicateprofiles "다운로드")하여 기본 설치 경로(%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)에 복사합니다.
-9.  관리자 권한 명령 프롬프트에서 “RemoveDuplicateProfiles.exe”를 실행하고 완료될 때까지 기다립니다.
-10. …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin 디렉터리: **Mongo ATA**에서 다음 명령을 입력합니다.
+3.    ATA 센터 v1.5를 다시 설치합니다. 이전 ATA 1.5 설치와 동일한 구성(인증서, IP 주소, DB 경로 등)을 사용해야 합니다.
+4.    다음 서비스를 다음 순서대로 중지합니다.
+    1.    Microsoft Advanced Threat Analytics Center
+    2.    MongoDB
+5.    MongoDB 데이터베이스 파일을 "data_old" 폴더의 파일로 바꿉니다.
+6.    다음 서비스를 다음 순서대로 시작합니다.
+    1.    MongoDB
+    2.    Microsoft Advanced Threat Analytics Center
+7.    로그를 검토하여 제품이 오류 없이 실행되고 있는지 확인합니다.
+8.    "RemoveDuplicateProfiles.exe" 도구를 [다운로드](http://aka.ms/ataremoveduplicateprofiles "다운로드")하여 기본 설치 경로(%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)에 복사합니다.
+9.    관리자 권한 명령 프롬프트에서 “RemoveDuplicateProfiles.exe”를 실행하고 완료될 때까지 기다립니다.
+10.    …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin 디렉터리: **Mongo ATA**에서 다음 명령을 입력합니다.
 
     db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
@@ -145,8 +142,3 @@ ATA 업데이트 절차에서는 향후 조사를 위해 원하는 경우 데이
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [버전 1.6으로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.6-migration-guide.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
-

@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 69127773d9c3130bd07dee0b65956b93848ec399
-
-
+ms.openlocfilehash: 3884e7d40a598aed292cc492bfa1bd5a5e360990
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="what39s-new-in-ata-version-14"></a>ATA 버전 1.4의 새로운 기능
 이 릴리스 정보에서는 버전 1.4의 Advanced Threat Analytics에서 알려진 문제에 대한 정보를 제공합니다.
 
@@ -100,8 +97,3 @@ ATA Center 또는 ATA Gateway를 제거할 때 제거 대신 ATA 설치가 열�
 [버전 1.6으로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.6-migration-guide.md)
 
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-<!--HONumber=Feb17_HO1-->
-
-

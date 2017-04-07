@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: c0efec3abdec8e44c8cf5005d756f973e64312e7
-
-
+ms.openlocfilehash: 514ae2c41338ca5e4b7d97629554df857f79cc2d
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="ata-update-to-15-migration-guide"></a>버전 1.5로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.5로 업데이트하는 경우 다음 영역에서 기능이 개선됩니다.
 
@@ -132,9 +129,3 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 ## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

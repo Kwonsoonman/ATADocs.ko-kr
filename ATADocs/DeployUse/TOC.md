@@ -14,7 +14,7 @@
 ## [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)
 ## [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 ## [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-# 배포:
+# 배포
 ## 사전 설치 단계
 ### [1. 포트 미러링 구성](configure-port-mirroring.md)
 ### [2. 포트 미러링 유효성 검사](validate-port-mirroring.md)
@@ -27,7 +27,7 @@
 ### [5 단계 GW 구성](install-ata-step5.md)
 ### [6 단계 제외 사항 및 허니 토큰](install-ata-step6.md)
 ### [자동 설치](ata-silent-installation.md)
-# 관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의
+# 사용
 ## [ATA 센터 IP 주소 변경](modifying-ata-config-centerip.md)
 ## [ATA 센터 인증서 변경](modifying-ata-config-centercert.md)
 ## [ATA 콘솔 URL 변경](modifying-ata-config-consoleurl.md)
@@ -48,7 +48,3 @@
 ## [성능 카운터를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [데이터베이스를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [재해 복구](/advanced-threat-analytics/troubleshoot/disaster-recovery)
-
-<!--HONumber=Feb17_HO4-->
-
-

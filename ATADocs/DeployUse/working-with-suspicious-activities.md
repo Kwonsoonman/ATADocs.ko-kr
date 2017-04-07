@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: c94f61853aa45d45600cbcc0ba0a5a64adc6fd3f
-
-
+ms.openlocfilehash: b84c1ddcae304d95ec9f4e7c102460c75cb04112
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -115,9 +112,3 @@ ATA에서 사용자 네트워크를 학습할 수 있도록 하기 위해 일부
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [ATA 검색 설정 작업](working-with-detection-settings.md)
 - [ATA 구성 수정](modifying-ata-configuration.md)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

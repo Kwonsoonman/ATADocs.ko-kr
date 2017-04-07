@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: b5954bd6f0cd9ef8c8b0b958a92840e905189d71
-
-
+ms.openlocfilehash: da6e72ac5c2966f3e77ce3bef8fe23fcda6770a4
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -60,7 +57,9 @@ ATA에서는 허니 토큰 사용자를 구성하여 악의적인 행위자에 �
 
 공격 타임라인에서 검색된 의심스러운 활동을 보고, 사용자 또는 컴퓨터를 검색하여 해당 프로필을 확인하세요.
 
-ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부 의심스러운 동작과 같은 일부 활동은 ATA에서 동작 프로필을 작성할 시간(최소&3;주)을 소요한 다음에야 사용할 수 있습니다.
+ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부 의심스러운 동작과 같은 일부 활동은 ATA에서 동작 프로필을 작성할 시간(최소 3주)을 소요한 다음에야 사용할 수 있습니다.
+
+ATA이 실행되고 네트워크에서 위반을 catch하는지 확인하려면 [ATA 공격 시뮬레이션 플레이북](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook)을 확인할 수 있습니다.
 
 
 >[!div class="step-by-step"]
@@ -72,10 +71,4 @@ ATA는 즉시 의심스러운 활동에 대한 검색을 시작합니다. 일부
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

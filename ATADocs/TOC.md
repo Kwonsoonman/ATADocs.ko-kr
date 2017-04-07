@@ -14,7 +14,7 @@
 ## [ATA 아키텍처](/advanced-threat-analytics/plan-design/ata-architecture)
 ## [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 ## [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-# 배포:
+# 배포
 ## 사전 설치 단계
 ### [1. 포트 미러링 구성](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
 ### [2. 포트 미러링 유효성 검사](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
@@ -27,7 +27,7 @@
 ### [5 단계 GW 구성](/advanced-threat-analytics/deploy-use/install-ata-step5)
 ### [6 단계 제외 사항 및 허니 토큰](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [자동 설치](/advanced-threat-analytics/deploy-use/ata-silent-installation)
-# 관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의
+# 사용
 ## [ATA 센터 IP 주소 변경](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
 ## [ATA 센터 인증서 변경](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)
 ## [ATA 콘솔 URL 변경](/advanced-threat-analytics/deploy-use/modifying-ata-config-consoleurl)

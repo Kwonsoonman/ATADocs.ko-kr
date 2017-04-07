@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
-
-
+ms.openlocfilehash: fea114b062a7861ac284b4bf746fff68c5c1bd52
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -44,7 +41,7 @@ ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
     |**암호**(필수)|읽기 전용 사용자에 대한 암호를 입력합니다(예: **Pencil1**).|
     |**도메인**(필수)|읽기 전용 사용자에 대한 도메인을 입력합니다(예: **contoso.com**). **참고:** 사용자가 있는 도메인의 전체 FQDN을 입력해야 합니다. 예를 들어 사용자의 계정이 corp.contoso.com 도메인에 있는 경우 contoso.com이 아니라 `corp.contoso.com`을 입력해야 합니다.|
 
-2. 필요에 따라 **연결 테스트**를 클릭하여 도메인 연결을 테스트하고 제공된 자격 증명으로 액세스할 수 있는지 확인할 수 있습니다. 이 작업은 ATA 센터가 도메인에 연결되어 있는 경우에만 수행할 수 있습니다.   
+2. 필요에 따라 **연결 테스트**를 클릭하여 도메인 연결을 테스트하고 제공된 자격 증명으로 액세스할 수 있는지 확인할 수 있습니다. 이 작업은 ATA 센터가 도메인에 연결되어 있는 경우에만 수행할 수 있습니다.     
 
     저장되고 나면 콘솔에서 시작 메시지가 다음과 같이 변경됩니다. ![ATA 시작 1단계가 완료됨](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -61,9 +58,3 @@ ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

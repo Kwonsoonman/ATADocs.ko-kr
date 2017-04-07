@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 9d26567a0a9a00d4cb1a9421a4ef2e30a52c11a8
-ms.openlocfilehash: 9e550cf8fe795cb679fbcfe10ef40d2ede7875b4
-
-
+ms.openlocfilehash: 5b58a8ec2f2fc1fe08e2b1099c3e9eda2f6d4c49
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -219,8 +216,3 @@ ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합�
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-<!--HONumber=Feb17_HO3-->
-
-

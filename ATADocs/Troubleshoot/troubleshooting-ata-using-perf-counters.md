@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: a909388cfcd35af45ccd4eac35f81e55938db086
-
-
+ms.openlocfilehash: 5c4662cd2d83135227cf86e339d5e30f9713f022
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -35,6 +32,16 @@ ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제�
 2.  그러면 이전 구성 요소가 그 이전 구성 요소의 추가 엔터티 보내기를 차단할 때까지 **자체** 크기를 늘리기 시작합니다.
 
 3.  이는 더 이상 엔터티를 전달할 수 없을 때 트래픽을 삭제하는 NetworkListener 구성 요소까지 거슬러 올라갑니다.
+
+
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>문제 해결에 대한 성능 모니터 파일 검색하기
+
+ATA 구성 요소에서 성능 모니터 파일(BLG)를 검색하려면:
+1.  성능 모니터를 엽니다.
+2.  “Microsoft ATA Gateway” 또는 “Microsoft ATA Center”라는 이름으로 지정된 데이터 수집기 집합을 중지합니다.
+3.  데이터 수집기 집합 폴더로 이동합니다(기본적으로 이 폴더는 "C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets" 또는 “C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets”입니다).
+4.  가장 최근에 수정된 BLG 파일을 복사합니다.
+5.  “Microsoft ATA Gateway” 또는 “Microsoft ATA Center”라는 이름으로 지정된 데이터 수집기 집합을 다시 시작합니다.
 
 
 ## <a name="ata-gateway-performance-counters"></a>ATA Gateway 성능 카운터
@@ -126,9 +133,3 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

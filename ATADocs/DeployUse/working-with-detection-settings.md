@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: c88d74793c6210704f2a187df6508bf525907118
-
-
+ms.openlocfilehash: 831bafd08e0eea821fda94bd4f519d92ffec3397
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
 
@@ -52,9 +49,3 @@ ms.openlocfilehash: c88d74793c6210704f2a187df6508bf525907118
 - [의심스러운 활동 작업](working-with-suspicious-activities.md)
 - [ATA 구성 수정](modifying-ata-configuration.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
