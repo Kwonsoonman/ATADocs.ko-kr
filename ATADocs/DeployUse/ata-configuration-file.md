@@ -23,7 +23,7 @@ translationtype: HT
 
 # <a name="export-and-import-the-ata-configuration"></a>ATA 구성 내보내기 및 가져오기
 ATA의 구성은 데이터베이스의 "SystemProfile" 컬렉션에 저장됩니다.
-이 컬렉션은 ATA 센터 서비스에 의해 "SystemProfile_*timestamp*.json" 파일에&1;시간 간격으로 백업됩니다. 최신 10 버전이 저장됩니다.
+이 컬렉션은 ATA 센터 서비스에 의해 "SystemProfile_*timestamp*.json" 파일에 1시간 간격으로 백업됩니다. 최신 10 버전이 저장됩니다.
 이 파일은 "Backup"이라는 하위 폴더에 있습니다. 기본 ATA 설치 위치에서는 *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*timestamp*.json*에서 찾을 수 있습니다. 
 
 **고**: ATA를 대폭 변경할 경우에는 이 파일을 백업하는 것이 좋습니다.
