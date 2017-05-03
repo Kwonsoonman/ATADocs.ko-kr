@@ -1,6 +1,6 @@
 ---
 title: "Advanced Threat Analytics 구성 변경 - 센터 인증서 | Microsoft 문서"
-description: "ATA 센터 서버에서 로컬 컴퓨터 저장소의 인증서를 갱신하거나 바꾸기 위한&2;단계 프로세스에 대해 설명합니다."
+description: "ATA 센터 서버에서 로컬 컴퓨터 저장소의 인증서를 갱신하거나 바꾸기 위한 2단계 프로세스에 대해 설명합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
@@ -28,7 +28,7 @@ translationtype: HT
 [ATA 콘솔 URL»](modifying-ata-config-consoleurl.md)
 
 ## <a name="change-the-ata-center-certificate"></a>ATA 센터 인증서 변경
-인증서가 만료되거나, ATA 센터 서버의 로컬 컴퓨터 저장소에서 새 인증서를 설치한 후 인증서를 갱신 또는 바꾸어야 할 경우 다음&2;단계 프로세스를 진행하여 인증서를 바꿉니다.
+인증서가 만료되거나, ATA 센터 서버의 로컬 컴퓨터 저장소에서 새 인증서를 설치한 후 인증서를 갱신 또는 바꾸어야 할 경우 다음 2단계 프로세스를 진행하여 인증서를 바꿉니다.
 
 -   첫 번째 단계 – ATA 센터에서 사용할 인증서를 업데이트합니다. 이때 ATA 센터 서비스는 여전히 원래 인증서에 바인딩되어 있습니다. ATA 게이트웨이는 구성을 동기화하는 경우 상호 인증에 사용할 수 있는 두 가지 잠재적인 인증서를 갖게 됩니다. ATA 게이트웨이는 원래 인증서를 사용하여 연결할 수 있으면 새 인증서 사용을 시도하지 않습니다.
 

@@ -55,9 +55,9 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec|ATA Gateway가&1;초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
-|NetworkListener PEF Dropped Events\Sec|ATA Gateway가&1;초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상&0;이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
-|Microsoft ATA Gateway\NetworkListener ETW Dropped Events\Sec|ATA Gateway가&1;초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상&0;이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec|ATA Gateway가 1초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
+|NetworkListener PEF Dropped Events\Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
+|Microsoft ATA Gateway\NetworkListener ETW Dropped Events\Sec|ATA Gateway가 1초마다 삭제하는 트래픽 양입니다.|이 숫자는 항상 0이어야 합니다(드물게 발생하는 삭제의 짧은.버스트는 허용됨).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Gateway\NetworkActivityTranslator Message Data # Block Size|NA(네트워크 활동)로 변환되기 위해 큐에서 대기 중인 트래픽 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 100,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Gateway\EntityResolver Activity Block Size|해결을 위해 큐에서 대기 중인 NA(네트워크 활동) 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
 |Microsoft ATA Gateway\EntitySender Entity Batch Block Size|ATA Center로 전송되기 위해 큐에서 대기 중인 NA(네트워크 활동) 양입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 1,000,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다. 위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
