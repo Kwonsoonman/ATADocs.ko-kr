@@ -80,7 +80,7 @@ ATA 게이트웨이 수는 사용 중인 네트워크 레이아웃, 패킷 볼�
 다음의 두 가지 항목을 백업합니다.
 
 -   ATA에서 저장하는 트래픽과 이벤트. 지원되는 모든 데이터베이스 백업 절차를 사용하여 이러한 항목을 백업할 수 있습니다. 자세한 내용은 [ATA 데이터베이스 관리](/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요. 
--   ATA 구성. 데이터베이스에 저장되며, ATA 센터 배포 위치의 **백업** 폴더에서&1;시간마다 자동으로 백업됩니다.  자세한 내용은 [ATA 데이터베이스 관리](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요.
+-   ATA 구성. 데이터베이스에 저장되며, ATA 센터 배포 위치의 **백업** 폴더에서 1시간마다 자동으로 백업됩니다.  자세한 내용은 [ATA 데이터베이스 관리](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management)를 참조하세요.
 
 
 
@@ -93,7 +93,7 @@ ATA는 알려진 악의적인 공격 및 기법, 보안 문제, 위험을 검색
 디스크 액세스 대기 시간이 짧고(10밀리초 미만) 빠른 저장소(7200RPM 디스크는 권장하지 않음)가 좋습니다. RAID 구성에서 높은 쓰기 부하(RAID-5/6 및 해당 파생 항목은 권장하지 않음)를 지원해야 합니다.
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>ATA 게이트웨이에는 NIC가 몇 개나 필요한가요?
-ATA 게이트웨이에는 최소&2;개의 네트워크 어댑터가 필요합니다.<br>1. 내부 네트워크와 ATA 센터에 연결하기 위한 NIC<br>2. 포트 미러링을 통해 도메인 컨트롤러 네트워크 트래픽을 캡처하는 데 사용될 NIC<br>* 기본적으로 도메인 컨트롤러에서 사용하는 네트워크 어댑터를 모두 사용하는 ATA 경량 게이트웨이에는 적용되지 않습니다.
+ATA 게이트웨이에는 최소 2개의 네트워크 어댑터가 필요합니다.<br>1. 내부 네트워크와 ATA 센터에 연결하기 위한 NIC<br>2. 포트 미러링을 통해 도메인 컨트롤러 네트워크 트래픽을 캡처하는 데 사용될 NIC<br>* 기본적으로 도메인 컨트롤러에서 사용하는 네트워크 어댑터를 모두 사용하는 ATA 경량 게이트웨이에는 적용되지 않습니다.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>ATA는 SIEM과 어떤 유형으로 통합할 수 있나요?
 다음과 같이 ATA를 SIEM과 양방향으로 통합할 수 있습니다.
@@ -111,7 +111,7 @@ Microsoft Advanced Threat Analytics는 온-프레미스 제품입니다.
 이 솔루션은 현재 독립 실행형 제품으로 제공되며 Azure Active Directory 또는 온-프레미스 Active Directory에 포함되지 않습니다.
 
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>규칙을 직접 작성하고 임계값/기준을 만들어야 하나요?
-Microsoft Advanced Threat Analytics를 사용할 때는 규칙, 임계값 또는 기준을 작성한 다음 미세 조정할 필요가 없습니다. ATA는 사용자, 장치 및 리소스의 동작과 이러한 항목 간의 관계를 분석하며 의심스러운 활동과 알려진 공격을 빠르게 검색할 수 있습니다. 배포 후&3;주가 지나면 ATA는 동작이 의심스러운 활동 검색을 시작합니다. 그리고 알려진 악의적 공격 및 보안 문제는 배포 직후부터 검색하기 시작합니다.
+Microsoft Advanced Threat Analytics를 사용할 때는 규칙, 임계값 또는 기준을 작성한 다음 미세 조정할 필요가 없습니다. ATA는 사용자, 장치 및 리소스의 동작과 이러한 항목 간의 관계를 분석하며 의심스러운 활동과 알려진 공격을 빠르게 검색할 수 있습니다. 배포 후 3주가 지나면 ATA는 동작이 의심스러운 활동 검색을 시작합니다. 그리고 알려진 악의적 공격 및 보안 문제는 배포 직후부터 검색하기 시작합니다.
 
 ## <a name="if-you-are-already-breached-will-microsoft-advanced-threat-analytics-be-able-to-identify-abnormal-behavior"></a>이미 보안이 위반된 경우 Microsoft Advanced Threat Analytics가 비정상 동작을 식별할 수 있나요?
 예. ATA는 보안이 위반된 후에 설치하더라도 해커의 의심스러운 활동을 검색할 수 있습니다. ATA는 사용자 동작 자체를 확인할 뿐 아니라, 동작을 조직 보안 맵의 다른 사용자와 대조하여 확인하는 작업도 수행합니다. 초기 분석 시간 중에 확인되는 공격자의 비정상 동작은 "이상값"으로 식별되며 ATA는 비정상 동작을 계속 보고합니다. 또한 ATA는 해커가 Pass-the-Ticket 등의 방식으로 다른 사용자의 자격 증명 도용을 시도하거나 도메인 컨트롤러 중 하나에서 원격 실행을 수행하려는 경우에도 의심스러운 활동을 검색할 수 있습니다.
