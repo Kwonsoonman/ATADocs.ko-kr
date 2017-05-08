@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f91c728614cbe03f794fd0ad45ccc19af712cf54
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: ff27dbe4b2b5e44add5dfd93e0a71419ba818ea6
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
@@ -40,6 +41,7 @@ ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들�
 
 > [!NOTE]
 > 포트 미러링되는 도메인 컨트롤러가 WAN 링크를 통해 연결된 경우 WAN 링크에서 ERSPAN 트래픽의 추가 부하를 처리할 수 있는지 확인합니다.
+> ATA는 트래픽이 같은 방식으로 NIC 및 도메인 컨트롤러에 도달하는 경우에만 트래픽 모니터링을 지원합니다. ATA는 트래픽이 서로 다른 포트로 분산되는 경우 트래픽 모니터링을 지원하지 않습니다.
 
 ## <a name="supported-port-mirroring-options"></a>지원되는 포트 미러링 옵션
 
