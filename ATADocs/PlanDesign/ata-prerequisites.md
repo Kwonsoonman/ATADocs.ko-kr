@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/16/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 270a16feada7db5462c5232f023c0bab9ef23c7e
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
@@ -137,6 +138,7 @@ Windows Server 2012 R2를 실행 중인 ATA 게이트웨이를 설치하기 전�
 
 Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
 
+
 ATA 게이트웨이가 설치된 가상 컴퓨터를 사용하는 방법에 대한 자세한 내용은 [포트 미러링 구성](/advanced-threat-analytics/deploy-use/configure-port-mirroring)을 참조하세요.
 
 > [!NOTE]
@@ -223,6 +225,10 @@ Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업�
 Windows server 2012 R2 Server Core에 대한 설치의 경우  [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2) 업데이트도 설치되어 있어야 합니다.
 
  Windows PowerShell cmdlet `[Get-HotFix -Id kb3000850]`을 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
+
+
+설치하는 동안 .Net Framework 4.6.1이 설치되고 도메인 컨트롤러가 다시 부팅되도록 할 수 있습니다.
+
 
 > [!NOTE]
 > 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) 및 [성능 로그](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.

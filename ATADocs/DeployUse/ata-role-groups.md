@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/7/2017
+ms.date: 4/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 69034316493b8783cbeaaae9aac6af237da39dc8
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 6243c03af9e40b8774b2ce7089a47e54569ba45e
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
@@ -27,7 +28,7 @@ translationtype: HT
 역할 그룹에서는 ATA에 대한 액세스 권한을 관리할 수 있습니다. 역할 그룹을 사용하여 보안 팀 내에서 업무를 구분할 수 있으며 사용자가 해당 작업을 수행할 때 필요한 액세스 권한만큼만 부여할 수도 있습니다. 이 문서는 액세스 관리 및 ATA 역할 권한 부여에 대해 설명하며, 사용자가 ATA의 역할 그룹을 사용하여 구동하고 실행하는 데 도움을 줍니다.
 
 > [!NOTE]
-> ATA 센터의 모든 로컬 관리자는 자동으로 Microsoft Advanced Threat Aalytics 관리자가 됩니다.
+> ATA 센터의 모든 로컬 관리자는 자동으로 Microsoft Advanced Threat Analytics 관리자가 됩니다.
 
 ## <a name="types-of-ata-role-groups"></a>ATA 역할 그룹 유형 
 
@@ -46,10 +47,13 @@ ATA에서는 3가지 유형의 역할 그룹, ATA 관리자, ATA 사용자 및 A
 |게이트웨이 - 삭제 |사용 가능|사용할 수 없음|사용할 수 없음|
 |모니터링된 DC – 추가 |사용 가능|사용할 수 없음|사용할 수 없음|
 |모니터링된 DC – 삭제|사용 가능|사용할 수 없음|사용할 수 없음|
+|경고 및 의심스러운 활동 보기|사용 가능|사용 가능|사용 가능|
+
 
 사용자가 자신의 역할 그룹으로 사용할 수 없는 페이지에 액세스하려고 하면 ATA의 권한 없음 페이지로 리디렉션됩니다. 
 
 ## <a name="add--remove-users---ata-role-groups"></a>사용자 추가/제거 - ATA 역할 그룹 
 
-ATA에서는 역할 그룹에 대한 기준으로 로컬 Windows 그룹을 사용합니다. 사용자를 추가하거나 제거하려면 **로컬 사용자 및 그룹** MMC(Lusrmgr.msc)를 사용하세요. 도메인에 가입된 컴퓨터에서 로컬 계정과 도메인 계정을 추가할 수 있습니다. 
+ATA에서는 역할 그룹에 대한 기준으로 로컬 Windows 그룹을 사용합니다. 역할 그룹은 ATA 센터 서버에서 관리되어야 합니다.
+사용자를 추가하거나 제거하려면 **로컬 사용자 및 그룹** MMC(Lusrmgr.msc)를 사용하세요. 도메인에 가입된 컴퓨터에서 로컬 계정과 도메인 계정을 추가할 수 있습니다. 
 

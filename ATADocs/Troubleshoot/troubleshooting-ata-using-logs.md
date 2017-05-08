@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 04/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 4a5b48f490a13cfb990f49b864462b556e36c3ce
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.7*
 
@@ -27,7 +28,7 @@ ATA 로그는 ATA의 각 구성 요소가 주어진 시점에 수행하는 작�
 ## <a name="ata-gateway-logs"></a>ATA 게이트웨이 로그
 이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다. 
 
-ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는* *C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
+ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
 
 ATA 게이트웨이에는 다음 로그가 있습니다.
 
@@ -81,6 +82,10 @@ ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS.log** - 이 로그는 ATA 게이트웨이의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 배포 프로세스를 추적합니다.
 
 -   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - 이 로그는 ATA 게이트웨이 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 이진 파일의 배포를 추적합니다.
+
+
+> [!NOTE] 
+> 여기에 언급된 배포 로그 외에 “Microsoft Advanced Threat Analytics”로 시작하는 다른 로그도 배포 프로세스에 대한 추가 정보를 제공할 수 있습니다.
 
 
 ## <a name="see-also"></a>참고 항목
