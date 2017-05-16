@@ -42,6 +42,7 @@
 ## [ATA 데이터베이스 관리](/advanced-threat-analytics/deploy-use/ata-database-management)
 ## [ATA 구성 내보내기/가져오기](/advanced-threat-analytics/deploy-use/ata-configuration-file)
 ## [ATA 원격 분석 관리](/advanced-threat-analytics/deploy-use/manage-telemetry-settings)
+## [위조된 PAC 공격 조사](/use-case-forged-pac)
 # 문제 해결
 ## [알려진 오류를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 ## [로그를 사용하여 문제 해결](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
