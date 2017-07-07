@@ -1,81 +1,73 @@
 ---
-# required metadata
-
-title: What's new in Advanced Threat Analytics version 1.5 | Microsoft Docs
-description: Lists what was new in ATA version 1.5 along with known issues
-keywords:
+title: "Advanced Threat Analytics 버전 1.5의 새로운 기능 | Microsoft 문서"
+description: "알려진 문제와 함께 ATA 버전 1.5의 새로운 기능을 나열합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 08da33114bc3f0c9aafb9914b9d77a88fac009f4
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
+# <a name="whats-new-in-ata-version-15"></a>ATA 버전 1.5의 새로운 기능
+이 릴리스 정보에서는 이 버전의 Advanced Threat Analytics에서 알려진 문제에 대한 정보를 제공합니다.
 
-# What's new in ATA version 1.5
-These release notes provide information about known issues in this version of  Advanced Threat Analytics.
+## <a name="whats-new-in-the-ata-15-update"></a>ATA 1.5 업데이트의 새로운 기능
+ATA 1.5 업데이트에서는 다음 영역에 대한 향상된 기능을 제공합니다.
 
-## What's new in the ATA 1.5 update?
-The update to ATA 1.5 provides improvements in the following areas:
+-   검색 시간 단축
 
--   Faster detection times
+-   NAT(Network Address Translation) 장치용으로 향상된 자동 검색 알고리즘 제공
 
--   Enhanced automatic detection algorithm for NAT (network address translation) devices
+-   도메인에 가입되지 않은 장치용으로 향상된 이름 확인 프로세스 제공
 
--   Enhanced name resolution process for non-domain joined devices
+-   제품 업데이트 중에 데이터 마이그레이션 지원
 
--   Support for data migration during product updates
+-   수천 개의 엔터티를 사용하여 의심스러운 활동에 대한 UI 응답성 향상
 
--   Better UI responsiveness for suspicious activities with thousands of entities involved
+-   모니터링 경고의 자동 해결 기능 개선
 
--   Improved auto-resolution of monitoring alerts
+-   모니터링 및 문제 해결 기능 향상을 위한 추가 성능 모니터 제공
 
--   Additional performance counters for enhanced monitoring and troubleshooting
+## <a name="known-issues"></a>알려진 문제
+이 버전에는 다음과 같은 알려진 문제가 존재합니다.
 
-## Known issues
-The following known issues exist in this version.
+### <a name="new-ata-gateway-installation-fails"></a>새 ATA Gateway 설치 실패
+ATA 배포를 ATA 버전 1.5로 업데이트한 후 새 ATA 게이트웨이를 설치하면 Microsoft Advanced Threat Analytics Gateway is not installed(Microsoft Advanced Threat Analytics 게이트웨이가 설치되어 있지 않습니다.)라는 오류가 표시됩니다.
 
-### New ATA Gateway installation fails
-After updating your ATA deployment to ATA version 1.5, you get the following error when installing a new ATA Gateway:
-Microsoft Advanced Threat Analytics Gateway is not installed
+![ATA GW 오류](media/ata-install-error.png)
 
-![ATA GW error](media/ata-install-error.png)
+<b>해결 방법:</b> <ataeval@microsoft.com>으로 전자 메일을 보내 문제 해결 단계를 요청합니다.
+### <a name="deployment"></a>배포
+"데이터베이스 데이터 경로" 및 "데이터베이스 저널 경로"에 대해 지정된 폴더는 비어 있어야 합니다(파일 또는 하위 폴더가 없어야 함).
+비어 있지 않으면 배포가 진행되지 됩니다.
 
-<b>Workaround:</b> Send an email to <ataeval@microsoft.com> to request workaround steps.
-### Deployment
-The folder specified for the "Database data path" and "Database journal path" has to be empty (no files or subfolders).
-If it is not empty, the deployment will not progress.
+### <a name="installation-from-zip-file"></a>Zip 파일에서 설치
+ATA Gateway를 설치할 때 zip 파일에서 로컬 디렉터리에 파일을 추출하고 해당 디렉터리에서 설치해야 합니다. Zip 파일 내에서 직접 ATA Gateway를 설치하지 마세요. 설치가 실패합니다.
 
-### Installation from Zip file
-When installing the ATA Gateway, make sure to extract the files from the zip file to a local directory and install it from there. Do not install the ATA Gateway directly from within the zip file or the installation will fail.
+### <a name="configuration"></a>구성
+ATA Gateway 구성을 설정한 후 ATA Gateway를 처음 시작할 경우 서비스가 완전히 시작될 때까지(서비스를 처음 시작할 때 최대 10분이 걸릴 수 있음) "동기화되지 않음" 레이블이 표시됩니다.
 
-### Configuration
-After the configuration for an ATA Gateway is set, when the ATA Gateway starts for the first time, the "Not Synced" label is displayed until the service is fully started which may take up to 10 minutes the first time the service starts.
+### <a name="network-capture-software"></a>네트워크 캡처 소프트웨어
+ATA 게이트웨이에서 설치할 수 있는 네트워크 캡처 소프트웨어는 [Microsoft 네트워크 모니터 3.4](http://www.microsoft.com/download/details.aspx?id=4865)만 지원됩니다. Microsoft 메시지 분석기 또는 다른 네트워크 캡처 소프트웨어를 설치하지 마세요. 다른 소프트웨어를 설치하면 ATA Gateway 작동이 중지됩니다.
 
-### Network Capture Software
-On the ATA Gateway, the only supported network capture software you can install is [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Do not install Microsoft Message Analyzer or any other network capturing software. Installing other software will cause the ATA Gateway to stop functioning properly.
+### <a name="kb-on-virtualization-host"></a>가상화 호스트의 KB
+가상화 호스트에 KB 3047154를 설치하지 마세요. 포트 미러링이 제대로 작동하지 않을 수 있습니다.
 
-### KB on virtualization host
-Do not install KB 3047154 on a virtualization host. This may cause port mirroring to stop working properly.
+## <a name="see-also"></a>참고 항목
 
-## See Also
+[버전 1.5로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.5-migration-guide.md)
 
-[Update ATA to version 1.5 - migration guide](ata-update-1.5-migration-guide.md)
+[버전 1.6으로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.6-migration-guide.md)
 
-[Update ATA to version 1.6 - migration guide](ata-update-1.6-migration-guide.md)
-
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+[ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
