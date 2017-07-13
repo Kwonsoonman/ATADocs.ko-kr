@@ -1,123 +1,115 @@
 ---
-# required metadata
-
-title: Working with suspicious activities in Advanced Threat Analytics | Microsoft Docs
-description: Describes how to review suspicious activities identified by ATA
-keywords:
+title: "Advanced Threat Analytics에서 의심스러운 활동 작업 | Microsoft 문서"
+description: "ATA에서 식별된 의심스러운 활동을 검토하는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 1ff15a323f461cf8436e1ff7e15738a49bf3973c
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Working with Suspicious Activities
-This topic explains the basics of how to work with Advanced Threat Analytics.
 
-## Review suspicious activities on the attack time line
-After logging in to the ATA Console, you are automatically taken to the open **Suspicious Activities Time Line**. Suspicious activities are listed in chronological order with the newest suspicious activities on the top of the time line.
-Each suspicious activity has the following information:
+# 의심스러운 활동 작업
+<a id="working-with-suspicious-activities" class="xliff"></a>
+이 항목에서는 Advanced Threat Analytics를 사용하는 방법에 대한 기본 사항을 설명합니다.
 
--   Entities involved, including users, computers, servers, domain controllers, and resources.
+## 공격 타임라인에서 의심스러운 활동 검토
+<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
+ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동으로 열립니다. 의심스러운 활동은 최신 활동이 타임라인의 맨 위에 오도록 시간 순으로 나열됩니다.
+각 의심스러운 활동에는 다음과 같은 정보가 있습니다.
 
--   Times and time frame of the suspicious activities.
+-   관련된 엔터티(사용자, 컴퓨터, 서버, 도메인 컨트롤러 및 리소스 포함)
 
--   Severity of the suspicious activity, High, Medium, or Low.
+-   의심스러운 활동의 시간 및 기간
 
--   Status: Open, resolved, or dismissed.
+-   의심스러운 활동의 심각도(높음, 중간 또는 낮음)
 
--   Ability to
+-   상태: 시작됨, 마감 또는 표시 안 함
 
-    -   Share the suspicious activity with other people in your organization via email.
+-   기능:
 
-    -   Export the suspicious activity to Excel.
+    -   메일을 통해 조직의 다른 사람과 의심스러운 활동을 공유합니다.
 
-    -   Add a note to the suspicious activity.
+    -   의심스러운 활동을 Excel로 내보냅니다.
 
-    -   Provide input on the suspicious activity.
+    -   의심스러운 활동에 메모를 추가합니다.
 
--   Provides recommendations for how to respond to the suspicious activity.
+    -   의심스러운 활동에 대한 입력을 제공합니다.
+
+-   의심스러운 활동에 대응하는 방법에 대한 권장 사항을 제공합니다.
 
 > [!NOTE]
-> -   When you hover your mouse over a user or computer, an entity mini-profile is displayed that provides additional information about the entity and includes the number of suspicious activities that the entity is linked to.
-> -   If you click on an entity, it will take you to the entity profile of the user or computer.
+> -   사용자 또는 컴퓨터 위로 마우스를 가져가면 엔터티에 대한 추가 정보를 제공하고 엔터티에 연결된 의심스러운 활동 수를 포함하는 엔터티 최소 프로필이 표시됩니다.
+> -   엔터티를 클릭하면 사용자 또는 컴퓨터의 엔터티 프로필로 이동합니다.
 
-![ATA suspicious activities timeline image](media/ATA-Suspicious-Activity-Timeline.JPG)
+![ATA 의심스러운 활동 타임라인 이미지](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filter suspicious activities list
-To filter the suspicious activities list:
+## 의심스러운 활동 목록 필터링
+<a id="filter-suspicious-activities-list" class="xliff"></a>
+의심스러운 활동 목록을 필터링하려면
 
-1.  In the **Filter by** pane on the left side of the screen, select one of the following: **All**, **Open**, **Resolved**, or **Dismissed**.
+1.  화면의 왼쪽의 **필터링 기준** 창에서 **모두**, **미해결**, **해결됨** 또는 **해제됨**을 선택합니다.
 
-2.  To further filter the list, select **High**, **Medium** or **Low**.
+2.  목록을 추가로 필터링하려면 **높음**, **중간** 또는 **낮음**을 선택합니다.
 
-**Suspicious activity severity**
+**의심스러운 활동 심각도**
 
--   **Low**
+-   **낮음**
 
-    Indicates suspicious activities that can lead to attacks designed for malicious users or software to gain access to organizational data.
+    악의적인 사용자 또는 소프트웨어가 조직 데이터에 대한 액세스 권한을 얻도록 설계된 공격으로 이어질 수 있는 의심스러운 활동을 나타냅니다.
 
--   **Medium**
+-   **중간**
 
-    Indicates suspicious activities that can put specific identities at risk for more severe attacks that could result in identity theft or privileged escalation
+    특정 ID를 ID 도용 또는 권한 상승을 초래하는 보다 심각한 공격의 위험에 노출시킬 수 있는 의심스러운 활동을 나타냅니다.
 
--   **High**
+-   **높음**
 
-    Indicates suspicious activities that can lead to identity theft, privilege escalation or other high-impact attacks
+    ID 도용, 권한 상승 또는 기타 강력한 공격으로 이어질 수 있는 의심스러운 활동을 나타냅니다.
 
-**Suspicious activity status**
 
--   **Open**
 
-    All new suspicious activities appear in this list
 
--   **Resolved**
+## 의심스러운 활동 해결
+<a id="remediating-suspicious-activities" class="xliff"></a>
+의심스러운 활동의 현재 상태를 클릭하고 **시작됨**, **표시 안 함**, **마감** 또는 **삭제됨**을 선택하여 의심스러운 활동의 상태를 변경할 수 있습니다.
+이렇게 하려면 특정 의심스러운 활동의 오른쪽 위에 있는 세 점을 클릭하여 사용 가능한 작업 목록을 표시합니다.
 
-    Is used to track suspicious activities which you identified, researched and fixed for mitigated.
+![의심스러운 활동에 대한 ATA 작업](./media/sa-actions.png)
+
+**의심스러운 활동 상태**
+
+-   **시작됨**: 새로운 의심스러운 활동이 모두 이 목록에 표시됩니다.
+
+-   **마감**: 식별, 조사 및 완화한 의심스러운 활동을 추적하는 데 사용됩니다.
 
     > [!NOTE]
-    > ATA may reopen a resolved activity if it the same activity is detected again within a short period of time.
+    > 짧은 기간 내에 동일한 활동이 다시 검색된 경우 ATA는 해결된 활동을 다시 열 수 있습니다.
 
--   **Dismissed**
+-   **표시 안 함**: 활동 표시 안 함은 지금은 활동을 무시하고 새 인스턴스가 있을 경우에만 다시 경고를 받는 것을 의미합니다. 이는 비슷한 경고가 있을 경우 ATA에서 다시 열지 않음을 의미합니다. 하지만 경고가 7일 동안 중지된 후 다시 표시되면 다시 경고를 받게 됩니다.
 
-    Are activities that you manually dismissed. If ATA detects a similar suspicious activity a new detection will be created.
+- **삭제**: 경고를 삭제하는 경우 시스템의 데이터베이스에서 삭제되며 복원할 수 없습니다. 삭제를 클릭하면 동일한 유형의 의심스러운 활동을 모두 삭제할 수 있습니다.
 
-## Provide input on a suspicious activity
-To enable ATA to learn about your network with you, some suspicious activities (DNS reconnaissance, Pass the Ticket, SMB Session Enumeration, Abnormal Behavior and Remote Execution) request your input to will enhance the detection of suspicious activities going forward.
+- **제외**: 특정 유형의 경고가 더 이상 발생하지 않도록 엔터티를 제외하는 기능입니다. 예를 들어 원격 코드를 실행하는 특정 관리자 또는 DNS 정찰을 수행하는 보안 스캐너와 같은 특정 유형의 의심스러운 활동에 대해 다시 경고가 표시되지 않게 특정 엔터티(사용자 또는 컴퓨터)를 제외하도록 ATA를 설정할 수 있습니다. 타임라인에서 검색 시 의심스러운 활동에 직접 제외를 추가할 수 있을 뿐 아니라 구성 페이지의 **제외**로 이동한 다음 각 의심스러운 활동(예: Pass-the-Ticket)에 대해 제외된 엔터티 또는 서브넷을 수동으로 추가하고 제거할 수 있습니다. 
+> [!NOTE]
+> ATA 관리자만 구성 페이지를 수정할 수 있습니다.
 
-1.  For suspicious activities that enable you to provide input, the input question opens automatically. You will be asked to answer questions about activities on your network and whether or not they should be considered suspicious. In the below example, you are being asked if running scanning tools is allowed from a specific computer.
 
-    ![ATA provide input for suspicious activities image](media/ATA-Input.JPG)
-
-2.  If you answer no, this activity will be considered suspicious and any time ATA encounters this activity from this computer, you will be alerted.
-
-3.  However, if you answer yes, the suspicious activity may be dismissed and future activities of this type from this computer may not generate a suspicious activity or will generate an activity that is automatically dismissed.
-
-4.  If you do not know, you can click **Cancel**.
-
-## Change the status of a suspicious activity
-You can change the status of a suspicious activity by clicking the current status of the suspicious activity and selecting one of the following **Open**, **Resolved** or **Dismissed**.
-
-## See Also
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Working with ATA detection settings](working-with-detection-settings.md)
-- [Modifying ATA configuration](modifying-ata-configuration.md)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [ATA 검색 설정 작업](working-with-detection-settings.md)
+- [ATA 구성 수정](modifying-ata-center-configuration.md)

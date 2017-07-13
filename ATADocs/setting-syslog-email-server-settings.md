@@ -1,88 +1,84 @@
 ---
-# required metadata
-
-title: Setting email notification settings in Advanced Threat Analytics | Microsoft Docs
-description: Describes how to have ATA notify you (by email or by ATA event forwarding) when it detects suspicious activities 
-keywords:
+title: "Advanced Threat Analytics에서 메일 알림 설정 | Microsoft 문서"
+description: "ATA가 의심스러운 활동을 검색할 때 알리는 방식(메일 또는 ATA 이벤트 전달)을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 06/23/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 47d1125856631ecedcbc7779bf0529741c3da61f
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Provide ATA with your email server settings
-ATA can notify you when it detects a suspicious activity. For ATA to be able to send email notifications, you must first configure the **Email server settings**.
 
-1.  On the ATA Center server, click the **Microsoft Advanced Threat Analytics Management** icon on the desktop.
+# ATA에 전자 메일 서버 설정 제공
+<a id="provide-ata-with-your-email-server-settings" class="xliff"></a>
+ATA는 의심스러운 활동을 검색한 경우 알림을 제공할 수 있습니다. ATA에서 메일 알림을 보낼 수 있도록 하려면 먼저 **메일 서버 설정**을 구성해야 합니다.
 
-2.  Enter your user name and password and click **Log in**.
+1.  ATA 센터 서버의 바탕 화면에서 **Microsoft Advanced Threat Analytics 관리** 아이콘을 클릭합니다.
 
-3.  Select the settings option on the toolbar and select **Configuration**.
+2.  사용자 이름과 암호를 입력하고 **로그인**을 클릭합니다.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+3.  도구 모음에서 설정 옵션을 선택하고 **구성**을 선택합니다.
 
-4.  In the **notifications** section, under **Mail server**, enter the following information:
+    ![ATA 구성 설정 아이콘](media/ATA-config-icon.png)
 
-    |Field|Description|Value|
+4.  **알림** 섹션의 **메일 서버**에 다음 정보를 입력합니다.
+
+    |필드|설명|값|
     |---------|---------------|---------|
-    |SMTP server endpoint (required)|Enter the FQDN of your SMTP server and optionally change the port number (default 25).|For example:<br />smtp.contoso.com|
-    |SSL|Toggle SSL if the SMTP server required SSL. **Note:** If you enable SSL you will also need to change the Port number.|Default is disabled|
-    |Authentication|Enable if your SMTP server requires authentication. **Note:** If you enable authentication you must provide a user name and password of an email account that has permission to connect to the SMTP server.|Default is disabled|
-    |Send from (required)|Enter an email address from whom the email will be sent from.|For example:<br />ATA@contoso.com|
-    ![ATA email server settings image](media/ATA-email-server-1.7.png)
+    |SMTP 서버 끝점(필수)|SMTP 서버의 FQDN을 입력하고 포트 번호를 선택적으로 변경합니다(기본값은 25).|예를 들면 다음과 같습니다.<br />smtp.contoso.com|
+    |SSL|SMTP 서버에 SSL이 필요한 경우 SSL을 전환합니다. **참고:** SSL을 사용하도록 설정하면 포트 번호도 변경해야 합니다.|기본값은 사용 안 함입니다.|
+    |인증|SMTP 서버에 인증이 필요하면 사용하도록 설정합니다. **참고:** 인증을 사용하도록 설정하는 경우 SMTP 서버에 연결할 수 있는 권한이 있는 전자 메일 계정의 사용자 이름 및 암호를 제공해야 합니다.|기본값은 사용 안 함입니다.|
+    |보낸 사람(필수)|전자 메일을 보낸 사람의 전자 메일 주소를 입력합니다.|예를 들면 다음과 같습니다.<br />ATA@contoso.com|
+    ![ATA 메일 서버 설정 이미지](media/ata-email-server.png)
 
-## Provide ATA with your Syslog server settings
-ATA can notify you when it detects a suspicious activity by sending the notification to your Syslog server. If you enable Syslog notifications, you can set the following for them.
+## ATA에 Syslog 서버 설정 제공
+<a id="provide-ata-with-your-syslog-server-settings" class="xliff"></a>
+ATA는 의심스러운 활동이 검색되면 Syslog 서버에 알림을 전송하여 알릴 수 있습니다. Syslog 알림을 사용하도록 설정하면 다음을 설정할 수 있습니다.
 
-1.  Before configuring Syslog notifications, work with your SIEM admin to find out the following information:
+1.  Syslog 알림을 구성하기 전에 SIEM 관리자와 협력하여 다음 정보를 찾습니다.
 
-    -   FQDN or IP address of the SIEM server
+    -   SIEM 서버의 FQDN 또는 IP 주소
 
-    -   Port on which the SIEM server is listening
+    -   SIEM 서버가 수신 대기하는 포트
 
-    -   What transport to use: UDP, TCP or TLS (Secured Syslog)
+    -   사용할 전송: UDP, TCP 또는 TLS(보안 Syslog)
 
-    -   Format in which to send the data RFC 3164 or 5424
+    -   데이터 RFC 3164 또는 5424를 보낼 형식
 
-2.  On the ATA Center server, click the **Microsoft Advanced Threat Analytics Management** icon on the desktop.
+2.  ATA 센터 서버의 바탕 화면에서 **Microsoft Advanced Threat Analytics 관리** 아이콘을 클릭합니다.
 
-3.  Enter your user name and password and click **Log in**.
+3.  사용자 이름과 암호를 입력하고 **로그인**을 클릭합니다.
 
-4.  Select the settings option on the toolbar and select **Configuration**.
+4.  도구 모음에서 설정 옵션을 선택하고 **구성**을 선택합니다.
 
-    ![ATA configuration settings icon](media/ATA-config-icon.JPG)
+    ![ATA 구성 설정 아이콘](media/ATA-config-icon.png)
 
-5.  Under Notifications section, Select **Syslog server** and enter the following information:
+5.  알림 섹션에서 **Syslog 서버**를 선택하고 다음 정보를 입력합니다.
 
-    |Field|Description|
+    |필드|설명|
     |---------|---------------|
-    |Syslog server endpoint|FQDN of the Syslog server and optionally change the port number (default 514)|
-    |Transport|Can be UDP, TCP or TLS (Secured Syslog)|
-    |Format|This is the format that ATA uses to send events to the SIEM server - either RFC 5424 or RFC 3164.|
+    |Syslog 서버 끝점|Syslog 서버의 FQDN을 입력하고 포트 번호를 선택적으로 변경합니다(기본값은 514).|
+    |전송|UDP, TCP 또는 TLS(보안 Syslog)일 수 있음|
+    |형식|ATA이 SIEM 서버에 이벤트를 전송하는 데 사용하는 형식(RFC 5424 또는 RFC 3164)입니다.|
 
- ![ATA Syslog server settings image](media/ata-syslog-server-settings-1.7.png)
+ ![ATA Syslog 서버 설정 이미지](media/ata-syslog-server-settings.png)
 
 
 
-## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+[ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

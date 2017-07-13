@@ -1,101 +1,98 @@
 ---
-# required metadata
-
-title: Manage Advanced Threat Analytics telemetry settings | Microsoft Docs
-description: Describes the data collected by ATA and provides steps to turn off data collection.
-keywords:
+title: "Advanced Threat Analytics 원격 분석 설정 관리 | Microsoft 관리"
+description: "ATA에 의해 수집되는 데이터를 설명하고 데이터 수집을 해제하는 단계를 제공합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/3/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: b0e94ca7d817d6d5735921fefd7c9f4cf2cbd866
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Manage Telemetry Settings
-Advanced Threat Analytics (ATA) collects anonymized telemetry data about ATA and transmits the data over an HTTPS connection to Microsoft servers.  This data is used by Microsoft to help improve future versions of ATA.
 
-## Data collected
-Collected anonymized data includes the following:
+# 원격 분석 설정 관리
+<a id="manage-telemetry-settings" class="xliff"></a>
+ATA(Advanced Threat Analytics)는 ATA에 대한 익명화된 원격 분석 데이터를 수집하여 HTTPS 연결을 통해 Microsoft 서버로 전송합니다.  이 데이터는 Microsoft에서 이후 버전의 ATA를 개선하는 데 사용됩니다.
 
--   Performance counters from both the ATA Center and the ATA Gateway
+## 수집되는 데이터
+<a id="data-collected" class="xliff"></a>
+수집되는 익명화된 데이터에는 다음이 포함됩니다.
 
--   Product ID from licensed copies of ATA
+-   ATA 센터와 ATA 게이트웨이의 성능 카운터
 
--   Deployment date of the ATA Center
+-   사용이 허가된 ATA 복사본의 제품 ID
 
--   Number of deployed ATA Gateways
+-   ATA Center 배포 날짜
 
--   The following anonymized Active Directory information:
+-   배포된 ATA Gateway 수
 
-    -   Domain ID for the domain whose name would be the first domain when sorted alphabetically
+-   다음과 같은 익명화된 Active Directory 정보:
 
-    -   Number of domain controllers
+    -   사전순으로 정렬할 때 이름이 첫 번째 도메인인 도메인의 도메인 ID
 
-    -   Number of domain controllers monitored by ATA via port mirroring
+    -   도메인 컨트롤러 수
 
-    -   Number of Sites
+    -   포트 미러링을 통해 ATA에서 모니터링되는 도메인 컨트롤러 수
 
-    -   Number of Computers
+    -   사이트 수
 
-    -   Number of Groups
+    -   컴퓨터 수량
 
-    -   Number of Users
+    -   그룹 수
 
--   Suspicious Activities  – The following anonymized data is collected for each suspicious activity:
+    -   사용자 수
 
-    (Computer names, user names, and IP addresses are **not** collected)
+-   의심스러운 활동 - 각 의심스러운 활동에 대해 다음과 같은 익명화된 데이터가 수집됩니다.
 
-    -   Suspicious activity type
+    (컴퓨터 이름, 사용자 이름 및 IP 주소는 수집되지 **않음**)
 
-    -   Suspicious activity ID
+    -   의심스러운 활동 유형
 
-    -   Status
+    -   의심스러운 활동 ID
 
-    -   Start and End Time
+    -   상태
 
-    -   Input provided
+    -   시작 및 종료 시간
 
-- Health issues – The following anonymized data is collected for each health issue:
+    -   제공된 입력
 
-    (Computer names, user names, and IP addresses are not collected)
+- 각 상태 문제 대해 다음과 같은 익명화된 데이터가 수집됩니다.
 
-    -   Health issue type
+    (컴퓨터 이름, 사용자 이름 및 IP 주소는 수집되지 않음)
 
-    -   Health issue ID
+    -   상태 문제 유형
 
-    -   Status
+    -   상태 문제 ID
 
-    -   Start and End Time
+    -   상태
 
-- ATA Console URL addresses - URL addresses when using the ATA Console i.e. which pages in the ATA Console are visited.
+    -   시작 및 종료 시간
+
+- ATA 콘솔 URL 주소 - ATA 콘솔을 사용할 때 URL 주소(예: ATA 콘솔에서 방문한 페이지).
 
 
-### Disable data collection
-Perform the following steps to stop collecting and sending telemetry data to Microsoft:
+### 데이터 수집 해제
+<a id="disable-data-collection" class="xliff"></a>
+원격 분석 데이터를 수집하여 Microsoft로 전송하는 작업을 중지하려면 다음 단계를 수행합니다.
 
-1.  Log in to the ATA Console, click the three dots in the toolbar and select **About**.
+1.  ATA 콘솔에 로그인하여 도구 모음에 있는 세 점을 클릭하고 **정보**를 선택합니다.
 
-2.  Uncheck the box for **Send us usage information to help improve your customer experience in the future**.
+2.  **향후 고객 환경을 개선하기 위해 사용 현황 정보를 보내 주세요.** 확인란의 선택을 취소합니다.
 
-## See Also
-- [What's new in version 1.6](whats-new-version-1.6.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [이벤트 로그를 사용하여 ATA 문제 해결](troubleshooting-ata-using-logs.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

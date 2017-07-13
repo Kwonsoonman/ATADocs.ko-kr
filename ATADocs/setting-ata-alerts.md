@@ -1,85 +1,56 @@
 ---
-# required metadata
-
-title: Set Advanced Threat Analytics notifications | Microsoft Docs
-description: Describes how to set ATA alerts so you are notified when suspicious activities are detected.
-keywords:
+title: "Advanced Threat Analytics 알림 설정 | Microsoft 문서"
+description: "의심스러운 활동이 감지되었을 때 알림을 받도록 ATA 경고를 설정하는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: cc7f5d2e75076b1f684ad76daca9ceb35e0d30e3
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Set ATA Notifications
-ATA can notify you when it detects a suspicious activity, either by email or by using ATA event forwarding and forwarding the event to your SIEM/syslog server. Before selecting which notifications you want to receive, you have to [set up your email server and your Syslog server](setting-syslog-email-server-settings.md).
+
+# ATA 알림 설정
+<a id="set-ata-notifications" class="xliff"></a>
+ATA는 의심스러운 활동을 감지하면 메일을 통해 또는 ATA 이벤트 전달 기능을 사용한 후 이벤트를 SIEM/syslog 서버에 전달하여 알릴 수 있습니다. 수신하려는 알림을 선택하기 전에 [메일 서버 및 Syslog 서버를 설정](setting-syslog-email-server-settings.md)해야 합니다.
 
 > [!NOTE]
-> -   Email notifications include a link that will take the user directly to the suspicious activity that was detected. The host name portion of the link is taken from the setting of the ATA Console URL on the ATA Center page. By default, the ATA Console URL is the IP address selected during the installation  of the ATA Center.  If you are going to configure email notifications it is recommended to use an FQDN as the ATA Console URL.
-> -   Notifications are sent from the ATA Center to either the SMTP server and the Syslog server.
-
-## Mail notifications
-To receive mail notifications, set the following:
+> -   전자 메일 알림에는 발견된 의심스러운 활동으로 사용자를 직접 이동하는 링크가 포함됩니다. 링크의 호스트 이름 부분은 ATA 센터 페이지에서 ATA 콘솔 URL을 설정하여 가져옵니다. 기본적으로 ATA 콘솔 URL은 ATA 센터의 설치 중에 선택한 IP 주소입니다.  메일 알림을 구성하려는 경우 FQDN을 ATA 콘솔 URL로 사용하는 것이 좋습니다.
+> -   알림은 ATA 센터에서 SMTP 서버 또는 Syslog 서버로 전송됩니다.
 
 
-1. In the ATA Console, select the settings option on the toolbar and select **Configuration**.
-![ATA configuration settings icon](media/ATA-config-icon.JPG)
-
-2. Under the **Notifications** section, select **Settings**.
-3. Under **Mail recipients**, specify the recipients who will receive the notifications via email.
->	[!NOTE]
->   Email alerts for suspicious activities are only sent when the suspicious activity is created.
-
-4. Under **Notify when:**, use the toggles to select to which notifications should be sent:
-  - New suspicious activity is detected
-  - New health issue is detected
-  - New software update is available
-
-5. Click **Save**.
-
-![ATA mail notification settings image](media/ATA-mail-notification-settings-1.7.png)
+알림을 수신하려면 다음을 설정합니다.
 
 
-## Syslog notification
+1. ATA 콘솔의 도구 모음에서 설정 옵션을 선택하고 **구성**을 선택합니다.
 
-To receive Syslog notifications, set the following:
+![ATA 구성 설정 아이콘](media/ATA-config-icon.png)
 
+2. **알림 및 보고서** 섹션에서 **알림**을 선택합니다.
+3. **메일 알림**에서 새로운 의심스러운 활동, 새로운 상태 문제 등 메일을 통해 보낼 알림을 지정합니다. 의심스러운 활동과 상태 경고에 대해 알림을 보낼 메일 주소를 각각 설정하여, 예를 들어 의심스러운 활동 알림은 보안 분석가에게 보내고 상태 경고 알림은 IT 관리자에게 보낼 수 있습니다.
+>   [!NOTE]
+>   의심스러운 활동에 대한 전자 메일 경고는 의심스러운 활동이 생성될 때만 전송됩니다.
+3. **Syslog 알림**에서 새로운 의심스러운 활동, 업데이트된 의심스러운 활동, 새로운 상태 문제 등 Syslog 서버에 보낼 알림을 지정합니다.
+5. **저장**을 클릭합니다.
 
-1. In the ATA Console, select the settings option on the toolbar and select **Configuration**.
-![ATA configuration settings icon](media/ATA-config-icon.JPG)
-
-2. Under the **Notifications** section, select **Settings**.
-3. Under **Syslog notifications**, use the toggles to select to which notifications should be sent:
-
-
-	- New suspicious activity is detected
-	- Existing suspicious activity is updated
-	- New health issue is detected
-5. Click **Save**.
-
-![ATA notification settings image](media/ATA-syslog-notification-settings-1.7.png)
+![ATA 메일 알림 설정 이미지](media/ata-mail-notification-settings.png)
 
 
 
 
-## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+[ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

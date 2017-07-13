@@ -1,306 +1,307 @@
 ---
-# required metadata
-
-title: Advanced Threat Analytics prerequisites | Microsoft Docs
-description: Describes the requirements for a successful deployment of ATA in your environment
-keywords:
+title: "Advanced Threat Analytics 필수 구성 요소 | Microsoft 문서"
+description: "환경에서 ATA를 올바르게 배포하기 위한 요구 사항을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 7/2/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: b810d066c59ea4663157027894eb7e2a39f7ff14
+ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/05/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# ATA Prerequisites
-This article describes the requirements for a successful deployment of ATA in your environment.
+
+# ATA 필수 구성 요소
+<a id="ata-prerequisites" class="xliff"></a>
+이 문서에서는 환경에서 ATA를 올바르게 배포하기 위한 요구 사항을 설명합니다.
 
 >[!NOTE]
-> For information on how to plan resources and capacity, see [ATA capacity planning](ata-capacity-planning.md).
+> 리소스 및 용량을 계획하는 방법에 대한 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
 
-ATA is comprised of the ATA Center, the ATA Gateway and/or the ATA Lightweight Gateway. For more information about the ATA components, see [ATA architecture](ata-architecture.md).
+ATA는 ATA 센터, ATA 게이트웨이 및/또는 ATA 경량 게이트웨이로 구성됩니다. ATA 구성 요소에 대한 자세한 내용은 [ATA 아키텍처](ata-architecture.md)를 참조하세요.
 
-The ATA System works on active directory forest boundary and supports Forest Functional Level (FFL) of Windows 2003 and above.
-
-
-[Before you start](#before-you-start): This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
-
-[ATA Center](#ata-center-requirements): This section lists ATA Center hardware, software requirements as well as settings  you need to configure on your ATA Center server.
-
-[ATA Gateway](#ata-gateway-requirements): This section lists ATA Gateway hardware, software requirements as well as settings  you need to configure on your ATA Gateway servers.
-
-[ATA Lightweight Gateway](#ata-lightweight-gateway-requirements): This section lists ATA Lightweight Gateway hardware, and software requirements.
-
-[ATA Console](#ata-console): This section lists browser requirements for running the ATA Console.
-
-![ATA architecture diagram](media/ATA-architecture-topology.jpg)
-
-## Before you start
-This section lists information you should gather and accounts and network entities you should have before starting ATA installation.
+ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows 2003 이상에서 FFL(포리스트 기능 수준)을 지원합니다.
 
 
--   User account and password with read access to all objects in the domains that will be monitored.
+[시작하기 전에](#before-you-start): 이 섹션에서는 ATA 설치를 시작하기 전에 수집해야 하는 정보와 확인해야 하는 계정 및 네트워크 엔터티를 제시합니다.
+
+[ATA 센터](#ata-center-requirements): 이 섹션에는 ATA 센터 하드웨어, 소프트웨어 요구 사항 및 ATA 센터 서버에서 구성해야 하는 설정에 대해 설명합니다.
+
+[ATA 게이트웨이](#ata-gateway-requirements): 이 섹션에는 ATA 게이트웨이 하드웨어, 소프트웨어 요구 사항 및 ATA 게이트웨이 서버에서 구성해야 하는 설정에 대해 설명합니다.
+
+[ATA 경량 게이트웨이](#ata-lightweight-gateway-requirements):이 섹션에는 ATA 경량 게이트웨이 하드웨어 및 소프트웨어 요구 사항이 나열되어 있습니다.
+
+[ATA 콘솔](#ata-console): 이 섹션에서는 ATA 콘솔을 실행하기 위한 브라우저 요구 사항을 제시합니다.
+
+![ATA 아키텍처 다이어그램](media/ATA-architecture-topology.jpg)
+
+## 시작하기 전에
+<a id="before-you-start" class="xliff"></a>
+이 섹션에서는 ATA 설치를 시작하기 전에 수집해야 하는 정보와 확인해야 하는 계정 및 네트워크 엔터티를 제시합니다.
+
+
+-   모니터링할 도메인의 모든 개체에 대한 읽기 권한이 있는 사용자 계정 및 암호입니다.
 
     > [!NOTE]
-    > If you have set custom ACLs on various Organizational Units (OU) in your domain, make sure that the selected user has read permissions to those OUs.
+    > 도메인의 여러 OU(조직 구성 단위)에서 사용자 지정 ACL을 설정한 경우에는 선택한 사용자에게 해당 OU에 대한 읽기 권한이 있는지 확인하세요.
 
--   Make sure that Message Analyzer and WireShark are not installed on the ATA Gateway.
--    Recommended: User should have read only permissions on the Deleted Objects container. This will allow ATA to detect bulk deletion of objects in the domain. For information about configuring read only permissions on the Deleted Objects container, see the **Changing permissions on a deleted object container** section in the [View or Set Permissions on a Directory Object](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) topic.
+-   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 다시 시작하지 않으면 게이트웨이가 트래픽을 더 이상 캡처하지 않습니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
 
--   Optional: A user account of a user who has no network activities. This account will be configured as the ATA Honeytoken user. To configure the Honeytoken user you will need the SID of the user account, not the username. For more information see [Working with ATA Detection Settings](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) topic.
+-    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 항목에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
 
--   Optional: In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by  setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+-   선택 사항: 네트워크 활동이 없는 사용자 계정을 사용합니다. 이 계정은 ATA 허니토큰 사용자로 구성됩니다. 허니토큰 사용자를 구성하려면 사용자 이름이 아닌 사용자 계정의 SID가 필요합니다. 자세한 내용은 [ATA 검색 설정 작업](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings)을 참조하세요.
 
-
-## ATA Center requirements
-This section lists the requirements for the ATA Center.
-### General
-The ATA Center supports installation on a server running Windows Server 2012 R2 or Windows Server 2016. 
-The ATA Center can be installed on a server that is a member of a domain or workgroup.
-
-Before installing ATA Center running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
-
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
-
-Installation of the ATA Center as a virtual machine is supported. 
-
->[!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-
-If you run the ATA Center as a virtual machine, shut down the server before creating a new checkpoint to avoid potential database corruption.
-### Server specifications
-When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.<br>
-For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-The number of domain controllers you are monitoring and the load on each of the domain controllers dictates the server specifications needed see [ATA capacity planning](ata-capacity-planning.md) for more details.
+-   선택 사항: ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 수집 및 분석할 수 있을 뿐 아니라 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756 및 4757을 사용하여 ATA Pass-the-Hash, 무차별 암호 대입(Brute force), 중요한 그룹 수정 및 Honeytoken 검색 기능을 추가로 개선할 수 있습니다. 이러한 이벤트는 SIEM에서 수신될 수도 있고 도메인 컨트롤러에서 Windows 이벤트 전달을 설정하여 수신할 수도 있습니다. 수집된 이벤트는 도메인 컨트롤러 네트워크 트래픽을 통해서는 사용할 수 없는 추가 정보를 ATA에 제공합니다.
 
 
-### Time synchronization
-The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
+## ATA 센터 요구 사항
+<a id="ata-center-requirements" class="xliff"></a>
+이 섹션에서는 ATA 센터의 요구 사항에 대해 설명합니다.
+### 일반
+<a id="general" class="xliff"></a>
+ATA 센터는 Windows Server 2012 R2 또는 Windows Server 2016을 실행 중인 서버에 설치할 수 있습니다. ATA 센터는 도메인이나 작업 그룹의 구성원인 서버에 설치할 수 있습니다.
 
+Windows Server 2012 R2를 실행 중인 ATA 센터를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
 
-### Network adapters
-You should have the following:
--   At least one network adapter (if using physical server in VLAN environment, it is recommended to use two network adapters)
+Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
 
--   Two IP addresses (recommended but not required)
-
-Communication between the ATA Center and the ATA Gateway is encrypted using SSL on port 443. Additionally, the ATA Console is also using SSL on port 443. **Two IP addresses** are recommended. The ATA Center service will bind port 443 to the first IP address and ATA Console will bind port 443 to the second IP address.
-
-> [!NOTE]
-> A single IP address with two different ports can be used, but two IP addresses are recommended.
-
-### Ports
-The following table lists the minimum ports that have to be opened for the ATA Center to work properly.
-
-In this table, IP address 1 is bound to the ATA Center service and IP address 2 is bound to the ATA Console:
-
-|Protocol|Transport|Port|To/From|Direction|IP Address|
-|------------|-------------|--------|-----------|-------------|--------------|
-|**SSL** (ATA Communications)|TCP|443, or configurable|ATA Gateway|Inbound|IP address 1|
-|**HTTP**|TCP|80|Company Network|Inbound|IP address 2|
-|**HTTPS**|TCP|443|Company Network and ATA Gateway|Inbound|IP address 2|
-|**SMTP** (optional)|TCP|25|SMTP Server|Outbound|IP address 2|
-|**SMTPS** (optional)|TCP|465|SMTP Server|Outbound|IP address 2|
-|**Syslog** (optional)|TCP|514|Syslog server|Outbound|IP address 2|
-
-### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways don't have Internet access, follow [the procedure to manually import a CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), taking care to install the all the CRL distribution points for the whole chain.
-
-To ease the installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.<br>
-> [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
-
-
-> Using of automatic certificate renewal is not supported.
-
-
-> [!NOTE]
-> If you are going to access the ATA Console from other computers, ensure that those computers trust the certificate being used by ATA Center otherwise you will get a warning page that there is a problem with the website's security certificate before getting to the log in page.
-
-## ATA Gateway requirements
-This section lists the requirements for the ATA Gateway.
-### General
-The ATA Gateway supports installation on a server running Windows Server 2012 R2 or Windows Server 2016 (Include server core).
-The ATA Gateway can be installed on a server that is a member of a domain or workgroup.
-The ATA Gateway can be used to monitor Domain Controllers with Domain Functional Level of Windows 2003 and above.
-
-Before installing ATA Gateway running Windows 2012 R2, confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
-
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`.
-
-
-For information on using virtual machines with the ATA Gateway, see [Configure port mirroring](configure-port-mirroring.md).
-
-> [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
-
-### Server specifications
-For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.<br>
-An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic to and from the domain controllers.
+ATA 센터를 가상 컴퓨터로 설치할 수 있습니다. 
 
 >[!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> 가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
 
-For more information about the ATA Gateway hardware requirements see [ATA capacity planning](ata-capacity-planning.md).
+ATA 센터를 가상 컴퓨터로 실행하는 경우 데이터베이스 손상 가능성을 방지하기 위해 새 검사점을 만들기 전에 서버를 종료합니다.
+### 서버 사양
+<a id="server-specifications" class="xliff"></a>
+물리적 서버에서 작업할 때 ATA 데이터베이스를 사용하려면 BIOS에서 NUMA(Non-Uniform Memory Access)를 **사용하지 않도록 설정**해야 합니다. 시스템이 NUMA를 노드 인터리빙으로 참조할 수 있습니다. 이 경우 NUMA를 사용하지 않으려면 노드 인터리빙을 **사용하도록 설정**해야 합니다. 자세한 내용은 BIOS 설명서를 참조하세요. 이는 ATA 센터가 가상 서버에서 실행 중인 경우 관련이 없습니다.<br>
+성능을 최적화하려면 ATA 센터의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
+모니터링 중인 도메인 컨트롤러 수와 각 도메인 컨트롤러의 로드에 따라 필요한 서버 사양이 결정됩니다. 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
-### Time synchronization
-The ATA Center server, the ATA Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
 
-### Network adapters
-The ATA Gateway requires at least one Management adapter and at least one Capture adapter:
+### 시간 동기화
+<a id="time-synchronization" class="xliff"></a>
+ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간차가 5분 이상 나지 않도록 동기화해야 합니다.
 
--   **Management adapter** - will be used for communications on your corporate network. This adapter should be configured with the following:
 
-    -   Static IP address including default gateway
+### 네트워크 어댑터
+<a id="network-adapters" class="xliff"></a>
+다음이 필요합니다.
+-   하나 이상의 네트워크 어댑터(VLAN 환경에서 물리적 서버를 사용할 경우 두 개의 네트워크 어댑터 사용 권장)
 
-    -   Preferred and alternate DNS servers
+-   두 개의 IP 주소(필수는 아니지만 권장됨)
 
-    -   The **DNS suffix for this connection** should be the DNS name of the domain for each domain being monitored.
+ATA 센터와 ATA 게이트웨이 간의 통신은 포트 443에서 SSL을 사용하여 암호화됩니다. 또한 ATA 콘솔은 포트 443에서도 SSL을 사용합니다. **IP 주소 2개**를 사용하는 것이 좋습니다. ATA 센터 서비스는 포트 443을 첫 번째 IP 주소에 바인딩하고, ATA 콘솔은 포트 443을 두 번째 IP 주소에 바인딩합니다.
 
-        ![Configure DNS suffix in advanced TCP/IP settings](media/ATA-DNS-Suffix.png)
+> [!NOTE]
+> IP 주소 하나와 서로 다른 포트 2개를 사용할 수도 있지만, IP 주소를 2개 사용하는 것이 좋습니다.
+
+### 포트
+<a id="ports" class="xliff"></a>
+아래 표에는 ATA 센터가 정상적으로 작동하도록 하려면 열어야 하는 최소한의 포트가 나와 있습니다.
+
+|프로토콜|전송|포트|끝/시작|방향|
+|------------|-------------|--------|-----------|-------------|
+|**SSL**(ATA 통신)|TCP|443 또는 구성 가능|ATA 게이트웨이|인바운드|
+|**HTTP**(선택 사항)|TCP|80|회사 네트워크|인바운드|
+|**HTTPS**|TCP|443|회사 네트워크 및 ATA 게이트웨이|인바운드|
+|**SMTP**(선택 사항)|TCP|25|SMTP 서버|아웃바운드|
+|**SMTPS**(선택 사항)|TCP|465|SMTP 서버|아웃바운드|
+|**syslog**(선택 사항)|TCP|514|Syslog 서버|아웃바운드|
+|**LDAP**|TCP 및 UDP|389|도메인 컨트롤러|아웃바운드|
+|**LDAPS**(선택 사항)|TCP|636|도메인 컨트롤러|아웃바운드|
+|**DNS**|TCP 및 UDP|53|DNS 서버|아웃바운드|
+|**Kerberos**(도메인에 연결된 경우 선택 사항)|TCP 및 UDP|88|도메인 컨트롤러|아웃바운드|
+|**Netlogon**(도메인에 연결된 경우 선택 사항)|TCP 및 UDP|445|도메인 컨트롤러|아웃바운드|
+|**Windows 시간**(도메인에 연결된 경우 선택 사항)|UDP|123|도메인 컨트롤러|아웃바운드|
+
+### 인증서
+<a id="certificates" class="xliff"></a>
+ATA 센터에 CRL 배포 지점 액세스 권한이 있는지 확인합니다. ATA 게이트웨이가 인터넷에 액세스할 수 없으면 [CRL을 수동으로 가져오는 절차](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx)에 따라 전체 체인에 모든 CRL 배포 지점을 설치합니다.
+
+ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설치할 수 있습니다. 배포 후에는 자체 서명 인증서를 ATA 게이트웨이에 사용할 내부 인증 기관의 인증서로 바꿀 수 있습니다.<br>
+> [!NOTE]
+> 인증서의 공급자 형식은 CSP(암호화 서비스 공급자) 또는 KSP(키 저장소 공급자)일 수 있습니다.
+
+
+> 인증서 자동 갱신 사용이 지원되지 않습니다.
+
+
+> [!NOTE]
+> 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그렇지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
+
+## ATA 게이트웨이 요구 사항
+<a id="ata-gateway-requirements" class="xliff"></a>
+이 섹션에서는 ATA 게이트웨이의 요구 사항에 대해 설명합니다.
+### 일반
+<a id="general" class="xliff"></a>
+ATA 게이트웨이는 Windows Server 2012 R2 또는 Windows Server 2016(서버 코어 포함)을 실행 중인 서버에 설치할 수 있습니다.
+ATA 게이트웨이는 도메인이나 작업 그룹의 구성원인 서버에 설치할 수 있습니다.
+ATA 게이트웨이를 사용하면 Windows 2003 이상의 도메인 기능 수준에서 도메인 컨트롤러를 모니터링할 수 있습니다.
+
+Windows Server 2012 R2를 실행 중인 ATA 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
+
+Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
+
+
+ATA 게이트웨이가 설치된 가상 컴퓨터를 사용하는 방법에 대한 자세한 내용은 [포트 미러링 구성](configure-port-mirroring.md)을 참조하세요.
+
+> [!NOTE]
+> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
+
+### 서버 사양
+<a id="server-specifications" class="xliff"></a>
+성능을 최적화하려면 ATA 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
+도메인 컨트롤러에서 보내고 받는 네트워크 트래픽의 양에 따라 ATA 게이트웨이 하나가 여러 도메인 컨트롤러를 모니터링할 수 있습니다.
+
+>[!NOTE] 
+> 가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
+
+ATA 게이트웨이 하드웨어 요구 사항에 대한 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
+
+### 시간 동기화
+<a id="time-synchronization" class="xliff"></a>
+ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간차가 5분 이상 나지 않도록 동기화해야 합니다.
+
+### 네트워크 어댑터
+<a id="network-adapters" class="xliff"></a>
+ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 각각 하나 이상 필요합니다.
+
+-   **관리 어댑터** - 회사 네트워크 통신에 사용됩니다. 다음 정보를 사용하여 이 어댑터를 구성해야 합니다.
+
+    -   기본 게이트웨이를 포함하는 고정 IP 주소
+
+    -   기본 설정 DNS 서버와 대체 DNS 서버
+
+    -   **이 연결의 DNS 접미사**는 모니터링 중인 각 도메인의 도메인 DNS 이름이어야 합니다.
+
+        ![고급 TCP/IP 설정에서 DNS 접미사 구성](media/ATA-DNS-Suffix.png)
 
         > [!NOTE]
-        > If the ATA Gateway is a member of the domain, this may be configured automatically.
+        > ATA 게이트웨이가 도메인의 구성원이면 관리 어댑터는 자동으로 구성될 수 있습니다.
 
--   **Capture adapter** - will be used to capture traffic to and from the domain controllers.
+-   **캡처 어댑터** -도메인 컨트롤러에서 보내고 받는 트래픽을 캡처하는 데 사용됩니다.
 
     > [!IMPORTANT]
-    > -   Configure port mirroring for the capture adapter as the destination of the domain controller network traffic. See [Configure port mirroring](configure-port-mirroring.md) for additional information. Typically, you will need to work with the networking or virtualization team to configure port mirroring.
-    > -   Configure a static non-routable IP address for your environment with no default gateway and no DNS server addresses. For example, 1.1.1.1/32. This will ensure that the capture network adapter can capture the maximum amount of traffic and that the management network adapter is used to send and receive the required network traffic.
+    > -   캡처 어댑터용 포트 미러링은 도메인 컨트롤러 네트워크 트래픽의 대상으로 구성합니다. 자세한 내용은 [포트 미러링 구성](configure-port-mirroring.md)을 참조하세요. 일반적으로는 네트워킹 또는 가상화 팀과 협의하여 포트 미러링을 구성해야 합니다.
+    > -   기본 게이트웨이 및 DNS 서버 주소가 없는 라우팅 불가능 고정 IP 주소를 환경에 대해 구성합니다. 예를 들어 1.1.1.1/32와 같이 구성할 수 있습니다. 이렇게 하면 캡처 네트워크 어댑터가 트래픽을 최대한 캡처할 수 있으며, 관리 네트워크 어댑터를 사용하여 필요한 네트워크 트래픽을 보내고 받을 수 있습니다.
 
-### Ports
-The following table lists the minimum ports that the ATA Gateway requires configured on the management adapter:
+### 포트
+<a id="ports" class="xliff"></a>
+아래 표에는 관리 어댑터에 구성된 ATA 게이트웨이에 필요한 최소한의 포트가 나와 있습니다.
 
-|Protocol|Transport|Port|To/From|Direction|
+|프로토콜|전송|포트|끝/시작|Direction|
 |------------|-------------|--------|-----------|-------------|
-|LDAP|TCP and UDP|389|Domain controllers|Outbound|
-|Secure LDAP (LDAPS)|TCP|636|Domain controllers|Outbound|
-|LDAP to Global Catalog|TCP|3268|Domain controllers|Outbound|
-|LDAPS to Global Catalog|TCP|3269|Domain controllers|Outbound|
-|Kerberos|TCP and UDP|88|Domain controllers|Outbound|
-|Netlogon|TCP and UDP|445|Domain controllers|Outbound|
-|Windows Time|UDP|123|Domain controllers|Outbound|
-|DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   Console IP Address|Outbound|
-|Syslog (optional)|UDP|514|SIEM Server|Inbound|
+|LDAP|TCP 및 UDP|389|도메인 컨트롤러|아웃바운드|
+|보안 LDAP(LDAPS)|TCP|636|도메인 컨트롤러|아웃바운드|
+|글로벌 카탈로그에 대한 LDAP|TCP|3268|도메인 컨트롤러|아웃바운드|
+|글로벌 카탈로그에 대한 LDAPS|TCP|3269|도메인 컨트롤러|아웃바운드|
+|Kerberos|TCP 및 UDP|88|도메인 컨트롤러|아웃바운드|
+|Netlogon|TCP 및 UDP|445|도메인 컨트롤러|아웃바운드|
+|Windows 시간|UDP|123|도메인 컨트롤러|아웃바운드|
+|DNS|TCP 및 UDP|53|DNS 서버|아웃바운드|
+|NTLM over RPC|TCP|135|네트워크의 모든 장치|아웃바운드|
+|NetBIOS|UDP|137|네트워크의 모든 장치|아웃바운드|
+|SSL|TCP|443 또는 센터 서비스용으로 구성된 포트|ATA 센터:<br /><br />-   센터 서비스 IP 주소<br />-   콘솔 IP 주소|아웃바운드|
+|syslog(선택 사항)|UDP|514|SIEM 서버|인바운드|
 
 > [!NOTE]
-> As part of the resolution process done by the ATA Gateway, the following ports need to be open inbound on devices on the network from the ATA Gateways.
+> ATA 게이트웨이가 수행하는 확인 프로세스의 일부분으로 ATA 게이트웨이에서 네트워크의 장치에 대해 다음 포트를 인바운드로 열어야 합니다.
 >
-> -   NTLM over RPC (TCP Port 135)
-> -   NetBIOS (UDP port 137)
+> -   NTLM over RPC(TCP 포트 135)
+> -   NetBIOS(UDP 포트 137)
 
-### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Gateways do not have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.<br>
-To ease installation of the ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Gateway.
+## ATA 경량 게이트웨이 요구 사항
+<a id="ata-lightweight-gateway-requirements" class="xliff"></a>
+이 섹션에서는 ATA 경량 게이트웨이 요구 사항에 대해 설명합니다.
+### 일반
+<a id="general" class="xliff"></a>
+ATA 경량 게이트웨이는 Windows Server 2008 R2 SP1(Server Core 제외), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016(Core 포함, Nano 제외)을 실행하는 도메인 컨트롤러에 대한 설치를 지원합니다.
 
-> [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).<br>
+도메인 컨트롤러는 RODC(읽기 전용 도메인 컨트롤러)만 될 수 있습니다.
 
-A certificate supporting **Server Authentication** is required to be installed in the Computer store of the ATA Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
+Windows Server 2012 R2를 실행하는 도메인 컨트롤러에 ATA 경량 게이트웨이를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
 
-## ATA Lightweight Gateway requirements
-This section lists the requirements for the ATA Lightweight Gateway.
-### General
-The ATA Lightweight Gateway supports installation on a domain controller running Windows Server 2008 R2 SP1 (not including Server Core), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (including Core but not Nano).
+Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
 
-The domain controller can be a read only domain controller (RODC).
+Windows server 2012 R2 Server Core에 대한 설치의 경우 [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2) 업데이트도 설치되어 있어야 합니다.
 
-Before installing ATA Lightweight Gateway on a domain controller running Windows Server 2012 R2,
- confirm that the following update has been installed: [KB2919355](https://support.microsoft.com/kb/2919355/).
-
-You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb2919355]`
-
-If the installation is for Windows server 2012 R2 Server Core, the following update should also be installed:
- [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
-
- You can check by running the following Windows PowerShell cmdlet: `[Get-HotFix -Id kb3000850]`
+ Windows PowerShell cmdlet `[Get-HotFix -Id kb3000850]`을 실행하여 이 업데이트가 설치되었는지를 확인할 수 있습니다.
 
 
-During installation, the .Net Framework 4.6.1 is installed and might cause a reboot of the domain controller.
+설치하는 동안 .Net Framework 4.6.1이 설치되고 도메인 컨트롤러가 다시 부팅되도록 할 수 있습니다.
 
 
 > [!NOTE]
-> A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
 
-### Server specifications
+### 서버 사양
+<a id="server-specifications" class="xliff"></a>
 
-The ATA Lightweight Gateway requires a minimum of 2 cores and 6 GB of RAM installed on the domain controller.
-For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-The ATA Lightweight Gateway can be deployed on domain controllers of various loads and sizes, depending on the amount of network traffic to and from the domain controllers and the amount of resources installed on that domain controller.
+ATA 경량 게이트웨이는 도메인 컨트롤러에 최소 2개의 코어와 6GB의 RAM이 설치되어 있어야 합니다.
+성능을 최적화하려면 ATA 경량 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.
+ATA 경량 게이트웨이는 도메인 컨트롤러에서 들어오고 나가는 네트워크 트래픽 양과 해당 도메인 컨트롤러에 설치된 리소스 양에 따라 로드와 크기가 다양한 도메인 컨트롤러에 배포할 수 있습니다.
 
 >[!NOTE] 
-> When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
+> 가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
 
-For more information about the ATA Lightweight Gateway hardware requirements see [ATA capacity planning](ata-capacity-planning.md).
+ATA 경량 게이트웨이 하드웨어 요구 사항에 대한 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
-### Time synchronization
-The ATA Center server, the ATA Lightweight Gateway servers and the domain controllers must have time synchronized to within 5 minutes of each other.
-### Network adapters
-The ATA Lightweight Gateway monitors the local traffic on all of the domain controller's network adapters. <br>
-After deployment, you can use the ATA Console if you ever want to modify which network adapters are monitored.
+### 시간 동기화
+<a id="time-synchronization" class="xliff"></a>
+ATA 센터 서버, ATA 경량 게이트웨이 서버 및 도메인 컨트롤러의 시간차가 5분 이상 나지 않도록 동기화해야 합니다.
+### 네트워크 어댑터
+<a id="network-adapters" class="xliff"></a>
+ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어댑터에서 로컬 트래픽을 모니터링합니다. <br>
+배포 후 모니터링되는 네트워크 어댑터를 수정하려면 ATA 콘솔을 사용하면 됩니다.
 
-### Ports
-The following table lists the minimum ports that the ATA Lightweight Gateway requires:
+### 포트
+<a id="ports" class="xliff"></a>
+아래 표에는 ATA 경량 게이트웨이에 필요한 최소한의 포트가 나와 있습니다.
 
-|Protocol|Transport|Port|To/From|Direction|
+|프로토콜|전송|포트|끝/시작|방향|
 |------------|-------------|--------|-----------|-------------|
-|DNS|TCP and UDP|53|DNS Servers|Outbound|
-|NTLM over RPC|TCP|135|All devices on the network|Outbound|
-|NetBIOS|UDP|137|All devices on the network|Outbound|
-|SSL|TCP|443 or as configured for the Center Service|ATA Center:<br /><br />-   Center Service IP Address<br />-   Console IP Address|Outbound|
-|Syslog (optional)|UDP|514|SIEM Server|Inbound|
+|DNS|TCP 및 UDP|53|DNS 서버|아웃바운드|
+|NTLM over RPC|TCP|135|네트워크의 모든 장치|아웃바운드|
+|NetBIOS|UDP|137|네트워크의 모든 장치|아웃바운드|
+|SSL|TCP|443 또는 센터 서비스용으로 구성된 포트|ATA 센터:<br /><br />-   센터 서비스 IP 주소<br />-   콘솔 IP 주소|아웃바운드|
+|syslog(선택 사항)|UDP|514|SIEM 서버|인바운드|
 
 > [!NOTE]
-> As part of the resolution process performed by the ATA Lightweight Gateway, the following ports need to be open inbound on devices on the network from the ATA Lightweight Gateways.
+> ATA 경량 게이트웨이가 수행하는 확인 프로세스의 일부분으로 ATA 경량 게이트웨이에서 네트워크의 장치에 대해 다음 포트를 인바운드로 열어야 합니다.
 >
 > -   NTLM over RPC
 > -   NetBIOS
 
-### Certificates
-Make sure the ATA Center has access to your CRL distribution point. If the ATA Lightweight Gateways don't have Internet access, follow the procedure to manually import a CRL, taking care to install the all the CRL distribution points for the whole chain.
-To ease installation of ATA, you can install self-signed certificates during installation. Post deployment you can replace the self-signed with a certificate from an internal Certification Authority to be used by the ATA Lightweight Gateway.
-> [!NOTE]
-> The certificate's Provider Type must be Cryptographic Service Provider (CSP).
+## ATA 콘솔
+<a id="ata-console" class="xliff"></a>
+다음과 같은 브라우저를 통해 ATA 콘솔에 액세스합니다.
 
-A certificate supporting Server Authentication is required to be installed in the Computer store of the ATA Lightweight Gateway in the Local Computer store. This certificate must be trusted by the ATA Center.
-
-## ATA Console
-Access to the ATA Console is via a browser, supporting the following:
-
--   Internet Explorer version 10 and above
+-   Internet Explorer 버전 10 이상
 
 -   Microsoft Edge
 
--   Google Chrome 40 and above
+-   Google Chrome 40 이상
 
--   Minimum screen width resolution of 1700 pixels
+-   스크린 너비 해상도가 1700픽셀 이상인 브라우저
 
-## See Also
+## 참고 항목
+<a id="see-also" class="xliff"></a>
 
-- [ATA architecture](ata-architecture.md)
-- [Install ATA](install-ata-step1.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [ATA 아키텍처](ata-architecture.md)
+- [ATA 설치](install-ata-step1.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 

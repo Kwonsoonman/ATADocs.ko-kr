@@ -1,192 +1,198 @@
 ---
-# required metadata
-
-title: Advanced Threat Analytics architecture | Microsoft Docs
-description: Describes the architecture of Microsoft Advance Threat Analytics (ATA)
-keywords:
+title: "Advanced Threat Analytics 아키텍처 | Microsoft 문서"
+description: "Microsoft Advanced Threat Analytics(ATA)의 아키텍처에 대해 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/5/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 4d95e5b13d06ea0963b7cac129be4eb1458e5d4c
+ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/05/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
 
-# ATA Architecture
-The Advanced Threat Analytics architecture is detailed in this diagram:
 
-![ATA architcture topology diagram](media/ATA-architecture-topology.jpg)
+# ATA 아키텍처
+<a id="ata-architecture" class="xliff"></a>
+아래 다이어그램에는 Advanced Threat Analytics 아키텍처가 자세히 나와 있습니다.
 
-ATA monitors your domain controller network traffic by utilizing port mirroring to an ATA Gateway using physical or virtual switches, or by deploying the ATA Lightweight Gateway directly on your domain controllers, which removes the requirement for port mirroring. In addition, ATA can leverage Windows events (forwarded directly from your domain controllers or from a SIEM server) and analyze the data for attacks and threats.
-This section describes the flow of network and event capturing and drills down to describe the functionality of the main components of ATA: the ATA Gateway, ATA Lightweight Gateway (which has the same core functionality as the ATA Gateway) and the ATA Center.
+![ATA 아키텍처 토폴로지 다이어그램](media/ATA-architecture-topology.jpg)
 
-
-![ATA traffic flow diagram](media/ATA-traffic-flow.jpg)
-
-## ATA Components
-ATA consists of the following:
-
--   **ATA Center** <br>
-The ATA Center receives data from any ATA Gateways and/or ATA Lightweight Gateways you deploy.
--   **ATA Gateway**<br>
-The ATA Gateway is installed on a dedicated server that monitors the traffic from your domain controllers using either port mirroring or a network TAP.
--   **ATA Lightweight Gateway**<br>
-The ATA Lightweight Gateway is installed directly on your domain controllers and monitors their traffic directly, without the need for a dedicated server or configuration of port mirroring. It is an alternative to the ATA Gateway.
-
-An ATA deployment can consist of a single ATA Center connected to all ATA Gateways, all ATA Lightweight Gateways or a combination of ATA Gateways and ATA Lightweight Gateways.
+ATA는 실제 또는 가상 스위치를 사용하는 ATA 게이트웨이에 포트 미러링을 활용하여 도메인 컨트롤러 네트워크 트래픽을 모니터링합니다. 도메인 컨트롤러에 직접 ATA 경량 게이트웨이를 배포하는 경우 포트 미러링에 대한 요구 사항이 제거됩니다. 또한 ATA는 Windows 이벤트(SIEM 서버 또는 도메인 컨트롤러에서 직접 전달됨)를 활용하고 공격 및 위협에 대한 데이터를 분석할 수 있습니다.
+이 섹션에서는 네트워크 및 이벤트 캡처의 흐름을 설명하고, ATA의 주요 구성 요소(ATA 게이트웨이, ATA 경량 게이트웨이(ATA 게이트웨이와 같은 핵심 기능이 있음), ATA 센터)의 기능을 설명하기 위해 드릴다운합니다.
 
 
-## Deployment options
-You can deploy ATA using the following combination of gateways:
+![ATA 트래픽 흐름 다이어그램](media/ATA-traffic-flow.jpg)
 
--	**Using only ATA Gateways** <br>
-If your ATA deployment contains only ATA Gateways, without any ATA Lightweight Gateways, all the domain controllers must be configured to enable port mirroring to an ATA Gateway or network TAPs must be in place.
--	**Using only ATA Lightweight Gateways**<br>
-If your ATA deployment contains only ATA Lightweight Gateways, the ATA Lightweight Gateways are deployed on each domain controller and no additional servers or port mirroring configuration is necessary.
--	**Using both ATA Gateways and ATA Lightweight Gateways**<br>
-If your ATA deployment includes both ATA Gateways and ATA Lightweight Gateways, where the ATA Lightweight Gateway is installed on some of your domain controllers (for example, all domain controllers in your branch sites) while other domain controllers are monitored by ATA Gateways (for example, the larger domain controllers in your main data centers).
+## ATA 구성 요소
+<a id="ata-components" class="xliff"></a>
+ATA는 다음 구성 요소로 이루어져 있습니다.
 
-In all 3 scenarios, all the gateways send their data to the ATA Center.
+-   **ATA 센터** <br>
+ATA 센터는 사용자가 배포하는 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이에서 데이터를 수신합니다.
+-   **ATA 게이트웨이**<br>
+ATA 게이트웨이는 포트 미러링 또는 네트워크 TAP를 사용하여 도메인 컨트롤러의 트래픽을 모니터링하는 전용 서버에 설치됩니다.
+-   **ATA 경량 게이트웨이**<br>
+ATA 경량 게이트웨이는 도메인 컨트롤러에 직접 설치되며 전용 서버 또는 포트 미러링 구성 없이 트래픽을 직접 모니터링합니다. ATA 게이트웨이를 대신합니다.
+
+ATA 배포는 모든 ATA 게이트웨이, 모든 ATA 경량 게이트웨이 또는 ATA 게이트웨이와 ATA 경량 게이트웨이의 조합과 연결된 단일 ATA 센터로 구성될 수 있습니다.
+
+
+## 배포 옵션
+<a id="deployment-options" class="xliff"></a>
+ATA는 다음과 같은 게이트웨이 조합을 사용하여 배포할 수 있습니다.
+
+-   **ATA 게이트웨이만 사용** <br>
+ATA 배포에 ATA 경량 게이트웨이 없이 ATA 게이트웨이만 포함될 수 있습니다. 이 경우 ATA 게이트웨이에 대해 포트 미러링을 사용하도록 모든 도메인 컨트롤러를 구성하거나, 네트워크 TAP가 준비되어 있어야 합니다.
+-   **ATA 경량 게이트웨이만 사용**<br>
+ATA 배포에 ATA 경량 게이트웨이만 포함될 수 있습니다. 이 경우 ATA 경량 게이트웨이가 각 도메인 컨트롤러에 배포되며, 서버 또는 포트 미러링을 추가로 구성하지 않아도 됩니다.
+-   **ATA 게이트웨이와 ATA 경량 게이트웨이 사용**<br>
+ATA 배포에는 ATA 게이트웨이와 ATA 경량 게이트웨이가 둘 다 포함됩니다. ATA 경량 게이트웨이는 일부 도메인 컨트롤러(예: 분기 사이트의 모든 도메인 컨트롤러)에 설치됩니다. 이와 동시에 다른 도메인 컨트롤러는 ATA 게이트웨이(예: 주 데이터 센터의 더 큰 도메인 컨트롤러)에 의해 모니터링됩니다.
+
+이러한 모든 시나리오에서 모든 게이트웨이는 해당 데이터를 ATA 센터로 보냅니다.
 
 
 
 
 ## ATA Center
-The **ATA Center** performs the following functions:
+<a id="ata-center" class="xliff"></a>
+**ATA 센터**는 다음 기능을 수행합니다.
 
--   Manages ATA Gateway and ATA Lightweight Gateway configuration settings
+-   ATA 게이트웨이 및 ATA 경량 게이트웨이 구성 설정 관리
 
--   Receives data from ATA Gateways and ATA Lightweight Gateways 
+-   ATA 게이트웨이 및 ATA 경량 게이트웨이에서 데이터 수신 
 
--   Detects suspicious activities
+-   의심스러운 활동 검색
 
--   Runs ATA behavioral machine learning algorithms to detect abnormal behavior
+-   ATA 동작 기계 학습 알고리즘을 실행하여 비정상적인 동작 검색
 
--   Runs various deterministic algorithms to detect advanced attacks based on the attack kill chain
+-   다양한 결정적 알고리즘을 실행하여 공격 중단 체인에 따라 고급 공격 검색
 
--   Runs the ATA Console
+-   ATA 콘솔 실행
 
--   Optional: The ATA Center can be configured to send emails and events when a suspicious activity is detected.
+-   선택 사항: 의심스러운 활동이 검색되면 전자 메일과 이벤트를 보내도록 ATA 센터 구성 가능
 
-The ATA Center receives parsed traffic from the ATA Gateway and ATA Lightweight Gateway, performs profiling, runs deterministic detection and runs machine learning and behavioral algorithms to learn about your network to enable detection of anomalies and warn you of suspicious activities.
-
-|||
-|-|-|
-|Entity Receiver|Receives batches of entities from all ATA Gateways and ATA Lightweight Gateways .|
-|Network Activity Processor|Processes all the network activities within each batch received. For example, matching between the various Kerberos steps performed from potentially different computers|
-|Entity Profiler|Profiles all the Unique Entities according to the traffic and events. For example, this is where ATA updates the list of logged-on computers for each user profile.|
-|Center Database|Manages the writing process of the Network Activities and events into the database. |
-|Database|ATA utilizes MongoDB for purposes of storing all the data in the system:<br /><br />-   Network activities<br />-   Event activities<br />-   Unique entities<br />-   Suspicious activities<br />-   ATA configuration|
-|Detectors|The Detectors use machine learning algorithms and deterministic rules to find suspicious activities and abnormal user behavior in your network.|
-|ATA Console|The ATA Console is for configuring ATA and monitoring suspicious activities detected by ATA on your network. The ATA Console is not dependent on the ATA Center service and will run even when the service is stopped, as long as it can communicate with the database.|
-Consider the following when deciding how many ATA Centers to deploy on your network:
-
--   One ATA Center can monitor a single Active Directory forest. If you have more than one Active Directory forest you will need a minimum of one ATA Center per Active Directory forest.
-
--    In very large Active Directory deployments, a single ATA Center might not be able to handle all of the traffic of all your domain controllers. In this case, multiple ATA Centers will be required. The number of ATA Centers should be dictated by [ATA capacity planning](ata-capacity-planning.md).
-
-## ATA Gateway and ATA Lightweight Gateway
-
-### Gateway core functionality
-The **ATA Gateway** and **ATA Lightweight Gateway** both have the same core functionality:
-
--   Capture and inspect domain controller network traffic (port mirrored traffic in the case of an ATA Gateway and local traffic of the domain controller in the case of an ATA Lightweight Gateway) 
-
--   Receive Windows events from SIEM or Syslog servers, or from domain controllers using Windows Event Forwarding
-
--   Retrieve data about users and computers from the Active Directory domain
-
--   Perform resolution of network entities (users, groups and computers)
-
--   Transfer relevant data to the ATA Center
-
--   Monitor multiple domain controllers from a single ATA Gateway, or monitor a single domain controller for an ATA Lightweight Gateway.
-
-The ATA Gateway receives network traffic and Windows Events from your network and processes it in the following main components:
+ATA 센터는 ATA 게이트웨이 및 ATA 경량 게이트웨이에서 구문 분석된 트래픽을 받습니다. 그런 다음 프로파일링을 수행하고 기계 학습 및 동작 알고리즘을 실행하여 네트워크 관련 정보를 학습하고 비정상을 검색하며 의심스러운 활동을 경고합니다.
 
 |||
 |-|-|
-|Network Listener|The Network Listener is responsible for capturing network traffic and parsing the traffic. This is a CPU-heavy task, so  it is especially important to check [ATA Prerequisites](ata-prerequisites.md) when planning your ATA Gateway or ATA Lightweight Gateway.|
-|Event Listener|The Event Listener is responsible for capturing and parsing Windows Events forwarded from a SIEM server on your network.|
-|Windows Event Log Reader|The Windows Event Log Reader is responsible for reading and parsing Windows Events forwarded to the ATA Gateway's Windows Event Log from the domain controllers.|
-|Network Activity Translator | Translates parsed traffic into a logical representation of the traffic used by ATA (NetworkActivity).
-|Entity Resolver|The Entity Resolver takes the parsed data (network traffic and events) and resolves it data with Active Directory to find account and identity information. It is then matched with the IP addresses found in the parsed data. The Entity Resolver inspects the packet headers efficiently, to enable parsing of authentication packets for machine names, properties, and identities. The Entity Resolver combines the parsed authentication packets with the data in the actual packet.|
-|Entity Sender|The Entity Sender is responsible for sending the parsed and matched data to the ATA Center.|
+|엔터티 수신기|모든 ATA 게이트웨이 및 ATA 경량 게이트웨이에서 엔터티 배치를 받습니다.|
+|네트워크 활동 처리기|받은 각 배치 내의 모든 네트워크 활동을 처리합니다. 예를 들어 서로 다를 수 있는 컴퓨터에서 수행한 여러 Kerberos 단계가 일치하는지를 확인합니다.|
+|엔터티 프로파일러|트래픽과 이벤트에 따라 모든 고유 엔터티를 프로파일링합니다. 예를 들어 ATA는 각 사용자 프로필에 대해 로그온한 컴퓨터 목록을 업데이트합니다.|
+|Center 데이터베이스|네트워크 활동과 이벤트를 데이터베이스에 기록하는 프로세스를 관리합니다. |
+|데이터베이스|ATA는 MongoDB를 사용하여 다음과 같은 시스템의 모든 데이터를 저장합니다.<br /><br />-   네트워크 활동<br />-   이벤트 활동<br />-   고유 엔터티<br />-   의심스러운 활동<br />-   ATA 구성|
+|탐지기|탐지기는 기계 학습 알고리즘과 결정적 규칙을 사용하여 네트워크에서 의심스러운 활동과 비정상적인 사용자 동작을 찾습니다.|
+|ATA 콘솔|ATA 콘솔은 ATA를 구성하고 네트워크에서 ATA가 검색한 의심스러운 활동을 모니터링하는 데 사용됩니다. ATA 콘솔은 ATA 센터 서비스 실행 여부와 관계없이 실행됩니다. 즉, 서비스가 중지되어도 ATA 콘솔은 데이터베이스와 통신할 수 있으면 실행됩니다.|
+네트워크에서 배포할 ATA 센터의 수를 결정할 때는 다음 조건을 고려하세요.
 
-## ATA Lightweight Gateway features
+-   각 ATA 센터는 Active Directory 포리스트 하나를 모니터링할 수 있습니다. Active Directory 포리스트가 둘 이상인 경우에는 Active Directory 포리스트당 최소 하나의 ATA 센터가 필요합니다.
 
-The following features work differently depending on whether you are running an ATA Gateway or an ATA Lightweight Gateway.
+-    대규모 Active Directory 배포에서는 ATA 센터 하나가 모든 도메인 컨트롤러의 트래픽을 모두 처리하지 못할 수도 있습니다. 이 경우 ATA 센터가 여러 개 있어야 합니다. ATA 센터의 수는 [ATA 용량 계획](ata-capacity-planning.md)에 따라 결정해야 합니다.
 
--	**Domain synchronizer candidate**<br>
-The domain synchronizer gateway is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One gateway is chosen randomly, from the list of candidates, to serve as the domain synchronizer. <br><br>
-If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, ATA will not be able to proactively synchronize entities and their changes, however ATA will reactively retrieve new entities as they are detected in the monitored traffic. 
-<br>If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results will be displayed.<br><br>
-By default, all ATA Gateways are synchronizer candidates.<br><br>
-Because all ATA Lightweight Gateways are more likely to be deployed in branch sites and on small domain controllers, they are not synchronizer candidates by default.
+## ATA 게이트웨이 및 ATA 경량 게이트웨이
+<a id="ata-gateway-and-ata-lightweight-gateway" class="xliff"></a>
+
+### 게이트웨이 핵심 기능
+<a id="gateway-core-functionality" class="xliff"></a>
+**ATA 게이트웨이** 및 **ATA 경량 게이트웨이** 둘 다 다음과 같은 동일한 핵심 기능이 있습니다.
+
+-   도메인 컨트롤러 네트워크 트래픽 캡처 및 검사. ATA 게이트웨이의 경우 포트 미러링된 트래픽이고, ATA 경량 게이트웨이에서는 도메인 컨트롤러의 로컬 트래픽입니다. 
+
+-   Windows 이벤트 전달 기능을 통해 SIEM 또는 Syslog 서버나 도메인 컨트롤러에서 Windows 이벤트 수신
+
+-   Active Directory 도메인에서 사용자 및 컴퓨터에 대한 데이터 검색
+
+-   네트워크 엔터티(사용자, 그룹, 컴퓨터) 확인 수행
+
+-   ATA 센터에 관련 데이터 전송
+
+-   단일 ATA 게이트웨이의 여러 도메인 컨트롤러를 모니터링하거나 ATA 경량 게이트웨이의 단일 도메인 컨트롤러를 모니터링합니다.
+
+ATA 게이트웨이는 네트워크에서 네트워크 트래픽과 Windows 이벤트를 수신하여 다음과 같은 기본 구성 요소에서 처리합니다.
+
+|||
+|-|-|
+|네트워크 수신기|네트워크 수신기는 네트워크 트래픽을 캡처하고 트래픽을 구문 분석합니다. 이러한 작업에서는 CPU를 많이 사용하므로 ATA 게이트웨이 또는 ATA 경량 게이트웨이를 계획할 때는 [ATA 필수 구성 요소](ata-prerequisites.md)를 확인하는 것이 특히 중요합니다.|
+|이벤트 수신기|이벤트 수신기는 네트워크의 SIEM 서버에서 전달되는 Windows 이벤트를 캡처하고 구문 분석합니다.|
+|Windows 이벤트 로그 판독기|Windows 이벤트 로그 판독기는 도메인 컨트롤러에서 ATA 게이트웨이의 Windows 이벤트 로그로 전달된 Windows 이벤트를 읽고 구문 분석합니다.|
+|네트워크 활동 변환기 | 구문 분석된 트래픽을 ATA에서 사용되는 논리적 트래픽 표현(NetworkActivity)으로 변환합니다.
+|엔터티 확인자|엔터티 확인자는 구문 분석된 데이터(네트워크 트래픽 및 이벤트)를 가져와 Active Directory에서 확인하여 계정 및 ID 정보를 찾습니다. 그러면 해당 정보가 구문 분석된 데이터에 있는 IP 주소와 연결됩니다. 패킷 헤더를 효율적으로 검사하고, 인증 패킷에서 컴퓨터 이름/속성/ID를 구문 분석할 수 있도록 설정합니다. 구문 분석된 인증 패킷을 실제 패킷의 데이터와 결합합니다.|
+|엔터티 발신자|엔터티 발신자는 구문 분석되어 일치 여부가 확인된 데이터를 ATA 센터로 보냅니다.|
+
+## ATA 경량 게이트웨이 기능
+<a id="ata-lightweight-gateway-features" class="xliff"></a>
+
+다음 기능은 ATA 게이트웨이 또는 ATA 경량 게이트웨이 실행 여부에 따라 다르게 작동합니다.
+
+-   ATA 경량 게이트웨이가 이벤트 전달을 구성하지 않고도 로컬에서 이벤트를 읽을 수 있습니다.
+
+-   **도메인 동기화 장치 후보**<br>
+도메인 동기화 게이트웨이는 특정 Active Directory 도메인의 모든 엔터티를 적극적으로 동기화합니다(도메인 컨트롤러 자체에서 복제에 사용하는 메커니즘과 유사). 후보 목록에서 하나의 게이트웨이가 임의로 선택되어 도메인 동기화 장치 역할을 합니다. <br><br>
+동기화 장치가 30분 이상 오프라인 상태인 경우 다른 후보가 대신 선택됩니다. 특정 도메인에 사용할 수 있는 도메인 동기화 장치가 없는 경우 ATA는 엔터티 및 해당 변경 사항을 사전에 동기화할 수 없지만, 모니터링되는 트래픽에서 감지되는 경우 새 엔터티를 사후에 검색합니다. 
+<br>사용 가능한 도메인 동기화 장치가 없고 관련된 트래픽이 없는 엔터티를 검색하는 경우 검색 결과가 표시되지 않습니다.<br><br>
+기본적으로 모든 ATA 게이트웨이는 동기화 장치 후보입니다.<br><br>
+모든 ATA 경량 게이트웨이는 분기 사이트 및 작은 도메인 컨트롤러에 배포될 가능성이 더 높기 때문에 기본적으로 동기화 장치 후보가 아닙니다.
 
 
--	**Resource limitations**<br>
-The ATA Lightweight Gateway includes a monitoring component which evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the ATA Lightweight Gateway process to make sure that at any given point in time, the domain controller has at least 15% of free compute and memory resources.<br><br>
-No matter what happens on the domain controller, this process always frees up resources to make sure the domain controller's core functionality is not affected.<br><br>
-If this causes the ATA Lightweight Gateway to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" will appear in the Health page.
+-   **리소스 제한 사항**<br>
+ATA 경량 게이트웨이에는 이 게이트웨이가 실행되고 있는 도메인 컨트롤러에서 사용 가능한 계산 및 메모리 용량을 평가하는 모니터링 구성 요소가 포함됩니다. 모니터링 프로세스는 10초 마다 실행되며, 도메인 컨트롤러에 특정 시점에 사용 가능한 계산 및 메모리 리소스의 15% 이상이 있도록 ATA 경량 게이트웨이 프로세스에 대한 CPU 및 메모리 사용률 할당량을 동적으로 업데이트합니다.<br><br>
+도메인 컨트롤러에 수행되는 작업에 관계없이 이 프로세스는 항상 도메인 컨트롤러의 핵심 기능에 영향을 주지 않도록 리소스를 확보합니다.<br><br>
+이로 인해 ATA 경량 게이트웨이에 리소스 부족이 발생하면 일부 트래픽만 모니터링되고, 상태 페이지에 "Dropped port mirrored network traffic(포트 미러링된 네트워크 트래픽 삭제됨)"이라는 모니터링 경고가 표시됩니다.
 
-The following table provides an example of a domain controller with enough compute resource available to allow for a larger quota then is currently needed, so that all traffic is monitored:
+다음 표에서는 현재 필요한 용량보다 더 많은 할당량을 사용하여 모든 트래픽을 모니터링할 수 있을 만큼 계산 리소스가 충분한 도메인 컨트롤러의 예를 제공합니다.
 
 ||||||
 |-|-|-|-|-|
-|Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Miscellaneous (other processes) |ATA Lightweight Gateway Quota|Gateway dropping|
-|30%|20%|10%|45%|No|
+|Active Directory(Lsass.exe)|ATA 경량 게이트웨이(Microsoft.Tri.Gateway.exe)|기타(기타 프로세스) |ATA 경량 게이트웨이 할당량|게이트웨이 삭제|
+|30%|20%|10%|45%|아니요|
 
-If Active Directory needs more compute, the quota needed by the ATA Lightweight Gateway is reduced. In the following example, The ATA Lightweight Gateway needs more than the allocated quota and drops some of the traffic (monitoring only partial traffic):
+Active Directory에 더 많은 계산이 필요한 경우 ATA 경량 게이트웨이에서 필요한 할당량이 줄어듭니다. 다음 예제에서는 ATA 경량 게이트웨이에 할당된 할당량 보다 더 많은 양이 필요하여 일부 트래픽을 삭제합니다(일부 트래픽만 모니터링).
 
 ||||||
 |-|-|-|-|-|
-|Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Miscellaneous (other processes) |ATA Lightweight Gateway Quota|Is gateway dropping|
-|60%|15%|10%|15%|Yes|
+|Active Directory(Lsass.exe)|ATA 경량 게이트웨이(Microsoft.Tri.Gateway.exe)|기타(기타 프로세스) |ATA 경량 게이트웨이 할당량|게이트웨이 삭제 비율|
+|60%|15%|10%|15%|예|
 
 
 
-## Your network components
-In order to work with ATA, make sure of the following:
+## 네트워크 구성 요소
+<a id="your-network-components" class="xliff"></a>
+ATA를 사용하려면 다음 사항을 확인해야 합니다.
 
-### Port mirroring
-If you are using ATA Gateways, you have to setup port mirroring for the domain controllers that will be monitored and set the ATA Gateway as the destination using the physical or virtual switches. Another option is to use network TAPs. ATA will work if some but not all of your domain controllers are monitored, but detections will be less effective.
+### 포트 미러링
+<a id="port-mirroring" class="xliff"></a>
+ATA 게이트웨이를 사용하는 경우 실제 또는 가상 스위치를 사용하여 ATA 게이트웨이를 대상으로 모니터링하고 설정할 도메인 컨트롤러에 대해 포트 미러링을 설정해야 합니다. 또 다른 옵션은 네트워크 TAP를 사용하는 것입니다. 도메인 컨트롤러 전체가 아닌 일부를 모니터링하는 경우 ATA가 작동되지만 검색 효율성은 떨어집니다.
 
-While port mirroring mirrors all the domain controller network traffic to the ATA Gateway, only a very small percentage of that traffic is then sent, compressed, to the ATA Center for analysis.
+포트 미러링이 ATA 게이트웨이에 대한 모든 도메인 컨트롤러 네트워크 트래픽을 미러링하지만 해당 트래픽 중 극히 일부분만이 분석을 위해 압축되어 ATA 센터로 전송됩니다.
 
-Your domain controllers and the ATA Gateways can be physical or virtual, see [Configure port mirroring](configure-port-mirroring.md) for more information.
+도메인 컨트롤러와 ATA 게이트웨이는 실제 하드웨어일 수도 있고 가상 하드웨어일 수도 있습니다. 자세한 내용은 [포트 미러링 구성](configure-port-mirroring.md)을 참조하세요.
 
 
-### Events
-To enhance ATA detection of Pass-the-Hash, Brute Force and Honey Tokens, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by using Windows Event Forwarding.
+### 이벤트
+<a id="events" class="xliff"></a>
+Pass-the-Hash, 무차별 암호 대입(Brute force), 중요한 그룹 수정, Honeytoken에 대한 ATA 검색을 개선하려면 ATA에 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756, 4757이 필요합니다. 이러한 이벤트는 ATA 경량 게이트웨이에서 자동으로 읽거나, ATA 경량 게이트웨이가 배포되지 않은 경우 두 가지 방법 중 하나로 ATA 게이트웨이에 전달될 수 있습니다. 하나는 ATA 게이트웨이가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 [Windows 이벤트 전달을 구성](#configuring-windows-event-forwarding)하는 것입니다.
 
--   Configuring the ATA Gateway to listen for SIEM events <br>Configure your SIEM to forward specific Windows events to ATA. ATA supports a number of SIEM vendors. For more information, see [Configure event collection](configure-event-collection.md).
+-   SIEM 이벤트를 수신하도록 ATA 게이트웨이 구성 <br>특정 Windows 이벤트를 ATA로 전달하도록 SIEM을 구성합니다. ATA는 다수의 SIEM 공급업체를 지원합니다. 자세한 내용은 [이벤트 수집 구성](configure-event-collection.md)을 참조하세요.
 
--   Configuring Windows Event Forwarding<br>Another way ATA can get your events is by configuring your domain controllers to forward Windows event 4776 to your ATA Gateway. This is especially useful if you don't have a SIEM or if your SIEM is not currently supported by ATA. For more information about Windows Event Forwarding in ATA, see [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding).
+-   Windows 이벤트 전달 구성<br>ATA가 이벤트를 받을 수 있도록 하는 또 다른 방법은, Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756 및 4757을 ATA 게이트웨이로 전달하도록 도메인 컨트롤러를 구성하는 것입니다. SIEM이 없거나 SIEM이 현재 ATA에서 지원되지 않는 경우 이 방법을 사용하면 특히 유용합니다. ATA의 Windows 이벤트 전달 기능에 대한 자세한 내용은 [Windows 이벤트 전달 구성](configure-event-collection.md#configuring-windows-event-forwarding)을 참조하세요. 이는 실제 ATA 게이트웨이에만 적용되고 ATA 경량 게이트웨이에는 적용되지 않습니다.
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 필수 구성 요소](ata-prerequisites.md)
+- [ATA 용량 계획](ata-capacity-planning.md)
+- [이벤트 수집 구성](configure-event-collection.md)
+- [Windows 이벤트 전달 구성](configure-event-collection.md#configuring-windows-event-forwarding)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
