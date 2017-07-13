@@ -1,109 +1,122 @@
 ---
-# required metadata
-
-title: What threats does Advanced Threat Analytics detect? | Microsoft Docs
-description: Lists the threats that Advanced Threat Analytics detects 
-keywords:
+title: "Advanced Threat Analytics는 어떤 위협을 검색하나요? | Microsoft 문서"
+description: "Advanced Threat Analytics에서 검색한 위협을 보여 줍니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/2/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 630bb2b74dafcf9ab9b3469c2afbf8abc59c2dbf
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
-*Applies to: Advanced Threat Analytics version 1.7*
+# ATA에서 찾는 위협
+<a id="what-threats-does-ata-look-for" class="xliff"></a>
 
-# What threats does ATA look for?
+ATA는 지능형 공격의 여러 단계(정찰, 자격 증명 손상, 측면 확대, 권한 상승, 도메인 우위 등)에 대한 검색을 제공합니다. 이러한 검색은 조직에 피해를 주기 전에 지능형 공격과 내부자 위협을 검색하는 것을 목표로 합니다.
+각 단계의 검색에서는 단계와 관련된 몇 가지 의심스러운 활동을 문제로 처리하고, 각 의심스러운 활동은 가능한 공격의 여러 특성과 상호 관련됩니다.
+이러한 적극 대처(kill-chain) 단계에서 ATA는 현재 검색 기능을 제공하며, 이 단계에 대한 설명은 아래 이미지와 같습니다.
 
-ATA provides detection for the following various phases of an advanced attack: reconnaissance, credential compromise, lateral movement, privilege escalation, domain dominance and others. These detections are aimed at detecting advanced attacks and insider threats before they cause damage to your organization.
-The detection of each phase results in several suspicious activities relevant for the phase in question, where each suspicious activity correlates to different flavors of possible attacks.
-These phases in the kill-chain where ATA currently provides detections are highlighted in the image below.
-
-![ATA focus on lateral activity in attack kill chain](media/attack-kill-chain-small.jpg)
-
-
-### Reconnaissance
-ATA provides multiple reconnaissance detections. These detections include:
--	**Reconnaissance using account enumeration**
-Detects attempts by attackers using the Kerberos protocol to discover if a user exists, even if the activity was not logged as an event on the domain controller.
--	**Net Session Enumeration**
-As part of the reconnaissance phase, attackers may query the DC for all active SMB sessions on the server, allowing them to gain access to all the users and IP addresses associated with those SMB sessions. SMB session enumeration can be used by attackers for targeting sensitive accounts, helping them move laterally across the network.
--	**Reconnaissance using DNS**
-DNS information in the target network is often very useful reconnaissance information. DNS information contains a list of all the servers and often all the clients and the mapping to their IP addresses. Viewing DNS information may provide attackers with a detailed view of these entities in your environment allowing attackers to focus their efforts on the relevant entities for the campaign.
--   **Reconnaissance using directory services enumeration**
-Detecting reconnaissance for entities (users, groups, etc.) performed using the SAM-remote protocol to run queries against the domain controllers. This reconnaissance method is prevalent in many types of malware seen in real-world attack scenarios. 
+![공격에 대한 적극 대처(kill-chain)에서 측면 활동에 대한 ATA 포커스](media/attack-kill-chain-small.jpg)
 
 
-### Compromised credentials
-To provide detection of compromised credentials, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.
-Using behavioral analytics and machine learning, ATA is able to detect suspicious activities such as anomalous logins, abnormal resource access, and abnormal working hours which would point to credential compromise. To protect against compromised credentials, ATA detects the following known malicious attacks and techniques:
--	**Brute force**
-In brute-force attacks, attackers try to guess user credentials by trying multiple users and pairing them with multiple password attempts. The attackers often use complex algorithms or dictionaries to try as many values as a system allows.
--	**Sensitive account exposed in plain text authentication**
-If high-privileged account credentials are sent in plain text, ATA alerts you so that you can update the computer configuration.
--	**Service exposing accounts in plain text authentication** 
-If a service on a computer is sending multiple account credentials in plain text, ATA alerts you so that you can update the service configuration.
--	**Honey Token account suspicious activities**
-Honey Token accounts are dummy accounts set up to trap, identify, and track malicious activity that attempts to use these dummy accounts. ATA alerts you to any activities across these Honey Tokens accounts.
--	**Unusual protocol implementation**
-Authentication requests (Kerberos or NTLM) are usually performed using a normal set of methods and protocols. However, in order to successfully authenticate, the request only has to meet a specific set of requirements. Attackers can implement these protocols with minor deviations from the normal implementation in the environment. These deviations may indicate the presence of an attacker attempting to leverage or successfully leveraging compromised credentials.
--	**Malicious Data Protection Private Information Request**
-Data Protection API (DPAPI) is a password-based data protection service. This protection service is used by various applications that stores user’s secrets, such as website passwords and file share credentials. In order to support password-loss scenarios, users can decrypt protected data by using a recovery key which does not involve their password. In a domain environment, attackers may remotely steal the recovery key and use it to decrypt protected data in all the domain joined computers.
--	**Abnormal Behavior**
-Often in cases of insider threats, as well as advanced attacks, the account credentials may be compromised using social engineering methods or new and not-yet-known methods and techniques. ATA is able to detect these types of compromises by analyzing the entity’s behavior and detecting and alerting on abnormalities of the operations performed by the entity.
+### 정찰
+<a id="reconnaissance" class="xliff"></a>
 
-### Lateral movement
-To provide detection of lateral movement, when users take advantage of credentials that provide access to some resources to gain access resources that they are not meant to have access to, ATA leverages both machine-learning based behavioral analytics as well as known malicious attacks and technique detection.
-Using behavioral analytics and machine learning, ATA detects abnormal resource access, abnormal devices used and other indicators that are evidence of lateral movement.
-In addition, ATA is able to detect lateral movement by detecting the techniques used by attackers to perform lateral movement, such as:
--	**Pass the ticket** 
-In pass the ticket attacks, attackers steal a Kerberos ticket from one computer and use it to gain access to another computer by impersonating an entity on your network.
--	**Pass the hash** 
-In pass the hash attacks, attackers steal the NTLM hash of an entity, and use it to authenticate with NTLM and impersonate that entity and gain access to resources on your network.
--	**Over-pass the hash**
-Over-pass the hash are attacks in which the attacker uses a stolen NTLM hash to authenticate with Kerberos, and obtain a valid Kerberos TGT ticket, which is then used to authenticate as a valid user and gain access to resources on your network.
--	**Abnormal behavior**
-Lateral movement is a technique often used by attackers, to move between devices and areas in the victim’s network to gain access to privileged credentials or sensitive information of interest to the attacker. ATA is able to detect lateral movement by analyzing the behavior of users, devices and their relationship inside the corporate network, and detect on any abnormal access patterns which may indicate a lateral movement performed by an attacker.
+ATA는 여러 정찰 검색을 제공합니다. 이러한 검색에는 다음이 포함됩니다.
 
-### Privilege escalation
-ATA detects successful and attempted privilege escalation attacks, in which attackers attempt to increase existing privileges and use them multiple times in order to eventually gain full control over the victim’s environment.
-ATA enables privilege escalation detection by combining behavioral analytics to detect anomalous behavior of privileged accounts as well as detecting known and malicious attacks and techniques that are often used to escalate privileges such as:
--	**MS14-068 exploit (Forged PAC)**
-Forged PAC are attacks in which the attacker plants authorization data in their valid TGT ticket in the form of a forged authorization header that grants them additional permissions that they weren't granted by their organization. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
--	**MS11-013 exploit (Silver PAC)**
-MS11-013 exploit attacks are an elevation of privilege vulnerability in Kerberos which allows for certain aspects of a Kerberos service ticket to be forged. A malicious user or attacker who successfully exploited this vulnerability could obtain a token with elevated privileges on the Domain Controller. In this scenario the attacker leverages previously compromised credentials, or credentials harvested during lateral movement operations.
+-   **계정 열거를 사용한 정찰**<br></br>Kerberos 프로토콜을 사용하여 사용자가 있는지 확인하는 공격자의 시도를 검색하며, 이는 해당 활동이 도메인 컨트롤러에 이벤트로 기록되지 않은 경우에도 마찬가지입니다.
 
-### Domain dominance
-ATA detects attackers attempting or successfully achieving total control and dominance over the victim’s environment by performing detection over known techniques used by attackers, which include:
--	**Skeleton key malware**
-In skeleton key attacks, malware is installed on your domain controller that allows attackers to authenticate as any user, while still enabling legitimate users to log on.
--	**Golden ticket**
-In golden ticket attacks, an attacker steals the KBTGT's credentials, the Kerberos Golden Ticket. That ticket enables the attacker to create a TGT ticket offline, to be used to gain access to resources in the network.
--	**Remote execution**
-Attackers can attempt to control your network by running code remotely on your domain controller.
--	**Malicious replication requests** In Active Directory (AD) environments replication happens regularly between Domain Controllers. An attacker can spoof AD replication request (sometimes impersonating as a Domain Controller) allowing the attacker to retrieve the data stored in AD, including password hashes, without utilizing more intrusive techniques like Volume Shadow Copy.
+-   **Net 세션 열거**<br></br>정찰 단계의 일부로 공격자가 DC에서 서버에 있는 모든 활성 SMB 세션을 쿼리하여 해당 SMB 세션과 연결된 모든 사용자 및 IP 주소에 액세스하도록 할 수 있습니다. SMB 세션 열거는 공격자가 중요한 계정을 대상으로 지정하는 데 사용되어 네트워크를 가로로 이동하는 데 도움을 줄 수 있습니다.
+
+-   **DNS를 사용한 정찰**<br></br>대상 네트워크의 DNS 정보는 매우 유용한 정찰 정보인 경우가 많습니다. DNS 정보에는 모든 서버 목록이 포함되며 종종 모든 클라이언트와 해당 IP 주소에 대한 매핑이 포함됩니다. DNS 정보를 보면 사용자 환경의 이러한 엔터티에 대한 자세한 보기를 공격자에게 제공하여 공격자가 캠페인을 위한 관련 엔터티에 노력을 집중하도록 할 수 있습니다.
+
+-   **디렉터리 서비스 열거를 사용한 정찰**<br></br>SAM 원격 프로토콜을 사용하여 수행된 엔터티(사용자, 그룹, 등)에 대한 검색 정찰로, 도메인 컨트롤러에 대해 쿼리를 실행합니다. 이 정찰 방법은 실제 공격 시나리오에서 발생하는 다양한 형식의 맬웨어에서 널리 사용됩니다. 
 
 
-## What's next?
+### 손상된 자격 증명
+<a id="compromised-credentials" class="xliff"></a>
 
--   For more information about how ATA fits into your network: [ATA architecture](ata-architecture.md)
+손상된 자격 증명 검색을 제공하기 위해 ATA는 기계 학습 기반 동작 분석뿐 아니라 알려진 악의적인 공격 및 기술 검색을 활용합니다.
+동작 분석 및 기계 학습을 사용하여 ATA는 비정상적인 로그인, 비정상적인 리소스 액세스, 비정상적인 작업 시간 등 자격 증명 손상을 가리키는 의심스러운 활동을 검색할 수 있습니다. 손상된 자격 증명을 방지하기 위해 ATA는 다음과 같은 알려진 악의적인 공격과 기술을 검색합니다.
 
--   To get started deploying ATA: [Install ATA](install-ata-step1.md)
+-   **무차별 암호 대입(Brute force)**<br></br>무차별 암호 대입 공격에서는 공격자가 여러 사용자를 시도하고 이를 여러 번의 암호 시도와 쌍으로 연결하여 사용자 자격 증명을 추측하려고 시도합니다. 공격자는 종종 복잡한 알고리즘이나 사전을 사용하여 시스템에서 허용되는 개수의 값을 시도합니다.
 
-## See Also
-[Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- **의심스러운 인증 실패**(동작 무차별 암호 대입(Brute force)) <br></br> 공격자가 자격 증명에 무차별 암호 대입(Brute force)을 사용하여 계정을 손상하려고 합니다. 비정상적인 인증 실패 동작이 검색되면 ATA에서 경고가 발생합니다.
+
+-   **일반 텍스트 인증으로 공개되는 중요한 계정**<br></br>권한이 높은 계정 자격 증명을 일반 텍스트로 보내는 경우 ATA는 컴퓨터 구성을 업데이트할 수 있도록 경고합니다.
+
+-   **일반 텍스트 인증으로 계정을 공개하는 서비스** <br></br>컴퓨터의 서비스에서 여러 계정 자격 증명을 일반 텍스트로 보내는 경우 ATA는 서비스 구성을 업데이트할 수 있도록 경고합니다.
+
+-   **Honeytoken 계정 의심스러운 활동**<br></br>허니토큰 계정은 더미 계정을 사용하려고 시도하는 악의적인 활동을 트래핑, 식별 및 추적하도록 설정된 더미 계정입니다. ATA는 이러한 허니토큰 계정의 모든 활동에 대해 경고합니다.
+
+-   **비정상적인 프로토콜 구현**<br></br>인증 요청(Kerberos 또는 NTLM)은 일반적으로 일련의 정상 메서드 및 프로토콜을 사용하여 수행됩니다. 그러나 성공적으로 인증하려면 요청이 특정 요구 사항 집합을 충족해야만 합니다. 공격자가 환경에서 정상 구현과 약간의 차이로 이러한 프로토콜을 구현할 수 있습니다. 이러한 차이를 통해 손상된 자격 증명을 성공적으로 활용하거나 활용을 시도하는 공격자가 있음을 알 수 있습니다.
+
+-   **악성 데이터 보호 개인 정보 요청**<br></br>DPAPI(데이터 보호 API)는 암호 기반 데이터 보호 서비스입니다. 이 보호 서비스는 웹 사이트 암호 및 파일 공유 자격 증명과 같은 사용자의 비밀 정보를 저장하는 다양한 응용 프로그램에서 사용됩니다. 암호 손실 시나리오를 지원하기 위해 사용자는 자신의 암호를 포함하지 않는 복구 키를 사용하여 보호된 데이터를 해독할 수 있습니다. 도메인 환경에서 공격자가 복구 키를 원격으로 도용하고 사용하여 도메인에 가입된 모든 컴퓨터에서 보호된 데이터를 해독할 수 있습니다.
+
+-   **비정상적인 동작**<br></br>대개 지능형 공격뿐만 아니라 내부자 위협의 경우 계정 자격 증명이 소셜 엔지니어링 메서드 또는 아직 알려지지 않은 새로운 메서드와 기술을 사용하여 손상될 수 있습니다. ATA는 엔터티의 동작을 분석하고 엔터티에서 수행한 작업의 비정상적인 상태를 검색하고 경고하여 이러한 유형의 손상을 검색할 수 있습니다.
+
+### 측면 확대
+<a id="lateral-movement" class="xliff"></a>
+
+사용자가 일부 리소스에 대한 액세스 권한을 제공하는 자격 증명을 사용하여 액세스 권한이 없어야 하는 리소스에 대한 액세스 권한을 얻는 경우 ATA는 측면 확대를 검색하기 위해 기계 학습 기반 동작 분석뿐만 아니라 알려진 악의적인 공격 및 기술 검색을 모두 활용합니다.
+ATA는 동작 분석 및 기계 학습을 사용하여 비정상적인 리소스 액세스, 비정상적인 장치 사용 및 측면 확대의 증거인 기타 표시를 검색합니다.
+또한 ATA는 공격자가 측면 확대를 수행하기 위해 사용하는 다음과 같은 기술을 검색하여 측면 확대를 검색할 수 있습니다.
+
+-   **Pass-the-Ticket** <br></br>Pass-the-Ticket 공격에서는 공격자가 하나의 컴퓨터에서 Kerberos 티켓을 도용하여 네트워크의 엔터티로 가장해 다른 컴퓨터에 대한 액세스 권한을 얻습니다.
+
+-   **Pass-the-Hash** <br></br>Pass-the-Hash 공격에서는 공격자가 엔터티의 NTLM 해시를 도용하여 NTLM에 인증하고 엔터티를 가장해 네트워크의 리소스에 대한 액세스 권한을 얻습니다.
+
+-   **Over-Pass-the-Hash**<br></br>Over-Pass The Hash는 공격자가 훔친 NTLM 해시를 사용하여 Kerberos에 인증하고 유효한 Kerberos TGT 티켓을 얻는 공격입니다. 이 티켓은 유효한 사용자로 인증받고 네트워크의 리소스에 대한 액세스 권한을 얻는 데 사용됩니다.
+
+-   **비정상적인 동작**<br></br>측면 확대는 공격자가 희생자의 네트워크에 있는 장치 및 영역 간을 이동하여 권한 있는 자격 증명이나 관심 있는 중요한 정보에 대한 액세스 권한을 얻기 위해 종종 사용하는 기술입니다. ATA는 회사 네트워크 내에서 사용자, 장치 및 해당 관계의 동작을 분석하여 측면 확대를 검색하고, 공격자가 수행한 측면 확대를 나타낼 수 있는 모든 비정상적인 액세스 패턴을 검색할 수 있습니다.
+
+### 권한 상승
+<a id="privilege-escalation" class="xliff"></a>
+
+ATA는 성공한 권한 상승 공격과 시도한 권한 상승 공격을 모두 검색합니다. 권한 상승 공격은 공격자가 기존 권한을 높이고 이를 여러 번 사용하여 희생자 환경에 대한 모든 권한을 얻으려고 시도하는 경우에 발생합니다.
+ATA는 동작 분석을 결합하여 권한 있는 계정의 비정상적인 동작을 검색하고 알려진 악의적인 공격과 종종 다음과 같은 권한 상승에 사용되는 기술을 검색하여 권한 상승 검색을 사용합니다.
+
+-   **MS14-068 악용(위조된 PAC)**<br></br>위조된 PAC는 공격자가 조직에서 부여하지 않은 추가 권한을 부여하는 위조된 인증 헤더 형식으로 유효한 TGT 티켓에 권한 부여 데이터를 심는 공격입니다. 이 시나리오에서 공격자는 이전에 손상된 자격 증명 또는 측면 확대 작업 중에 수집된 자격 증명을 활용합니다.
+
+-   **MS11-013 악용(실버 PAC)**<br></br>MS11-013 악용 공격은 특정 측면의 Kerberos 서비스 티켓이 위조되도록 하는 Kerberos의 권한 상승 취약점입니다. 악의적인 사용자나 이 취약점을 악용하는 공격자가 도메인 컨트롤러에서 상승된 권한으로 토큰을 얻을 수 있습니다. 이 시나리오에서 공격자는 이전에 손상된 자격 증명 또는 측면 확대 작업 중에 수집된 자격 증명을 활용합니다.
+
+-   **중요한 그룹의 비정상적인 수정**  <br></br>권한 상승 단계의 일부로 공격자가 중요한 리소스에 대한 액세스 권한을 얻기 위해 높은 권한을 가진 그룹을 수정합니다. 이제 ATA가 관리자 권한 그룹에 비정상적인 변경이 있을 경우 이를 검색합니다.
+
+### 도메인 우위
+<a id="domain-dominance" class="xliff"></a>
+
+ATA는 다음과 같이 공격자가 사용한 알려진 기술에 대한 검색을 수행하여 희생자의 환경에 대한 모든 권한 및 우위를 실현하려고 시도하거나 성공한 공격자를 검색합니다.
+
+-   **스켈레톤 키 맬웨어**<br></br>스켈레톤 키 맬웨어 공격에서는 합법적인 사용자의 로그온이 가능한 동시에 공격자가 사용자로 인증하도록 허용하는 맬웨어가 도메인 컨트롤러에 설치됩니다.
+
+-   **골든 티켓**<br></br>골든 티켓 공격에서는 공격자가 KBTGT의 자격 증명인 Kerberos 골든 티켓을 도용합니다. 이 티켓을 통해 공격자는 네트워크의 리소스에 대한 액세스 권한을 얻는 데 사용할 TGT 티켓을 오프라인으로 만들 수 있습니다.
+
+-   **원격 실행**<br></br>공격자는 도메인 컨트롤러에서 원격으로 코드를 실행하여 네트워크를 제어하려고 시도할 수 있습니다.
+
+- **원격 실행 시도 – WMI 실행**<br></br>공격자는 도메인 컨트롤러에서 원격으로 코드를 실행하여 네트워크를 제어하려고 시도할 수 있습니다. ATA가 WMI 메서드를 활용하여 원격으로 코드를 실행하는 원격 실행을 검색합니다.
+
+-   **악의적인 복제 요청** <br></br>AD(Active Directory) 환경에서 복제는 도메인 컨트롤러 간에 정기적으로 수행됩니다. 공격자가 AD 복제 요청을 스푸핑(경우에 따라 도메인 컨트롤러를 가장)하여 볼륨 섀도 복사본과 같이 보다 침입적인 기술을 사용하지 않고도 암호 해시를 비롯하여 AD에 저장된 데이터를 검색하도록 할 수 있습니다.
+
+
+## 다음 단계
+<a id="whats-next" class="xliff"></a>
+
+-   ATA가 네트워크에 적용되는 방식에 대한 자세한 내용은 [ATA 아키텍처](ata-architecture.md)를 참조하세요.
+
+-   ATA 배포를 시작하려면 [ATA 설치](install-ata-step1.md)를 참조하세요.
+
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+[ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

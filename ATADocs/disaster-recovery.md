@@ -1,80 +1,75 @@
 ---
-# required metadata
-
-title: Disaster recovery for Advanced Threat Analytics | Microsoft Docs
-description: Describes how you can quickly recover ATA functionality after disaster
-keywords:
+title: "Advanced Threat Analytics 재해 복구 | Microsoft 문서"
+description: "재해 후 ATA 기능을 신속하게 복구할 수 있는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 3/7/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arzinger
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: ce06038a3c3f2e5a6f2a5d57ad814ab8393c0b0c
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# ATA disaster recovery
-This article describes how to quickly recover your ATA Center and restore ATA functionality when the ATA Center functionality is lost but the ATA Gateways are still working. 
+
+# ATA 재해 복구
+<a id="ata-disaster-recovery" class="xliff"></a>
+이 문서에서는 ATA 센터 기능이 손실되었지만 ATA 게이트웨이가 여전히 작동하는 경우 ATA 센터를 신속하게 복구하고 ATA 기능을 복원하는 방법을 설명합니다. 
 
 >[!NOTE]
-> The process described does not recover previously detected suspicious activities but does return the ATA Center to full functionality. Additionally, the learning period needed for some behavioral detections will restart, but most of the detection that ATA offers is operational after the ATA Center is restored. 
+> 설명하는 프로세스에서는 이전에 검색한 의심스러운 활동을 복구하지는 않지만 ATA 센터의 기능을 완전하게 복원합니다. 또한 일부 동작 검색에 필요한 학습 기간이 다시 시작되지만, ATA에서 제공하는 대부분의 검색은 ATA 센터가 복원된 후 작동합니다. 
 
-## Back up your ATA Center configuration
+## ATA 센터 구성 백업
+<a id="back-up-your-ata-center-configuration" class="xliff"></a>
 
-1. The ATA Center configuration is backed up to a file every hour. Locate the latest backup copy of the ATA Center configuration and save it on a separate computer. For a full explanation of how to locate these files, see [Export and import the ATA configuration](ata-configuration-file.md). 
-2. Export the ATA Center certificate.
-    1. In the certificate manager (`certlm.msc`), navigate to **Certificates (Local Computer)** -> **Personal** ->**Certificates**, and select **ATA Center**.
-    2. Right click **ATA Center** and select **All Tasks** followed by **Export**. 
-     ![ATA Center Certificate](media/ata-center-cert.png)
-    3. Follow the instructions to export the certificate, making sure to export the private key as well.
-    4. Back up the exported certificate file on a separate computer.
+1. ATA 센터 구성은 매시간 파일로 백업됩니다. ATA 센터 구성의 최신 백업 복사본을 찾아서 별도 컴퓨터에 저장하세요. 이러한 파일을 찾는 방법에 대한 자세한 내용은 [ATA 구성 내보내기 및 가져오기 ](/advanced-threat-analytics/deploy-use/ata-configuration-file)를 참조하세요. 
+2. ATA 센터 인증서를 내보냅니다.
+    1. 인증서 관리자에서 **인증서(로컬 컴퓨터)** -> **개인** ->**인증서**로 이동하고 **ATA Center**(ATA 센터)를 선택합니다.
+    2. **ATA Center**(ATA 센터)를 마우스 오른쪽 단추로 클릭하고 **All Tasks**(모든 작업), **내보내기**를 차례로 선택합니다. 
+     ![ATA 센터 인증서](media/ata-center-cert.png)
+    3. 지침에 따라 인증서를 내보내고 개인 키도 내보냈는지 확인합니다.
+    4. 내보낸 인증서 파일을 별도 컴퓨터에 백업합니다.
 
   > [!NOTE] 
-  > If you cannot export the private key, you must create a new certificate and deploy it to ATA, as described in [Change the ATA Center certificate](modifying-ata-config-centercert.md), and then export it. 
+  > 개인 키를 내보낼 수 없는 경우 [ATA 센터 인증서 변경](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)에 설명된 것처럼 새 인증서를 만들고 ATA에 배포한 다음 내보내야 합니다. 
 
-## Recover your ATA Center
+## ATA 센터 복구
+<a id="recover-your-ata-center" class="xliff"></a>
 
-1. Create a new Windows Server machine using the same IP address and computer name as the previous ATA Center machine.
-4. Import the certificate you backed up, above, to the new server.
-5. Follow the instructions to [Deploy the ATA Center](install-ata-step1.md) on the newly created Windows Server. Make sure to select the same IP address and port as the old center. There is no need to deploy the 
-ATA Gateways again. When prompted for a certificate, provide the certificate you exported when backing up the ATA Center configuration. 
- ![ATA Center restore](media/ata-center-restore.png)
-6. Import the backed up ATA Center configuration:
-    1. Remove the default ATA Center System Profile document from the MongoDB: 
-        1. Go to **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
-        2. Run `mongo.exe ATA` 
-        3. Run this command to remove the default system profile: `db.SystemProfile.remove({})`
-    2. Run the command: `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` using the backup file from step 1.</br>
-    For a full explanation of how to locate and import backup files, see [Export and import the ATA configuration](ata-configuration-file.md). 
-    3. After importing, run this command to remove some of the default system profiles (to reset them for the new environment): `db.SystemProfile.remove({$or:[{"_t":"DetectorProfile"}, "_t":"DirectoryServicesSystemProfile"}]}) `
-    4. Open the ATA Console. You should see all the ATA Gateways linked under the Configuration/Gateways tab. 
-    5. Make sure to define a [**Directory services user**](install-ata-step2.md) and to choose a [**Domain controller synchronizer**](install-ata-step5.md). 
-
+1. 이전 ATA 센터 컴퓨터와 동일한 IP 주소 및 컴퓨터 이름을 사용하여 새 Windows Server 컴퓨터를 만듭니다.
+4. 위에서 백업한 인증서를 새 서버에 가져옵니다.
+5. 새로 만든 Windows Server에서 [ATA 센터 배포](/advanced-threat-analytics/deploy-use/install-ata-step1)에 대한 지침을 따릅니다. ATA 게이트웨이는 다시 배포하지 않아도 됩니다. 인증서에 대한 메시지가 표시되면 ATA 센터 구성을 백업할 때 내보낸 인증서를 제공하세요. 
+![ATA 센터 복원](media/disaster-recovery-deploymentss.png)
+6. 백업된 ATA 센터 구성을 가져옵니다.
+    1. MongoDB에서 기본 ATA 센터 시스템 프로필 문서를 제거합니다. 
+        1. **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**으로 이동합니다. 
+        2. `mongo.exe`을 실행합니다. 
+        3. 기본 시스템 프로필을 제거하려면 이 명령을 실행하세요.`db.SystemProfile.remove({})`
+    2. 1단계의 백업 파일을 사용하여 다음 명령을 실행합니다. `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`</br>
+    백업 파일을 찾고 가져오는 방법에 대한 자세한 설명은 [ATA 구성 내보내기 및 가져오기](/advanced-threat-analytics/deploy-use/ata-configuration-file)를 참조하세요. 
+    3. ATA 콘솔을 엽니다. [구성/게이트웨이] 탭 아래에 연결된 모든 ATA 게이트웨이가 표시됩니다. 
+    5. [**Directory services user**](/advanced-threat-analytics/deploy-use/install-ata-step2)(디렉터리 서비스 사용자)를 정의하고 [**Domain controller synchronizer**](/advanced-threat-analytics/deploy-use/install-ata-step5)(도메인 컨트롤러 동기화 장치)를 선택합니다. 
 
 
 
 
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+- [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Windows 이벤트 전달 구성](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

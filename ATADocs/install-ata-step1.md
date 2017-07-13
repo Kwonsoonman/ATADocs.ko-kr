@@ -1,111 +1,109 @@
 ---
-# required metadata
-
-title: Install Advanced Threat Analytics - Step 1 | Microsoft Docs
-description: First step to install ATA involves downloading and installing the ATA Center onto your chosen server.
-keywords:
+title: "Advanced Threat Analytics 설치 - 1단계 | Microsoft 문서"
+description: "ATA를 설치하는 첫 번째 단계에는 ATA Center를 다운로드하여 선택한 서버에 설치하는 과정이 포함됩니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 6/12/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 97fa1522ca43cf92416ac845b8886f2905e9981b
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Install ATA - Step 1
+# ATA 설치 - 1단계
+<a id="install-ata---step-1" class="xliff"></a>
 
 >[!div class="step-by-step"]
-[Step 2 »](install-ata-step2.md)
+[2단계 »](install-ata-step2.md)
 
-This installation procedure provides instructions for performing a fresh installation of ATA 1.7. For information on updating an existing ATA deployment from an earlier version, see [the ATA migration guide for version 1.7](ata-update-1.7-migration-guide.md).
+이 설치 절차에서는 ATA 1.8을 새로 설치하는 데 필요한 지침을 제공합니다. 기존의 ATA 배포를 이전 버전에서 업데이트하는 방법에 대한 자세한 내용은 [ATA 버전 1.8 마이그레이션 가이드](ata-update-1.8-migration-guide.md)를 참조하세요.
 
 > [!IMPORTANT] 
-> If using Windows 2012 R2, you can install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation will install this update and will require a restart in the middle of the ATA installation.
+> Windows 2012 R2를 사용할 경우 설치를 시작하기 전에 ATA Center 및 ATA Gateway 서버에 KB2934520을 설치할 수 있습니다. 그렇지 않으면 ATA 설치에서 이 업데이트를 설치하므로 ATA 설치 도중에 다시 시작해야 합니다.
 
-## Step 1. Download and Install the ATA Center
-After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
+## 1단계. ATA Center 다운로드 및 설치
+<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
+서버가 요구 사항을 충족하는지 확인한 후 ATA Center 설치를 진행할 수 있습니다.
+    
+> [!NOTE]
+>Office 365 포털을 통해 직접 또는 CSP(Cloud Solution Partner) 라이선스 모델을 통해 EMS(Enterprise Mobility + Security)를 구입했으며 VLSC(Microsoft 볼륨 라이선스 센터)를 통해 ATA에 액세스할 수 없는 경우 Microsoft 고객 지원에 ATA(Advanced Threat Analytics)를 활성화하는 프로세스를 문의하세요.
 
-Perform the following steps on the ATA Center server.
+ATA Center 서버에서 다음 단계를 수행합니다.
 
-1.  Download ATA from the [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or from the [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) or from [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
+1.  [Microsoft 볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 또는 [TechNet 평가 센터](http://www.microsoft.com/evalcenter/) 또는 [MSDN](https://msdn.microsoft.com/subscriptions/downloads)에서 ATA를 다운로드합니다.
 
-2.  Log in to the computer onto which you are installing the ATA Center as a user who is a member of the local administrators group.
+2.  ATA 센터를 설치할 컴퓨터에 로컬 관리자 그룹의 구성원인 사용자로 로그인합니다.
 
-3.  Run **Microsoft ATA Center Setup.EXE** and follow the setup wizard.
+3.  **Microsoft ATA 센터 Setup.EXE**를 실행하고 설치 마법사를 따릅니다.
 
 > [!NOTE]   
-> Make sure to run the installation file from a local drive and not from a mounted ISO file to avoid issues in case a reboot is required as part of the installation.   
+> 설치 과정에서 다시 부팅해야 하는 경우 문제를 방지하려면 탑재된 ISO 파일이 아니라 로컬 드라이브에서 설치 파일을 실행해야 합니다.   
 
-4.  If Microsoft .Net Framework is not installed, you will be prompted to install it when you start installation. You may be prompted to reboot after .NET Framework installation.
-5.  On the **Welcome** page, select the language to be used for the ATA installation screens and click **Next**.
+4.  설치를 시작할 때 Microsoft .Net Framework가 설치되지 않은 경우 설치하라는 메시지가 표시됩니다. .NET Framework를 설치하고 나면 다시 부팅하라는 메시지가 표시될 수 있습니다.
+5.  **시작** 페이지에서 ATA 설치 화면에 사용할 언어를 선택하고 **다음**을 클릭합니다.
 
-6.  Read the Microsoft Software License Terms and if you accept the terms, click the check box and then click **Next**.
+6.  Microsoft 소프트웨어 사용 조건을 읽고 동의하면 확인란을 클릭한 후 **다음**을 클릭합니다.
 
-7.  It is recommended that you set ATA to update automatically. If Windows isn't set to do this on your computer, you will get the **Use Microsoft Update to help keep your computer secure and up to date** screen. 
-    ![Keep ATA up to date image](media/ata_ms_update.png)
+7.  ATA를 자동으로 업데이트하도록 설정하는 것이 좋습니다. 컴퓨터에서 Windows를 자동으로 업데이트하도록 설정하지 않은 경우 **Microsoft 업데이트를 사용하여 컴퓨터의 보안 및 최신 상태 유지** 화면이 표시됩니다. 
+    ![ATA를 최신 이미지로 유지](media/ata_ms_update.png)
 
-8. Select **Use Microsoft Update when I check for updates (recommended)**. This will adjust the Windows settings to enable updates for other Microsoft products (including ATA), as seen here. 
-    ![Windows auto-update image](media/ata_installupdatesautomatically.png)
+8. **업데이트를 확인할 때 Microsoft 업데이트 사용(권장)**을 선택합니다. 다음 그림과 같이 다른 Microsoft 제품(ATA 포함)에 업데이트를 사용하도록 Windows 설정을 조정합니다. 
 
-8.  On the **ATA Center Configuration** page, enter the following information based on your environment:
+    ![Windows 자동 업데이트 이미지](media/ata_installupdatesautomatically.png)
 
-    |Field|Description|Comments|
+8.  **센터 구성** 페이지에서 사용자 환경에 따라 다음 정보를 입력합니다.
+
+    |필드|설명|설명|
     |---------|---------------|------------|
-    |Installation Path|This is the location where the ATA Center will be installed. By default this is  %programfiles%\Microsoft Advanced Threat Analytics\Center|Leave the default value|
-    |Database Data Path|This is the location where the MongoDB database files will be located. By default this is %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|Change the location to a place where you have room to grow based on your sizing. **Note:** <ul><li>In production environments you should use a drive that has enough space based on capacity planning.</li><li>For large deployments the database should be on a separate physical disk.</li></ul>See [ATA capacity planning](ata-capacity-planning.md) for sizing information.|
-    |Center Service IP address: Port|This is the IP address that the ATA Center service will listen on for communication from the ATA Gateways.<br /><br />**Default port:** 443|Click the down arrow to select the IP address to be used by the ATA Center service.<br /><br />The IP address and port of the ATA Center service cannot be the same as the IP address and port of the ATA Console. Make sure to change the port of the ATA Console.|
-    |Center Service SSL Certificate|This is the certificate that will be used by the ATA Console and ATA Center service.|Click the key icon to select a certificate installed or check self-signed certificate when deploying in a lab environment.|
-    |Console IP address|This is the IP address that will be used for the ATA Console.|Click the down arrow to select the IP address used by the ATA Console. **Note:** Make a note of this IP address to make it easier to access the ATA Console from the ATA Gateway.|
-    
-    ![ATA center configuration image](media/ATA-Center-Configuration.png)
+    |설치 경로|ATA Center를 설치할 위치입니다. 기본적으로 %programfiles%\Microsoft Advanced Threat Analytics\Center입니다.|기본값을 그대로 둡니다.|
+    |데이터베이스 데이터 경로|MongoDB 데이터베이스 파일이 있는 위치입니다. 기본적으로 %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data입니다.|크기 조정에 따라 증가할 여유가 있는 곳으로 위치를 변경합니다. **참고:** <ul><li>프로덕션 환경에서는 용량 계획에 따라 충분한 공간이 있는 드라이브를 사용해야 합니다.</li><li>대규모 배포의 경우 데이터베이스는 별도의 물리적 디스크에 있어야 합니다.</li></ul>크기 조정에 대한 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.|
+    |센터 서비스 SSL 인증서|ATA 콘솔 및 ATA 센터 서비스에서 사용할 인증서입니다.|열쇠 아이콘을 클릭하여 설치된 인증서를 선택하거나, 랩 환경에 배포하는 경우 자체 서명된 인증서를 선택합니다. 자체 서명된 인증서를 만드는 옵션이 있다는 것에 유의하세요.|
+        
+    ![ATA Center 구성 이미지](media/ATA-Center-Configuration.png)
 
-10.  Click **Install** to install the ATA Center and its components.
-    The following components are installed and configured during the installation of ATA Center:
+10.  **설치**를 클릭하여 ATA 센터 및 해당 구성 요소를 설치합니다.
+    ATA Center 설치 중에 다음 구성 요소가 설치되고 구성됩니다.
 
-    -   ATA Center service
+    -   ATA 센터 서비스
 
     -   MongoDB
 
-    -   Custom Performance Monitor data collection set
+    -   사용자 지정 성능 모니터 데이터 컬렉션 집합
 
-    -   Self-signed certificates (if selected during the installation)
+    -   자체 서명된 인증서(설치 중에 선택한 경우)
 
-11.  When the installation completes, click **Launch**  to connect to the ATA Console.
-At this point you will be brought automatically to the **General** settings page to continue the configuration and the deployment of the ATA Gateways.
-Because you are logging into the site using an IP address, you will receive a warning related to the certificate, this is normal and you should click **Continue to this website**.
+11.  설치가 완료되면 **시작**을 클릭하여 ATA 콘솔을 열고 **구성** 페이지에서 설정을 완료합니다.
+이때 **일반** 설정 페이지로 자동으로 이동됩니다. 여기에서 ATA Gateway 구성 및 배포를 계속할 수 있습니다.
+IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 관련된 경고 메시지가 표시되는데, 이는 정상이며 **이 웹 사이트를 계속 탐색**을 클릭해야 합니다.
 
-### Validate installation
+### 설치 유효성 검사
+<a id="validate-installation" class="xliff"></a>
 
-1.  Check to see that the service named **Microsoft Advanced Threat Analytics Center** is running.
-2.  On the desktop, click the **Microsoft Advanced Threat Analytics** shortcut to connect to the ATA Console. Log in with the same user credentials that you used to install the ATA Center.
+1.  **Microsoft Advanced Threat Analytics Center** 서비스가 실행 중인지 확인합니다.
+2.  바탕 화면에서 **Microsoft Advanced Threat Analytics** 바로 가기를 클릭하여 ATA 콘솔에 연결합니다. ATA Center를 설치하는 데 사용한 것과 동일한 사용자 자격 증명으로 로그인합니다.
 
 
 
 >[!div class="step-by-step"]
-[« Pre-install](configure-port-mirroring.md)
-[Step 2 »](install-ata-step2.md)
+[« 설치 전](configure-port-mirroring.md)
+[2단계 »](install-ata-step2.md)
 
-## See Also
+## 참고 항목
+<a id="see-also" class="xliff"></a>
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](ata-prerequisites.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [이벤트 수집 구성](configure-event-collection.md)
+- [ATA 필수 구성 요소](ata-prerequisites.md)
 

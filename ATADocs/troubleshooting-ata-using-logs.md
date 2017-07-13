@@ -1,105 +1,102 @@
 ---
-# required metadata
-
-title: Troubleshooting Advanced Threat Analytics using the logs | Microsoft Docs
-description: Describes how you can use the ATA logs to troubleshoot issues
-keywords:
+title: "로그를 사용하여 Advanced Threat Analytics 문제 해결 | Microsoft 문서"
+description: "ATA 로그를 사용하여 문제를 해결하는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/30/2017
+ms.date: 06/30/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: d5a3587de2aa628eb61ace199b2282e7d7fe773a
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Troubleshooting ATA using the ATA logs
-The ATA logs provide insight into what each component of ATA is doing at any given point in time.
 
-## ATA Gateway logs
-In this section, every reference to the ATA Gateway is relevant also for the ATA Lightweight Gateway. 
+# ATA 로그를 사용하여 ATA 문제 해결
+<a id="troubleshooting-ata-using-the-ata-logs" class="xliff"></a>
+ATA 로그는 ATA의 각 구성 요소가 주어진 시점에 수행하는 작업을 이해할 수 있도록 도와줍니다.
 
-The ATA Gateway logs are located in a subfolder called **Logs** where ATA is installed; the default location is: **C:\Program Files\Microsoft Advanced Threat Analytics\**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+## ATA 게이트웨이 로그
+<a id="ata-gateway-logs" class="xliff"></a>
+이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다. 
 
-The ATA Gateway has the following logs:
+ATA 게이트웨이 로그는 ATA가 설치된 **Logs**라는 하위 폴더에 있습니다. 기본 위치는 **C:\Program Files\Microsoft Advanced Threat Analytics\**입니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**에서 찾을 수 있습니다.
 
--   **Microsoft.Tri.Gateway.log** – This log contains everything that happens in the ATA Gateway (including resolution and errors). Its main use is getting the overall status of all operations in the chronological order in which they occurred.
+ATA 게이트웨이에는 다음 로그가 있습니다.
 
--   **Microsoft.Tri.Gateway-Resolution.log** – This log contains the resolution details of the entities seen in traffic by the ATA Gateway. Its main use is investigating resolution issues of entities.
+-   **Microsoft.Tri.Gateway.log** - 이 로그에는 ATA 게이트웨이에서 발생하는 모든 항목(해결 방법 및 오류 포함)이 포함되어 있습니다. 기본 사용: 모든 작업의 전체적인 상태를 발생한 시간 순서대로 가져옵니다.
 
--   **Microsoft.Tri.Gateway-Errors.log** – This log contains just the errors that are caught by the ATA Gateway. Its main use is performing health checks and investigating issues that need to be correlated to specific times.
+-   **Microsoft.Tri.Gateway-Resolution.log** - 이 로그에는 ATA 게이트웨이에 의해 트래픽에서 확인된 엔터티의 확인 정보가 포함됩니다. 기본 사용: 엔터티 확인 문제를 조사합니다.
 
--   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – This log groups all similar errors and exceptions, and measures their count.
-    This file starts out  empty each time the ATA Gateway service starts and is updated every minute. Its main use is understanding if there are any new errors or issues with the ATA Gateway (because the errors are grouped it is easier to read and quickly understand if there are any new issues).
--	**Microsoft.Tri.Gateway.Updater.log** - This log is used for the gateway updater process, which is responsible for updating the gateway if configured to do so automatically. 
-For the ATA Lightweight Gateway, the gateway updater process is also responsible  for the resource limitations of the ATA Lightweight Gateway.
--	**Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** - This log groups all similar errors and exceptions together, and measures their count. This file starts out empty each time the ATA Updater service starts and is updated every minute. It enables you to understand if there are any new errors or issues with the ATA Updater. The errors are grouped to make it easier to quickly understand if any new errors or issues are detected.
+-   **Microsoft.Tri.Gateway-Errors.log** – 이 로그는 ATA 게이트웨이에서 발생한 오류만 포함합니다. 기본 사용: 상태 검사를 수행하고 특정 시간과 상호 연결해야 하는 문제를 조사합니다.
+
+-   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 그룹화하고 개수를 측정합니다.
+    이 파일은 ATA 게이트웨이 서비스가 시작될 때마다 빈 상태로 시작한 후 1분 간격으로 업데이트됩니다. 기본적으로 ATA 게이트웨이와 관련해서 새로운 오류나 문제가 있는지 파악하기 위해 사용됩니다. 오류가 그룹화되므로 보다 읽기 쉽고 새로운 문제가 있는지 쉽게 파악할 수 있습니다.
+-   **Microsoft.Tri.Gateway.Updater.log** - 이 로그는 게이트웨이 업데이트 프로그램 프로세스에서 사용되며, 자동으로 수행 하도록 구성하는 경우 게이트웨이를 업데이트하는 역할을 합니다. ATA 경량 게이트웨이의 경우 게이트웨이 업데이트 프로그램 프로세스도 ATA 경량 게이트웨이의 리소스 제한에 대한 책임을 집니다.
+-   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 함께 그룹화하고 개수를 측정합니다. 이 파일은 ATA 업데이트 프로그램 서비스가 시작될 때마다 빈 상태로 시작한 후 1분 간격으로 업데이트됩니다. 이를 통해 ATA 업데이트 프로그램에 새로운 오류 또는 문제가 있는지 파악할 수 있습니다. 오류가 그룹화되며 새로운 유형의 오류나 문제가 있는지 쉽고 빠르게 파악할 수 있습니다.
 
 > [!NOTE]
-> The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
+> 처음 세 개의 로그 파일에 최대 50MB까지 할당됩니다. 이 크기에 도달하면 새 로그 파일이 열리고 이전 로그 파일의 이름은 "&lt;원래 파일 이름&gt;-Archived-00000"으로 바뀝니다. 여기서 번호는 이름이 바뀔 때마다 커집니다. 기본적으로 형식이 동일한 파일이 10개가 넘는 경우 가장 오래된 파일부터 삭제됩니다.
 
-## ATA Center logs
-The ATA Center logs are located in a subfolder called **Logs**. In the default installation location, it can be found at: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**".
+## ATA 센터 로그
+<a id="ata-center-logs" class="xliff"></a>
+ATA 센터 로그는 **Logs**라는 하위 폴더에 있습니다. 기본 설치 위치에서는 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**에서 찾을 수 있습니다.
 > [!Note]
-> The ATA console logs that were formerly under IIS logs are now located under ATA Center logs.
+> 이전에 IIS 로그에 있었던 ATA 콘솔이 이제 ATA 센터 로그에 위치합니다.
 
-The ATA Center has the following logs:
+ATA 센터에는 다음 로그가 있습니다.
 
--   **Microsoft.Tri.Center.log** – This log contains everything that happens in the ATA Center, including detections and errors. Its main use is getting the overall status of all operations in the chronological order in which they occurred.
+-   **Microsoft.Tri.Center.log** – 이 로그에는 ATA 센터에서 발생하는 모든 항목(검색 내용 및 오류 포함)이 포함되어 있습니다. 기본 사용: 모든 작업의 전체적인 상태를 발생한 시간 순서대로 가져옵니다.
 
--   **Microsoft.Tri.Center-Detection.log** – This log contains just the detection details of the ATA Center. Its main use is investigating detection issues.
+-   **Microsoft.Tri.Center-Detection.log** – 이 로그는 ATA 센터의 검색 세부 정보만 포함합니다. 기본 사용: 검색 문제를 조사합니다.
 
--   **Microsoft.Tri.Center-Errors.log** – This log contains just the errors that are caught by the ATA Center. Its main use is performing health checks and investigating issues that need to be correlated to specific times.
+-   **Microsoft.Tri.Center-Errors.log** – 이 로그는 ATA 센터에서 발생한 오류만 포함합니다. 기본 사용: 상태 검사를 수행하고 특정 시간과 상호 연결해야 하는 문제를 조사합니다.
 
--   **Microsoft.Tri.Center-ExceptionStatistics.log** – This log groups all similar errors and exceptions, and measures their count.
-    This file starts out empty each time the ATA Center service starts and is updated every minute. Its main use is understanding if there are any new errors or issues with the ATA Center - because the errors are grouped it is easier to quickly understand if there is a new errors or issues.
+-   **Microsoft.Tri.Center-ExceptionStatistics.log** – 이 로그는 유사한 모든 오류 및 예외를 그룹화하고 개수를 측정합니다.
+    이 파일은 ATA 센터 서비스가 시작될 때마다 빈 상태로 시작한 후 1분 간격으로 업데이트됩니다. 주요 사용으로는 ATA 센터와 관련해서 새로운 오류나 문제가 있는지 파악하는 것입니다. 오류가 그룹화되어 새로운 유형의 오류나 문제가 있는지 쉽게 파악할 수 있기 때문입니다.
 
 > [!NOTE]
-> The first three log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
+> 처음 세 개의 로그 파일에 최대 50MB까지 할당됩니다. 이 크기에 도달하면 새 로그 파일이 열리고 이전 로그 파일의 이름은 "&lt;원래 파일 이름&gt;-Archived-00000"으로 바뀝니다. 여기서 번호는 이름이 바뀔 때마다 커집니다. 기본적으로 형식이 동일한 파일이 10개가 넘는 경우 가장 오래된 파일부터 삭제됩니다.
 
 
-## ATA Deployment logs
-The ATA deployment logs are located in the temp directory for the user who installed the product. In the default installation location, it can be found at: **C:\Users\Administrator\AppData\Local\Temp** (or one directory above %temp%).
+## ATA 배포 로그
+<a id="ata-deployment-logs" class="xliff"></a>
+ATA 배포 로그는 제품을 설치한 사용자에 대한 임시 디렉터리에 있습니다. 기본 설치 위치에서는 **C:\Users\Administrator\AppData\Local\Temp**(또는 %temp% 위의 디렉터리)에서 찾을 수 있습니다.
 
-ATA Center deployment logs:
+ATA 센터 배포 로그:
 
--   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the ATA Center. Its main use is tracking the ATA Center deployment process.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS.log** - 이 로그는 ATA 센터의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 센터 배포 프로세스를 추적합니다.
 
--   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_0_MongoDBPackage.log** - This log lists the steps in the process of MongoDB deployment on the ATA Center. Its main use is tracking the MongoDB deployment process.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_0_MongoDBPackage.log** - 이 로그는 ATA 센터의 MongoDB 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: MongoDB 배포 프로세스를 추적합니다.
 
--   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_1_MsiPackage.log** - This log file lists the steps in the process of the deployment of the ATA Center binaries. Its main use is tracking the deployment of the ATA Center binaries.
+-   **Microsoft Advanced Threat Analytics Center_YYYYMMDDHHMMSS_1_MsiPackage.log** - 이 로그 파일은 ATA 센터 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 센터 이진 파일의 배포를 추적합니다.
 
-ATA Gateway and ATA Lightweight Gateway deployment logs:
+ATA 게이트웨이 및 ATA 경량 게이트웨이 배포 로그:
 
--   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS.log** - This log lists the steps in the process of the deployment of the ATA Gateway. Its main use is tracking the ATA Gateway deployment process.
+-   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS.log** - 이 로그는 ATA 게이트웨이의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 배포 프로세스를 추적합니다.
 
--   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - This log file lists the steps in the process of the deployment of the ATA Gateway binaries. Its main use is tracking the deployment of the ATA Gateway binaries.
+-   **Microsoft Advanced Threat Analytics Gateway_YYYYMMDDHHMMSS_001_MsiPackage.log** - 이 로그는 ATA 게이트웨이 이진 파일의 배포 프로세스에 포함된 단계를 나열합니다. 기본 사용: ATA 게이트웨이 이진 파일의 배포를 추적합니다.
 
 
 > [!NOTE] 
-> In addition to the deployment logs mentioned here, there are other logs that begin with "Microsoft Advanced Threat Analytics" that can also provide additional information on the deployment process.
+> 여기에 언급된 배포 로그 외에 “Microsoft Advanced Threat Analytics”로 시작하는 다른 로그도 배포 프로세스에 대한 추가 정보를 제공할 수 있습니다.
 
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA capacity planning](ata-capacity-planning.md)
-- [Configure event collection](configure-event-collection.md)
-- [Configuring Windows event forwarding](configure-event-collection.md#configuring-windows-event-forwarding)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 필수 구성 요소](ata-prerequisites.md)
+- [ATA 용량 계획](ata-capacity-planning.md)
+- [이벤트 수집 구성](configure-event-collection.md)
+- [Windows 이벤트 전달 구성](configure-event-collection.md#configuring-windows-event-forwarding)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

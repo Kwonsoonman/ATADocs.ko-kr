@@ -1,220 +1,213 @@
 ---
-# required metadata
-
-title: Install Advanced Threat Analytics Silently | Microsoft Docs
-description: This describes how to silently install ATA.
-keywords:
+title: "Advanced Threat Analytics 자동 설치 | Microsoft 문서"
+description: "ATA를 자동으로 설치하는 방법을 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 02/19/2017
+ms.date: 06/28/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/30/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# ATA Silent Installation
-This article provides instructions for silently installing ATA.
-## Prerequisites
 
-Microsoft ATA v1.7 requires the installation of Microsoft .NET Framework 4.6.1. 
+# ATA 자동 설치
+<a id="ata-silent-installation" class="xliff"></a>
+이 문서에는 ATA 자동 설치에 대한 지침이 있습니다.
+## 전제 조건
+<a id="prerequisites" class="xliff"></a>
 
-When you install or update ATA, .Net Framework 4.6.1 will be automatically installed as part of the deployment of Microsoft ATA.
+ATA 버전 1.8을 사용하려면 Microsoft .NET Framework 4.6.1이 설치되어 있어야 합니다. 
+
+ATA를 설치하거나 업데이트하면 Microsoft ATA 배포의 일부로 .Net Framework 4.6.1이 자동으로 설치됩니다.
 
 > [!Note] 
-> The installation of .Net framework 4.6.1 may require rebooting the server. When installing ATA Gateway on Domain Controllers, consider scheduling a maintenance window for these Domain Controllers.
-When using ATA silent installation method, the installer is configured to automatically restart the server at the end of the installation (if necessary). To avoid restarting the server as part of the installation, use the `-NoRestart` flag. When using the `-NoRestart` flag and restart will be required as part of the installation, the installer will pause until the server is restarted. To track the progress of the deployment, monitor ATA installer logs which are located in **%AppData%\Local\Temp**.
+> .NET framework 4.6.1을 설치하려면 서버를 다시 부팅해야 할 수 있습니다. 도메인 컨트롤러에서 ATA 게이트웨이를 설치할 때 해당 도메인 컨트롤러에 대해 유지 관리 기간을 예약하는 것이 좋습니다.
+ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 자동으로 다시 시작하도록 설치 관리자가 구성됩니다(필요한 경우). Windows Installer 버그 때문에 서버가 다시 시작되지 않도록 norestart 플래그를 안정적으로 사용할 수 없으므로 유지 관리 기간 동안에만 자동 설치를 실행해야 합니다.
+
+배포 진행 상태를 추적하려면 **%AppData%\Local\Temp**에 있는 ATA 설치 관리자 로그를 모니터링합니다.
 
 
-## Install the ATA Center
+## ATA 센터를 설치합니다.
+<a id="install-the-ata-center" class="xliff"></a>
 
-Use the following command to install the ATA Center:
+다음 명령을 사용하여 ATA 센터를 설치합니다.
 
-**Syntax**:
+**구문**:
 
-    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
-**Installation options**:
+**설치 옵션**:
 
-|Name|Syntax|Mandatory for silent installation?|Description|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, UI will prompt before restart.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
-|LicenseAccepted|--LicenseAccepted|Yes|Indicates that the license was read and approved. Must be set on silent installation.|
+|Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
+|도움말|/help|아니요|도움말 및 빠른 참조를 제공합니다. 모든 옵션 및 동작 목록을 포함하여 설정 명령에 대한 올바른 사용법을 보여줍니다.|
+|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|예|.Net Framework 설치를 위한 매개 변수를 지정합니다. .Net Framework 자동 설치를 적용하도록 설정해야 합니다.|
+|LicenseAccepted|--LicenseAccepted|예|라이선스를 읽고 승인했는지를 나타냅니다. 자동 설치에 설정되어 있어야 합니다.|
 
-**Installation parameters**:
+**설치 매개 변수**:
 
-|Name|Syntax|Mandatory for silent installation?|Description|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|InstallationPath|InstallationPath="<InstallPath>"|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|No|Sets the path for the ATA Database data folder. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
-|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Yes|Sets the IP address of the ATA Center Service|
-|CenterPort|CenterPort=<CenterPort>|Yes|Sets the network port of the ATA Center Service|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|No|Sets the certificate thumbprint for the ATA Center Service. This Certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
-|ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Yes|Sets the IP address of the ATA Console|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|No|Specifies the certificate thumbprint for the ATA Console. This Certificate is used to validate the identity of the ATA Console website.If not specified, the installation will generate a self-signed certificate|
+|InstallationPath|InstallationPath="<InstallPath>"|아니요|ATA 이진 파일을 설치할 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center입니다.|
+|DatabaseDataPath|DatabaseDataPath= “<DBPath>”|아니요|ATA 데이터베이스 데이터 폴더 경로를 설정합니다. 기본 경로는 C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data입니다.|
+|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|예|ATA 센터 서비스의 IP 주소를 설정합니다.|
+|CenterPort|CenterPort=<CenterPort>|예|ATA 센터 서비스의 네트워크 포트를 설정합니다.|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
+|ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|예|ATA 콘솔의 IP 주소를 설정합니다.|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|아니요|ATA 콘솔용 인증서 지문을 지정합니다. 이 인증서는 ATA 콘솔 웹 사이트의 ID를 확인하는 데 사용됩니다. 지정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
 
-**Examples**:
-To install the ATA Center with default installation paths and a single IP address:
+**예**: 기본 설치 경로 및 단일 IP 주소를 사용하여 ATA 센터를 설치하려면 다음을 수행합니다.
 
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
-To install the ATA Center with default installation paths, two IP addresses, and user-defined certificate thumbprints:
+기본 설치 경로, 두 개의 IP 주소, 사용자 정의 인증서 지문을 사용하여 ATA 센터를 설치하려면 다음을 수행합니다.
 
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## Update the ATA Center
+## ATA 센터를 업데이트합니다.
+<a id="update-the-ata-center" class="xliff"></a>
 
-Use the following command to update the ATA Center:
+다음 명령을 사용하여 ATA 센터를 업데이트합니다.
 
-**Syntax**:
+**구문**:
 
-    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
-**Installation options**:
+**설치 옵션**:
 
-|Name|Syntax|Mandatory for silent installation?|Description|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+|Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
+|도움말|/help|아니요|도움말 및 빠른 참조를 제공합니다. 모든 옵션 및 동작 목록을 포함하여 설정 명령에 대한 올바른 사용법을 보여줍니다.|
+|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|예|.Net Framework 설치를 위한 매개 변수를 지정합니다. .Net Framework 자동 설치를 적용하도록 설정해야 합니다.|
 
 
-When updating ATA, the installer automatically detects that ATA is already installed on the server, and no update installation option is required.
+ATA를 업데이트할 때 설치 관리자가 서버에 ATA가 이미 설치되어 있는지 자동으로 검색하며, 업데이트 설치 옵션은 필요하지 않습니다.
 
-**Examples**:
-To update the ATA Center silently. In large environments, the ATA Center update can take a while to complete. Monitor ATA logs to track the progress of the update.
+**예**: ATA 센터를 자동으로 업데이트하려면 다음을 수행합니다. 대규모 환경에서는 ATA 센터 업데이트를 완료하는 데 시간이 걸릴 수 있습니다. ATA 로그를 모니터링하여 업데이트 진행 상태를 추적합니다.
 
-    	"Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## Uninstall the ATA Center silently
+## ATA 센터 자동 제거
+<a id="uninstall-the-ata-center-silently" class="xliff"></a>
 
-Use the following command to perform a silent uninstall of the ATA Center:
-**Syntax**:
+ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **구문**:
 
-    Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
+    Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/Help]
      [--DeleteExistingDatabaseData]
 
-**Installation options**:
+**설치 옵션**:
 
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
+|Name|구문|자동 제거에 필수입니까?|설명|
 |-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Center from the server.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+|Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 제거 프로그램을 실행합니다.|
+|제거|/uninstall|예|서버에서 ATA 센터 자동 제거를 실행합니다.|
+|도움말|/help|아니요|도움말 및 빠른 참조를 제공합니다. 모든 옵션 및 동작 목록을 포함하여 설정 명령에 대한 올바른 사용법을 보여줍니다.|
 
-**Installation parameters**:
+**설치 매개 변수**:
 
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
+|Name|구문|자동 제거에 필수입니까?|설명|
 |-------------|----------|---------|---------|
-|DeleteExistingDatabaseData|DeleteExistingDatabaseData|No|Deletes all the files in the existing database.|
+|DeleteExistingDatabaseData|DeleteExistingDatabaseData|아니요|기존 데이터베이스에 있는 모든 파일을 삭제합니다.|
 
-**Examples**:
-To silently uninstall the ATA Center from the server, removing all existing database data:
+**예**: 서버에서 ATA 센터를 자동으로 제거하기 위해 다음과 같이 기존 데이터베이스의 모든 데이터를 제거합니다.
 
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## ATA Gateway Silent Installation
-Use the following command to silently install the ATA Gateway:
+## ATA 게이트웨이 자동 설치
+<a id="ata-gateway-silent-installation" class="xliff"></a>
+다음 명령을 사용하여 ATA 게이트웨이를 자동으로 설치합니다.
 
-**Syntax**:
+**구문**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
     [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
-**Installation options**:
+> [!NOTE]
+> 도메인에 연결된 컴퓨터에서 작업 중이며 ATA 관리자 사용자 이름 및 암호를 사용하여 로그인한 경우에는 여기서 자격 증명을 제공할 필요가 없습니다.
 
-|Name|Syntax|Mandatory for silent installation?|Description|
+
+**설치 옵션**:
+
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, UI will prompt before restart.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+|Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
+|도움말|/help|아니요|도움말 및 빠른 참조를 제공합니다. 모든 옵션 및 동작 목록을 포함하여 설정 명령에 대한 올바른 사용법을 보여줍니다.|
+|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|예|.Net Framework 설치를 위한 매개 변수를 지정합니다. .Net Framework 자동 설치를 적용하도록 설정해야 합니다.|
 
-**Installation parameters**:
+**설치 매개 변수**:
 
-|Name|Syntax|Mandatory for silent installation?|Description|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|No|Sets the certificate thumbprint for the ATA Center service. This certificate is used to secure communication between the ATA Center and the ATA Gateway. If not set, the installation will generate a self-signed certificate.|
-|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
+|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
+|ConsoleAccountName|ConsoleAccountName="<AccountName>"|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 이름을 설정합니다.|
+|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 암호를 설정합니다.|
 
-**Examples**:
-To silently install the ATA Gateway and register it with the ATA Center using the specified credentials:
+**예제**: ATA 게이트웨이를 자동으로 설치하려면 ATA 관리자 자격 증명을 사용하여 도메인에 연결된 컴퓨터에 로그인합니다. 자격 증명을 지정할 필요가 없습니다. 그렇지 않으면 지정된 자격 증명을 사용하여 ATA 센터에 등록합니다.
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## Update the ATA Gateway
+## ATA 게이트웨이 업데이트
+<a id="update-the-ata-gateway" class="xliff"></a>
 
-Use the following command to silently update the ATA Gateway:
+다음 명령을 사용하여 ATA 게이트웨이를 자동으로 업데이트합니다.
 
-**Syntax**:
+**구문**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 
 
-**Installation options**:
+**설치 옵션**:
 
-|Name|Syntax|Mandatory for silent installation?|Description|
+|Name|구문|자동 설치에 필수인가요?|설명|
 |-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the installer displaying no UI and no prompts.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
+|Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 설치 관리자를 실행합니다.|
+|도움말|/help|아니요|도움말 및 빠른 참조를 제공합니다. 모든 옵션 및 동작 목록을 포함하여 설정 명령에 대한 올바른 사용법을 보여줍니다.|
+|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|예|.Net Framework 설치를 위한 매개 변수를 지정합니다. .Net Framework 자동 설치를 적용하도록 설정해야 합니다.|
 
 
-**Examples**:
-To update the ATA Gateway silently:
+**예**: ATA 게이트웨이를 자동으로 업데이트하려면 다음을 수행합니다.
 
-    	Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
+        Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Uninstall the ATA Gateway silently
+## ATA 게이트웨이 자동 제거
+<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
 
-Use the following command to perform a silent uninstall of the ATA Gateway:
-**Syntax**:
+ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합니다. **구문**:
 
-    Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/NoRestart] [/Help]
+    Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
     
-**Installation options**:
+**설치 옵션**:
 
-|Name|Syntax|Mandatory for silent uninstallation?|Description|
+|Name|구문|자동 제거에 필수입니까?|설명|
 |-------------|----------|---------|---------|
-|Quiet|/quiet|Yes|Runs the uninstaller displaying no UI and no prompts.|
-|Uninstall|/uninstall|Yes|Runs the silent uninstallation of the ATA Gateway from the server.|
-|NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
-|Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
+|Quiet|/quiet|예|UI 및 프롬프트를 표시하지 않고 제거 프로그램을 실행합니다.|
+|제거|/uninstall|예|서버에서 ATA 게이트웨이 자동 제거를 실행합니다.|
+|도움말|/help|아니요|도움말 및 빠른 참조를 제공합니다. 모든 옵션 및 동작 목록을 포함하여 설정 명령에 대한 올바른 사용법을 보여줍니다.|
 
-**Examples**:
-To silently uninstall the ATA Gateway from the server:
+**예**: 서버에서 ATA 게이트웨이를 자동으로 제거하려면 다음을 수행합니다.
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
@@ -228,8 +221,9 @@ To silently uninstall the ATA Gateway from the server:
 
 
 
-## See Also
+## 참고 항목
+<a id="see-also" class="xliff"></a>
 
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [Configure event collection](configure-event-collection.md)
-- [ATA prerequisites](ata-prerequisites.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [이벤트 수집 구성](configure-event-collection.md)
+- [ATA 필수 구성 요소](ata-prerequisites.md)

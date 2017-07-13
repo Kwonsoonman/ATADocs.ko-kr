@@ -1,55 +1,59 @@
 ---
-# required metadata
-
-title: Monitor Advanced Threat Analytics Health Center alerts | Microsoft Docs
-description: Use the ATA Health Center to check how the ATA service is working and be alerted to potential problems.
-keywords:
+title: "Advanced Threat Analytics 시스템 상태 및 이벤트 모니터링 | Microsoft Docs"
+description: "ATA 상태 관리 센터를 사용하면 ATA 서비스의 작동 상태를 확인하고 문제 가능성에 대한 경고를 받고 이벤트 뷰어에서 시스템 이벤트를 볼 수 있습니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 07/2/2017
 ms.topic: article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 7e396cddb818c0e80f8b7d78764a58d6abd560e5
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# ATA Health Center
-The ATA Health Center lets you know how your ATA service is performing and alerts you to problems.
+# ATA 시스템 상태 및 이벤트 작업
+<a id="working-with-ata-system-health-and-events" class="xliff"></a>
 
-## Working with the ATA Health Center
-The ATA Health Center lets you know that there's a problem by raising an alert (a red dot) above the Health Center icon in the menu bar.
+## ATA 상태 관리 센터
+<a id="ata-health-center" class="xliff"></a>
+ATA 상태 관리 센터에서는 ATA 서비스의 작동 상태를 확인하고 문제에 대한 경고를 받을 수 있습니다.
 
-![ATA Health Center red dot toolbar](media/ATA-Health-Center-Alert-red-dot.png)
+## ATA 상태 관리 센터 사용
+<a id="working-with-the-ata-health-center" class="xliff"></a>
+ATA 상태 관리 센터에서는 메뉴 모음의 상태 관리 센터 아이콘 위에 경고(빨간 점)를 표시하여 문제가 있음을 알려 줍니다.
 
-### Managing ATA health
-To check up on your system's overall health, click the Health Center icon in the menu bar ![ATA Health Center icon](media/ATA-red-dot.png)
+![ATA 상태 관리 센터 빨간 점 도구 모음](media/ATA-Health-Center-Alert-red-dot.png)
 
--   All open alerts can be managed by setting them to **Resolved** or **Dismissed**. In the Alert, click **Open** and scroll down to either **Resolved** or **Dismissed**.
+### ATA 상태 관리
+<a id="managing-ata-health" class="xliff"></a>
+시스템의 전반적인 상태를 확인하려면 메뉴 모음에서 상태 관리 센터 아이콘을 클릭합니다. ![ATA 상태 관리 센터 아이콘](media/ATA-red-dot.png)
 
--   If you resolve an issue and ATA detects that the issue persists, the issue will automatically be moved back to the **Open** issues list. If ATA detects that an open issue is resolved, it will automatically be moved to the **Resolved** issues list.
+-   열려 있는 모든 경고는 **해결됨** 또는 **해제됨**으로 설정하여 관리할 수 있습니다. 이렇게 하려면 경고에서 **열림**을 클릭한 다음 아래쪽의 **해결됨** 또는 **해제됨**으로 스크롤합니다.
 
--   **Dismissed** issues are issues that you do not want ATA to continue to check - for example, if you are alerted to an issue that you know exists and you do not plan to resolve the issue but do not want to continue to get notifications about it and you no longer want to see it in your **Open** issues list, you can set it to **Dismissed**.
+-   문제를 해결했는데도 ATA에서 해당 문제가 계속되는 것으로 검색하는 경우에는 문제가 **열림** 문제 목록으로 다시 자동 이동합니다. ATA에서 열린 문제가 해결되었음을 검색하면 해당 문제는 **해결됨** 문제 목록으로 자동 이동합니다.
 
-![ATA Health Center issues image](media/ATA-Health-Issue.JPG)
+-   **해제됨** 상태의 문제는 ATA가 계속 확인하지 않도록 할 문제입니다. 예를 들어 발생했음을 알고 있는 문제에 대한 경고가 표시되는 경우 해당 문제를 해결하지는 않되 문제에 대한 알림을 계속 받지 않고 **열림** 문제 목록에 이 문제를 더 이상 표시하지 않으려면 문제를 **해제됨** 상태로 설정합니다.
 
-## See Also
-- [Working with ATA detection settings](working-with-detection-settings.md)
-- [Working with suspicious activities](working-with-suspicious-activities.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+![ATA 상태 관리 센터 문제 이미지](media/ATA-Health-Issue.JPG)
+
+
+
+
+
+
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 검색 설정 작업](working-with-detection-settings.md)
+- [의심스러운 활동 작업](working-with-suspicious-activities.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

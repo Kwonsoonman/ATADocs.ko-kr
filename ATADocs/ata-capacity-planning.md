@@ -1,224 +1,225 @@
 ---
-# required metadata
-
-title: Planning your Advanced Threat Analytics deployment | Microsoft Docs
-description: Helps you plan your deployment and decide how many ATA servers will be needed to support your network
-keywords:
+title: "Advanced Threat Analytics 배포 계획 | Microsoft 문서"
+description: "배포를 계획하고 네트워크를 지원하는 데 필요한 ATA 서버의 수를 결정하는 데 도움이 됩니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2017
+ms.date: 7/5/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
-ms.prod:
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 3a313ba032a43bff90e37908909830f7c741c39c
+ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/05/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# ATA Capacity Planning
-This topic helps you determine how many ATA servers will be needed to monitor your network, including understanding how many ATA Gateways and/or ATA Lightweight Gateways you need and the server capacity for your ATA Center and ATA Gateways.
+
+# ATA 용량 계획
+<a id="ata-capacity-planning" class="xliff"></a>
+이 항목에서는 네트워크를 모니터링하는 데 필요한 ATA 서버 수를 결정하는 데 도움이 되는 정보를 제공합니다. 필요한 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이 수와 ATA 센터 및 ATA 게이트웨이에 대한 서버 용량을 이해하는 데에도 도움이 됩니다.
 
 > [!NOTE] 
-> The ATA Center can be deployed on any IaaS vendor as long as the performance requirements described in this article are met.
+> 이 문서에 설명된 성능 요구 사항에 충족하기만 하면 모든 IaaS 공급 업체에 ATA Center를 배포할 수 있습니다.
 
-##Using the sizing tool
-The recommended and simplest way to determine capacity for your ATA deployment is to use the [ATA Sizing Tool](http://aka.ms/atasizingtool). Run the ATA Sizing Tool and from the Excel file results, use the following fields to determine the ATA capacity you need:
+##크기 조정 도구 사용
+<a id="using-the-sizing-tool" class="xliff"></a>
+ATA 배포의 용량을 결정할 때 가장 간단한 권장 방법은 [ATA Sizing Tool](http://aka.ms/atasizingtool)(ATA 크기 조정 도구)을 사용하는 것입니다. ATA 크기 조정 도구를 실행하고 Excel 파일 결과에서 다음 필드를 사용하여 필요한 ATA 용량을 결정합니다.
 
-- ATA Center CPU and Memory: Match the **Busy Packets/sec** field in the ATA Center table in the results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
+- ATA 센터 CPU 및 메모리: ATA 센터 테이블 결과 파일의 **Busy Packets/sec**(사용 중인 패킷/초) 필드를 [ATA 센터 테이블](#ata-center-sizing)의 **PACKETS PER SECOND**(패킷/초) 필드와 비교합니다.
 
-- ATA Center Storage: Match the **Avg Packets/sec** field in the ATA Center table in the results file to the **PACKETS PER SECOND** field in the [ATA Center table](#ata-center-sizing).
-- ATA Gateway: Match the **Busy Packets/sec** field in the ATA Gateway table in the results file to the **PACKETS PER SECOND** field in the [ATA Gateway table](#ata-gateway-sizing) or the [ATA Lightweight Gateway table](#ata-lightweight-gateway-sizing), depending on the [gateway type you choose](#choosing-the-right-gateway-type-for-your-deployment).
-
-
-![Sample capacity planning tool](media/capacity tool.png)
+- ATA 센터 저장소: ATA 센터 테이블 결과 파일의 **Avg Packets/sec**(평균 패킷/초) 필드를 [ATA 센터 테이블](#ata-center-sizing)의 **PACKETS PER SECOND**(패킷/초) 필드와 비교합니다.
+- ATA 게이트웨이: 결과 파일의 ATA 센터 테이블에 있는 **Busy Packets/sec**(사용 중인 패킷/초) 필드를 [선택한 게이트웨이 유형](#choosing-the-right-gateway-type-for-your-deployment)에 따라 [ATA 게이트웨이 테이블](#ata-gateway-sizing) 또는 [ATA 경량 게이트웨이 테이블](#ata-lightweight-gateway-sizing)의 **PACKETS PER SECOND**(패킷/초) 필드와 비교합니다.
 
 
-
-If for some reason you cannot use the ATA Sizing Tool, you need to manually gather the packet/sec counter information from all your Domain Controllers for a period of 24 hours with a very low collection interval (approximately 5 seconds). Then, for each Domain Controller, you  must calculate the daily average and the busiest period (15 minutes) average.
-The following sections present the instruction for how to collect the packets/sec counter from one Domain Controller.
+![샘플 용량 계획 도구](media/capacity tool.png)
 
 
 
-### ATA Center Sizing
-The ATA Center requires a recommended minimum of 30 days of data for user behavioral analytics.
+어떤 이유로든 ATA 크기 조정 도구를 사용할 수 없으면 24시간 동안 짧은 수집 간격(약 5초)으로 모든 도메인 컨트롤러에서 패킷/초 카운터 정보를 수동으로 수집합니다. 그런 다음 각 도메인 컨트롤러에 대해 일일 평균과 최대 사용 기간(15분) 평균을 계산해야 합니다.
+다음 섹션에서는 하나의 도메인 컨트롤러에서 패킷/초 카운터를 수집하는 방법에 대해 지침을 제공합니다.
+
+
+
+### ATA 센터 크기 결정
+<a id="ata-center-sizing" class="xliff"></a>
+사용자 동작을 분석하려면 ATA 센터에 최소 30일 분량(권장)의 데이터가 필요합니다.
  
 
-|Packets per second from all DCs|CPU (cores&#42;)|Memory (GB)|Database storage per day (GB)|Database storage per month (GB)|IOPS&#42;&#42;|
+|모든 데이터 센터의 초당 패킷 수|CPU(코어&#42;)|메모리(GB)|매일 데이터베이스 저장소 사용량(GB)|매월 데이터베이스 저장소 사용량(GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1,000|2|32|0.3|9|30 (100)
-|10,000|4|48|3|90|200 (300)
-|40,000|8|64|12|360|500 (1,000)
-|100,000|12|96|30|900|1,000 (1,500)
+|1,000|2|32|0.3|9|30(100)
+|10,000|4|48|3|90|200(300)
+|40,000|8|64|12|360|500(1,000)
+|100,000|12|96|30|900|1,000(1,500)
 |200,000|24|112|60|1,800|2,000 (3,000)
 |400,000|40|128|120|3,600|4,000 (5,000)
 
-&#42;This includes physical cores, not hyper-threaded cores.
+&#42;실제 코어만 포함되며 하이퍼스레딩 코어는 포함되지 않습니다.
 
-&#42;&#42;Average numbers (Peak numbers)
+&#42;&#42;평균 수(최대 수)입니다.
 > [!NOTE]
-> -   The ATA Center can handle an aggregated maximum of 400,000 frames per second (FPS) from all the monitored domain controllers. In some environments, the same ATA Center can handle overall traffic that is higher than 400,000. Please contact askcesec@microsoft.com for assistance with such environments.
-> -   The amounts of storage dictated here are net values, you should always account for future growth and to make sure that the disk the database resides on has at least 20% of free space.
-> -   If your free space reaches a minimum of either 20% or 100 GB, the oldest collection of data will be deleted. This will continue to occur until 5% or 50 GB of free space remains at which point data collection will stop working.
-> - It's possible to deploy the ATA Center on any IaaS vendor as long as the performance requirements that are described in this article are met.
-> -   The storage latency for read and write activities should be below 10 ms.
-> -   The ratio between read and write activities is approximately 1:3 below 100,000 packets-per-second and 1:6 above 100,000 packets-per-second.
-> -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-> -   For optimal performance, set the **Power Option** of the ATA Center to **High Performance**.<br>
-> -   When working on a physical server, the ATA database necessitates that you **disable** Non-uniform memory access (NUMA) in the BIOS. Your system may refer to NUMA as Node Interleaving, in which case you will have to **enable** Node Interleaving in order to disable NUMA. See your BIOS documentation for more information. Note that this is not relevant when the ATA Center is running on a virtual server.
+> -   ATA 센터는 모니터링되는 모든 도메인 컨트롤러에서 최대 400,000개의 누적 FPS(초당 패킷)를 처리할 수 있습니다. 일부 환경에서는 동일한 ATA 데이터 센터에서 400,000개 이상의 전체 트래픽을 처리할 수 있습니다. 이러한 환경에 대한 지원은 askcesec@microsoft.com으로 문의하세요.
+> -   위의 표에 나와 있는 저장소 크기는 순수 저장소 값입니다. 향후 확장을 고려하여 데이터베이스가 있는 디스크에 20% 이상의 사용 가능한 공간을 확보해 두어야 합니다.
+> -   사용 가능한 공간이 최소값인 20% 또는 100GB에 도달하면 가장 오래된 데이터 컬렉션이 삭제됩니다. 5%나 50GB의 사용 가능한 공간만이 남을 때까지 삭제 작업이 계속 수행되며, 그 이후에는 데이터 수집의 작동이 중지됩니다.
+> - 이 문서에 설명된 성능 요구 사항에 충족하기만 하면 모든 IaaS 공급 업체에 ATA Center를 배포할 수 있습니다.
+> -   읽기 및 쓰기 활동에 대한 저장소 대기 시간은 10ms 미만이어야 합니다.
+> -   읽기와 쓰기 활동의 비율은 초당 패킷 수가 100,000개 미만인 경우 약 1:3이고 100,000개를 초과하는 경우에는 1:6입니다.
+> -   가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
+> -   성능을 최적화하려면 ATA 센터의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
+> -   물리적 서버에서 작업할 때 ATA 데이터베이스를 사용하려면 BIOS에서 NUMA(Non-Uniform Memory Access)를 **사용하지 않도록 설정**해야 합니다. 시스템이 NUMA를 노드 인터리빙으로 참조할 수 있습니다. 이 경우 NUMA를 사용하지 않으려면 노드 인터리빙을 **사용하도록 설정**해야 합니다. 자세한 내용은 BIOS 설명서를 참조하세요. 이는 ATA 센터가 가상 서버에서 실행 중인 경우 관련이 없습니다.
 
 
-## Choosing the right gateway type for your deployment
-In an ATA deployment any combination of the ATA Gateway types is supported:
+## 배포에 맞는 올바른 게이트웨이 형식 선택
+<a id="choosing-the-right-gateway-type-for-your-deployment" class="xliff"></a>
+ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 
-- Only ATA Gateway(s)
-- Only ATA Lightweight Gateway(s)
-- A combination of both
+- ATA 게이트웨이 전용
+- ATA 경량 게이트웨이 전용
+- 두 형식의 조합
 
-When deciding the Gateway deployment type, consider the following:
+게이트웨이 배포 유형을 결정할 때는 다음 혜택을 고려하세요.
 
-|Gateway type|Benefits|Cost|Deployment topology|Domain controller use|
+|게이트웨이 형식|이점|비용|배포 토폴로지|도메인 컨트롤러 사용|
 |----|----|----|----|-----|
-|ATA Gateway|The Out of band deployment makes it harder for attackers to discover ATA is present|Higher|Installed alongside the domain controller (out of band)|Supports up to 50,000 packets per second|
-|ATA Lightweight Gateway|Doesn't require a dedicated server and port-mirroring configuration|Lower|Installed on the domain controller|Supports up to 10,000 packets per second|
+|ATA Gateway|대역 외 배포의 경우 공격자가 ATA가 있는지 검색하기가 어려움|높음|도메인 컨트롤러와 함께 설치(대역 외)|초당 최대 50,000 패킷 지원|
+|ATA 경량 게이트웨이|전용 서버 및 포트 미러링 구성 필요 없음|소문자|도메인 컨트롤러에 설치|초당 최대 10,000 패킷 지원|
 
-The following are examples of scenarios in which domain controllers should be covered by the ATA Lightweight Gateway:
-
-
-- Branch sites
-
-- Virtual domain controllers deployed in the cloud (IaaS)
+다음은 도메인 컨트롤러를 ATA 경량 게이트웨이로 다루어야 하는 시나리오의 예입니다.
 
 
-The following are examples of scenarios in which domain controllers should be covered by the ATA Gateway:
+- 분기 사이트
+
+- 클라우드(IaaS)에 배포된 가상 도메인 컨트롤러
 
 
-- Headquarter data centers (having domain controllers with more than 10,000 packets per seconds)
+다음은 도메인 컨트롤러를 ATA 게이트웨이로 다루어야 하는 시나리오의 예입니다.
 
 
-### ATA Lightweight Gateway Sizing
-
-An ATA Lightweight Gateway can support the monitoring of one domain controller based on the amount of network traffic the domain controller generates. 
+- 본사 데이터 센터(초당 10,000 패킷보다 많은 도메인 컨트롤러 보유)
 
 
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)&#42;&#42;&#42;|
+### ATA 경량 게이트웨이 크기 조정
+<a id="ata-lightweight-gateway-sizing" class="xliff"></a>
+
+하나의 ATA 경량 게이트웨이는 도메인 컨트롤러에서 생성되는 네트워크 트래픽 양에 따라 하나의 도메인 컨트롤러에 대한 모니터링을 지원할 수 있습니다. 
+
+
+|초당 패킷 수&#42;|CPU(코어&#42;&#42;)|메모리(GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
 |1,000|2|6|
 |5,000|6|16|
-	|10,000|10|24|
+    |10,000|10|24|
 
-&#42;Total number of packets-per-second on the domain controller being monitored by the specific ATA Lightweight Gateway.
+&#42;특정 ATA 경량 게이트웨이가 모니터링 중인 도메인 컨트롤러에서 초당 생성되는 총 패킷 수입니다.
 
-&#42;&#42;Total amount of non-hyper threaded cores that this domain controller has installed.<br>While hyper threading is acceptable for the ATA Lightweight Gateway, when planning for capacity, you should count actual cores and not hyper threaded cores.
+&#42;&#42;이 도메인 컨트롤러에서 설치한 하이퍼 이외의 총 스레드 코어 수입니다.<br>용량을 계획할 때 ATA 경량 게이트웨이에 대 해 하이퍼 스레딩이 허용되지만 하이퍼 스레드 코어가 아닌 실제 코어를 계산해야 합니다.
 
-&#42;&#42;&#42;Total amount of memory that this domain controller has installed.
+&#42;&#42;&#42;이 도메인 컨트롤러에서 설치한 총 메모리 양입니다.
 
-> [!NOTE]	
-> -   If the domain controller does not have the necessary amount of resources required by the ATA Lightweight Gateway, the domain controller performance will not be effected, but the ATA Lightweight Gateway might not operate as expected.
-> -   When running as a virtual machine dynamic memory or any other memory ballooning feature is not supported.
-> -   For optimal performance, set the **Power Option** of the ATA Lightweight Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> [!NOTE]   
+> -   ATA 경량 게이트웨이에 필요한 리소스가 도메인 컨트롤러에 없으면 도메인 컨트롤러 성능에는 영향을 주지 않지만 ATA 경량 게이트웨이가 예상대로 작동하지 않을 수 있습니다.
+> -   가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
+> -   성능을 최적화하려면 ATA 경량 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.
+> -   최소 5GB의 공간이 필요하며 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간을 포함하여 10GB가 권장됩니다.
 
 
-### ATA Gateway Sizing
+### ATA 게이트웨이 크기 결정
+<a id="ata-gateway-sizing" class="xliff"></a>
 
-Consider the following when deciding how many ATA Gateways to deploy.
+배포할 ATA 게이트웨이 수를 결정할 때는 다음 문제를 고려하세요.
 
--	**Active Directory forests and domains**<br>
-	ATA can monitor traffic from multiple domains from a single Active Directory forest. Monitoring multiple Active Directory forests requires separate ATA deployments. A single ATA deployment should not be configured to monitor network traffic of domain controllers from different forests.
+-   **Active Directory 포리스트 및 도메인**<br>
+    ATA는 하나의 Active Directory 포리스트에서 여러 도메인의 트래픽을 모니터링할 수 있습니다. 여러 Active Directory 포리스트를 모니터링하려면 별도의 ATA를 배포해야 합니다. 단일 ATA 배포를 서로 다른 여러 포리스트의 도메인 컨트롤러에서 네트워크 트래픽을 모니터링하도록 구성하지 마세요.
 
--	**Port Mirroring**<br>
-Port mirroring considerations might require you to deploy multiple ATA Gateways per data center or branch site.
+-   **포트 미러링**<br>
+포트 미러링 고려 사항으로 인해 데이터 센터 또는 분기 사이트마다 여러 개의 ATA 게이트웨이를 배포해야 할 수 있습니다.
 
--	**Capacity**<br>
-	An ATA Gateway can support monitoring multiple domain controllers, depending on the amount of network traffic of the domain controllers being monitored. 
+-   **용량**<br>
+    모니터링 중인 도메인 컨트롤러의 네트워크 트래픽 양에 따라 ATA 게이트웨이 하나가 여러 도메인 컨트롤러를 모니터링할 수 있습니다. 
 <br>
 
 
 
-|Packets per second&#42;|CPU (cores&#42;&#42;)|Memory (GB)|
+|초당 패킷 수&#42;|CPU(코어&#42;&#42;)|메모리(GB)|
 |---------------------------|-------------------------|---------------|
 |1,000|1|6|
 |5,000|2|10|
 |10,000|3|12|
 |20,000|6|24|
 |50,000|16|48|
-&#42;Total average number of packets-per-second from all domain controllers being monitored by the specific ATA Gateway during their busiest hour of the day.
+&#42;하루 중 가장 바쁜 시간 동안 특정 ATA 게이트웨이가 모니터링 중인 모든 도메인 컨트롤러에서 초당 생성되는 평균 패킷 수입니다.
 
-&#42;The total amount of domain controller port-mirrored traffic cannot exceed the capacity of the capture NIC on the ATA Gateway.
+&#42;도메인 컨트롤러에서 포트 미러링되는 총 트래픽 양은 ATA 게이트웨이의 캡처 NIC 용량을 초과할 수 없습니다.
 
-&#42;&#42;Hyper-threading must be disabled.
+&#42;&#42;하이퍼스레딩은 사용하지 않도록 설정해야 합니다.
 
 > [!NOTE] 
-> -   Dynamic memory is not supported.
-> -   For optimal performance, set the **Power Option** of the ATA Gateway to **High Performance**.
-> -   A minimum of 5 GB of space is required and 10 GB is recommended. This includes space needed for the ATA binaries, [ATA logs](troubleshooting-ata-using-logs.md) and [performance logs](troubleshooting-ata-using-perf-counters.md).
+> -   동적 메모리가 지원되지 않습니다.
+> -   성능을 최적화하려면 ATA 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.
+> -   최소 5GB의 공간이 필요하며 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간을 포함하여 10GB가 권장됩니다.
 
 
-## Domain controller traffic estimation
-There are various tools that you can use to discover the average packets per second of your domain controllers. If you do not have any tools that track this counter, you can use Performance Monitor to gather the required information.
+## 도메인 컨트롤러 트래픽 예측
+<a id="domain-controller-traffic-estimation" class="xliff"></a>
+여러 가지 도구를 사용하여 도메인 컨트롤러의 초당 평균 패킷 수를 확인할 수 있습니다. 이 카운터를 추적하는 도구가 없는 경우 성능 모니터를 사용하여 필요한 정보를 수집할 수 있습니다.
 
-To determine packets per second, perform the following on each domain controller:
+초당 패킷 수를 확인하려면 각 도메인 컨트롤러에서 다음 단계를 수행합니다.
 
-1.  Open Performance Monitor.
+1.  성능 모니터를 엽니다.
 
-    ![Performance monitor image](media/ATA-traffic-estimation-1.png)
+    ![성능 모니터 이미지](media/ATA-traffic-estimation-1.png)
 
-2.  Expand **Data Collector Sets**.
+2.  **데이터 수집기 집합**을 확장합니다.
 
-    ![Data collector sets image](media/ATA-traffic-estimation-2.png)
+    ![데이터 수집기 집합 이미지](media/ATA-traffic-estimation-2.png)
 
-3.  Right click **User Defined** and select **New** &gt; **Data Collector Set**.
+3.  **사용자 정의**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기** &gt; **데이터 수집기 집합**을 선택합니다.
 
-    ![New data collector set image](media/ATA-traffic-estimation-3.png)
+    ![새 데이터 수집기 집합 이미지](media/ATA-traffic-estimation-3.png)
 
-4.  Enter a name for the collector set and select **Create Manually (Advanced)**.
+4.  수집기 집합의 이름을 입력하고 **수동으로 만들기(고급)**를 선택합니다.
 
-5.  Under **What type of data do you want to include?**, select  **Create data logs and Performance counter**.
+5.  **어떤 형식의 데이터를 포함하시겠습니까?**에서 **데이터 로그 만들기**를 선택하고 아래쪽에서 성능 카운터 확인란을 선택합니다.
 
-    ![Type of data for new data collector set image](media/ATA-traffic-estimation-5.png)
+    ![새 데이터 수집기 집합의 데이터 형식 이미지](media/ATA-traffic-estimation-5.png)
 
-6.  Under **Which performance counters would you like to log** click **Add**.
+6.  **어떤 성능 카운터를 기록하시겠습니까?**에서 **추가**를 클릭합니다.
 
-7.  Expand **Network Adapter** and select **Packets/sec** and select the proper instance. If you are not sure, you can select **&lt;All instances&gt;** and click **Add** and **OK**.
+7.  **네트워크 어댑터**를 확장하고 **Packets/sec**를 선택한 후에 적절한 인스턴스를 선택합니다. 어떤 카운터를 추가해야 하는지 모르는 경우 **&lt;모든 인스턴스&gt;**를 선택하고 **추가**, **확인**을 차례로 클릭하면 됩니다.
 
     > [!NOTE]
-    > To do this, in a command line, run `ipconfig /all` to see the name of the adapter and configuration.
+    > 이 작업을 수행하려면 명령줄에서 `ipconfig /all`을 실행하여 구성 및 어댑터의 이름을 확인합니다.
 
-    ![Add performance counters image](media/ATA-traffic-estimation-7.png)
+    ![성능 카운터 추가 이미지](media/ATA-traffic-estimation-7.png)
 
-8.  Change the **Sample interval** to **1 second**.
+8.  **샘플 간격**을 **1초**로 변경합니다.
 
-9. Set the location where you want the data to be saved.
+9. 데이터를 저장할 위치를 설정합니다.
 
-10. Under **Create the data collector set**  select **Start this data collector set now** and click **Finish**.
+10. **데이터 수집기 집합 만들기**에서 **이 데이터 수집기 집합을 지금 시작**을 선택하고 **마침**을 클릭합니다.
 
-    You should now see the data collector set you just created with a green triangle indicating that it is working.
+    이제 만든 데이터 수집기 집합이 나타나고 해당 집합이 작동함을 나타내는 녹색 삼각형이 표시됩니다.
 
-11. After 24 hours, stop the data collector set, by right clicking the data collector set and selecting **Stop**.
+11. 24시간이 지난 후 데이터 수집기 집합을 마우스 오른쪽 단추로 클릭하고 **중지**를 선택하여 데이터 수집기 집합을 중지합니다.
 
-    ![Stop data collector set image](media/ATA-traffic-estimation-12.png)
+    ![데이터 수집기 집합 중지 이미지](media/ATA-traffic-estimation-12.png)
 
-12. In File Explorer, browse to the folder where the .blg file was saved and double click it to open it in Performance Monitor.
+12. 파일 탐색기에서 .blg 파일이 저장된 폴더를 찾은 다음 해당 파일을 두 번 클릭하여 성능 모니터에서 엽니다.
 
-13. Select the Packets/sec counter, and record the average and maximum values.
+13. Packets/sec 카운터를 선택하고 평균값과 최대값을 기록합니다.
 
-    ![Packets per second counter image](media/ATA-traffic-estimation-14.png)
+    ![Packets/sec 카운터 이미지](media/ATA-traffic-estimation-14.png)
 
-## See Also
-- [ATA prerequisites](ata-prerequisites.md)
-- [ATA architecture](ata-architecture.md)
-- [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 필수 구성 요소](ata-prerequisites.md)
+- [ATA 아키텍처](ata-architecture.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

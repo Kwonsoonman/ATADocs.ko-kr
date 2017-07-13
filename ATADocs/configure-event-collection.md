@@ -1,296 +1,102 @@
 ---
-# required metadata
-
-title: Configure event collection in Advanced Threat Analytics | Microsoft Docs
-description: Describes your options for configuring event collection with ATA
-keywords:
+title: "Advanced Threat Analytics에서 Windows 이벤트 전달 구성 | Microsoft Docs"
+description: "ATA를 통해 Windows 이벤트 전달 기능을 구성하는 옵션에 대해 설명합니다."
+keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 7/2/2017
 ms.topic: get-started-article
-ms.prod:
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology:
+ms.technology: 
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
+ms.openlocfilehash: 6469f602d2da833e96bba72003aad3fe2b67eb48
+ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/03/2017
 ---
-
-*Applies to: Advanced Threat Analytics version 1.6 and 1.7*
-
+*적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Configure Event Collection
-To enhance detection capabilities, ATA needs Windows Event log ID 4776. This can be forwarded to the ATA Gateway in one of two ways, by configuring the ATA Gateway to listen for SIEM events or by [Configuring Windows Event Forwarding](#configuring-windows-event-forwarding).
 
-## Event collection
-In addition to collecting and analyzing network traffic to and from the domain controllers, ATA can use Windows event 4776 to further enhance ATA Pass-the-Hash detection. This can be received from your SIEM or by setting Windows Event Forwarding from your domain controller. Events collected provide ATA with additional information that is not available via the domain controller network traffic.
+# Windows 이벤트 전달 구성
+<a id="configuring-windows-event-forwarding" class="xliff"></a>
 
-### SIEM/Syslog
-For ATA to be able to consume data from a Syslog server, you need to do the following:
+검색 기능을 강화하려면 ATA에 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756, 4757이 있어야 합니다. 이러한 이벤트는 ATA 경량 게이트웨이에서 자동으로 읽거나, ATA 경량 게이트웨이가 배포되지 않은 경우 두 가지 방법 중 하나로 ATA 게이트웨이에 전달될 수 있습니다. 하나는 ATA 게이트웨이가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 [Windows 이벤트 전달을 구성](#configuring-windows-event-forwarding)하는 것입니다.
 
--   Configure your ATA Gateway servers to listen to and accept events forwarded from the SIEM/Syslog server.
 > [!NOTE]
-> ATA only listens on IPv4 and not IPv6. 
--   Configure your SIEM/Syslog server to forward specific events to the ATA Gateway.
+> ATA 버전 1.8 이상에서는 ATA 경량 게이트웨이에 이벤트 수집 구성이 더 이상 필요하지 않습니다. 이제 ATA 경량 게이트웨이가 이벤트 전달을 구성하지 않고도 로컬에서 이벤트를 읽을 수 있습니다.
 
-> [!IMPORTANT]
-> -   Do not forward all the Syslog data to the ATA Gateway.
-> -   ATA supports UDP traffic from the SIEM/Syslog server.
+### 포트 미러링으로 ATA 게이트웨이에 대한 WEF 구성
+<a id="wef-configuration-for-ata-gateways-with-port-mirroring" class="xliff"></a>
 
-Refer to your SIEM/Syslog server's product documentation for information on how to configure forwarding of specific events to another server. 
+도메인 컨트롤러에서 ATA 게이트웨이로의 미러링을 구성하고 나면 원본에서 시작된 구성을 사용하여 아래 지침에 따라 Windows 이벤트 전달을 구성합니다. 이것이 Windows 이벤트 전달을 구성하는 한 가지 방법입니다. 
 
-### Windows event forwarding
-If you do not use a SIEM/Syslog server, you can configure your Windows domain controllers to forward Windows Event ID 4776 to be collected and analyzed by ATA. Windows Event ID 4776 provides data regarding NTLM authentications.
+**1단계: 도메인 Event Log Readers 그룹에 네트워크 서비스 계정 추가** 
 
-## Configuring the ATA Gateway to listen for SIEM events
+이 시나리오에서는 ATA 게이트웨이가 도메인의 멤버라고 간주합니다.
 
-1.  On the ATA configuration, under "Events" tab enable **Syslog** and press **Save**.
+1.  Active Directory 사용자 및 컴퓨터를 열고 **Builtin** 폴더로 이동하여 **Event Log Readers** 그룹을 두 번 클릭합니다. 
+2.  **멤버**를 선택합니다.
+4.  **네트워크 서비스**가 목록에 없으면 **추가**를 클릭하고, **선택할 개체 이름을 입력하십시오** 필드에 **네트워크 서비스**를 입력합니다. **이름 확인**클릭한 다음 **확인**을 두 번 클릭합니다. 
 
-    ![Enable syslog listener UDP image](media/ATA-enable-siem-forward-events.png)
+**네트워크 서비스**를 **Event Log Readers** 그룹에 추가 한 후 변경 내용을 적용하려면 도메인 컨트롤러를 다시 부팅해야 합니다.
 
-2.  Configure your SIEM or Syslog server to forward Windows Event ID 4776 to the IP address of one of the ATA Gateways. For additional information on configuring your SIEM, refer to your SIEM online help or technical support options for specific formatting requirements for each SIEM server.
-
-### SIEM support
-ATA supports SIEM events in the following formats:  
-
-#### RSA Security Analytics
-&lt;Syslog Header&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
-
--   Syslog header is optional.
-
--   “\n” character separator is required between all fields.
-
--   The fields, in order, are:
-
-    1.  RsaSA constant (must appear).
-
-    2.  The timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). Preferably  in milliseconds accuracy, this is very important.
-
-    3.  The windows event ID
-
-    4.  The windows event provider name
-
-    5.  The windows event log name
-
-    6.  The name of the computer receiving the event (the DC in this case)
-
-    7.  The name of the user authenticating
-
-    8.  The name of the source host name
-
-    9. The result code of the NTLM
-
--   The order is important and nothing else should be included in the message.
-
-#### HP Arcsight
-CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
-
--   Must comply with the protocol definition.
-
--   No syslog header.
-
--   The header part (the part that’s separated by a pipe) must exist (as stated in the protocol).
-
--   The following keys in the _Extension_ part must be present in the event:
-
-    -   externalId = the Windows event ID
-
-    -   rt = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to us). Preferably  in milliseconds accuracy, this is very important.
-
-    -   cat = the Windows event log name
-
-    -   shost = the source host name
-
-    -   dhost = the computer receiving the event (the DC in this case)
-
-    -   duser = the user authenticating
-
--   The order is not important for the _Extension_ part
-
--   There must be a custom key and keyLable for these two fields:
-
-    -   “EventSource”
-
-    -   “Reason or Error Code” = The result code of the NTLM
-
-#### Splunk
-&lt;Syslog Header&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
-
-The computer attempted to validate the credentials for an account.
-
-Authentication Package:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
-
-Logon Account: Administrator
-
-Source Workstation:       SIEM
-
-Error Code:         0x0
-
--   Syslog header is optional.
-
--   There’s a “\r\n” character separator between all required fields.
-
--   The fields are in key=value format.
-
--   The following keys must exists and have a value:
-
-    -   EventCode = the Windows event ID
-
-    -   Logfile = the Windows event log name
-
-    -   SourceName = The Windows event provider name
-
-    -   TimeGenerated = the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably  in milliseconds accuracy, this is very important.
-
-    -   ComputerName = the source host name
-
-    -   Message = the original event text from the Windows event
-
--   The Message Key and value MUST be last.
-
--   The order is not important for the key=value pairs.
-
-#### QRadar
-QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data. Because ATA necessitates millisecond data, it is necessary to set QRadar to use agentless Windows event collection. For more information, see [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol").
-
-    <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
-
-The fields needed are:
-
-- The agent type for the collection
-- The windows event log provider name
-- The windows event log source
-- The DC fully qualified domain name
-- The windows event ID
-
-TimeGenerated is the timestamp of the actual event (make sure it’s not the timestamp of the arrival to the SIEM or when it’s sent to ATA). The format should match yyyyMMddHHmmss.FFFFFF, preferably in milliseconds accuracy, this is very important.
-
-Message is the original event text from the Windows event
-
-Make sure to have \t between the key=value pairs.
-
->[!NOTE] 
-> Using WinCollect for Windows event collection is not supported.
-
-## Configuring Windows Event Forwarding
-
-### WEF configuration for ATA Gateway's with port mirroring
-
-After you configured port mirroring from the domain controllers to the ATA Gateway, follow the instructions below to configure Windows Event forwarding using Source Initiated configuration. This is one way to configure Windows Event forwarding. 
-
-**Step 1: Add the network service account to the domain Event Log Readers Group.** 
-
-In this scenario we are assuming that the ATA Gateway is a member of the domain.
-
-1.	Open Active Directory Users and Computers, navigate to the **BuiltIn** folder and double click **Event Log Readers**. 
-2.	Select **Members**.
-4.	If **Network Service** is not listed, click **Add**, type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
-
-Note that after adding the **Network Service** to the **Event Log Readers** group you need to reboot the domain controllers for the change to take effect.
-
-**Step 2: Create a policy on the domain controllers to set the Configure target Subscription Manager setting.** 
+**2단계: 대상 구독 관리자 구성 설정을 위해 도메인 컨트롤러에서 정책 만들기** 
 > [!Note] 
-> You can create a group policy for these settings and apply the group policy to each domain controller monitored by the ATA Gateway. The steps below modify the local policy of the domain controller. 	
+> 이러한 설정에 대한 그룹 정책을 만들고 ATA 게이트웨이에서 모니터링할 각 도메인 컨트롤러에 그룹 정책을 적용할 수 있습니다. 다음 단계는 도메인 컨트롤러의 로컬 정책을 수정합니다.     
 
-1.	Run the following command on each domain controller: *winrm quickconfig*
-2.  From a command prompt type *gpedit.msc*.
-3.	Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**
+1.  각 도메인 컨트롤러에서 *winrm quickconfig* 명령을 실행합니다.
+2.  명령 프롬프트에 *gpedit.msc*를 입력합니다.
+3.  **컴퓨터 구성 정책 > 관리 템플릿 > Windows 구성 요소 > 이벤트 전달**을 확장합니다.
 
- ![Local policy group editor image](media/wef 1 local group policy editor.png)
+ ![로컬 정책 그룹 편집기 이미지](media/wef 1 local group policy editor.png)
 
-4.	Double click **Configure target Subscription Manager**.
+4.  **대상 가입 관리자 구성**을 두 번 클릭합니다.
    
-    1.	Select **Enabled**.
-    2.	Under **Options** click **Show**.
-    3.	Under **SubscriptionManagers** enter the following value and click **OK**:	*Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    1.  **사용**을 선택합니다.
+    2.  **옵션**에서 **표시**를 클릭합니다.
+    3.  **SubscriptionManagers**에서 다음 값을 입력하고 **확인**을 클릭합니다. *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
  
-   ![Configure target subscription image](media/wef 2 config target sub manager.png)
+   ![대상 구독 구성 이미지](media/wef 2 config target sub manager.png)
    
-    5.	Click **OK**.
-    6.	From an elevated command prompt type *gpupdate /force*. 
+    5.  **확인**을 클릭합니다.
+    6.  관리자 권한 명령 프롬프트에서 *gpupdate /force*를 입력합니다. 
 
-**Step 3: Perform the following steps on the ATA Gateway** 
+**3단계: ATA Gateway 서버에서 다음 단계 수행** 
 
-1.	Open an elevated command prompt and type *wecutil qc*
-2.	Open **Event Viewer**. 
-3.	Right click **Subscriptions** and select **Create Subscription**. 
+1.  관리자 권한 명령 프롬프트를 열고 *wecutil qc*를 입력합니다.
+2.  **이벤트 뷰어**를 엽니다. 
+3.  마우스 오른쪽 단추로 **구독**을 클릭하고 **구독 만들기**를 클릭합니다. 
 
-   1.	Enter a name and description for the subscription. 
-   2.	For **Destination Log** confirm that **Forwarded Events** is selected. For ATA to read the events, the destination log must be **Forwarded Events**. 
-   3.	Select **Source computer initiated** and click **Select Computers Groups**.
-        1.	Click **Add Domain Computer**.
-        2.	Enter the name of the domain controller in the **Enter the object name to select** field. Then click **Check Names** and click **OK**. 
+   1.   구독에 대한 이름과 설명을 입력합니다. 
+   2.   **대상 로그**에서 **전달된 이벤트**가 선택되어 있는지 확인합니다. ATA에서 이벤트를 읽으려면 대상 로그가 **전달된 이벤트**여야 합니다. 
+   3.   **원본 컴퓨터 시작**을 선택하고 **컴퓨터 그룹 선택**을 클릭합니다.
+        1.  **도메인 컴퓨터 추가**를 클릭합니다.
+        2.  **선택할 개체 이름을 입력하십시오** 필드에 도메인 컨트롤러의 이름을 입력합니다. **이름 확인**을 클릭하고 **확인**을 클릭합니다. 
        
-        ![Event Viewer image](media/wef3 event viewer.png)
+        ![이벤트 뷰어 이미지](media/wef3 event viewer.png)
    
         
-        3.	Click **OK**.
-   4.	Click **Select Events**.
+        3.  **확인**을 클릭합니다.
+   4.   **이벤트 선택**을 클릭합니다.
 
-        1. Click **By log** and select **Security**.
-        2. In the **Includes/Excludes Event ID** field type **4776** and click **OK**. 
+        1. **로그 기준**을 클릭하고 **보안**을 선택합니다.
+        2. **이벤트 ID 포함/제외** 필드에 이벤트 번호를 입력하고 **확인**을 클릭합니다. 
 
- ![Query filter image](media/wef 4 query filter.png)
+ ![쿼리 필터 이미지](media/wef 4 query filter.png)
 
-   5.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
-   6.	After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
-
-
-### WEF configuration for the ATA Lightweight Gateway
-When you install the ATA Lightweight Gateway on your domain controllers, you can set up your domain controllers to forward the events to itself. 
-Perform the following steps to configure the Window Event Forwarding when using the ATA Lightweight Gateway. This is one way to configure Windows Event forwarding.  
-
-**Step 1: Add the network service account to the domain Event Log Readers Group** 
-
-1.	Open Active Directory Users and Computer, navigate to the **BuiltIn** folder and double click **Event Log Readers**. 
-2.	Select **Members**.
-3.	If **Network Service** is not listed, click **Add** and type **Network Service** in the **Enter the object names to select** field. Then click **Check Names** and click **OK** twice. 
-
-**Step 2: Perform the following steps on the domain controller after the ATA Lightweight Gateway is installed** 
-
-1.	Open an elevated command prompt and type *winrm quickconfig* and *wecutil qc* 
-2.	Open **Event Viewer**. 
-3.	Right click **Subscriptions** and select **Create Subscription**. 
-
-   1.	Enter a name and description for the subscription. 
-   2.	For **Destination Log** confirm that **Forwarded Events** is selected. For ATA to read the events the destination log must be Forwarded Events.
-
-        1.	Select **Collector initiated** and click **Select Computers**. Then click **Add Domain Computer**.
-        2.	Enter the name of the domain controller in the **Enter the object name to select**. Then click **Check Names** and click **OK**.
-
-            ![Subscription properties image](media/wef 5 sub properties computers.png)
-
-        3.	Click **OK**.
-   3.	Click **Select Events**.
-
-        1.	Click **By log** and select **Security**.
-        2.	In the **Includes/Excludes Event ID** type *4776* and click **OK**. 
-
-![Query filter image](media/wef 4 query filter.png)
+   5.   만들어진 구독을 마우스 오른쪽 단추로 클릭하고 **런타임 상태**를 선택하여 상태에 문제가 있는지 확인합니다. 
+   6.   몇 분 후에 전달되도록 설정한 이벤트가 ATA 게이트웨이의 전달된 이벤트에 표시되는지 확인합니다.
 
 
-  4.	Right click the created subscription and select **Runtime Status** to see if there are any issues with the status. 
+자세한 내용은 [이벤트를 전달하고 수집하도록 컴퓨터 구성](https://technet.microsoft.com/library/cc748890)을 참조하세요.
 
-> [!Note] 
-> You may need to reboot the domain controller before the setting take effect. 
-
-After a few minutes, check to see that event 4776 is showing up in the Forwarded Events on the ATA Gateway.
-
-
-
-For more information see: [Configure the computers to forward and collect events](https://technet.microsoft.com/library/cc748890)
-
-## See Also
-- [Install ATA](install-ata-step1.md)
-- [Check out the ATA forum!!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+- [ATA 설치](install-ata-step1.md)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
