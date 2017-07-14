@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1ff15a323f461cf8436e1ff7e15738a49bf3973c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: d943dc9aae7192f46f079175c2216b5b27e459e2
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/10/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -111,5 +111,4 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
 ## 참고 항목
 <a id="see-also" class="xliff"></a>
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-- [ATA 검색 설정 작업](working-with-detection-settings.md)
 - [ATA 구성 수정](modifying-ata-center-configuration.md)
