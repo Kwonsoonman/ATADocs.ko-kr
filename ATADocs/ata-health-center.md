@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e396cddb818c0e80f8b7d78764a58d6abd560e5
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 59e5cafcff7b84ffb9dc161cd0b50cd3014e455a
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/10/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -54,6 +54,6 @@ ATA 상태 관리 센터에서는 메뉴 모음의 상태 관리 센터 아이�
 
 ## 참고 항목
 <a id="see-also" class="xliff"></a>
-- [ATA 검색 설정 작업](working-with-detection-settings.md)
+
 - [의심스러운 활동 작업](working-with-suspicious-activities.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
