@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 07/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d261273adfa23392a9c0b8408483aa02708f1eee
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 2b969089d8c4c2d861591342f7367e8cc5430b24
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/10/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -49,7 +49,7 @@ ATA에서는 허니 토큰 사용자를 구성하여 악의적인 행위자에 �
 
    ![Honeytoken](media/honeytoken.png)
 
-3. **제외**를 클릭합니다. 각 위협 유형에 대해 이러한 위협의 검색에서 제외할 사용자 계정 또는 IP 주소를 입력하고 *더하기* 기호를 클릭합니다. 엔터티(사용자 또는 컴퓨터) 추가 필드는 검색 가능하며 네트워크의 엔터티가 자동으로 채워집니다.
+3. **제외**를 클릭합니다. 각 위협 유형에 대해 이러한 위협의 검색에서 제외할 사용자 계정 또는 IP 주소를 입력하고 *더하기* 기호를 클릭합니다. **엔터티 추가**(사용자 또는 컴퓨터) 필드는 검색 가능하며 해당 필드에 네트워크의 엔터티가 자동으로 채워집니다. 자세한 내용은 [검색에서 엔터티 제외](excluding-entities-from-detections.md)를 참조하세요.
 
    ![제외](media/exclusions.png)
 

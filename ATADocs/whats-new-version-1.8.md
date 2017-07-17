@@ -13,14 +13,17 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: f2a4ed151db38497a6cec977f1090faf2eb4133e
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 # ATA 버전 1.8의 새로운 기능
 <a id="whats-new-in-ata-version-18" class="xliff"></a>
+
+ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](https://www.microsoft.com/download/details.aspx?id=55536)할 수 있으며 전체 버전은 [Eval 센터](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)에서 다운로드할 수 있습니다.
+
 이 릴리스 정보에서는 이 Advanced Threat Analytics 버전의 업데이트, 새로운 기능, 버그 수정 및 알려진 문제에 대한 정보를 제공합니다.
 
 
@@ -65,7 +68,6 @@ ms.lasthandoff: 07/05/2017
 
 -   ATA 센터 성능이 향상되었습니다. ATA 1.8에서는 ATA 센터가 초당 1M 이상의 패킷을 처리할 수 있습니다.
 -   이제 ATA 경량 게이트웨이가 이벤트 전달을 구성하지 않고도 로컬에서 이벤트를 읽을 수 있습니다.
--   접근성 확장 - 이제 ATA에서 Microsoft와 협력하여 접근성이 높은 제품을 제공합니다. 
 -   이제 모니터링 경고 및 의심스러운 활동에 대해 별도로 메일을 구성할 수 있습니다.
 
 ## 향상된 보안 기능

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 07/9/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1042f464f424d2805542a8145d2e09d592fe8a51
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: ff61d12eefaf6fb0a6b3d92568ef8c25c9d4c49b
+ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/10/2017
 ---
 # 버전 1.8로 ATA 업데이트
 <a id="updating-ata-to-version-18" class="xliff"></a>
@@ -58,9 +58,8 @@ ATA 버전 1.8로 업데이트하려면 다음 단계를 수행합니다.
     -  버전 1.7에서 자동 업데이트를 사용하도록 설정하지 않은 경우에는 ATA가 최신 상태로 유지되도록 ATA에서 Microsoft Update를 사용하도록 설정하라는 메시지가 표시됩니다.  Microsoft 업데이트 페이지에서 **업데이트를 확인할 때 Microsoft 업데이트 사용(권장)**을 선택합니다.
     ![ATA를 최신 이미지로 유지](media/ata_ms_update.png)
      
-     다음 그림과 같이 다른 Microsoft 제품(ATA 포함)에 업데이트를 사용하도록 Windows 설정을 조정합니다. 
-    ![Windows 자동 업데이트 이미지](media/ata_installupdatesautomatically.png)
-
+     이렇게 하면 ATA에 대한 업데이트를 사용하도록 Windows 설정이 조정됩니다. 
+    
     -  **데이터 마이그레이션** 화면에서 데이터 전체를 마이그레이션할지, 데이터 일부를 마이그레이션할지 선택합니다. 부분 데이터만 마이그레이션하도록 선택하는 경우 전체 프로필을 작성하는 데 3주가 걸리는 비정상적인 동작 검색을 제외한 모든 검색이 즉시 작동합니다.  
     
     **부분** 데이터 마이그레이션은 설치하는 데 시간이 훨씬 더 적게 걸립니다. **전체** 데이터 마이그레이션을 선택하면 설치를 완료하는 데 상당한 시간이 걸릴 수 있습니다. **데이터 마이그레이션** 화면에 나열된 예상 시간과 필요한 디스크 공간을 확인합니다. 이러한 수치는 이전 버전의 ATA에서 저장한 이전에 캡처된 네트워크 트래픽의 양에 따라 달라집니다. 예를 들어 아래 화면에서는 매우 큰 데이터베이스에서의 데이터 마이그레이션을 확인할 수 있습니다.
