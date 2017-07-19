@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 설치 - 3단계
-<a id="install-ata---step-3" class="xliff"></a>
+# <a name="install-ata---step-3"></a>ATA 설치 - 3단계
 
 >[!div class="step-by-step"]
 [« 2단계](install-ata-step2.md)
 [4단계 »](install-ata-step4.md)
 
-## 3단계. ATA Gateway 설치 패키지 다운로드
-<a id="step-3-download-the-ata-gateway-setup-package" class="xliff"></a>
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>3단계. ATA Gateway 설치 패키지 다운로드
 도메인 연결 설정을 구성하고 나면 ATA Gateway 설치 패키지를 다운로드할 수 있습니다. ATA 게이트웨이는 전용 서버 또는 도메인 컨트롤러에 설치할 수 있습니다. 도메인 컨트롤러에 설치하는 경우 ATA 경량 게이트웨이로 설치됩니다. ATA 경량 게이트웨이에 대한 자세한 내용은 [ATA 아키텍처](ata-architecture.md)를 참조하세요. 
 
 페이지 맨 위에 있는 단계 목록에서 게이트웨이 설치 다운로드를 클릭하여 게이트웨이 페이지로 이동합니다.
@@ -57,8 +55,7 @@ zip 파일에는 다음 항목이 포함되어 있습니다.
 [« 2단계](install-ata-step2.md)
 [4단계 »](install-ata-step4.md)
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)

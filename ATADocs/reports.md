@@ -22,8 +22,7 @@ ms.lasthandoff: 06/30/2017
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# ATA 보고서
-<a id="ata-reports" class="xliff"></a>
+# <a name="ata-reports"></a>ATA 보고서
 
 콘솔의 ATA 보고서 섹션에서는 시스템 상태, 사용자 환경에서 검색된 의심스러운 활동 보고서 등 시스템 상태 정보를 제공하는 보고서를 생성할 수 있습니다.
 
@@ -55,8 +54,7 @@ ms.lasthandoff: 06/30/2017
 > 예약된 보고서는 메일을 통해 배달되며, **구성**에서 메일 서버를 이미 구성했으며 알림 및 보고서에서 **메일 서버**를 선택하는 경우에만 보낼 수 있습니다.
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](configure-event-collection.md)

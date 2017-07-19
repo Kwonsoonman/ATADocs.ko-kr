@@ -23,16 +23,14 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Windows 이벤트 전달 구성
-<a id="configuring-windows-event-forwarding" class="xliff"></a>
+# <a name="configuring-windows-event-forwarding"></a>Windows 이벤트 전달 구성
 
 검색 기능을 강화하려면 ATA에 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756, 4757이 있어야 합니다. 이러한 이벤트는 ATA 경량 게이트웨이에서 자동으로 읽거나, ATA 경량 게이트웨이가 배포되지 않은 경우 두 가지 방법 중 하나로 ATA 게이트웨이에 전달될 수 있습니다. 하나는 ATA 게이트웨이가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 [Windows 이벤트 전달을 구성](#configuring-windows-event-forwarding)하는 것입니다.
 
 > [!NOTE]
 > ATA 버전 1.8 이상에서는 ATA 경량 게이트웨이에 이벤트 수집 구성이 더 이상 필요하지 않습니다. 이제 ATA 경량 게이트웨이가 이벤트 전달을 구성하지 않고도 로컬에서 이벤트를 읽을 수 있습니다.
 
-### 포트 미러링으로 ATA 게이트웨이에 대한 WEF 구성
-<a id="wef-configuration-for-ata-gateways-with-port-mirroring" class="xliff"></a>
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>포트 미러링으로 ATA 게이트웨이에 대한 WEF 구성
 
 도메인 컨트롤러에서 ATA 게이트웨이로의 미러링을 구성하고 나면 원본에서 시작된 구성을 사용하여 아래 지침에 따라 Windows 이벤트 전달을 구성합니다. 이것이 Windows 이벤트 전달을 구성하는 한 가지 방법입니다. 
 
@@ -96,7 +94,6 @@ ms.lasthandoff: 07/03/2017
 
 자세한 내용은 [이벤트를 전달하고 수집하도록 컴퓨터 구성](https://technet.microsoft.com/library/cc748890)을 참조하세요.
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 설치](install-ata-step1.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

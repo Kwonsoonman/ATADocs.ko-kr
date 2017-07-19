@@ -23,19 +23,16 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# ATA 콘솔 작업
-<a id="working-with-the-ata-console" class="xliff"></a>
+# <a name="working-with-the-ata-console"></a>ATA 콘솔 작업
 
 ATA 콘솔을 사용하여 ATA에서 검색한 의심스러운 활동을 모니터링하고 대응할 수 있습니다.
 
 ? 키를 입력하면 ATA 포털 접근성을 위한 바로 가기 키가 제공됩니다. 
 
-## ATA 콘솔에 대한 액세스 설정
-<a id="enabling-access-to-the-ata-console" class="xliff"></a>
+## <a name="enabling-access-to-the-ata-console"></a>ATA 콘솔에 대한 액세스 설정
 ATA 콘솔에 로그인하려면 ATA 콘솔에 액세스할 수 있는 적절한 ATA 역할을 할당한 사용자로 로그인해야 합니다. ATA에서 RBAC(역할 기반 액세스 제어)에 대한 자세한 내용은 [ATA 역할 그룹 작업](ata-role-groups.md)을 참조하세요.
 
-## ATA 콘솔 로그인
-<a id="logging-into-the-ata-console" class="xliff"></a>
+## <a name="logging-into-the-ata-console"></a>ATA 콘솔 로그인
 
 1. ATA 센터 서버에서 바탕 화면에 있는 **Microsoft ATA 콘솔** 아이콘을 클릭하거나 브라우저를 열고 ATA 콘솔로 이동합니다.
 
@@ -56,16 +53,14 @@ SSO를 사용하여 로그인하려면 브라우저에서 ATA 콘솔 사이트�
 
 
 
-## ATA 콘솔
-<a id="the-ata-console" class="xliff"></a>
+## <a name="the-ata-console"></a>ATA 콘솔
 
 ATA 콘솔은 모든 의심스러운 활동에 대한 빠른 보기를 시간순으로 제공합니다. 모든 활동의 세부 정보를 검색하고 해당 활동에 따라 작업을 수행할 수 있습니다. 또한 콘솔에는 ATA 네트워크 또는 의심스러운 것으로 간주되는 새로운 활동에 대한 문제를 강조하는 경고 및 알림도 표시됩니다.
 
 이는 ATA 콘솔의 주요 요소입니다.
 
 
-### 공격 타임라인
-<a id="attack-time-line" class="xliff"></a>
+### <a name="attack-time-line"></a>공격 타임라인
 
 ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. 기본적으로 해결되지 않은 모든 의심스러운 활동이 공격 타임라인에 표시됩니다. 모두, 미해결, 해제됨 또는 해결됨 상태의 의심스러운 활동을 표시하도록 공격 타임라인을 필터링할 수 있습니다. 또한 각 활동에 할당된 심각도를 볼 수 있습니다.
 
@@ -73,27 +68,23 @@ ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. �
 
 자세한 내용은 [의심스러운 활동 작업](working-with-suspicious-activities.md)을 참조하세요.
 
-### 알림 표시줄
-<a id="notification-bar" class="xliff"></a>
+### <a name="notification-bar"></a>알림 표시줄
 
 새로운 의심스러운 활동이 검색된 경우 오른쪽에 알림 표시줄이 자동으로 열립니다. 마지막으로 로그인한 시간 이후에 새로운 의심스러운 활동이 있는 경우에는 로그인에 성공한 후에 알림 표시줄이 열립니다. 언제든지 오른쪽에 있는 화살표를 클릭하여 알림 표시줄에 액세스할 수 있습니다.
 
 ![ATA 알림 표시줄 이미지](media/notification-bar-1.7.png)
 
-### 필터링 패널
-<a id="filtering-panel" class="xliff"></a>
+### <a name="filtering-panel"></a>필터링 패널
 
 공격 타임라인에 표시되거나 엔터티 프로필 의심스러운 활동 탭에 표시되는 의심스러운 활동을 상태 및 심각도에 따라 필터링할 수 있습니다.
 
-### 검색 창
-<a id="search-bar" class="xliff"></a>
+### <a name="search-bar"></a>검색 창
 
 최상위 메뉴에서 검색 창을 찾을 수 있습니다. ATA에서 특정 사용자, 컴퓨터 또는 그룹을 검색할 수 있습니다. 검색하려면 입력을 시작하기만 하면 됩니다.
 
 ![ATA 콘솔 검색 이미지](media/ATA-console-search.png)
 
-### 상태 관리 센터
-<a id="health-center" class="xliff"></a>
+### <a name="health-center"></a>상태 관리 센터
 
 상태 관리 센터에서는 ATA 배포에서 제대로 작동하지 않는 요소가 있는 경우 경고를 제공합니다.
 
@@ -103,8 +94,7 @@ ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. �
 
 상태 관리 센터 경고는 해제하거나 해결할 수 있으며 심각도에 따라 높음, 중간 또는 낮음으로 분류할 수 있습니다. 해결한 경고를 ATA 서비스에서 여전히 활성 상태인 것으로 검색한 경우 이 경고는 자동으로 미해결 경고 목록으로 이동합니다. 시스템에서 더 이상 경고의 원인이 없는 것으로 검색한 경우(상황이 해결된 경우) 이 경고는 자동으로 해결됨 목록으로 이동합니다.
 
-### 사용자 및 컴퓨터 프로필
-<a id="user-and-computer-profiles" class="xliff"></a>
+### <a name="user-and-computer-profiles"></a>사용자 및 컴퓨터 프로필
 
 ATA에서는 네트워크의 각 사용자 및 컴퓨터에 대한 프로필을 작성합니다. 사용자 프로필에는 ATA가그룹 멤버 자격, 최근 로그인 및 최근에 액세스한 리소스와 같은 일반 정보가 표시합니다. 사용자가 VPN을 통해 연결한 위치 목록도 제공됩니다. ATA에서 중요한 것으로 간주되는 그룹 멤버 자격 목록은 아래를 참조하세요.
 
@@ -121,8 +111,7 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 ![ATA 미확인 프로필 이미지](media/ATA-Unresolved-Profile.jpg)
 
-### 중요한 그룹
-<a id="sensitive-groups" class="xliff"></a>
+### <a name="sensitive-groups"></a>중요한 그룹
 
 다음 그룹 목록은 ATA에서 **중요한 그룹**으로 간주됩니다. 다음은 관리자 권한이 있는 그룹으로 플래그가 지정되고 중요한 계정에 해당하는 경고를 생성하는 그룹입니다.
 
@@ -146,8 +135,7 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 - DNS Admins 
 
 
-### 최소 프로필
-<a id="mini-profile" class="xliff"></a>
+### <a name="mini-profile"></a>최소 프로필
 
 콘솔의 도처에 사용자 또는 컴퓨터와 같은 단일 엔터티가 표시된 곳이 있습니다. 엔터티 위로 마우스를 가져가면 다음 정보(사용 가능한 경우)가 표시된 최소 프로필이 자동으로 열립니다.
 
@@ -165,6 +153,5 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -23,20 +23,16 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 데이터베이스 관리
-<a id="ata-database-management" class="xliff"></a>
+# <a name="ata-database-management"></a>ATA 데이터베이스 관리
 ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는 아래에 나와 있는 MongoDB 사용 절차를 수행하세요.
 
-## ATA 데이터베이스 백업
-<a id="backing-up-the-ata-database" class="xliff"></a>
+## <a name="backing-up-the-ata-database"></a>ATA 데이터베이스 백업
 [관련 MongoDB 설명서](http://docs.mongodb.org/manual/administration/backup/)를 참조하세요.
 
-## ATA 데이터베이스 복원
-<a id="restoring-the-ata-database" class="xliff"></a>
+## <a name="restoring-the-ata-database"></a>ATA 데이터베이스 복원
 [관련 MongoDB 설명서](http://docs.mongodb.org/manual/administration/backup/)를 참조하세요.
 
-## 다른 드라이브로 ATA 데이터베이스 이동
-<a id="moving-the-ata-database-to-another-drive" class="xliff"></a>
+## <a name="moving-the-ata-database-to-another-drive"></a>다른 드라이브로 ATA 데이터베이스 이동
 
 1.  **Microsoft Advanced Threat Analytics 센터** 서비스를 중지합니다.
 > [!Important] 
@@ -58,8 +54,7 @@ ATA 데이터베이스를 이동, 백업 또는 복원해야 하는 경우에는
 
 7. **Microsoft Advanced Threat Analytics 센터** 서비스를 시작합니다.
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 아키텍처](ata-architecture.md)
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

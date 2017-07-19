@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 알림 설정
-<a id="set-ata-notifications" class="xliff"></a>
+# <a name="set-ata-notifications"></a>ATA 알림 설정
 ATA는 의심스러운 활동을 감지하면 메일을 통해 또는 ATA 이벤트 전달 기능을 사용한 후 이벤트를 SIEM/syslog 서버에 전달하여 알릴 수 있습니다. 수신하려는 알림을 선택하기 전에 [메일 서버 및 Syslog 서버를 설정](setting-syslog-email-server-settings.md)해야 합니다.
 
 > [!NOTE]
@@ -51,6 +50,5 @@ ATA는 의심스러운 활동을 감지하면 메일을 통해 또는 ATA 이벤
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

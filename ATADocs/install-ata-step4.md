@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 설치 - 4단계
-<a id="install-ata---step-4" class="xliff"></a>
+# <a name="install-ata---step-4"></a>ATA 설치 - 4단계
 
 >[!div class="step-by-step"]
 [« 3단계](install-ata-step3.md)
 [5단계 »](install-ata-step5.md)
 
-## 4단계. ATA Gateway 설치
-<a id="step-4-install-the-ata-gateway" class="xliff"></a>
+## <a name="step-4-install-the-ata-gateway"></a>4단계. ATA Gateway 설치
 
 전용 서버에 ATA Gateway를 설치하기 전에 포트 미러링이 올바르게 구성되어 있는지와 ATA Gateway에서 도메인 컨트롤러로 들어오고 나가는 트래픽을 볼 수 있는지를 확인합니다. 자세한 내용은 [포트 미러링 유효성 검사](validate-port-mirroring.md)를 참조하세요.
 
@@ -90,8 +88,7 @@ ATA Gateway 서버에서 다음 단계를 수행합니다.
 [« 3단계](install-ata-step3.md)
 [5단계 »](install-ata-step5.md)
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)

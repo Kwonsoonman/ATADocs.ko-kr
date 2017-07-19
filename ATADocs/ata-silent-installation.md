@@ -23,11 +23,9 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 자동 설치
-<a id="ata-silent-installation" class="xliff"></a>
+# <a name="ata-silent-installation"></a>ATA 자동 설치
 이 문서에는 ATA 자동 설치에 대한 지침이 있습니다.
-## 전제 조건
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>전제 조건
 
 ATA 버전 1.8을 사용하려면 Microsoft .NET Framework 4.6.1이 설치되어 있어야 합니다. 
 
@@ -40,8 +38,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 배포 진행 상태를 추적하려면 **%AppData%\Local\Temp**에 있는 ATA 설치 관리자 로그를 모니터링합니다.
 
 
-## ATA 센터를 설치합니다.
-<a id="install-the-ata-center" class="xliff"></a>
+## <a name="install-the-ata-center"></a>ATA 센터를 설치합니다.
 
 다음 명령을 사용하여 ATA 센터를 설치합니다.
 
@@ -81,8 +78,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## ATA 센터를 업데이트합니다.
-<a id="update-the-ata-center" class="xliff"></a>
+## <a name="update-the-ata-center"></a>ATA 센터를 업데이트합니다.
 
 다음 명령을 사용하여 ATA 센터를 업데이트합니다.
 
@@ -106,8 +102,7 @@ ATA를 업데이트할 때 설치 관리자가 서버에 ATA가 이미 설치되
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## ATA 센터 자동 제거
-<a id="uninstall-the-ata-center-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-center-silently"></a>ATA 센터 자동 제거
 
 ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **구문**:
 
@@ -133,8 +128,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## ATA 게이트웨이 자동 설치
-<a id="ata-gateway-silent-installation" class="xliff"></a>
+## <a name="ata-gateway-silent-installation"></a>ATA 게이트웨이 자동 설치
 다음 명령을 사용하여 ATA 게이트웨이를 자동으로 설치합니다.
 
 **구문**:
@@ -169,8 +163,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## ATA 게이트웨이 업데이트
-<a id="update-the-ata-gateway" class="xliff"></a>
+## <a name="update-the-ata-gateway"></a>ATA 게이트웨이 업데이트
 
 다음 명령을 사용하여 ATA 게이트웨이를 자동으로 업데이트합니다.
 
@@ -192,8 +185,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## ATA 게이트웨이 자동 제거
-<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-gateway-silently"></a>ATA 게이트웨이 자동 제거
 
 ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합니다. **구문**:
 
@@ -221,8 +213,7 @@ ATA 게이트웨이 자동 제거를 수행하려면 다음 명령을 사용합�
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)

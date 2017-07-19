@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA에 전자 메일 서버 설정 제공
-<a id="provide-ata-with-your-email-server-settings" class="xliff"></a>
+# <a name="provide-ata-with-your-email-server-settings"></a>ATA에 전자 메일 서버 설정 제공
 ATA는 의심스러운 활동을 검색한 경우 알림을 제공할 수 있습니다. ATA에서 메일 알림을 보낼 수 있도록 하려면 먼저 **메일 서버 설정**을 구성해야 합니다.
 
 1.  ATA 센터 서버의 바탕 화면에서 **Microsoft Advanced Threat Analytics 관리** 아이콘을 클릭합니다.
@@ -45,8 +44,7 @@ ATA는 의심스러운 활동을 검색한 경우 알림을 제공할 수 있습
     |보낸 사람(필수)|전자 메일을 보낸 사람의 전자 메일 주소를 입력합니다.|예를 들면 다음과 같습니다.<br />ATA@contoso.com|
     ![ATA 메일 서버 설정 이미지](media/ata-email-server.png)
 
-## ATA에 Syslog 서버 설정 제공
-<a id="provide-ata-with-your-syslog-server-settings" class="xliff"></a>
+## <a name="provide-ata-with-your-syslog-server-settings"></a>ATA에 Syslog 서버 설정 제공
 ATA는 의심스러운 활동이 검색되면 Syslog 서버에 알림을 전송하여 알릴 수 있습니다. Syslog 알림을 사용하도록 설정하면 다음을 설정할 수 있습니다.
 
 1.  Syslog 알림을 구성하기 전에 SIEM 관리자와 협력하여 다음 정보를 찾습니다.
@@ -79,6 +77,5 @@ ATA는 의심스러운 활동이 검색되면 Syslog 서버에 알림을 전송�
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

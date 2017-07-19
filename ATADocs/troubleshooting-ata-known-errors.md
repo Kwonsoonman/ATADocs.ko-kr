@@ -23,13 +23,11 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# ATA의 알려진 문제 해결
-<a id="troubleshooting-ata-known-issues" class="xliff"></a>
+# <a name="troubleshooting-ata-known-issues"></a>ATA의 알려진 문제 해결
 
 이 섹션에서는 ATA 배포 시 발생할 수 있는 오류와 이러한 문제를 해결하는 데 필요한 단계에 대해 자세히 설명합니다.
 
-## ATA 게이트웨이 및 경량 게이트웨이 오류
-<a id="ata-gateway-and-lightweight-gateway-errors" class="xliff"></a>
+## <a name="ata-gateway-and-lightweight-gateway-errors"></a>ATA 게이트웨이 및 경량 게이트웨이 오류
 
 |오류|설명|해결 방법|
 |-------------|----------|---------|
@@ -52,8 +50,7 @@ ms.lasthandoff: 07/03/2017
 |VMware에서 경량 게이트웨이를 사용하는 경우 삭제된 포트 미러 트래픽 경고|VMware 가상 컴퓨터에서 DC를 사용하는 경우, **삭제된 포트 미러 네트워크 트래픽**에 대한 경고를 받을 수 있습니다. VMware의 구성이 일치하지 않기 때문일 수 있습니다. |이러한 경고를 방지하기 위해 다음 설정이 0 또는 사용 안 함으로 설정되어 있는지 확인하세요.: TsoEnable, LargeSendOffload, IPv4, TSO Offload IPv4 Giant TSO Offload도 사용하지 않도록 설정하는 것이 좋습니다. 자세한 내용은 VMware 설명서를 참조하세요.|
 
 
-## 배포 오류
-<a id="deployment-errors" class="xliff"></a>
+## <a name="deployment-errors"></a>배포 오류
 |오류|설명|해결 방법|
 |-------------|----------|---------|
 |오류 0x800713ec와 함께 .NET Framework 4.6.1 설치 실패|.Net Framework 4.6.1의 필수 조건이 서버에 설치되어 있지 않습니다. |ATA를 설치하기 전에 Windows 업데이트 [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) 및 [KB2919355](https://support.microsoft.com/kb/2919355)가 서버에 설치되어 있는지 확인합니다.|
@@ -65,8 +62,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](configure-event-collection.md)

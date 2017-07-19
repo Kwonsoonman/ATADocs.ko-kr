@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# 포트 미러링 유효성 검사
-<a id="validate-port-mirroring" class="xliff"></a>
+# <a name="validate-port-mirroring"></a>포트 미러링 유효성 검사
 > [!NOTE] 
 > 이 문서는 ATA 경량 게이트웨이 대신 ATA 게이트웨이를 배포하는 경우에만 해당합니다. ATA 게이트웨이를 사용해야 하는지 확인하려면 [배포에 사용할 올바른 게이트웨이 선택](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment)을 참조하세요.
  
 다음 단계에서는 포트 미러링이 올바르게 구성되었는지 확인하는 프로세스를 안내합니다. ATA가 제대로 작동하려면 ATA Gateway에서 도메인 컨트롤러로 들어오고 나가는 트래픽을 볼 수 있어야 합니다. ATA에서 사용되는 기본 데이터 원본은 도메인 컨트롤러로 들어오고 나가는 네트워크 트래픽의 상세한 패킷 검사입니다. ATA에서 네트워크 트래픽을 보려면 포트 미러링을 구성해야 합니다. 포트 미러링은 하나의 포트(원본 포트)에서 다른 포트(대상 포트)로 트래픽을 복사합니다.
 
-## Windows PowerShell 스크립트를 사용하여 포트 미러링 유효성 검사
-<a id="validate-port-mirroring-using-a-windows-powershell-script" class="xliff"></a>
+## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Windows PowerShell 스크립트를 사용하여 포트 미러링 유효성 검사
 
 1. 이 스크립트의 텍스트를 *ATAdiag.ps1*이라는 파일에 저장합니다.
 2. 유효성을 검사할 ATA 게이트웨이에서 이 스크립트를 실행합니다.
@@ -193,8 +191,7 @@ ATA 게이트웨이에서 대상 IP 주소가 ATA 콘솔에서 입력한 DC IP �
     [void][System.Console]::ReadKey($true)
     
     
-## Net Mon을 사용하여 포트 미러링 유효성 검사
-<a id="validate-port-mirroring-using-net-mon" class="xliff"></a>
+## <a name="validate-port-mirroring-using-net-mon"></a>Net Mon을 사용하여 포트 미러링 유효성 검사
 1.  유효성을 검사할 ATA 게이트웨이에서 [Microsoft 네트워크 모니터 3.4](http://www.microsoft.com/download/details.aspx?id=4865)를 설치합니다.
 
     > [!IMPORTANT]
@@ -224,8 +221,7 @@ ATA 게이트웨이에서 대상 IP 주소가 ATA 콘솔에서 입력한 DC IP �
 
 5.  한 방향의 트래픽만 보이는 경우 네트워킹 또는 가상화 팀과 함께 포트 미러링 구성 문제를 해결해야 합니다.
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [포트 미러링 구성](configure-port-mirroring.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

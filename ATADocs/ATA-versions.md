@@ -20,8 +20,7 @@ ms.lasthandoff: 07/03/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
-# Microsoft ATA(Advanced Threat Analytics)에 대한 지원
-<a id="support-for-microsoft-advanced-threat-analytics-ata-versions" class="xliff"></a>
+# <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Microsoft ATA(Advanced Threat Analytics)에 대한 지원
 
 Microsoft는 GA(일반 공급) 릴리스 날짜로부터 12개월 동안 지원되는 각 업데이트 버전과 함께 연간 몇 차례 ATA 업데이트를 릴리스할 계획입니다. 전체 12개월 동안 기술 지원이 제공됩니다. 그러나 당사의 지원 구조는 최신 버전의 가용성에 따라 두 가지 별도의 서비스 단계로 발전하는 동적 구조입니다.
 
@@ -34,8 +33,7 @@ Microsoft는 GA(일반 공급) 릴리스 날짜로부터 12개월 동안 지원�
 > [!Note]
 > 최신 ATA 버전은 항상 보안 및 중요 업데이트 서비스 단계입니다. 즉, 중요 업데이트가 필요한 코드 오류가 발생하는 경우 이를 해결하려면 최신 현재 분기 버전을 설치해야 합니다. 지원되는 다른 모든 버전은 보안 업데이트만 받을 수 있습니다. 버전에 대한 12개월의 지원 기간이 만료되면 모든 지원이 종료됩니다. 이 시점에서 고객은 지원되는 버전으로 업데이트해야 합니다.
 
-## 버전 기록
-<a id="version-history" class="xliff"></a>
+## <a name="version-history"></a>버전 기록
 
 |버전|빌드 번호|가용일| 지원 종료 날짜|
 |----|----|----|----|
@@ -51,6 +49,5 @@ Microsoft는 GA(일반 공급) 릴리스 날짜로부터 12개월 동안 지원�
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
