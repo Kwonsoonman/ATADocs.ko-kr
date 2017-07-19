@@ -23,14 +23,12 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# ATA 설치 - 7단계
-<a id="install-ata---step-7" class="xliff"></a>
+# <a name="install-ata---step-7"></a>ATA 설치 - 7단계
 
 >[!div class="step-by-step"]
 [« 6단계](install-ata-step6.md)
 
-## 7단계. IP 주소 제외 및 Honeytoken 사용자 구성
-<a id="step-7-configure-ip-address-exclusions-and-honeytoken-user" class="xliff"></a>
+## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>7단계. IP 주소 제외 및 Honeytoken 사용자 구성
 ATA를 사용하면 많은 검색에서 특정 IP 주소 또는 사용자를 제외할 수 있습니다. 
 
 예를 들어 한 **DNS 정찰 제외**는 검색 메커니즘으로 DNS를 사용하는 보안 스캐너일 수 있습니다. 이 제외를 통해 ATA에서 이러한 스캐너를 무시할 수 있습니다. *Pass-the-Ticket* 예외의 예로는 NAT 장치가 있습니다.    
@@ -73,8 +71,7 @@ ATA이 실행되고 네트워크에서 위반을 catch하는지 확인하려면 
 [« 6단계](install-ata-step6.md)
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)

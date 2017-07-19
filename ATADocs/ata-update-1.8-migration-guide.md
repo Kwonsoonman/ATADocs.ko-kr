@@ -19,8 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/10/2017
 ---
-# 버전 1.8로 ATA 업데이트
-<a id="updating-ata-to-version-18" class="xliff"></a>
+# <a name="updating-ata-to-version-18"></a>버전 1.8로 ATA 업데이트
 
 > [!NOTE] 
 > 사용 중인 환경에 ATA가 설치되어 있지 않으면 버전 1.8이 포함된 처음 사용자용 ATA를 다운로드한 다음 [ATA 설치](install-ata-step1.md)에서 설명하는 표준 설치 절차를 수행하세요.
@@ -42,8 +41,7 @@ ATA 버전 1.8로 업데이트하려면 다음 단계를 수행합니다.
     > [!IMPORTANT]
     > ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### 1단계: ATA 센터 업데이트
-<a id="step-1-update-the-ata-center" class="xliff"></a>
+### <a name="step-1-update-the-ata-center"></a>1단계: ATA 센터 업데이트
 
 1.  원하는 경우 데이터베이스를 백업합니다.
 
@@ -84,7 +82,6 @@ ATA 버전 1.8로 업데이트하려면 다음 단계를 수행합니다.
 > 새 ATA 게이트웨이를 설치하려면 **게이트웨이** 화면으로 가서 **게이트웨이 설치 다운로드**를 클릭한 후 ATA 1.8 게이트웨이 설치 패키지를 받고 [4단계. ATA 게이트웨이 설치](install-ata-step4.md)에 설명된 대로 새 게이트웨이 설치에 대한 지침을 따릅니다.
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
