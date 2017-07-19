@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 재해 복구
-<a id="ata-disaster-recovery" class="xliff"></a>
+# <a name="ata-disaster-recovery"></a>ATA 재해 복구
 이 문서에서는 ATA 센터 기능이 손실되었지만 ATA 게이트웨이가 여전히 작동하는 경우 ATA 센터를 신속하게 복구하고 ATA 기능을 복원하는 방법을 설명합니다. 
 
 >[!NOTE]
 > 설명하는 프로세스에서는 이전에 검색한 의심스러운 활동을 복구하지는 않지만 ATA 센터의 기능을 완전하게 복원합니다. 또한 일부 동작 검색에 필요한 학습 기간이 다시 시작되지만, ATA에서 제공하는 대부분의 검색은 ATA 센터가 복원된 후 작동합니다. 
 
-## ATA 센터 구성 백업
-<a id="back-up-your-ata-center-configuration" class="xliff"></a>
+## <a name="back-up-your-ata-center-configuration"></a>ATA 센터 구성 백업
 
 1. ATA 센터 구성은 매시간 파일로 백업됩니다. ATA 센터 구성의 최신 백업 복사본을 찾아서 별도 컴퓨터에 저장하세요. 이러한 파일을 찾는 방법에 대한 자세한 내용은 [ATA 구성 내보내기 및 가져오기 ](/advanced-threat-analytics/deploy-use/ata-configuration-file)를 참조하세요. 
 2. ATA 센터 인증서를 내보냅니다.
@@ -44,8 +42,7 @@ ms.lasthandoff: 06/30/2017
   > [!NOTE] 
   > 개인 키를 내보낼 수 없는 경우 [ATA 센터 인증서 변경](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)에 설명된 것처럼 새 인증서를 만들고 ATA에 배포한 다음 내보내야 합니다. 
 
-## ATA 센터 복구
-<a id="recover-your-ata-center" class="xliff"></a>
+## <a name="recover-your-ata-center"></a>ATA 센터 복구
 
 1. 이전 ATA 센터 컴퓨터와 동일한 IP 주소 및 컴퓨터 이름을 사용하여 새 Windows Server 컴퓨터를 만듭니다.
 4. 위에서 백업한 인증서를 새 서버에 가져옵니다.
@@ -66,8 +63,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [ATA 용량 계획](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [이벤트 수집 구성](/advanced-threat-analytics/deploy-use/configure-event-collection)

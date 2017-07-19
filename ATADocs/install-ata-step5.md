@@ -23,16 +23,14 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 설치 - 5단계
-<a id="install-ata---step-5" class="xliff"></a>
+# <a name="install-ata---step-5"></a>ATA 설치 - 5단계
 
 >[!div class="step-by-step"]
 [« 4단계](install-ata-step4.md)
 [6단계 »](install-ata-step6.md)
 
 
-## 5단계. ATA Gateway 설정 구성
-<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
+## <a name="step-5-configure-the-ata-gateway-settings"></a>5단계. ATA Gateway 설정 구성
 ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 대한 설정을 구성합니다.
 
 1.  ATA 콘솔에서 **구성**으로 이동하고 **시스템**에서 **게이트웨이**를 선택합니다.
@@ -70,8 +68,7 @@ ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 
 5. **저장**을 클릭합니다.
 
 
-## 설치 유효성 검사
-<a id="validate-installations" class="xliff"></a>
+## <a name="validate-installations"></a>설치 유효성 검사
 ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 다음을 확인합니다.
 
 1.  **Microsoft Advanced Threat Analytics Gateway** 서비스가 실행 중인지 확인합니다. ATA 게이트웨이 설정을 저장한 후 서비스를 시작하는 데 몇 분 정도 걸릴 수 있습니다.
@@ -91,8 +88,7 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 [« 4단계](install-ata-step4.md)
 [6단계 »](install-ata-step6.md)
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)

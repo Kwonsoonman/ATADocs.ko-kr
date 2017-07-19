@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 센터 서비스 시작 문제 해결
-<a id="troubleshooting-ata-center-service-startup" class="xliff"></a>
+# <a name="troubleshooting-ata-center-service-startup"></a>ATA 센터 서비스 시작 문제 해결
 
 ATA 센터가 시작되지 않는 경우 다음과 같은 문제 해결 절차를 수행합니다.
 
@@ -37,8 +36,7 @@ ATA 센터가 시작되지 않는 경우 다음과 같은 문제 해결 절차�
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](configure-event-collection.md)

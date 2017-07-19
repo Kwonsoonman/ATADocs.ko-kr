@@ -23,15 +23,13 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# ATA 설치 - 2단계
-<a id="install-ata---step-2" class="xliff"></a>
+# <a name="install-ata---step-2"></a>ATA 설치 - 2단계
 
 >[!div class="step-by-step"]
 [« 1단계](install-ata-step1.md)
 [3단계 »](install-ata-step3.md)
 
-## 2단계. Active Directory 포리스트에 연결할 사용자 이름 및 암호 제공
-<a id="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest" class="xliff"></a>
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>2단계. Active Directory 포리스트에 연결할 사용자 이름 및 암호 제공
 
 처음 ATA 콘솔을 열 때 다음 화면이 나타납니다.
 
@@ -57,8 +55,7 @@ ms.lasthandoff: 07/03/2017
 [3단계 »](install-ata-step3.md)
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)

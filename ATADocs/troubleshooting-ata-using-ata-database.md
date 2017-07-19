@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 데이터베이스를 사용하여 ATA 문제 해결
-<a id="troubleshooting-ata-using-the-ata-database" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-ata-database"></a>ATA 데이터베이스를 사용하여 ATA 문제 해결
 ATA는 MongoDB를 데이터베이스로 사용합니다.
 기본 명령줄 또는 사용자 인터페이스 도구를 사용하여 데이터베이스와 상호 작용하면서 고급 작업을 수행하고 문제를 해결할 수 있습니다.
 
-## 데이터베이스와 상호 작용
-<a id="interacting-with-the-database" class="xliff"></a>
+## <a name="interacting-with-the-database"></a>데이터베이스와 상호 작용
 데이터베이스를 쿼리하는 가장 기본적인 방법은 Mongo 셸을 사용하는 것입니다.
 
 1.  명령줄 창을 열고 MongoDB bin 폴더로 경로를 변경합니다. 기본 경로는 **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**입니다.
@@ -51,8 +49,7 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](configure-event-collection.md)

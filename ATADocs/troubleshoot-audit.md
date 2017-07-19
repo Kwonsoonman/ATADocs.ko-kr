@@ -21,8 +21,7 @@ ms.lasthandoff: 07/05/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
-# ATA 감사 로그 작업
-<a id="working-with-ata-audit-logs" class="xliff"></a>
+# <a name="working-with-ata-audit-logs"></a>ATA 감사 로그 작업
 
 ATA 감사 로그는 ATA 센터 및 ATA 게이트웨이 컴퓨터 둘 다의 Windows 이벤트 로그, **응용 프로그램 및 서비스**와 **Microsoft ATA**에 유지됩니다.
 
@@ -40,7 +39,6 @@ ATA 게이트웨이 감사 로그에는 다음이 포함되어 있습니다.
 *구성 변경 감사 로그에는 이전 구성과 새 구성이 모두 포함됩니다.
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [의심스러운 활동 작업](working-with-suspicious-activities.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

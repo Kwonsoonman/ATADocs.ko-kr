@@ -21,13 +21,11 @@ ms.lasthandoff: 07/11/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
-# DNS를 사용한 정찰 조사
-<a id="investigating-reconnaissance-using-dns" class="xliff"></a>
+# <a name="investigating-reconnaissance-using-dns"></a>DNS를 사용한 정찰 조사
 
 ATA가 네트워크에서 **DNS를 사용한 정찰**을 검색하고 경고할 경우 이 문서의 내용에 따라 경고를 조사하고 문제 해결 방법을 파악합니다.
 
-## DNS를 사용한 정찰이란 무엇인가요?
-<a id="what-is-reconnaissance-using-dns" class="xliff"></a>
+## <a name="what-is-reconnaissance-using-dns"></a>DNS를 사용한 정찰이란 무엇인가요?
 
 **DNS를 사용한 정찰** 경고는 의심스러운 DNS(Domain Name System) 쿼리가 비정상적인 호스트에서 실행되어 내부 네트워크에 대한 정찰을 수행하고 있음을 나타냅니다.
 
@@ -35,13 +33,11 @@ DNS(Domain Name System)는 호스트 이름 및 도메인 이름 확인을 제�
 악의적 사용자에게 DNS는 모든 서버 및 종종 해당 IP 주소에 매핑된 모든 클라이언트 목록을 포함하여 내부 네트워크 매핑을 위한 중요한 정보를 포함합니다. 또한 이 정보는 지정된 네트워크 환경의 설명이 포함된 호스트 이름을 나열하기 때문에 중요한 가치가 있습니다. 악의적 사용자는 이 정보를 검색하여 캠페인 중에 관련 엔터티를 보다 집중적으로 공격할 수 있습니다. [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) 등의 도구와 [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx) 등의 기본 제공 도구는 DNS 정찰을 사용한 호스트 검색 기능을 제공합니다.
 내부 호스트에서 DNS 쿼리를 사용한 정찰 검색은 문제의 원인이 되며 기존 호스트 손상, 광범위한 네트워크 손상 또는 내부자 위협 가능성을 나타냅니다.
 
-## DNS 쿼리 유형
-<a id="dns-query-types" class="xliff"></a>
+## <a name="dns-query-types"></a>DNS 쿼리 유형
 
 DNS 프로토콜에는 여러 가지 쿼리 유형이 있습니다. ATA는 AXFR(전송) 요청을 검색하고 발견될 경우 경고를 생성합니다. 이러한 유형의 쿼리는 DNS 서버에서만 수행되어야 합니다.
 
-## 공격 검색
-<a id="discovering-the-attack" class="xliff"></a>
+## <a name="discovering-the-attack"></a>공격 검색
 
 공격자가 DNS를 사용한 정찰을 수행하려고 하면 ATA에서 이를 검색하고 보통 심각도로 표시합니다.
 
@@ -49,8 +45,7 @@ DNS 프로토콜에는 여러 가지 쿼리 유형이 있습니다. ATA는 AXFR(
  
 ATA는 원본 컴퓨터의 이름과 수행된 실제 DNS 쿼리에 대한 추가 정보를 표시합니다. 예를 들어 동일한 호스트에서 여러 번 시도될 수 있습니다.
 
-## 조사
-<a id="investigating" class="xliff"></a>
+## <a name="investigating"></a>조사
 
 DNS를 사용한 정찰을 조사하려면 먼저 쿼리의 원인을 확인해야 합니다. 다음 범주 중 하나로 식별될 수 있습니다. 
 -   참 긍정 - 네트워크에 공격자 또는 악성 맬웨어가 있습니다. 네트워크 경계에 도달한 공격자 또는 내부자 위협일 수 있습니다.
@@ -75,8 +70,7 @@ DNS를 사용한 정찰을 조사하려면 먼저 쿼리의 원인을 확인해�
     2.  호스트 기반 분석을 수행합니다. 
     3.  의심되는 사용자의 활동이 아닌 경우 컴퓨터에서 법정 분석을 수행하여 맬웨어로 손상되었는지 확인해야 합니다.
 
-## 사후 조사
-<a id="post-investigation" class="xliff"></a>
+## <a name="post-investigation"></a>사후 조사
 
 호스트를 손상시키는 데 사용된 맬웨어가 백도어 기능을 가진 트로이 목마를 포함할 수 있습니다. 손상된 호스트에서 성공적인 측면 이동이 확인되면 해당 호스트 및 측면 이동에 포함된 모든 호스트에서 사용된 암호 및 자격 증명 변경을 포함하여 수정 작업을 이러한 호스트까지 확장해야 합니다. 
 
@@ -84,14 +78,12 @@ DNS를 사용한 정찰을 조사하려면 먼저 쿼리의 원인을 확인해�
 
 Microsoft 계정 팀을 통해 연락할 수 있는 전문 인시던트 응답 및 복구 팀의 지원을 받아 공격자가 네트워크에 지속성 방법을 배포했는지 검색하는 것이 좋습니다.
 
-## 완화 방법
-<a id="mitigation" class="xliff"></a>
+## <a name="mitigation"></a>완화 방법
 
 영역 전송을 사용하지 않도록 설정하거나 지정된 IP 주소로만 제한하여 DNS를 사용한 정찰이 발생하지 않도록 내부 DNS 서버의 보안을 설정할 수 있습니다. 영역 전송 제한에 대한 자세한 내용은 Windows Server Technet 문서 [영역 전송 제한](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx)을 참조하세요. [IPsec로 영역 전송의 보안을 설정](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx)하면 제한된 영역 전송을 추가로 잠글 수 있습니다. 영역 전송 수정은 [내부 및 외부 공격으로부터 DNS 서버 보호](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx)를 위해 처리해야 하는 검사 목록의 작업 중 하나입니다.
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [의심스러운 활동 작업](working-with-suspicious-activities.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

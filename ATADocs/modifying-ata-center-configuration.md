@@ -23,14 +23,12 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# ATA 센터 구성 수정
-<a id="modifying-the-ata-center-configuration" class="xliff"></a>
+# <a name="modifying-the-ata-center-configuration"></a>ATA 센터 구성 수정
 
 
 초기 배포 후 ATA 센터를 수정할 때는 신중하게 해야 합니다. IP 주소와 포트, 콘솔 URL 및 인증서를 업데이트할 때는 다음 절차를 사용합니다.
 
-## ATA 센터 IP 주소
-<a id="the-ata-center-ip-address" class="xliff"></a>
+## <a name="the-ata-center-ip-address"></a>ATA 센터 IP 주소
 
 ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 저장합니다. ATA 게이트웨이는 정기적으로 ATA 센터에 연결하고 구성 변경 내용을 끌어옵니다. ATA 게이트웨이가 ATA 센터에 연결하는 방법은 두 단계로 변경합니다.
 
@@ -43,8 +41,7 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 > -   새 IP 주소가 ATA 센터 서버에 설치되면 구성을 변경할 때 IP 주소 목록에서 선택할 수 있습니다. 그러나 몇 가지 이유로 ATA 센터 서버에서 IP 주소를 설치할 수 없는 경우 사용자 지정 IP 주소를 선택한 후 수동으로 추가할 수 있습니다. IP 주소가 서버에 설치될 때까지 새 IP 주소를 활성화할 수 없습니다.
 > -   새 IP 주소를 활성화한 후 새 데이터 게이트웨이 배포해야 하는 경우 ATA 게이트웨이 설치 패키지를 다시 다운로드해야 합니다.
 
-## 콘솔 URL
-<a id="the-console-url" class="xliff"></a>
+## <a name="the-console-url"></a>콘솔 URL
 
 이 URL은 다음 시나리오에서 사용됩니다.
 
@@ -59,8 +56,7 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 > [!NOTE]
 > ATA 콘솔 URL을 수정한 후 새 데이터 게이트웨이 설치하기 전에 ATA 게이트웨이 설치 패키지를 다운로드해야 합니다.
 
-## ATA 센터 인증서
-<a id="the-ata-center-certificate" class="xliff"></a>
+## <a name="the-ata-center-certificate"></a>ATA 센터 인증서
 인증서가 만료되거나, ATA 센터 서버의 로컬 컴퓨터 저장소에서 새 인증서를 설치한 후 인증서를 갱신 또는 바꾸어야 할 경우 다음 2단계 프로세스를 진행하여 인증서를 바꿉니다.
 
 -   첫 번째 단계 – ATA 센터에서 사용할 인증서를 업데이트합니다. 이때 ATA 센터 서비스는 여전히 원래 인증서에 바인딩되어 있습니다. ATA 게이트웨이는 구성을 동기화하는 경우 상호 인증에 사용할 수 있는 두 가지 잠재적인 인증서를 갖게 됩니다. ATA 게이트웨이는 원래 인증서를 사용하여 연결할 수 있으면 새 인증서 사용을 시도하지 않습니다.
@@ -73,8 +69,7 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 > -   인증서는 또한 ATA 콘솔에서도 사용되므로 브라우저 경고 방지를 위해 ATA 콘솔 주소가 일치해야 합니다.
 > -   새 인증서를 활성화한 후 새 데이터 게이트웨이 배포해야 하는 경우 ATA 게이트웨이 설치 패키지를 다시 다운로드해야 합니다.
 
-## ATA 센터 구성 변경
-<a id="changing-the-ata-center-configuration" class="xliff"></a>
+## <a name="changing-the-ata-center-configuration"></a>ATA 센터 구성 변경
 
 1.  ATA 콘솔을 엽니다.
 
@@ -106,7 +101,6 @@ ATA 게이트웨이는 연결해야 하는 ATA 센터의 IP 주소를 로컬로 
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 콘솔 작업](working-with-ata-console.md)
 - [ATA 포럼을 확인해 보세요!](https://aka.ms/ata-forum)

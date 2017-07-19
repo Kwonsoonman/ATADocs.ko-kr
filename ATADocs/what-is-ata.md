@@ -22,12 +22,10 @@ ms.lasthandoff: 07/03/2017
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
-# Advanced Threat Analytics란?
-<a id="what-is-advanced-threat-analytics" class="xliff"></a>
+# <a name="what-is-advanced-threat-analytics"></a>Advanced Threat Analytics란?
 ATA(Advanced Threat Analytics)는 여러 유형으로 대상이 지정된 고급 사이버 공격과 내부자 위협으로부터 기업을 보호하는 온-프레미스 플랫폼입니다.
 
-## ATA의 작동 방법
-<a id="how-ata-works" class="xliff"></a>
+## <a name="how-ata-works"></a>ATA의 작동 방법
 
 ATA는 독점 네트워크 구문 분석 엔진을 활용하여 인증 및 정보 수집을 위해 여러 프로토콜(예: Kerberos, DNS, RPC, NTLM 및 기타)의 네트워크 트래픽을 캡처하고 구문 분석합니다. 이 정보는 다음 중 하나를 통해 ATA에서 수집됩니다.
 
@@ -44,8 +42,7 @@ ATA는 다음으로부터 이벤트와 로그를 받을 수 있습니다.
 
 ATA 아키텍처에 대한 자세한 내용은 [ATA 아키텍처](ata-architecture.md)를 참조하세요.
 
-## ATA의 기능
-<a id="what-does-ata-do" class="xliff"></a>
+## <a name="what-does-ata-do"></a>ATA의 기능
 
 ATA 기술에서는 다음과 같이 사이버 공격를 적극 대처하는 여러 단계에 중점을 두고 여러 의심스러운 활동을 검색합니다.
 
@@ -97,21 +94,18 @@ ATA는 또한 다음을 포함하여 **보안 문제 및 위험**을 검색합�
   ![샘플 ATA 화면 손상된 신뢰](media/broken-trust-sa.png)
 
 
-## 알려진 문제
-<a id="known-issues" class="xliff"></a>
+## <a name="known-issues"></a>알려진 문제
 
 - 먼저 ATA 게이트웨이를 업데이트하지 않고 ATA 1.7로 업데이트한 후 즉시 ATA 1.8로 업데이트하는 경우 ATA 1.8로 마이그레이션할 수 없습니다. ATA 센터를 버전 1.8로 업데이트하기 전에 먼저 모든 게이트웨이를 버전 1.7.1 또는 1.7.2로 업데이트해야 합니다.
 
 - 전체 마이그레이션을 수행하는 옵션을 선택하는 경우 데이터베이스 크기에 따라 시간이 오래 걸릴 수 있습니다. 마이그레이션 옵션을 선택할 때 예상 시간이 표시됩니다. 선택할 옵션을 결정하기 전에 이 내용을 기록해 두세요. 
 
 
-## 다음 단계
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>다음 단계
 
 -   ATA가 네트워크에 적용되는 방식에 대한 자세한 내용은 [ATA 아키텍처](ata-architecture.md)를 참조하세요.
 
 -   ATA 배포를 시작하려면 [ATA 설치](install-ata-step1.md)를 참조하세요.
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

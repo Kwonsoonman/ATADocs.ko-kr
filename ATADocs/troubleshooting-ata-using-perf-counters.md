@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# 성능 카운터를 사용하여 ATA 문제 해결
-<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>성능 카운터를 사용하여 ATA 문제 해결
 ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제공합니다. ATA의 구성 요소는 데이터를 순차적으로 처리하므로 문제가 발생할 경우 구성 요소 체인에 따라 어딘가에 부분적으로 삭제된 트래픽을 유발할 수 있습니다. 이 문제를 해결하려면 역효과를 낳는 구성 요소를 파악하고 연쇄 반응의 시작이 되는 문제를 해결해야 합니다. 성능 카운터에서 찾은 데이터를 사용하여 각 구성 요소의 작동 방식을 이해합니다.
 내부 ATA 구성 요소의 흐름을 이해하려면 [ATA 아키텍처](ata-architecture.md)를 참조하세요.
 
@@ -37,8 +36,7 @@ ATA 성능 카운터는 ATA의 각 구성 요소에 대한 성능 정보를 제�
 3.  이는 더 이상 엔터티를 전달할 수 없을 때 트래픽을 삭제하는 NetworkListener 구성 요소까지 거슬러 올라갑니다.
 
 
-## 문제 해결에 대한 성능 모니터 파일 검색하기
-<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>문제 해결에 대한 성능 모니터 파일 검색하기
 
 ATA 구성 요소에서 성능 모니터 파일(BLG)를 검색하려면:
 1.  성능 모니터를 엽니다.
@@ -48,8 +46,7 @@ ATA 구성 요소에서 성능 모니터 파일(BLG)를 검색하려면:
 5.  “Microsoft ATA Gateway” 또는 “Microsoft ATA Center”라는 이름으로 지정된 데이터 수집기 집합을 다시 시작합니다.
 
 
-## ATA Gateway 성능 카운터
-<a id="ata-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-gateway-performance-counters"></a>ATA Gateway 성능 카운터
 
 이 섹션에서는 ATA 게이트웨이에 대한 모든 참조가 ATA 경량 게이트웨이와도 관련됩니다.
 
@@ -72,8 +69,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 > -   시간 카운터는 밀리초 단위입니다.
 > -   경우에 따라 "보고서" 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
-## ATA 경량 게이트웨이 성능 카운터
-<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-lightweight-gateway-performance-counters"></a>ATA 경량 게이트웨이 성능 카운터
 성능 카운터는 ATA가 설치된 도메인 컨트롤러에서 너무 많은 리소스를 사용되지 않도록 경량 게이트웨이에서 할당량 관리에 사용할 수 있습니다.
 경량 게이트웨이에서 ATA가 적용하는 리소스 제한을 확인하려면 이 카운터를 추가합니다.
 
@@ -98,8 +94,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 |Process(Microsoft.Tri.Gateway)\Private Bytes|경량 게이트웨이 프로세스에서 실제로 사용하는 커밋된 메모리 크기(바이트)입니다.|임계값 없음 | 이 카운터 결과를 GatewayUpdaterResourceManager Commit Memory Max Size의 한도와 비교합니다. 시간이 지날수록 프로세스가 자주 최대 한도에 도달하면(프로세스가 한도에 도달하면 트래픽 삭제가 시작됨) 좀 더 많은 리소스를 경량 게이트웨이 전용으로 사용해야 한다는 것을 의미합니다.| 
 |Process(Microsoft.Tri.Gateway)\Working Set|경량 게이트웨이 프로세스에서 실제로 사용하는 실제 메모리 크기(바이트)입니다.|임계값 없음 |이 카운터 결과를 GatewayUpdaterResourceManager Working Set Limit Size의 한도와 비교합니다. 시간이 지날수록 프로세스가 자주 최대 한도에 도달하면(프로세스가 한도에 도달하면 트래픽 삭제가 시작됨) 좀 더 많은 리소스를 경량 게이트웨이 전용으로 사용해야 한다는 것을 의미합니다.|
 
-## ATA Center 성능 카운터
-<a id="ata-center-performance-counters" class="xliff"></a>
+## <a name="ata-center-performance-counters"></a>ATA Center 성능 카운터
 ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 상태를 관찰할 수 있습니다.
 
 이 작업을 수행하려면 "성능 모니터"를 열고 ATA Center에 대한 모든 카운터를 추가합니다. 성능 카운터 개체의 이름은 "Microsoft ATA Center"입니다.
@@ -118,8 +113,7 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 > -   시간 카운터는 밀리초 단위입니다.
 > -   경우에 따라 보고서에 대한 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
-## 운영 체제 카운터
-<a id="operating-system-counters" class="xliff"></a>
+## <a name="operating-system-counters"></a>운영 체제 카운터
 다음은 주의해야 하는 주 운영 체제 카운터 목록입니다.
 
 |카운터|설명|Threshold|문제 해결|
@@ -135,8 +129,7 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 |\LogicalDisk&#42;\Disk Writes\sec|디스크에 대한 쓰기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터(저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있음)|
 |\LogicalDisk(&#42;)\Disk Write Bytes\sec|초당 디스크에 쓴 바이트 수입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](configure-event-collection.md)
