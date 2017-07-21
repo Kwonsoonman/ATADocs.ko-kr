@@ -13,18 +13,17 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b810d066c59ea4663157027894eb7e2a39f7ff14
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
+ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/16/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
 
-# ATA 필수 구성 요소
-<a id="ata-prerequisites" class="xliff"></a>
+# <a name="ata-prerequisites"></a>ATA 필수 구성 요소
 이 문서에서는 환경에서 ATA를 올바르게 배포하기 위한 요구 사항을 설명합니다.
 
 >[!NOTE]
@@ -48,8 +47,7 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
 
 ![ATA 아키텍처 다이어그램](media/ATA-architecture-topology.jpg)
 
-## 시작하기 전에
-<a id="before-you-start" class="xliff"></a>
+## <a name="before-you-start"></a>시작하기 전에
 이 섹션에서는 ATA 설치를 시작하기 전에 수집해야 하는 정보와 확인해야 하는 계정 및 네트워크 엔터티를 제시합니다.
 
 
@@ -67,11 +65,9 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
 -   선택 사항: ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 수집 및 분석할 수 있을 뿐 아니라 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756 및 4757을 사용하여 ATA Pass-the-Hash, 무차별 암호 대입(Brute force), 중요한 그룹 수정 및 Honeytoken 검색 기능을 추가로 개선할 수 있습니다. 이러한 이벤트는 SIEM에서 수신될 수도 있고 도메인 컨트롤러에서 Windows 이벤트 전달을 설정하여 수신할 수도 있습니다. 수집된 이벤트는 도메인 컨트롤러 네트워크 트래픽을 통해서는 사용할 수 없는 추가 정보를 ATA에 제공합니다.
 
 
-## ATA 센터 요구 사항
-<a id="ata-center-requirements" class="xliff"></a>
+## <a name="ata-center-requirements"></a>ATA 센터 요구 사항
 이 섹션에서는 ATA 센터의 요구 사항에 대해 설명합니다.
-### 일반
-<a id="general" class="xliff"></a>
+### <a name="general"></a>일반
 ATA 센터는 Windows Server 2012 R2 또는 Windows Server 2016을 실행 중인 서버에 설치할 수 있습니다. ATA 센터는 도메인이나 작업 그룹의 구성원인 서버에 설치할 수 있습니다.
 
 Windows Server 2012 R2를 실행 중인 ATA 센터를 설치하기 전에 [KB2919355](https://support.microsoft.com/kb/2919355/) 업데이트가 설치되었는지 확인합니다.
@@ -84,32 +80,23 @@ ATA 센터를 가상 컴퓨터로 설치할 수 있습니다.
 > 가상 컴퓨터로 실행하는 경우 동적 메모리 또는 다른 메모리 풍선 알림 기능은 지원되지 않습니다.
 
 ATA 센터를 가상 컴퓨터로 실행하는 경우 데이터베이스 손상 가능성을 방지하기 위해 새 검사점을 만들기 전에 서버를 종료합니다.
-### 서버 사양
-<a id="server-specifications" class="xliff"></a>
+### <a name="server-specifications"></a>서버 사양
 물리적 서버에서 작업할 때 ATA 데이터베이스를 사용하려면 BIOS에서 NUMA(Non-Uniform Memory Access)를 **사용하지 않도록 설정**해야 합니다. 시스템이 NUMA를 노드 인터리빙으로 참조할 수 있습니다. 이 경우 NUMA를 사용하지 않으려면 노드 인터리빙을 **사용하도록 설정**해야 합니다. 자세한 내용은 BIOS 설명서를 참조하세요. 이는 ATA 센터가 가상 서버에서 실행 중인 경우 관련이 없습니다.<br>
 성능을 최적화하려면 ATA 센터의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
 모니터링 중인 도메인 컨트롤러 수와 각 도메인 컨트롤러의 로드에 따라 필요한 서버 사양이 결정됩니다. 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
 
-### 시간 동기화
-<a id="time-synchronization" class="xliff"></a>
+### <a name="time-synchronization"></a>시간 동기화
 ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간차가 5분 이상 나지 않도록 동기화해야 합니다.
 
 
-### 네트워크 어댑터
-<a id="network-adapters" class="xliff"></a>
+### <a name="network-adapters"></a>네트워크 어댑터
 다음이 필요합니다.
 -   하나 이상의 네트워크 어댑터(VLAN 환경에서 물리적 서버를 사용할 경우 두 개의 네트워크 어댑터 사용 권장)
 
--   두 개의 IP 주소(필수는 아니지만 권장됨)
+-   ATA 센터와 ATA 게이트웨이 간의 통신에 사용되는 IP 주소이며 포트 443에서 SSL을 사용하여 암호화됩니다. 
 
-ATA 센터와 ATA 게이트웨이 간의 통신은 포트 443에서 SSL을 사용하여 암호화됩니다. 또한 ATA 콘솔은 포트 443에서도 SSL을 사용합니다. **IP 주소 2개**를 사용하는 것이 좋습니다. ATA 센터 서비스는 포트 443을 첫 번째 IP 주소에 바인딩하고, ATA 콘솔은 포트 443을 두 번째 IP 주소에 바인딩합니다.
-
-> [!NOTE]
-> IP 주소 하나와 서로 다른 포트 2개를 사용할 수도 있지만, IP 주소를 2개 사용하는 것이 좋습니다.
-
-### 포트
-<a id="ports" class="xliff"></a>
+### <a name="ports"></a>포트
 아래 표에는 ATA 센터가 정상적으로 작동하도록 하려면 열어야 하는 최소한의 포트가 나와 있습니다.
 
 |프로토콜|전송|포트|끝/시작|방향|
@@ -127,8 +114,7 @@ ATA 센터와 ATA 게이트웨이 간의 통신은 포트 443에서 SSL을 사�
 |**Netlogon**(도메인에 연결된 경우 선택 사항)|TCP 및 UDP|445|도메인 컨트롤러|아웃바운드|
 |**Windows 시간**(도메인에 연결된 경우 선택 사항)|UDP|123|도메인 컨트롤러|아웃바운드|
 
-### 인증서
-<a id="certificates" class="xliff"></a>
+### <a name="certificates"></a>인증서
 ATA 센터에 CRL 배포 지점 액세스 권한이 있는지 확인합니다. ATA 게이트웨이가 인터넷에 액세스할 수 없으면 [CRL을 수동으로 가져오는 절차](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx)에 따라 전체 체인에 모든 CRL 배포 지점을 설치합니다.
 
 ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설치할 수 있습니다. 배포 후에는 자체 서명 인증서를 ATA 게이트웨이에 사용할 내부 인증 기관의 인증서로 바꿀 수 있습니다.<br>
@@ -142,11 +128,9 @@ ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설
 > [!NOTE]
 > 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그렇지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
 
-## ATA 게이트웨이 요구 사항
-<a id="ata-gateway-requirements" class="xliff"></a>
+## <a name="ata-gateway-requirements"></a>ATA 게이트웨이 요구 사항
 이 섹션에서는 ATA 게이트웨이의 요구 사항에 대해 설명합니다.
-### 일반
-<a id="general" class="xliff"></a>
+### <a name="general"></a>일반
 ATA 게이트웨이는 Windows Server 2012 R2 또는 Windows Server 2016(서버 코어 포함)을 실행 중인 서버에 설치할 수 있습니다.
 ATA 게이트웨이는 도메인이나 작업 그룹의 구성원인 서버에 설치할 수 있습니다.
 ATA 게이트웨이를 사용하면 Windows 2003 이상의 도메인 기능 수준에서 도메인 컨트롤러를 모니터링할 수 있습니다.
@@ -161,8 +145,7 @@ ATA 게이트웨이가 설치된 가상 컴퓨터를 사용하는 방법에 대�
 > [!NOTE]
 > 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
 
-### 서버 사양
-<a id="server-specifications" class="xliff"></a>
+### <a name="server-specifications"></a>서버 사양
 성능을 최적화하려면 ATA 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽의 양에 따라 ATA 게이트웨이 하나가 여러 도메인 컨트롤러를 모니터링할 수 있습니다.
 
@@ -171,12 +154,10 @@ ATA 게이트웨이가 설치된 가상 컴퓨터를 사용하는 방법에 대�
 
 ATA 게이트웨이 하드웨어 요구 사항에 대한 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
-### 시간 동기화
-<a id="time-synchronization" class="xliff"></a>
+### <a name="time-synchronization"></a>시간 동기화
 ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간차가 5분 이상 나지 않도록 동기화해야 합니다.
 
-### 네트워크 어댑터
-<a id="network-adapters" class="xliff"></a>
+### <a name="network-adapters"></a>네트워크 어댑터
 ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 각각 하나 이상 필요합니다.
 
 -   **관리 어댑터** - 회사 네트워크 통신에 사용됩니다. 다음 정보를 사용하여 이 어댑터를 구성해야 합니다.
@@ -198,8 +179,7 @@ ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 �
     > -   캡처 어댑터용 포트 미러링은 도메인 컨트롤러 네트워크 트래픽의 대상으로 구성합니다. 자세한 내용은 [포트 미러링 구성](configure-port-mirroring.md)을 참조하세요. 일반적으로는 네트워킹 또는 가상화 팀과 협의하여 포트 미러링을 구성해야 합니다.
     > -   기본 게이트웨이 및 DNS 서버 주소가 없는 라우팅 불가능 고정 IP 주소를 환경에 대해 구성합니다. 예를 들어 1.1.1.1/32와 같이 구성할 수 있습니다. 이렇게 하면 캡처 네트워크 어댑터가 트래픽을 최대한 캡처할 수 있으며, 관리 네트워크 어댑터를 사용하여 필요한 네트워크 트래픽을 보내고 받을 수 있습니다.
 
-### 포트
-<a id="ports" class="xliff"></a>
+### <a name="ports"></a>포트
 아래 표에는 관리 어댑터에 구성된 ATA 게이트웨이에 필요한 최소한의 포트가 나와 있습니다.
 
 |프로토콜|전송|포트|끝/시작|Direction|
@@ -223,11 +203,9 @@ ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 �
 > -   NTLM over RPC(TCP 포트 135)
 > -   NetBIOS(UDP 포트 137)
 
-## ATA 경량 게이트웨이 요구 사항
-<a id="ata-lightweight-gateway-requirements" class="xliff"></a>
+## <a name="ata-lightweight-gateway-requirements"></a>ATA 경량 게이트웨이 요구 사항
 이 섹션에서는 ATA 경량 게이트웨이 요구 사항에 대해 설명합니다.
-### 일반
-<a id="general" class="xliff"></a>
+### <a name="general"></a>일반
 ATA 경량 게이트웨이는 Windows Server 2008 R2 SP1(Server Core 제외), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016(Core 포함, Nano 제외)을 실행하는 도메인 컨트롤러에 대한 설치를 지원합니다.
 
 도메인 컨트롤러는 RODC(읽기 전용 도메인 컨트롤러)만 될 수 있습니다.
@@ -247,8 +225,7 @@ Windows server 2012 R2 Server Core에 대한 설치의 경우 [KB3000850](https:
 > [!NOTE]
 > 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
 
-### 서버 사양
-<a id="server-specifications" class="xliff"></a>
+### <a name="server-specifications"></a>서버 사양
 
 ATA 경량 게이트웨이는 도메인 컨트롤러에 최소 2개의 코어와 6GB의 RAM이 설치되어 있어야 합니다.
 성능을 최적화하려면 ATA 경량 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.
@@ -259,16 +236,13 @@ ATA 경량 게이트웨이는 도메인 컨트롤러에서 들어오고 나가�
 
 ATA 경량 게이트웨이 하드웨어 요구 사항에 대한 자세한 내용은 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
-### 시간 동기화
-<a id="time-synchronization" class="xliff"></a>
+### <a name="time-synchronization"></a>시간 동기화
 ATA 센터 서버, ATA 경량 게이트웨이 서버 및 도메인 컨트롤러의 시간차가 5분 이상 나지 않도록 동기화해야 합니다.
-### 네트워크 어댑터
-<a id="network-adapters" class="xliff"></a>
+### <a name="network-adapters"></a>네트워크 어댑터
 ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어댑터에서 로컬 트래픽을 모니터링합니다. <br>
 배포 후 모니터링되는 네트워크 어댑터를 수정하려면 ATA 콘솔을 사용하면 됩니다.
 
-### 포트
-<a id="ports" class="xliff"></a>
+### <a name="ports"></a>포트
 아래 표에는 ATA 경량 게이트웨이에 필요한 최소한의 포트가 나와 있습니다.
 
 |프로토콜|전송|포트|끝/시작|방향|
@@ -285,8 +259,7 @@ ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어�
 > -   NTLM over RPC
 > -   NetBIOS
 
-## ATA 콘솔
-<a id="ata-console" class="xliff"></a>
+## <a name="ata-console"></a>ATA 콘솔
 다음과 같은 브라우저를 통해 ATA 콘솔에 액세스합니다.
 
 -   Internet Explorer 버전 10 이상
@@ -297,8 +270,7 @@ ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어�
 
 -   스크린 너비 해상도가 1700픽셀 이상인 브라우저
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 - [ATA 아키텍처](ata-architecture.md)
 - [ATA 설치](install-ata-step1.md)

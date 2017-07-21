@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 7/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,14 +13,13 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
+ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/16/2017
 ---
-# ATA 버전 1.8의 새로운 기능
-<a id="whats-new-in-ata-version-18" class="xliff"></a>
+# <a name="whats-new-in-ata-version-18"></a>ATA 버전 1.8의 새로운 기능
 
 ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](https://www.microsoft.com/download/details.aspx?id=55536)할 수 있으며 전체 버전은 [Eval 센터](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics)에서 다운로드할 수 있습니다.
 
@@ -28,8 +27,7 @@ ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](ht
 
 
 
-## 새롭거나 업데이트된 검색 기능
-<a id="new--updated-detections" class="xliff"></a>
+## <a name="new--updated-detections"></a>새롭거나 업데이트된 검색 기능
 
 - 비정상적인 프로토콜 구현이 WannaCry 맬웨어를 검색하도록 향상되었습니다.
 
@@ -48,8 +46,7 @@ ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](ht
     - 비정상적인 프로토콜 구현
     - 손상된 신뢰
 
-## 의심스러운 활동의 향상된 심사
-<a id="improved-triage-of-suspicious-activities" class="xliff"></a>
+## <a name="improved-triage-of-suspicious-activities"></a>의심스러운 활동의 향상된 심사
 
 -   새 기능! ATA 1.8에서는 심사 프로세스 중 의심스러운 활동에 대해 다음과 같은 작업을 실행할 수 있습니다. 
     - **엔터티 제외** - ATA에서 원격 코드를 실행하는 관리자, 보안 스캐너 검색 등 무해한 참 긍정을 검색할 때 경고하지 않도록 향후 의심스러운 활동 발생에서 엔터티를 제외합니다.
@@ -57,32 +54,32 @@ ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](ht
     - **의심스러운 활동 삭제** - 공격 타임라인에서 의심스러운 활동을 삭제합니다.
 -   이제 의심스러운 활동 경고에 대한 후속 작업 프로세스가 더 효율적입니다. 의심스러운 활동 타임라인이 다시 설계되었습니다. ATA 1.8에서는 단일 화면에 더 많은 의심스러운 활동을 표시하고, 심사 및 조사를 위해 더 나은 정보를 포함할 수 있습니다. 
 
-## 조사에 도움이 되는 새로운 보고서
-<a id="new-reports-to-help-you-investigate" class="xliff"></a> 
+## <a name="new-reports-to-help-you-investigate"></a>조사에 도움이 되는 새로운 보고서 
 -   새 기능! 의심스러운 활동, 상태 문제 등을 포함하여 ATA에서 요약된 모든 데이터를 볼 수 있도록 **요약 보고서**가 추가되었습니다. 반복해서 자동으로 생성되는 사용자 지정 보고서를 정의할 수도 있습니다.
 -   새 기능! 특정 기간 동안 중요한 그룹에서 변경된 모든 내용을 볼 수 있도록 **중요한 그룹 보고서**가 추가되었습니다.
 
 
-## 인프라 향상
-<a id="infrastructure-improvements" class="xliff"></a>
+## <a name="infrastructure-improvements"></a>인프라 향상
 
 -   ATA 센터 성능이 향상되었습니다. ATA 1.8에서는 ATA 센터가 초당 1M 이상의 패킷을 처리할 수 있습니다.
 -   이제 ATA 경량 게이트웨이가 이벤트 전달을 구성하지 않고도 로컬에서 이벤트를 읽을 수 있습니다.
 -   이제 모니터링 경고 및 의심스러운 활동에 대해 별도로 메일을 구성할 수 있습니다.
 
-## 향상된 보안 기능
-<a id="security-improvements" class="xliff"></a>
+## <a name="security-improvements"></a>향상된 보안 기능
 
 -   새 기능! **ATA 관리에 대한 Single Sign-On**. ATA는 Windows 인증과 통합된 Single Sign-On을 지원합니다. 컴퓨터에 이미 로그온되어 있으면 ATA는 해당 토큰을 사용하여 ATA 콘솔에 로그인합니다. 스마트 카드를 사용하여 로그인할 수도 있습니다. ATA 게이트웨이 및 ATA 경량 게이트웨이에 대한 자동 설치 스크립트에서 이제 자격 증명을 제공할 필요 없이 로그온한 사용자의 컨텍스트를 사용합니다.
 -   로컬 시스템 권한이 ATA 게이트웨이 프로세스에서 제거되었으므로 이제 가상 계정(독립 실행형 ATA 게이트웨이에서만 사용 가능), 관리 서비스 계정 및 그룹 관리 서비스 계정을 사용하여 ATA 게이트웨이 프로세스를 실행할 수 있습니다.   
 -   ATA 센터 및 게이트웨이에 대한 감사 로그가 추가되었으며, 이제 모든 작업이 Windows 이벤트 로그에 기록됩니다.
 -   ATA 센터에 대한 KSP 인증서 지원이 추가되었습니다.
 
+## <a name="additional-changes"></a>추가 변경 사항
+
+- 설명 추가 옵션이 의심스러운 활동에서 제거되었습니다.
+- 의심스러운 활동 완화에 대한 권장 사항이 의심스러운 활동 타임라인에서 제거되었습니다.
 
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [버전 1.8로 ATA 업데이트 - 마이그레이션 가이드](ata-update-1.8-migration-guide.md)
