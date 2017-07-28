@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: bc3ad332e1a8af6259eadaecc4638f27fded67c6
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -55,6 +55,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 
 다음은 주의해야 하는 주 ATA Gateway 카운터 목록입니다.
 
+> [!div class="mx-tableFixed"]
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec|ATA Gateway가 1초마다 처리하는 트래픽 양입니다.|임계값 없음|ATA Gateway에서 구문 분석되는 트래픽 양을 이해하도록 도와줍니다.|
@@ -75,7 +76,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 
 이 작업을 수행하려면 "성능 모니터"를 열고 ATA 경량 게이트웨이에 대한 모든 카운터를 추가합니다. 성능 카운터 개체 이름은 "Microsoft ATA Gateway" 및 "Microsoft ATA Gateway Updater"입니다.
 
-
+> [!div class="mx-tableFixed"]
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Gateway Updater\GatewayUpdaterResourceManager CPU Time Max %|경량 게이트웨이 프로세스에서 사용할 수 있는 최대 CPU 시간(%)입니다. |임계값 없음 | 이 카운터는 도메인 컨트롤러 리소스가 ATA 경량 게이트웨이에서 사용되지 않도록 제한합니다. 시간이 지날수록 프로세스가 자주 최대 한도에 도달하면(프로세스가 한도에 도달하면 트래픽 삭제가 시작됨) 도메인 컨트롤러를 실행하는 서버에 좀 더 많은 리소스를 추가해야 한다는 것을 의미합니다.|
@@ -87,7 +88,7 @@ ATA Gateway의 성능 카운터를 추가하여 ATA Gateway의 실시간 성능 
 실제 사용 내용을 보려면 다음 카운터를 참조하세요.
 
 
-
+> [!div class="mx-tableFixed"]
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
 |Process(Microsoft.Tri.Gateway)\%Processor Time|경량 게이트웨이 프로세스에서 실제로 사용하는 CPU 시간(%)입니다. |임계값 없음 | 이 카운터 결과를 GatewayUpdaterResourceManager CPU Time Max %의 한도와 비교합니다. 시간이 지날수록 프로세스가 자주 최대 한도에 도달하면(프로세스가 한도에 도달하면 트래픽 삭제가 시작됨) 좀 더 많은 리소스를 경량 게이트웨이 전용으로 사용해야 한다는 것을 의미합니다.|
@@ -101,6 +102,7 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 
 다음은 주의해야 하는 주 ATA Center 카운터 목록입니다.
 
+> [!div class="mx-tableFixed"]
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
 |Microsoft ATA Center\EntityReceiver Entity Batch Block Size|ATA Center에서 큐에 넣은 엔터티 일괄 처리 수입니다.|최대값 - 1보다 작아야 합니다(기본 최대값: 10,000).|최대 크기에 도달하고 NetworkListener까지의 이전 구성 요소를 차단하는 구성 요소가 있는지 확인합니다.  위의 **ATA 구성 요소 프로세스**를 참조하세요.<br /><br />CPU 또는 메모리에 문제가 없는지 확인합니다.|
@@ -116,6 +118,7 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 ## <a name="operating-system-counters"></a>운영 체제 카운터
 다음은 주의해야 하는 주 운영 체제 카운터 목록입니다.
 
+> [!div class="mx-tableFixed"]
 |카운터|설명|Threshold|문제 해결|
 |-----------|---------------|-------------|-------------------|
 |Processor(_Total)\% Processor Time|프로세서가 비유휴 스레드를 실행하는 데 걸린 경과된 시간의 백분율입니다.|평균 80% 미만|프로세서 시간이 예상보다 훨씬 많이 걸리는 특정 프로세스가 있는지 확인합니다.<br /><br />프로세서를 더 추가합니다.<br /><br />서버당 트래픽 양을 줄입니다.<br /><br />"Processor(_Total)\% Processor Time" 카운터는 가상 서버에서 정확도가 떨어질 수 있습니다. 부족한 프로세서 능력을 보다 정확하게 측정하는 방법은 "System\Processor Queue Length" 카운터를 사용하는 것입니다.|
