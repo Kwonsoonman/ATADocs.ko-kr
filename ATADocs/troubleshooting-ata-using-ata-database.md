@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 112ee57f79b20b4e42b15c6fdc4566bbdcebe29f
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 174918812562b9bfe892fcde90d92e208b26ffc3
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -34,6 +34,7 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 
 2.  `mongo.exe ATA`를 실행합니다. ATA는 모두 대문자로 입력해야 합니다.
 
+> [!div class="mx-tableFixed"]
 |사용법|구문|참고|
 |-------------|----------|---------|
 |데이터베이스에서 컬렉션을 확인합니다.|`show collections`|트래픽이 데이터베이스에 기록 되는지와 이벤트 4776이 ATA에서 수신되는지를 확인하기 위한 종단 간 테스트로 유용합니다.|

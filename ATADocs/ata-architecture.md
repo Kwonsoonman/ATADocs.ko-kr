@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4d95e5b13d06ea0963b7cac129be4eb1458e5d4c
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/25/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -146,6 +146,7 @@ ATA 경량 게이트웨이에는 이 게이트웨이가 실행되고 있는 도�
 
 다음 표에서는 현재 필요한 용량보다 더 많은 할당량을 사용하여 모든 트래픽을 모니터링할 수 있을 만큼 계산 리소스가 충분한 도메인 컨트롤러의 예를 제공합니다.
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory(Lsass.exe)|ATA 경량 게이트웨이(Microsoft.Tri.Gateway.exe)|기타(기타 프로세스) |ATA 경량 게이트웨이 할당량|게이트웨이 삭제|
@@ -153,6 +154,7 @@ ATA 경량 게이트웨이에는 이 게이트웨이가 실행되고 있는 도�
 
 Active Directory에 더 많은 계산이 필요한 경우 ATA 경량 게이트웨이에서 필요한 할당량이 줄어듭니다. 다음 예제에서는 ATA 경량 게이트웨이에 할당된 할당량 보다 더 많은 양이 필요하여 일부 트래픽을 삭제합니다(일부 트래픽만 모니터링).
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory(Lsass.exe)|ATA 경량 게이트웨이(Microsoft.Tri.Gateway.exe)|기타(기타 프로세스) |ATA 경량 게이트웨이 할당량|게이트웨이 삭제 비율|
