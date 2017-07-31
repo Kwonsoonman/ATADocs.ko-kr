@@ -1,7 +1,7 @@
 # 이해 및 탐색
 ## [Microsoft Advanced Threat Analytics란?](what-is-ata.md)
 ## [ATA에서 검색하는 위협 요소는 무엇인가요?](ata-threats.md)
-## ATA 릴리스 정보
+## ATA의 새로운 기능?
 ### [ATA 버전 1.8의 새로운 기능](whats-new-version-1.8.md)
 #### [ATA 1.8로 업데이트 - 마이그레이션 가이드](ata-update-1.8-migration-guide.md)
 ### [ATA 버전 1.7의 새로운 기능](whats-new-version-1.7.md)
@@ -28,19 +28,19 @@
 ### [4단계 ATA 게이트웨이 설치](install-ata-step4.md)
 ### [5단계 ATA 게이트웨이 구성](install-ata-step5.md)
 ### [6단계 이벤트 컬렉션 및 VPN](install-ata-step6.md)
-### [6 단계 제외 사항 및 허니 토큰](install-ata-step6.md)
+### [7 단계 제외 사항 및 허니 토큰](install-ata-step7.md)
 ### [자동 설치](ata-silent-installation.md)
-# 사용
-## [ATA 센터 구성 변경](modifying-ata-center-configuration.md)
-## [도메인 연결 암호 변경](modifying-ata-config-dcpassword.md)
+# Windows Server Update Services와 함께
 ## [ATA 콘솔 작업](working-with-ata-console.md)
-## [ATA 역할 그룹](ata-role-groups.md)
-## [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
+## [의심스러운 활동 작업](working-with-suspicious-activities.md)
+###[검색에서 엔터티 제외](excluding-entities-from-detections.md)
 ## [ATA 알림 설정](setting-ata-alerts.md)
-## [검색 설정 사용](working-with-detection-settings.md)
 ## [ATA 보고서](reports.md)
 ## [ATA 상태 관리 센터](ata-health-center.md)
-## [의심스러운 활동 작업](working-with-suspicious-activities.md)
+## [ATA 역할 그룹](ata-role-groups.md)
+## [ATA 센터 구성 변경](modifying-ata-center-configuration.md)
+## [도메인 연결 암호 변경](modifying-ata-config-dcpassword.md)
+## [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
 ## [ATA 데이터베이스 관리](ata-database-management.md)
 ## [ATA 구성 내보내기/가져오기](ata-configuration-file.md)
 ## [ATA 원격 분석 관리](manage-telemetry-settings.md)
