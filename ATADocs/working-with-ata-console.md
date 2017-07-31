@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -34,19 +34,22 @@ ATA 콘솔에 로그인하려면 ATA 콘솔에 액세스할 수 있는 적절한
 
 ## <a name="logging-into-the-ata-console"></a>ATA 콘솔 로그인
 
+>[!NOTE]
+ > ATA 1.8부터 ATA 콘솔에 로그인할 때 Single Sign-On을 사용합니다.
+
 1. ATA 센터 서버에서 바탕 화면에 있는 **Microsoft ATA 콘솔** 아이콘을 클릭하거나 브라우저를 열고 ATA 콘솔로 이동합니다.
 
     ![ATA 서버 아이콘](media/ata-server-icon.png)
 
->[!NOTE]
-> ATA 센터나 ATA 게이트웨이에서 브라우저를 열고 ATA 센터 설치에서 ATA 콘솔에 대해 구성한 IP 주소로 이동합니다.    
+ >[!NOTE]
+ > ATA 센터나 ATA 게이트웨이에서 브라우저를 열고 ATA 센터 설치에서 ATA 콘솔에 대해 구성한 IP 주소로 이동합니다.    
 
 2.  ATA 센터가 설치된 컴퓨터와 ATA 콘솔에 액세스하려는 컴퓨터가 둘 다 도메인에 연결되어 있는 경우 ATA는 Windows 인증과 통합된 Single Sign-On을 지원합니다. 컴퓨터에 이미 로그온되어 있으면 ATA는 해당 토큰을 사용하여 ATA 콘솔에 로그인합니다. 스마트 카드를 사용하여 로그인할 수도 있습니다. ATA의 사용 권한은 [관리자 역할](ata-role-groups.md)과 일치합니다.
 
-> [!NOTE]
-> ATA 관리자 사용자 이름 및 암호를 사용하여 ATA 콘솔에 액세스하려는 컴퓨터에 로그온해야 합니다. 또는 다른 사용자로 브라우저를 실행하거나 Windows에서 로그아웃하고 ATA 관리자 사용자로 로그온할 수 있습니다. ATA 콘솔에서 자격 증명을 확인하도록 하려면 IP 주소를 사용하여 콘솔에 액세스합니다. 자격 증명을 입력하라는 메시지가 표시됩니다.
+ > [!NOTE]
+ > ATA 관리자 사용자 이름 및 암호를 사용하여 ATA 콘솔에 액세스하려는 컴퓨터에 로그온해야 합니다. 또는 다른 사용자로 브라우저를 실행하거나 Windows에서 로그아웃하고 ATA 관리자 사용자로 로그온할 수 있습니다. ATA 콘솔에서 자격 증명을 확인하도록 하려면 IP 주소를 사용하여 콘솔에 액세스합니다. 자격 증명을 입력하라는 메시지가 표시됩니다.
 
-SSO를 사용하여 로그인하려면 브라우저에서 ATA 콘솔 사이트가 로컬 인트라넷 사이트로 정의되어 있는지 확인하고 짧은 이름 또는 localhost를 사용하여 액세스해야 합니다.
+3. SSO를 사용하여 로그인하려면 브라우저에서 ATA 콘솔 사이트가 로컬 인트라넷 사이트로 정의되어 있는지 확인하고 짧은 이름 또는 localhost를 사용하여 액세스해야 합니다.
 
 > [!NOTE]
 > 각 의심스러운 활동 및 상태 경고를 기록할 뿐 아니라 ATA 콘솔에서 변경한 모든 구성이 ATA 센터 컴퓨터의 Windows 이벤트 로그, **응용 프로그램 및 서비스 로그**와 **Microsoft ATA**에서 감사됩니다. ATA 콘솔에 대한 각 로그인도 감사됩니다.<br></br>  ATA 게이트웨이에 영향을 주는 구성도 ATA 게이트웨이 컴퓨터의 Windows 이벤트 로그에 기록됩니다. 
@@ -113,7 +116,7 @@ ATA에서 완전히 확인할 수 없는 프로필 옆에는 절반이 채워진
 
 ### <a name="sensitive-groups"></a>중요한 그룹
 
-다음 그룹 목록은 ATA에서 **중요한 그룹**으로 간주됩니다. 다음은 관리자 권한이 있는 그룹으로 플래그가 지정되고 중요한 계정에 해당하는 경고를 생성하는 그룹입니다.
+다음 그룹 목록은 ATA에서 **중요한 그룹**으로 간주됩니다. 이러한 그룹의 구성원인 모든 엔터티는 중요하다고 간주됩니다.
 
 - Enterprise Read Only Domain Controllers 
 - Domain Admins 

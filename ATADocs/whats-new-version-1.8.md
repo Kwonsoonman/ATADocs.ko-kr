@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/16/2017
+ms.date: 7/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: b4754c749cad25a6aa4da94563df29f9f99e2a20
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 07/25/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA 버전 1.8의 새로운 기능
 
@@ -77,6 +77,51 @@ ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](ht
 - 설명 추가 옵션이 의심스러운 활동에서 제거되었습니다.
 - 의심스러운 활동 완화에 대한 권장 사항이 의심스러운 활동 타임라인에서 제거되었습니다.
 
+## <a name="known-issues"></a>알려진 문제
+
+### <a name="ata-gateway-on-windows-server-core"></a>Windows Server Core의 ATA 게이트웨이
+
+**증상**: .Net framework 4.7이 포함된 Windows Server 2012R2에서 ATA 게이트웨이를 1.8로 업그레이드하면 실패하고 *Microsoft Advanced Threat Analytics Gateway has stopped working*\(Microsoft Advanced Threat Analytics 게이트웨이의 작동이 중지되었습니다.\) 오류가 표시됩니다. 
+
+![게이트웨이 코어 오류](./media/gateway-core-error.png)
+
+Windows Server 2016 Core에서는 오류가 표시되지 않을 수 있지만 설치할 때 프로세스가 실패하고 1000 및 1001(프로세스 크래시) 이벤트가 서버의 응용 프로그램 이벤트 로그에 기록됩니다.
+
+**설명**: .NET framework 4.7에서는 WPF 기술(예: ATA)을 사용하는 응용 프로그램이 로드되지 않는 문제가 발생합니다. 자세한 내용은 [KB 4034015를 참조](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on)하세요. 
+
+**해결 방법**: .Net 4.7 제거. [KB 3186497을 참조](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows)하여 .NET 버전을 .NET 4.6.2로 되돌린 다음 ATA 게이트웨이를 1.8 버전으로 업데이트합니다. ATA를 업그레이드한 후 .NET 4.7을 다시 설치할 수 있습니다.  향후 릴리스에서는 이 문제를 해결하는 업데이트가 제공됩니다.
+
+### <a name="lightweight-gateway-event-log-permissions"></a>경량 게이트웨이 이벤트 로그 사용 권한
+
+**증상**: ATA 버전 1.8로 업그레이드하는 경우 이전에 보안 이벤트 로그에 액세스할 수 있는 권한이 부여된 앱 또는 서비스의 권한이 손실될 수 있습니다. 
+
+**설명**: ATA를 더 쉽게 배포할 수 있도록 ATA 1.8에서는 보안 이벤트 로그에 직접 액세스하므로 Windows 이벤트 전달을 구성할 필요가 없습니다. 동시에 ATA는 낮은 권한의 로컬 서비스로 실행되어 더욱 강화된 보안을 유지합니다. ATA가 이벤트를 읽을 수 있는 액세스 권한을 제공하기 위해 ATA 서비스는 자신에게 보안 이벤트 로그에 대한 사용 권한을 부여합니다. 이 경우 다른 서비스에 대해 이전에 설정된 사용 권한을 사용할 수 없게 될 수 있습니다.
+
+**해결 방법**: 다음 Windows PowerShell 스크립트를 실행합니다. 그러면 잘못 추가된 사용 권한이 ATA의 레지스트리에서 제거되고 다른 API를 통해 추가됩니다. 따라서 다른 앱의 사용 권한이 복원될 수 있습니다. 복원되지 않으면 수동으로 복원해야 합니다. 향후 릴리스에서는 이 문제를 해결하는 업데이트가 제공됩니다. 
+
+       $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
+        try {
+        $SecurityDescriptor = Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+        $ATASddl = "O:BAG:SYD:" + $ATADaclEntry 
+        if($SecurityDescriptor.CustomSD -eq $ATASddl) {
+        Remove-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Eventlog\Security -Name CustomSD
+        }
+    }
+    catch
+    {
+    # registry key does not exist
+    }
+
+    $EventLogConfiguration = New-Object -TypeName System.Diagnostics.Eventing.Reader.EventLogConfiguration("Security")
+    $EventLogConfiguration.SecurityDescriptor = $EventLogConfiguration.SecurityDescriptor + $ATADaclEntry
+
+### <a name="proxy-interference"></a>프록시 간섭
+
+**증상**: ATA 1.8로 업그레이드한 후 ATA 게이트웨이 서비스가 시작되지 않을 수 있습니다. ATA 오류 로그에 *System.Net.Http.HttpRequestException: 요청을 보내는 동안 오류가 발생했습니다. ---> System.Net.WebException: 원격 서버에 오류가 반환되었습니다. (407) 프록시 인증이 필요합니다.*라는 예외가 표시될 수 있습니다.
+
+**설명**: ATA 1.8부터 ATA 게이트웨이는 HTTP 프로토콜을 사용하여 ATA 센터와 통신합니다. ATA 게이트웨이를 설치한 컴퓨터가 프록시 서버를 사용하여 ATA 센터에 연결된 경우 이 통신이 중단될 수 있습니다. 
+
+**해결 방법**: ATA 게이트웨이 서비스 계정에서 프록시 서버를 사용하지 않도록 설정합니다. 향후 릴리스에서는 이 문제를 해결하는 업데이트가 제공됩니다.
 
 
 ## <a name="see-also"></a>참고 항목
