@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/2/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 08/02/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -51,12 +51,12 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
 이 섹션에서는 ATA 설치를 시작하기 전에 수집해야 하는 정보와 확인해야 하는 계정 및 네트워크 엔터티를 제시합니다.
 
 
--   모니터링할 도메인의 모든 개체에 대한 읽기 권한이 있는 사용자 계정 및 암호입니다.
+-   모니터링되는 도메인의 모든 개체에 대한 읽기 권한이 있는 사용자 계정 및 암호입니다.
 
     > [!NOTE]
     > 도메인의 여러 OU(조직 구성 단위)에서 사용자 지정 ACL을 설정한 경우에는 선택한 사용자에게 해당 OU에 대한 읽기 권한이 있는지 확인하세요.
 
--   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 다시 시작하지 않으면 게이트웨이가 트래픽을 더 이상 캡처하지 않습니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
+-   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 그렇지 않으면 게이트웨이가 트래픽 캡처를 중지합니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
 
 -    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 항목에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
 
@@ -94,7 +94,7 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 다음이 필요합니다.
 -   하나 이상의 네트워크 어댑터(VLAN 환경에서 물리적 서버를 사용할 경우 두 개의 네트워크 어댑터 사용 권장)
 
--   ATA 센터와 ATA 게이트웨이 간의 통신에 사용되는 IP 주소이며 포트 443에서 SSL을 사용하여 암호화됩니다. 
+-   ATA 센터와 ATA 게이트웨이 간의 통신에 사용되는 IP 주소이며 포트 443에서 SSL을 사용하여 암호화됩니다. (ATA 서비스는 ATA 센터가 포트 443에 가지고 있는 모든 IP 주소에 바인딩됩니다.)
 
 ### <a name="ports"></a>포트
 아래 표에는 ATA 센터가 정상적으로 작동하도록 하려면 열어야 하는 최소한의 포트가 나와 있습니다.
@@ -114,19 +114,23 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 |**Netlogon**(도메인에 연결된 경우 선택 사항)|TCP 및 UDP|445|도메인 컨트롤러|아웃바운드|
 |**Windows 시간**(도메인에 연결된 경우 선택 사항)|UDP|123|도메인 컨트롤러|아웃바운드|
 
+> [!NOTE]
+> ATA 게이트웨이와 도메인 컨트롤러 간의 자격 증명을 테스트하려면 LDAP가 필요합니다. 이 테스트는 ATA 센터에서 도메인 컨트롤러로 수행되어 이러한 자격 증명의 유효성을 테스트하며, 이 테스트 이후에는 ATA 게이트웨이가 LDAP를 일반적인 통신의 일부로 사용합니다.
+
+
 ### <a name="certificates"></a>인증서
 ATA 센터에 CRL 배포 지점 액세스 권한이 있는지 확인합니다. ATA 게이트웨이가 인터넷에 액세스할 수 없으면 [CRL을 수동으로 가져오는 절차](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx)에 따라 전체 체인에 모든 CRL 배포 지점을 설치합니다.
 
 ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설치할 수 있습니다. 배포 후에는 자체 서명 인증서를 ATA 게이트웨이에 사용할 내부 인증 기관의 인증서로 바꿀 수 있습니다.<br>
-> [!NOTE]
-> 인증서의 공급자 형식은 CSP(암호화 서비스 공급자) 또는 KSP(키 저장소 공급자)일 수 있습니다.
 
-
-> 인증서 자동 갱신 사용이 지원되지 않습니다.
+> [!WARNING]
+> - 기존 인증서의 갱신 프로세스가 지원되지 않습니다. 인증서를 갱신하는 방법은 새 인증서를 만들고 해당 인증서를 사용하도록 ATA를 구성하는 방법만이 유일합니다.
 
 
 > [!NOTE]
-> 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그렇지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
+> - 인증서의 공급자 형식은 CSP(암호화 서비스 공급자) 또는 KSP(키 저장소 공급자)일 수 있습니다.
+> - ATA 센터 인증서는 갱신되지 않아야 합니다. 인증서가 만료되기 전에 인증서를 갱신하는 올바른 방법은 새 인증서를 만들고 해당 인증서를 선택하는 것입니다. 
+> - 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그렇지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
 
 ## <a name="ata-gateway-requirements"></a>ATA 게이트웨이 요구 사항
 이 섹션에서는 ATA 게이트웨이의 요구 사항에 대해 설명합니다.
