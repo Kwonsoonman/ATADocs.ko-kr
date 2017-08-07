@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 07/30/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -51,6 +51,7 @@ ms.lasthandoff: 07/25/2017
 |VMware에서 경량 게이트웨이를 사용하는 경우 삭제된 포트 미러 트래픽 경고|VMware 가상 컴퓨터에서 DC를 사용하는 경우, **삭제된 포트 미러 네트워크 트래픽**에 대한 경고를 받을 수 있습니다. VMware의 구성이 일치하지 않기 때문일 수 있습니다. |이러한 경고를 방지하기 위해 다음 설정이 0 또는 사용 안 함으로 설정되어 있는지 확인하세요.: TsoEnable, LargeSendOffload, IPv4, TSO Offload IPv4 Giant TSO Offload도 사용하지 않도록 설정하는 것이 좋습니다. 자세한 내용은 VMware 설명서를 참조하세요.|
 |System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (407) 프록시 인증이 필요합니다.|ATA 센터와 ATA 게이트웨이 통신이 프록시 서버에 의해 중단됩니다.|ATA 게이트웨이 컴퓨터에서 프록시를 사용하지 않도록 설정합니다. <br></br>프록시 설정을 계정별로 지정될 수 있습니다.|
 |System.IO.DirectoryNotFoundException: 지정된 경로를 찾을 수 없습니다. (HRESULT의 예외: 0x80070003)|ATA를 작동하는 데 필요한 하나 이상의 서비스가 시작되지 않았습니다.|다음 서비스를 시작합니다. <br></br>성능 로그 및 경고(PLA), 작업 스케줄러(일정)|
+|System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (403) 사용 권한 없음|ATA 센터를 신뢰할 수 없기 때문에 ATA 게이트웨이 또는 경량 게이트웨이가 HTTP 연결을 설정하는 것이 금지되었을 수 있습니다.|ATA 센터의 NetBIOS 이름과 FQDN을 신뢰할 수 있는 웹 사이트 목록에 추가하고 Internet Explorer에서 캐시(또는 구성된 이름이 해당 NetBIOS/FQDN과 다른 경우에는 구성에 지정된 ATA 센터의 이름)를 지웁니다.|
 
 ## <a name="deployment-errors"></a>배포 오류
 > [!div class="mx-tableFixed"]
