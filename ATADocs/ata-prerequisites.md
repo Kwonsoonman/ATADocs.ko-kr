@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/6/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -115,8 +115,7 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 |**Windows 시간**(도메인에 연결된 경우 선택 사항)|UDP|123|도메인 컨트롤러|아웃바운드|
 
 > [!NOTE]
-> ATA 게이트웨이와 도메인 컨트롤러 간의 자격 증명을 테스트하려면 LDAP가 필요합니다. 이 테스트는 ATA 센터에서 도메인 컨트롤러로 수행되어 이러한 자격 증명의 유효성을 테스트하며, 이 테스트 이후에는 ATA 게이트웨이가 LDAP를 일반적인 통신의 일부로 사용합니다.
-
+> ATA 게이트웨이와 도메인 컨트롤러 간에 사용할 자격 증명을 테스트하려면 LDAP가 필요합니다. 이 테스트는 ATA 센터에서 도메인 컨트롤러로 수행되어 이러한 자격 증명의 유효성을 테스트하며, 이 테스트 이후에는 ATA 게이트웨이가 LDAP를 일반적인 확인 프로세스의 일부로 사용합니다.
 
 ### <a name="certificates"></a>인증서
 ATA 센터에 CRL 배포 지점 액세스 권한이 있는지 확인합니다. ATA 게이트웨이가 인터넷에 액세스할 수 없으면 [CRL을 수동으로 가져오는 절차](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx)에 따라 전체 체인에 모든 CRL 배포 지점을 설치합니다.
