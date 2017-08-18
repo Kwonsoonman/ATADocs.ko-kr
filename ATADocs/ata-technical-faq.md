@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/2/2017
+ms.date: 08/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05853aecf8f8aa075d66c5a755cf89ffd7727739
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: 90a4c656d42d02c89cbb31b0e46c33fe495e19aa
+ms.sourcegitcommit: 9c7f173efb076ef9a8664d50b2333a10ddaf7401
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/15/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -53,6 +53,7 @@ Office 365 포털을 통해 직접 또는 CSP(Cloud Solution Partner) 라이선�
 |1.7 업데이트 1|1.7.5647|
 |1.7 업데이트 2|1.7.5757|
 |1.8|1.8.6645|
+|1.8 업데이트 1|1.8.6765|
 
 ## <a name="what-version-should-i-use-to-upgrade-my-current-ata-deployment-to-the-latest-version"></a>현재 ATA 배포를 최신 버전으로 업그레이드하려면 어떤 버전을 사용해야 하나요?
 
