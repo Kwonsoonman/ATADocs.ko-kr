@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9fa0b9162aabdaa9a42c532cf69af37decf3e05
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bfd86dadbc773b349f28a6327ec2e177da74be8d
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/14/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 08/02/2017
 
 이 프로세스를 수행하여 인증서를 바꿉니다.
 
-1. 현재 인증서가 만료되기 전에 새 인증서를 만들고 해당 인증서가 ATA 센터 서버에 설치되었는지 확인해야 합니다. 
+1. 현재 인증서가 만료되기 전에 새 인증서를 만들고 해당 인증서가 ATA 센터 서버에 설치되었는지 확인해야 합니다. <br></br>내부 인증 기관에서 인증서를 선택하는 것이 좋지만 새 자체 서명 인증서를 만들 수도 있습니다. 자세한 내용은 [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate)를 참조하세요.
 
 2. ATA 설정의 **센터** 아래에서 새로 만들어진 이 인증서를 선택합니다. 이때 ATA 센터 서비스는 여전히 원래 인증서에 바인딩되어 있습니다. 
 
