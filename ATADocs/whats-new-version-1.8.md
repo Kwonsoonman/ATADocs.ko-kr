@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/8/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: a067dbaaac9ed115baa7ee13bf5dd1099f038eaf
-ms.sourcegitcommit: 5fd505fac6b69b6c732bb2da121eff23c5eb303e
+ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA 버전 1.8의 새로운 기능
 
@@ -76,6 +76,7 @@ ATA의 최신 업데이트 버전은 [다운로드 센터에서 다운로드](ht
 
 - 설명 추가 옵션이 의심스러운 활동에서 제거되었습니다.
 - 의심스러운 활동 완화에 대한 권장 사항이 의심스러운 활동 타임라인에서 제거되었습니다.
+- ATA 버전 1.8부터는 ATA 게이트웨이 및 경량 게이트웨이가 자체 인증서를 관리하고 이를 관리하기 위해 관리자 상호 작용이 필요하지 않습니다.
 
 ## <a name="known-issues"></a>알려진 문제
 
