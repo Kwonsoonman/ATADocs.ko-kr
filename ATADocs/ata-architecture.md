@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 250c68f0efc7064f7ec4a4578342c935d04e815b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -180,8 +180,13 @@ Pass-the-Hash, 무차별 암호 대입(Brute force), 중요한 그룹 수정, Ho
 
 -   Windows 이벤트 전달 구성<br>ATA가 이벤트를 받을 수 있도록 하는 또 다른 방법은, Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756 및 4757을 ATA 게이트웨이로 전달하도록 도메인 컨트롤러를 구성하는 것입니다. SIEM이 없거나 SIEM이 현재 ATA에서 지원되지 않는 경우 이 방법을 사용하면 특히 유용합니다. ATA의 Windows 이벤트 전달 기능에 대한 자세한 내용은 [Windows 이벤트 전달 구성](configure-event-collection.md#configuring-windows-event-forwarding)을 참조하세요. 이는 실제 ATA 게이트웨이에만 적용되고 ATA 경량 게이트웨이에는 적용되지 않습니다.
 
+## <a name="related-videos"></a>관련 동영상
+- [올바른 ATA 게이트웨이 유형 선택](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
 ## <a name="see-also"></a>참고 항목
 - [ATA 필수 구성 요소](ata-prerequisites.md)
+- [ATA 크기 조정 도구](http://aka.ms/atasizingtool)
 - [ATA 용량 계획](ata-capacity-planning.md)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [Windows 이벤트 전달 구성](configure-event-collection.md#configuring-windows-event-forwarding)

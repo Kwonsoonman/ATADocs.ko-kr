@@ -12,11 +12,11 @@ ms.prod:
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 54dd8bab3381fc221c75c53191ef052fc83b61ec
-ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
+ms.openlocfilehash: cdc3767fd9fdc00dbb92457c980f6f7e8b99907b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -211,7 +211,13 @@ ATA 배포에서 ATA 게이트웨이 형식의 모든 조합이 지원됩니다.
 
     ![Packets/sec 카운터 이미지](media/ATA-traffic-estimation-14.png)
 
+
+## <a name="related-videos"></a>관련 동영상
+- [올바른 ATA 게이트웨이 유형 선택](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
 ## <a name="see-also"></a>참고 항목
+- [ATA 크기 조정 도구](http://aka.ms/atasizingtool)
 - [ATA 필수 구성 요소](ata-prerequisites.md)
 - [ATA 아키텍처](ata-architecture.md)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

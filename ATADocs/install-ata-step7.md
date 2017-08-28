@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/9/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2b969089d8c4c2d861591342f7367e8cc5430b24
-ms.sourcegitcommit: 3177d5894413fbd363b9aca8130f3f7a369223b8
+ms.openlocfilehash: 527e62553913dc12b2b0d5ff149f765002de7946
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -71,8 +71,14 @@ ATA이 실행되고 네트워크에서 위반을 catch하는지 확인하려면 
 [« 6단계](install-ata-step6.md)
 
 
-## <a name="see-also"></a>참고 항목
 
+## <a name="related-videos"></a>관련 동영상
+- [올바른 ATA 게이트웨이 유형 선택](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## <a name="see-also"></a>참고 항목
+- [ATA POC 배포 가이드](http://aka.ms/atapoc)
+- [ATA 크기 조정 도구](http://aka.ms/atasizingtool)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](ata-prerequisites.md)

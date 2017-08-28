@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ffab11a99ae62c1c0b37c43ee212d87508f886b8
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 61ff0535d3497d39d58b96f1b4acc255b74e05b5
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -206,8 +206,14 @@ VPN 데이터를 구성하려면 **구성** > **VPN**으로 이동한 다음 VPN
 [7 단계»](install-ata-step7.md)
 
 
-## <a name="see-also"></a>참고 항목
 
+## <a name="related-videos"></a>관련 동영상
+- [올바른 ATA 게이트웨이 유형 선택](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## <a name="see-also"></a>참고 항목
+- [ATA POC 배포 가이드](http://aka.ms/atapoc)
+- [ATA 크기 조정 도구](http://aka.ms/atasizingtool)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](ata-prerequisites.md)

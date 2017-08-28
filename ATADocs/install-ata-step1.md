@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 97fa1522ca43cf92416ac845b8886f2905e9981b
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 3dc73583295136567ac221006430a3e8bc1353d9
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -97,8 +97,13 @@ IP 주소를 사용하여 사이트에 로그인하기 때문에 인증서와 �
 [« 설치 전](configure-port-mirroring.md)
 [2단계 »](install-ata-step2.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="related-videos"></a>관련 동영상
+- [올바른 ATA 게이트웨이 유형 선택](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
+
+## <a name="see-also"></a>참고 항목
+- [ATA POC 배포 가이드](http://aka.ms/atapoc)
+- [ATA 크기 조정 도구](http://aka.ms/atasizingtool)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](ata-prerequisites.md)

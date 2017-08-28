@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6952a239eb5f11cdfefc9ce201f9a765e61de8e8
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: ff0de9755c4023d0245c6af8b7a29d505b4f4664
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -43,7 +43,7 @@ ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 
     ![게이트웨이 설정 구성 이미지](media/ATA-Gateways-config-2.png)
 
   - **설명**: ATA 게이트웨이에 대한 설명을 입력합니다(옵션).
-  - **FQDN(Port Mirrored Domain Controller)** (ATA 게이트웨이에 필요하며 ATA 경량 게이트웨이에는 설정할 수 없음): 도메인 컨트롤러의 전체 FQDN을 입력하고 더하기 기호를 클릭하여 목록에 추가합니다. 예를 들면  **dc01.contoso.com**과 같습니다.
+  - **FQDN(Port Mirrored Domain Controller)** (ATA 게이트웨이에 필요하며 ATA 경량 게이트웨이에는 설정할 수 없음): 도메인 컨트롤러의 전체 FQDN을 입력하고 더하기 기호를 클릭하여 목록에 추가합니다. 예를 들면 **dc01.contoso.com**과 같습니다.
 
       다음 정보는 **도메인 컨트롤러** 목록에 입력한 서버에 적용됩니다.
       - ATA Gateway에서 포트 미러링을 통해 모니터링하는 트래픽의 모든 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되어야 합니다. 도메인 컨트롤러가 **도메인 컨트롤러** 목록에 나열되지 않은 경우 의심스러운 활동 검색이 예상대로 작동하지 않을 수 있습니다.
@@ -88,8 +88,15 @@ ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 �
 [« 4단계](install-ata-step4.md)
 [6단계 »](install-ata-step6.md)
 
-## <a name="see-also"></a>참고 항목
 
+
+## <a name="related-videos"></a>관련 동영상
+- [올바른 ATA 게이트웨이 유형 선택](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
+## <a name="see-also"></a>참고 항목
+- [ATA POC 배포 가이드](http://aka.ms/atapoc)
+- [ATA 크기 조정 도구](http://aka.ms/atasizingtool)
 - [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [이벤트 수집 구성](configure-event-collection.md)
 - [ATA 필수 구성 요소](ata-prerequisites.md)
