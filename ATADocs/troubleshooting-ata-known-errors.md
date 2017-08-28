@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 675543c11e07bcc243131e2350cfb33bfe8e7e39
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: 89d1472b18f20d9702fcd7dfd47fa4b22858ab83
+ms.sourcegitcommit: 37fdfb6a21d1b81f5a4b4c1351112bdf727a633f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -53,7 +53,9 @@ ms.lasthandoff: 08/07/2017
 |System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (407) 프록시 인증이 필요합니다.|ATA 센터와 ATA 게이트웨이 통신이 프록시 서버에 의해 중단됩니다.|ATA 게이트웨이 컴퓨터에서 프록시를 사용하지 않도록 설정합니다. <br></br>프록시 설정을 계정별로 지정될 수 있습니다.|
 |System.IO.DirectoryNotFoundException: 지정된 경로를 찾을 수 없습니다. (HRESULT의 예외: 0x80070003)|ATA를 작동하는 데 필요한 하나 이상의 서비스가 시작되지 않았습니다.|다음 서비스를 시작합니다. <br></br>성능 로그 및 경고(PLA), 작업 스케줄러(일정)|
 |System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (403) 사용 권한 없음|ATA 센터를 신뢰할 수 없기 때문에 ATA 게이트웨이 또는 경량 게이트웨이가 HTTP 연결을 설정하는 것이 금지되었을 수 있습니다.|ATA 센터의 NetBIOS 이름과 FQDN을 신뢰할 수 있는 웹 사이트 목록에 추가하고 Internet Explorer에서 캐시(또는 구성된 이름이 해당 NetBIOS/FQDN과 다른 경우에는 구성에 지정된 ATA 센터의 이름)를 지웁니다.|
+|System.Net.Http.HttpRequestException: PostAsync 실패 [requestTypeName=StopNetEventSessionRequest]|ATA 게이트웨이 또는 ATA 경량 게이트웨이는 WMI 문제로 인해 네트워크 트래픽을 수집하는 ETW 세션을 멈추고 시작할 수 없습니다.|[WMI: WMI 리포지토리 다시 작성](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/)의 지침에 따라 WMI 문제를 해결합니다.|
 
+ 
 ## <a name="deployment-errors"></a>배포 오류
 > [!div class="mx-tableFixed"]
 |오류|설명|해결 방법|

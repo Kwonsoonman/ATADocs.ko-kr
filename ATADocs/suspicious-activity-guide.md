@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c93f4485998bbb1b2b440f01fed8d96ad4e2842
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: f9f9fee8ad8d75d3510c86890201dd719e074b8c
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/20/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -204,7 +204,13 @@ ATA는 지능형 공격의 여러 단계(정찰, 자격 증명 손상, 측면 �
 |------|----|------|----------|
 | 모든 계정의 5% 이상이 삭제되면 ATA에서 이 경고가 발생합니다. 이 경우 삭제된 항목 컨테이너에 대한 읽기 권한이 필요합니다. | 모든 계정의 5%가 갑자기 삭제된 이유를 파악합니다. | Active Directory에서 계정을 삭제할 수 있는 사용자에 대한 권한을 제거합니다. 자세한 내용은 [디렉터리 개체에 대한 사용 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx)을 참조하세요. | 낮음 |
 
+## <a name="related-videos"></a>관련 동영상
+- [보안 커뮤니티에 가입](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
 ## <a name="see-also"></a>참고 항목
+- [ATA 의심스러운 활동 플레이북](http://aka.ms/ataplaybook)
+- [ATA 포럼을 확인해 보세요!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [의심스러운 활동 작업](working-with-suspicious-activities.md)
 - [위조된 PAC 공격 조사](use-case-forged-pac.md)
 - [ATA의 알려진 오류 문제 해결](troubleshooting-ata-known-errors.md)
