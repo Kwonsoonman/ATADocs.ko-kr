@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 313ee78070ab991d3d1b30441be8a4cee990eace
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -60,7 +60,7 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
 
 -    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 항목에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
 
--   선택 사항: 네트워크 활동이 없는 사용자 계정을 사용합니다. 이 계정은 ATA 허니토큰 사용자로 구성됩니다. 허니토큰 사용자를 구성하려면 사용자 이름이 아닌 사용자 계정의 SID가 필요합니다. 자세한 내용은 [ATA 검색 설정 작업](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings)을 참조하세요.
+-   선택 사항: 네트워크 활동이 없는 사용자 계정을 사용합니다. 이 계정은 ATA 허니토큰 사용자로 구성됩니다. 허니토큰 사용자를 구성하려면 사용자 이름이 아닌 사용자 계정의 SID가 필요합니다. 자세한 내용은 [ATA 검색 설정 작업](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) 항목을 참조하세요.
 
 -   선택 사항: ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 수집 및 분석할 수 있을 뿐 아니라 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756 및 4757을 사용하여 ATA Pass-the-Hash, 무차별 암호 대입(Brute force), 중요한 그룹 수정 및 Honeytoken 검색 기능을 추가로 개선할 수 있습니다. 이러한 이벤트는 SIEM에서 수신될 수도 있고 도메인 컨트롤러에서 Windows 이벤트 전달을 설정하여 수신할 수도 있습니다. 수집된 이벤트는 도메인 컨트롤러 네트워크 트래픽을 통해서는 사용할 수 없는 추가 정보를 ATA에 제공합니다.
 

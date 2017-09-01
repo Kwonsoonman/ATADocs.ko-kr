@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 89d1472b18f20d9702fcd7dfd47fa4b22858ab83
-ms.sourcegitcommit: 37fdfb6a21d1b81f5a4b4c1351112bdf727a633f
+ms.openlocfilehash: 2362f6bf64147b972e9c45e3b97bab4280c6eeac
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -46,8 +46,7 @@ ms.lasthandoff: 08/20/2017
 |System.InvalidOperationException: 지정한 범주에 'Microsoft.Tri.Gateway' 인스턴스가 없습니다.|ATA 게이트웨이에서 프로세스 이름에 PID를 사용하도록 설정되어 있습니다.|프로세스 이름에서 PID를 사용하도록 설정하지 않으려면 [KB281884](https://support.microsoft.com/kb/281884)를 사용하세요.|
 |System.InvalidOperationException: 범주가 없습니다.|레지스트리에서 카운터를 사용하지 않도록 설정했을 수 있습니다.|성능 카운터를 다시 작성하려면 [KB2554336](https://support.microsoft.com/kb/2554336)를 사용하세요.|
 |System.ApplicationException: ETW 세션 MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329를 시작할 수 없습니다.|컴퓨터의 짧은 이름을 가리키는 HOSTS 파일에 호스트 항목이 있습니다.|C:\Windows\System32\drivers\etc\HOSTS 파일에서 호스트 항목을 제거하거나 FQDN으로 변경하세요.|
-|System.IO.IOException: 원격 상대방이 전송 스트림을 닫아서 인증에 실패했습니다.|TLS 1.0이 ATA 게이트웨이에서 사용하지 않도록 설정되어 있지만 .Net은 TLS 1.2를 사용하도록 설정되어 있음|다음 옵션 중 하나를 사용합니다. </br> ATA 게이트웨이에서 TLS 1.0을 사용하도록 설정 </br>다음과 같이 SSL 및 TLS에 대한 운영 체제 기본값을 사용하도록 레지스트리 키를 설정하여 .Net에서 TLS 1.2를 사용하도록 설정합니다. </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>
-`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+|System.IO.IOException: 원격 상대방이 전송 스트림을 닫아서 인증에 실패했습니다.|TLS 1.0이 ATA 게이트웨이에서 사용하지 않도록 설정되어 있지만 .Net은 TLS 1.2를 사용하도록 설정되어 있음|다음 옵션 중 하나를 사용합니다. </br> ATA 게이트웨이에서 TLS 1.0을 사용하도록 설정 </br>다음과 같이 SSL 및 TLS에 대한 운영 체제 기본값을 사용하도록 레지스트리 키를 설정하여 .Net에서 TLS 1.2를 사용하도록 설정합니다. </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: 'Microsoft.Opn.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' 어셈블리에서 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' 형식을 로드할 수 없습니다.|ATA 게이트웨이가 필요한 구문 분석 파일을 로드하지 못했습니다.|Microsoft Message Analyzer가 현재 설치되어 있는지 확인합니다. Message Analyzer는 ATA 게이트웨이/경량 게이트웨이와 함께 설치할 수 없습니다. Message Analyzer를 제거하고 게이트웨이 서비스를 다시 시작합니다.|
 |VMware에서 경량 게이트웨이를 사용하는 경우 삭제된 포트 미러 트래픽 경고|VMware 가상 컴퓨터에서 DC를 사용하는 경우, **삭제된 포트 미러 네트워크 트래픽**에 대한 경고를 받을 수 있습니다. VMware의 구성이 일치하지 않기 때문일 수 있습니다. |이러한 경고를 방지하기 위해 다음 설정이 0 또는 사용 안 함으로 설정되어 있는지 확인하세요.: TsoEnable, LargeSendOffload, IPv4, TSO Offload IPv4 Giant TSO Offload도 사용하지 않도록 설정하는 것이 좋습니다. 자세한 내용은 VMware 설명서를 참조하세요.|
 |System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (407) 프록시 인증이 필요합니다.|ATA 센터와 ATA 게이트웨이 통신이 프록시 서버에 의해 중단됩니다.|ATA 게이트웨이 컴퓨터에서 프록시를 사용하지 않도록 설정합니다. <br></br>프록시 설정을 계정별로 지정될 수 있습니다.|
@@ -63,7 +62,11 @@ ms.lasthandoff: 08/20/2017
 |오류 0x800713ec와 함께 .NET Framework 4.6.1 설치 실패|.Net Framework 4.6.1의 필수 조건이 서버에 설치되어 있지 않습니다. |ATA를 설치하기 전에 Windows 업데이트 [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) 및 [KB2919355](https://support.microsoft.com/kb/2919355)가 서버에 설치되어 있는지 확인합니다.|
 |System.Threading.Tasks.TaskCanceledException: 작업이 취소되었습니다.|ATA 센터에 연결할 수 없어 배포 프로세스 시간이 초과되었습니다.|1.    IP 주소로 이동하여 ATA 센터에 대한 네트워크 연결을 확인합니다. <br></br>2.    프록시 또는 방화벽 구성을 확인합니다.|
 |System.Net.Http.HttpRequestException: 요청을 보내는 동안 오류가 발생했습니다. ---> System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (407) 프록시 인증이 필요합니다.|잘못된 프록시 구성 때문에 ATA 센터에 연결할 수 없어 배포 프로세스 시간이 초과되었습니다.|배포하기 전에 프록시 구성을 사용하지 않도록 설정한 다음 프록시 구성을 다시 사용하도록 설정합니다. 또는 프록시에서 예외를 구성할 수 있습니다.|
-|System.Net.Sockets.SocketException: 원격 호스트에 의해 기존 연결이 강제로 종료되었습니다.|다음 옵션 중 하나를 사용합니다. </br>ATA 게이트웨이에서 TLS 1.0을 사용하도록 설정 </br>다음과 같이 SSL 및 TLS에 대한 운영 체제 기본값을 사용하도록 레지스트리 키를 설정하여 .Net에서 TLS 1.2를 사용하도록 설정합니다.</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`
+|System.Net.Sockets.SocketException: 원격 호스트에 의해 기존 연결이 강제로 종료되었습니다.||다음 옵션 중 하나를 사용합니다. </br>ATA 게이트웨이에서 TLS 1.0을 사용하도록 설정 </br>다음과 같이 SSL 및 TLS에 대한 운영 체제 기본값을 사용하도록 레지스트리 키를 설정하여 .Net에서 TLS 1.2를 사용하도록 설정합니다.</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+|오류 [\[]DeploymentModel[\]] 실패한 관리 인증 [\[]CurrentlyLoggedOnUser=<domain>\<username>상태=FailedAuthentication 예외=[\]]|ATA 게이트웨이 또는 ATA 경량 게이트웨이의 배포 프로세스를 ATA 센터에 대해 성공적으로 인증할 수 없습니다.|배포 프로세스가 실패한 컴퓨터에서 브라우저를 열고 ATA 콘솔에 연결할 수 있는지 확인합니다. </br>연결할 수 없는 경우 문제 해결을 시작하여 ATA 센터에 대해 브라우저를 인증할 수 없는 이유를 확인합니다. </br>확인할 사항:</br>프록시 구성</br>네트워킹 문제</br>ATA 센터와 다른 컴퓨터에서 인증을 위한 그룹 정책 설정입니다.|
+
+
+
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>ATA 게이트웨이 및 경량 게이트웨이 문제
