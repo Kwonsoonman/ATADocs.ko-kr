@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 793273aeea3c78b54d4dc189acaff9bdf8ae58f9
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/28/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -65,7 +65,7 @@ ATA 콘솔은 모든 의심스러운 활동에 대한 빠른 보기를 시간순
 
 ### <a name="attack-time-line"></a>공격 타임라인
 
-ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. 기본적으로 해결되지 않은 모든 의심스러운 활동이 공격 타임라인에 표시됩니다. 모두, 미해결, 해제됨 또는 해결됨 상태의 의심스러운 활동을 표시하도록 공격 타임라인을 필터링할 수 있습니다. 또한 각 활동에 할당된 심각도를 볼 수 있습니다.
+ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. 기본적으로 해결되지 않은 모든 의심스러운 활동이 공격 타임라인에 표시됩니다. 모두, 시작됨, 해제됨 또는 표시 안 함 상태의 의심스러운 활동을 표시하도록 공격 타임라인을 필터링할 수 있습니다. 또한 각 활동에 할당된 심각도를 볼 수 있습니다.
 
 ![ATA 공격 타임라인 이미지](media/ATA-Suspicious-Activity-Timeline.jpg)
 
@@ -94,8 +94,6 @@ ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. �
 ![ATA 상태 관리 센터 이미지](media/ATA-Health-Issue.jpg)
 
 시스템에서 연결 오류 또는 ATA Gateway 연결 끊김 등의 문제가 발생할 때마다 상태 관리 센터 아이콘에 빨간색 점이 표시됩니다. ![ATA 상태 관리 센터 빨간색 점 이미지](media/ATA-Health-Center-Alert-red-dot.png)
-
-상태 관리 센터 경고는 해제하거나 해결할 수 있으며 심각도에 따라 높음, 중간 또는 낮음으로 분류할 수 있습니다. 해결한 경고를 ATA 서비스에서 여전히 활성 상태인 것으로 검색한 경우 이 경고는 자동으로 미해결 경고 목록으로 이동합니다. 시스템에서 더 이상 경고의 원인이 없는 것으로 검색한 경우(상황이 해결된 경우) 이 경고는 자동으로 해결됨 목록으로 이동합니다.
 
 ### <a name="user-and-computer-profiles"></a>사용자 및 컴퓨터 프로필
 
