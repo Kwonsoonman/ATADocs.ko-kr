@@ -16,20 +16,20 @@
 ## [ATA 아키텍처](ata-architecture.md)
 ## [ATA 용량 계획](ata-capacity-planning.md)
 ## [ATA 필수 구성 요소](ata-prerequisites.md)
+## [권장되는 업그레이드 경로](upgrade-path.md)
 # 배포
-## 사전 설치 단계
+## [1 다운로드 및 설치 센터](install-ata-step1.md)
+## [2 AD에 연결](install-ata-step2.md)
+## [3 ATA 게이트웨이 패키지 다운로드](install-ata-step3.md)
+## [4 ATA 게이트웨이 설치](install-ata-step4.md)
+## [5 ATA 게이트웨이 구성](install-ata-step5.md)
+## [6 이벤트 컬렉션 및 VPN](install-ata-step6.md)
+## [7 제외 사항 및 허니 토큰](install-ata-step7.md)
+## [자동 설치](ata-silent-installation.md)
+## ATA 게이트웨이 추가 단계
 ### [1. 포트 미러링 구성](configure-port-mirroring.md)
 ### [2. 포트 미러링 유효성 검사](validate-port-mirroring.md)
 ### [3. Windows 이벤트 전달 구성](configure-event-collection.md)
-## ATA 설치
-### [1 단계 다운로드 및 설치 센터](install-ata-step1.md)
-### [2 단계 AD에 연결](install-ata-step2.md)
-### [3단계 ATA 게이트웨이 패키지 다운로드](install-ata-step3.md)
-### [4단계 ATA 게이트웨이 설치](install-ata-step4.md)
-### [5단계 ATA 게이트웨이 구성](install-ata-step5.md)
-### [6단계 이벤트 컬렉션 및 VPN](install-ata-step6.md)
-### [7 단계 제외 사항 및 허니 토큰](install-ata-step7.md)
-### [자동 설치](ata-silent-installation.md)
 # Windows Server Update Services와 함께
 ## [ATA 콘솔 작업](working-with-ata-console.md)
 ## [의심스러운 활동 작업](working-with-suspicious-activities.md)
