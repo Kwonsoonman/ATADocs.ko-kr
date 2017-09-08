@@ -45,8 +45,7 @@
 ## [ATA 구성 내보내기/가져오기](ata-configuration-file.md)
 ## [ATA 원격 분석 관리](manage-telemetry-settings.md)
 # 조사
-## [위조된 권한 부여 데이터 공격을 사용한 권한 상승](use-case-forged-pac.md)
-## [DNS를 사용한 정찰](use-case-dns.md)
+## [의심스러운 활동 가이드](suspicious-activity-guide.md)
 # 문제 해결
 ## [감사 로그 작업](troubleshoot-audit.md)
 ## [알려진 문제 해결](troubleshooting-ata-known-errors.md)
