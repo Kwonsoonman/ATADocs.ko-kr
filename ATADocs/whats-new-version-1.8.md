@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/03/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>ATA 버전 1.8의 새로운 기능
 
@@ -126,6 +126,14 @@ Windows Server 2016 Core에서는 오류가 표시되지 않을 수 있지만 �
 **설명**: ATA 1.8부터 ATA 게이트웨이는 HTTP 프로토콜을 사용하여 ATA 센터와 통신합니다. ATA 게이트웨이를 설치한 컴퓨터가 프록시 서버를 사용하여 ATA 센터에 연결된 경우 이 통신이 중단될 수 있습니다. 
 
 **해결 방법**: ATA 게이트웨이 서비스 계정에서 프록시 서버를 사용하지 않도록 설정합니다. 향후 릴리스에서는 이 문제를 해결하는 업데이트가 제공됩니다.
+
+### <a name="report-settings-reset"></a>보고서 설정 다시 설정
+
+**증상**: 1.8 업데이트 1로 업데이트하면 예약된 보고서에 대한 모든 설정이 지워집니다.
+
+**설명**: 1.8에서 1.8 업데이트 1로 업데이트하면 보고서 일정 설정이 다시 설정됩니다.
+
+**해결 방법**: 1.8 업데이트 1로 업데이트하기 전에 보고서 설정의 복사본을 만들어 다시 입력합니다. 이는 스크립트를 통해 수행할 수도 있습니다. 자세한 내용은 [ATA 구성 내보내기 및 가져오기](ata-configuration-file.md)를 참조하세요.
 
 
 ## <a name="see-also"></a>참고 항목

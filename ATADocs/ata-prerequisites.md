@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 9/3/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/03/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -124,13 +124,19 @@ ATA를 쉽게 설치하려면 설치하는 동안 자체 서명 인증서를 설
 
 ATA 센터 및 ATA 게이트웨이에 CRL 배포 지점 액세스 권한이 있는지 확인합니다. 인터넷에 액세스할 수 없으면 [CRL을 수동으로 가져오는 절차](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx)에 따라 전체 체인에 모든 CRL 배포 지점을 설치합니다.
 
+인증서에 있어야 하는 항목은 다음과 같습니다.
+-   개인 키
+-   CSP(암호화 서비스 공급자) 또는 KSP(키 저장소 공급자) 중 하나의 공급자 형식
+-   2,048비트 길이의 공개 키
+-   KeyEncipherment 및 ServerAuthentication 사용 플래그에 대한 설정 값
+
+예를 들어 표준 **웹 서버** 또는 **컴퓨터** 템플릿을 사용할 수 있습니다.
 
 > [!WARNING]
 > - 기존 인증서의 갱신 프로세스가 지원되지 않습니다. 인증서를 갱신하는 방법은 새 인증서를 만들고 해당 인증서를 사용하도록 ATA를 구성하는 방법만이 유일합니다.
 
 
 > [!NOTE]
-> - 인증서의 공급자 형식은 CSP(암호화 서비스 공급자) 또는 KSP(키 저장소 공급자)일 수 있습니다.
 > - 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그렇지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
 > - ATA 버전 1.8부터는 ATA 게이트웨이 및 경량 게이트웨이가 자체 인증서를 관리하고 이를 관리하기 위해 관리자 상호 작용이 필요하지 않습니다.
 
