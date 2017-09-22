@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/25/2017
+ms.date: 9/19/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cdc3767fd9fdc00dbb92457c980f6f7e8b99907b
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 713d0070f6cc8949ceab80b2940469c1abc8adab
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 09/19/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -63,7 +63,7 @@ ATA 배포의 용량을 결정할 때 가장 간단한 권장 방법은 [ATA Siz
 
 &#42;&#42;평균 수(최대 수)입니다.
 > [!NOTE]
-> -   ATA 센터는 모니터링되는 모든 도메인 컨트롤러에서 최대 백만 개의 누적 초당 패킷을 처리할 수 있습니다. 일부 환경에서는 동일한 ATA 데이터 센터에서 400,000개 이상의 전체 트래픽을 처리할 수 있습니다. 이러한 환경에 대한 지원은 askcesec@microsoft.com으로 문의하세요.
+> -   ATA 센터는 모니터링되는 모든 도메인 컨트롤러에서 최대 백만 개의 누적 초당 패킷을 처리할 수 있습니다. 일부 환경에서는 동일한 ATA 데이터 센터에서 1백만 개 이상의 전체 트래픽을 처리할 수 있습니다. 이러한 환경에 대한 지원은 askcesec@microsoft.com으로 문의하세요.
 > -   위의 표에 나와 있는 저장소 크기는 순수 저장소 값입니다. 향후 확장을 고려하여 데이터베이스가 있는 디스크에 20% 이상의 사용 가능한 공간을 확보해 두어야 합니다.
 > -   사용 가능한 공간이 최소값인 20% 또는 200GB에 도달하면 가장 오래된 데이터 컬렉션이 삭제됩니다. 5%나 50GB의 사용 가능한 공간만이 남을 때까지 삭제 작업이 계속 수행되며, 그 이후에는 데이터 수집의 작동이 중지됩니다.
 > - 이 문서에 설명된 성능 요구 사항에 충족하기만 하면 모든 IaaS 공급 업체에 ATA Center를 배포할 수 있습니다.
