@@ -1,11 +1,11 @@
 ---
-title: "Advanced Threat Analytics 설치 - 7단계 | Microsoft Docs"
+title: "Advanced Threat Analytics 설치 - 8단계 | Microsoft Docs"
 description: "ATA 설치의 마지막 단계에서는 허니 토큰 사용자를 구성합니다."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,22 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5cb87148741c92dc7832da16cc37a749fa72fae
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 3a8ccb1412bbd8e2013c84d36f4142301159c46c
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/19/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
 
-# <a name="install-ata---step-7"></a>ATA 설치 - 7단계
+# <a name="install-ata---step-8"></a>ATA 설치 - 8단계
 
 >[!div class="step-by-step"]
-[« 6단계](install-ata-step6.md)
+[« 7단계](vpn-integration-install-step.md)
 
-## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>7단계. IP 주소 제외 및 Honeytoken 사용자 구성
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>8단계: IP 주소 제외 및 Honeytoken 사용자 구성
 ATA를 사용하면 많은 검색에서 특정 IP 주소 또는 사용자를 제외할 수 있습니다. 
 
 예를 들어 한 **DNS 정찰 제외**는 검색 메커니즘으로 DNS를 사용하는 보안 스캐너일 수 있습니다. 이 제외를 통해 ATA에서 이러한 스캐너를 무시할 수 있습니다. *Pass-the-Ticket* 예외의 예로는 NAT 장치가 있습니다.    
@@ -64,7 +64,7 @@ ATA이 실행되고 네트워크에서 위반을 catch하는지 확인하려면 
 
 
 >[!div class="step-by-step"]
-[« 6단계](install-ata-step6.md)
+[« 7단계](vpn-integration-install-step.md)
 
 
 

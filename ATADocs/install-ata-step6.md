@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ac591d960028268f6c1ebd74706839a3b91597da
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 068c3ca2858934f68beea9d092fbeb113b77ba2a
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/19/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -26,9 +26,10 @@ ms.lasthandoff: 08/29/2017
 # <a name="install-ata---step-6"></a>ATA 설치 - 6단계
 
 >[!div class="step-by-step"]
-[« 5단계](install-ata-step5.md)
+[«5 단계](install-ata-step5.md)
+[7 단계»](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection-and-vpn"></a>6단계. 이벤트 수집 및 VPN 구성
+## <a name="step-6-configure-event-collection"></a>6단계. 이벤트 수집 구성
 ### <a name="configure-event-collection"></a>이벤트 수집 구성
 검색 기능을 강화하려면 ATA에 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756, 4757이 있어야 합니다. 이러한 이벤트는 ATA 경량 게이트웨이에서 자동으로 읽거나, ATA 경량 게이트웨이가 배포되지 않은 경우 두 가지 방법 중 하나로 ATA 게이트웨이에 전달될 수 있습니다. 하나는 ATA 게이트웨이가 SIEM 이벤트를 수신하도록 구성하는 것이고, 다른 하나는 [Windows 이벤트 전달을 구성](configure-event-collection.md)하는 것입니다.
 
@@ -184,26 +185,10 @@ Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
 > Windows 이벤트 컬렉션용 WinCollect는 사용할 수 없습니다.
 
 
-### <a name="configuring-vpn"></a>VPN 구성
-
-ATA는 컴퓨터가 네트워크에 연결하는 위치를 프로파일링하는 데 도움이 되는 VPN 데이터를 수집합니다.
-
-VPN 데이터를 구성하려면 **구성** > **VPN**으로 이동한 다음 VPN의 **Radius 계정 공유 암호**를 입력합니다.
-
-![VPN 구성](./media/vpn.png)
-
-공유 암호를 가져오려면 VPN 설명서를 참조하세요. 지원되는 VPN 공급업체는 다음과 같습니다.
-
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
-
-
 
 >[!div class="step-by-step"]
 [«5 단계](install-ata-step5.md)
-[7 단계»](install-ata-step7.md)
+[7 단계»](vpn-integration-install-step.md)
 
 
 
