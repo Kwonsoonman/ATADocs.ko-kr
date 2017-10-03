@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/3/2017
+ms.date: 9/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
+ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/24/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -56,7 +56,7 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
     > [!NOTE]
     > 도메인의 여러 OU(조직 구성 단위)에서 사용자 지정 ACL을 설정한 경우에는 선택한 사용자에게 해당 OU에 대한 읽기 권한이 있는지 확인하세요.
 
--   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 그렇지 않으면 게이트웨이가 트래픽 캡처를 중지합니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
+-   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 그러지 않으면 게이트웨이가 트래픽 캡처를 중지합니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
 
 -    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 항목에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
 
@@ -91,7 +91,7 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 
 
 ### <a name="network-adapters"></a>네트워크 어댑터
-다음이 필요합니다.
+다음 집합이 필요합니다.
 -   하나 이상의 네트워크 어댑터(VLAN 환경에서 물리적 서버를 사용할 경우 두 개의 네트워크 어댑터 사용 권장)
 
 -   ATA 센터와 ATA 게이트웨이 간의 통신에 사용되는 IP 주소이며 포트 443에서 SSL을 사용하여 암호화됩니다. (ATA 서비스는 ATA 센터가 포트 443에 가지고 있는 모든 IP 주소에 바인딩됩니다.)
@@ -137,7 +137,7 @@ ATA 센터 및 ATA 게이트웨이에 CRL 배포 지점 액세스 권한이 있�
 
 
 > [!NOTE]
-> - 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그렇지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
+> - 다른 컴퓨터에서 ATA 콘솔에 액세스하려는 경우 해당 컴퓨터가 ATA 센터에서 사용 중인 인증서를 신뢰하는지 확인해야 합니다. 그러지 않으면 로그인 페이지가 표시되기 전에 웹 사이트 보안 인증서에 문제가 있다는 경고 페이지가 표시됩니다.
 > - ATA 버전 1.8부터는 ATA 게이트웨이 및 경량 게이트웨이가 자체 인증서를 관리하고 이를 관리하기 위해 관리자 상호 작용이 필요하지 않습니다.
 
 ## <a name="ata-gateway-requirements"></a>ATA 게이트웨이 요구 사항
@@ -155,7 +155,7 @@ Windows PowerShell cmdlet `[Get-HotFix -Id kb2919355]`를 실행하여 이 업�
 ATA 게이트웨이가 설치된 가상 컴퓨터를 사용하는 방법에 대한 자세한 내용은 [포트 미러링 구성](configure-port-mirroring.md)을 참조하세요.
 
 > [!NOTE]
-> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
+> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
 
 ### <a name="server-specifications"></a>서버 사양
 성능을 최적화하려면 ATA 게이트웨이의 **전원 옵션**을 **고성능**으로 설정합니다.<br>
@@ -172,7 +172,7 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 ### <a name="network-adapters"></a>네트워크 어댑터
 ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 각각 하나 이상 필요합니다.
 
--   **관리 어댑터** - 회사 네트워크 통신에 사용됩니다. 다음 정보를 사용하여 이 어댑터를 구성해야 합니다.
+-   **관리 어댑터** - 회사 네트워크 통신에 사용됩니다. 다음 설정을 사용하여 이 어댑터를 구성해야 합니다.
 
     -   기본 게이트웨이를 포함하는 고정 IP 주소
 
@@ -235,7 +235,7 @@ Windows server 2012 R2 Server Core에 대한 설치의 경우 [KB3000850](https:
 
 
 > [!NOTE]
-> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그](troubleshooting-ata-using-logs.md) 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
+> 최소 5GB의 공간이 필요하며 10GB가 권장됩니다. 여기에는 ATA 이진 파일, [ATA 로그 및 [성능 로그](troubleshooting-ata-using-perf-counters.md)에 필요한 공간이 포함됩니다.
 
 ### <a name="server-specifications"></a>서버 사양
 
@@ -272,7 +272,7 @@ ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어�
 > -   NetBIOS
 
 ## <a name="ata-console"></a>ATA 콘솔
-다음과 같은 브라우저를 통해 ATA 콘솔에 액세스합니다.
+브라우저를 통해 ATA 콘솔에 액세스합니다. 다음과 같은 브라우저와 설정이 지원됩니다.
 
 -   Internet Explorer 버전 10 이상
 
