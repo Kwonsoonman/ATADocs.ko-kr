@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05550e56479de0390d7f2d990ffae4b319dec9f9
-ms.sourcegitcommit: 74cce0c1d52086fdf10ea70f590b306c1c7e8b14
+ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
+ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/01/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -285,7 +285,7 @@ Active Directory에서 계정을 삭제할 수 있는 사용자에 대한 권한
 
 2. 대상 컴퓨터(**액세스됨** 열 아래)에 MS14-068(도메인 컨트롤러) 또는 MS11-013(서버)이 패치되어 있나요? 그러한 경우 의심스러운 활동을 **닫습니다**(거짓 긍정).
 
-3. 그렇지 않은 경우 원본 컴퓨터(**FROM** 열 아래)에서 PAC를 수정하는 것으로 알려진 OS/응용 프로그램을 실행하나요? 그러한 경우 의심스러운 활동을 **표시하지 않습니다**(무해한 참 긍정).
+3. 그렇지 않은 경우 원본 컴퓨터 실행 (**FROM** 열 아래)에서 PAC를 수정하는 것으로 알려진 OS/응용 프로그램을 실행하나요? 그러한 경우 의심스러운 활동을 **표시하지 않습니다**(무해한 참 긍정).
 
 4. 위의 두 질문에 대한 대답이 '아니요'인 경우 악의적이라고 가정합니다.
 
