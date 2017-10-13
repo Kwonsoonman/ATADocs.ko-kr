@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 10/9/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: db2133e05fb7d2390f4b7e05dd219be71bf4e157
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
+ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 10/09/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -44,7 +44,7 @@ ATA 아키텍처에 대한 자세한 내용은 [ATA 아키텍처](ata-architectu
 
 ## <a name="what-does-ata-do"></a>ATA의 기능
 
-ATA 기술에서는 다음과 같이 사이버 공격을 적극 대처하는 여러 단계에 중점을 두고 여러 의심스러운 활동을 검색합니다.
+ATA 기술에서는 다음과 같이 사이버 공격를 적극 대처하는 여러 단계에 중점을 두고 여러 의심스러운 활동을 검색합니다.
 
 -   정찰. 공격자가 환경이 구축된 방법, 다음 공격 단계를 위해 일반적으로 계획을 수립하는 다른 자산과 엔터티에 대한 정보를 수집하는 동안 수행합니다.
 -   측면 활동 주기. 공격자가 네트워크 내부에서 공격 진영을 분산하기 위해 시간과 노력을 들이는 동안 수행합니다.
@@ -109,6 +109,7 @@ ATA는 또한 다음을 포함하여 **보안 문제 및 위험**을 검색합�
 
 ## <a name="related-videos"></a>관련 동영상
 - [보안 커뮤니티에 가입](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+- [ATA 배포 개요](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 
 ## <a name="see-also"></a>참고 항목
