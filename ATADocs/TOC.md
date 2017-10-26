@@ -38,14 +38,16 @@
 ## [ATA 역할 그룹](ata-role-groups.md)
 ## [ATA 센터 구성 변경](modifying-ata-center-configuration.md)
 ## [도메인 연결 암호 변경](modifying-ata-config-dcpassword.md)
-###[검색에서 엔터티 제외](excluding-entities-from-detections.md)
+## [검색에서 엔터티 제외](excluding-entities-from-detections.md)
 ## [ATA 구성 내보내기/가져오기](ata-configuration-file.md)
 ## [ATA 원격 분석 관리](manage-telemetry-settings.md)
 ## [ATA 알림 설정](setting-ata-alerts.md)
 ## [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
-## [SIEM 로그 참조](cef-format-sa.md)
 ## [의심스러운 활동 작업](working-with-suspicious-activities.md)
 ## [ATA 콘솔 작업](working-with-ata-console.md)
+## [ATA 참조 정보]
+### [SIEM 로그 참조](cef-format-sa.md)
+### [이벤트 ID 참조](event-id-reference.md)
 # 조사
 ## [의심스러운 활동 가이드](suspicious-activity-guide.md)
 # 문제 해결
