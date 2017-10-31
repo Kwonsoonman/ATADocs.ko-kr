@@ -45,7 +45,7 @@
 ## [Syslog 및 메일 서버 설정 지정](setting-syslog-email-server-settings.md)
 ## [의심스러운 활동 작업](working-with-suspicious-activities.md)
 ## [ATA 콘솔 작업](working-with-ata-console.md)
-## [ATA 참조 정보]
+## ATA 참조 정보
 ### [SIEM 로그 참조](cef-format-sa.md)
 ### [이벤트 ID 참조](event-id-reference.md)
 # 조사
