@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/24/2017
+ms.date: 10/25/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
-ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
+ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
+ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2017
+ms.lasthandoff: 10/25/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -56,11 +56,11 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
     > [!NOTE]
     > 도메인의 여러 OU(조직 구성 단위)에서 사용자 지정 ACL을 설정한 경우에는 선택한 사용자에게 해당 OU에 대한 읽기 권한이 있는지 확인하세요.
 
--   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 그러지 않으면 게이트웨이가 트래픽 캡처를 중지합니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
+-   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 그렇지 않으면 게이트웨이가 트래픽 캡처를 중지합니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
 
 -    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 항목에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
 
--   선택 사항: 네트워크 활동이 없는 사용자 계정을 사용합니다. 이 계정은 ATA 허니토큰 사용자로 구성됩니다. 허니토큰 사용자를 구성하려면 사용자 이름이 아닌 사용자 계정의 SID가 필요합니다. 자세한 내용은 [ATA 검색 설정 작업](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) 항목을 참조하세요.
+-   선택 사항: 네트워크 활동이 없는 사용자 계정을 사용합니다. 이 계정은 ATA 허니토큰 사용자로 구성됩니다. 허니토큰 사용자를 구성하려면 사용자 이름이 아닌 사용자 계정의 SID가 필요합니다. 자세한 내용은 [IP 주소 제외 및 Honeytoken 사용자 구성](install-ata-step7.md)을 참조하세요.
 
 -   선택 사항: ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 수집 및 분석할 수 있을 뿐 아니라 Windows 이벤트 4776, 4732, 4733, 4728, 4729, 4756 및 4757을 사용하여 ATA Pass-the-Hash, 무차별 암호 대입(Brute force), 중요한 그룹 수정 및 Honeytoken 검색 기능을 추가로 개선할 수 있습니다. 이러한 이벤트는 SIEM에서 수신될 수도 있고 도메인 컨트롤러에서 Windows 이벤트 전달을 설정하여 수신할 수도 있습니다. 수집된 이벤트는 도메인 컨트롤러 네트워크 트래픽을 통해서는 사용할 수 없는 추가 정보를 ATA에 제공합니다.
 
