@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 10/23/2017
 |System.Threading.Tasks.TaskCanceledException: 작업이 취소되었습니다.|ATA 센터에 연결할 수 없어 배포 프로세스 시간이 초과되었습니다.|1.    IP 주소로 이동하여 ATA 센터에 대한 네트워크 연결을 확인합니다. <br></br>2.    프록시 또는 방화벽 구성을 확인합니다.|
 |System.Net.Http.HttpRequestException: 요청을 보내는 동안 오류가 발생했습니다. ---> System.Net.WebException: 원격 서버에서 오류가 반환되었습니다. (407) 프록시 인증이 필요합니다.|잘못된 프록시 구성 때문에 ATA 센터에 연결할 수 없어 배포 프로세스 시간이 초과되었습니다.|배포하기 전에 프록시 구성을 사용하지 않도록 설정한 다음 프록시 구성을 다시 사용하도록 설정합니다. 또는 프록시에서 예외를 구성할 수 있습니다.|
 |System.Net.Sockets.SocketException: 원격 호스트에 의해 기존 연결이 강제로 종료되었습니다.||다음 옵션 중 하나를 사용합니다. </br>ATA 게이트웨이에서 TLS 1.0을 사용하도록 설정 </br>다음과 같이 SSL 및 TLS에 대한 운영 체제 기본값을 사용하도록 레지스트리 키를 설정하여 .Net에서 TLS 1.2를 사용하도록 설정합니다.</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-|오류 [\[]DeploymentModel[\]] 실패한 관리 인증 [\[]CurrentlyLoggedOnUser=<domain>\<username>상태=FailedAuthentication 예외=[\]]|ATA 게이트웨이 또는 ATA 경량 게이트웨이의 배포 프로세스를 ATA 센터에 대해 성공적으로 인증할 수 없습니다.|배포 프로세스가 실패한 컴퓨터에서 브라우저를 열고 ATA 콘솔에 연결할 수 있는지 확인합니다. </br>연결할 수 없는 경우 문제 해결을 시작하여 ATA 센터에 대해 브라우저를 인증할 수 없는 이유를 확인합니다. </br>확인할 사항:</br>프록시 구성</br>네트워킹 문제</br>ATA 센터와 다른 컴퓨터에서 인증을 위한 그룹 정책 설정입니다.|
+|오류 [\[]DeploymentModel[\]] 실패한 관리 인증 [\[]CurrentlyLoggedOnUser=<domain>\<username>상태=FailedAuthentication 예외=[\]]|ATA 게이트웨이 또는 ATA 경량 게이트웨이의 배포 프로세스를 ATA 센터에 대해 성공적으로 인증할 수 없습니다.|배포 프로세스가 실패한 컴퓨터에서 브라우저를 열고 ATA 콘솔에 연결할 수 있는지 확인합니다. </br>연결할 수 없는 경우 문제 해결을 시작하여 ATA 센터에 대해 브라우저를 인증할 수 없는 이유를 확인합니다. </br>확인할 사항: </br>프록시 구성</br>네트워킹 문제</br>ATA 센터와 다른 컴퓨터에서 인증을 위한 그룹 정책 설정입니다.|
 
 
 
