@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f0cef288b36bb070d632c78d773c769f7862ff19
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 25c2defd02e260248d30eb76f6ae297c1b36325f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -87,7 +87,7 @@ ATA 게이트웨이 수는 사용 중인 네트워크 레이아웃, 패킷 볼�
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>ATA를 사용하여 가상 도메인 컨트롤러를 모니터링하려면 어떻게 해야 하나요?
 대부분의 가상 도메인 컨트롤러는 ATA 경량 게이트웨이로 다룰 수 있습니다. 사용자 환경에 ATA 경량 게이트웨이가 적절한지 여부를 확인하려면 [ATA 용량 계획](ata-capacity-planning.md)을 참조하세요.
 
-가상 도메인 컨트롤러를 ATA 경량 게이트웨이로 다룰 수 없는 경우에는 [포트 미러링 구성](configure-port-mirroring.md)에 설명된 대로 가상 또는 실제 ATA 게이트웨이를 구성할 수 있습니다.  <br />가장 쉬운 방법은 가상 도메인 컨트롤러가 있는 모든 호스트에 가상 ATA 게이트웨이를 배치하는 것입니다.<br />가상 도메인 컨트롤러가 호스트 간에 이동하는 경우에는 다음 작업 중 하나를 수행해야 합니다.
+가상 도메인 컨트롤러를 ATA 경량 게이트웨이로 다룰 수 없는 경우에는 [포트 미러링 구성](configure-port-mirroring.md)에 설명된 대로 가상 또는 실제 ATA 게이트웨이를 구성할 수 있습니다.  <br />가장 쉬운 방법은 가상 도메인 컨트롤러가 있는 모든 호스트에 가상 ATA 게이트웨이를 배치하는 것입니다.<br />가상 도메인 컨트롤러가 호스트 간에 이동하는 경우에는 다음 단계 중 하나를 수행해야 합니다.
 
 -   가상 도메인 컨트롤러가 다른 호스트로 이동하는 경우 최근 이동한 가상 도메인 컨트롤러의 트래픽을 받도록 해당 호스트에서 ATA 게이트웨이를 미리 구성합니다.
 -   가상 도메인 컨트롤러를 이동하면 가상 ATA 게이트웨이도 함께 이동하도록 가상 도메인 컨트롤러와 가상 ATA 게이트웨이 간에 관계를 설정해야 합니다.
@@ -105,7 +105,7 @@ ATA는 알려진 악의적인 공격 및 기법, 보안 문제, 위험을 검색
 전체 ATA 검색 목록은 [ATA에서 수행하는 검색은 무엇인가요?](ata-threats.md)를 참조하세요.
 
 ## <a name="what-kind-of-storage-do-i-need-for-ata"></a>ATA에는 어떤 종류의 저장소를 사용해야 하나요?
-디스크 액세스 대기 시간이 짧고(10밀리초 미만) 빠른 저장소(7200RPM 디스크는 권장하지 않음)가 좋습니다. RAID 구성에서 높은 쓰기 부하(RAID-5/6 및 해당 파생 항목은 권장하지 않음)를 지원해야 합니다.
+디스크 액세스 대기 시간이 짧고(10ms 미만) 빠른 저장소(7200RPM 디스크는 권장하지 않음)가 좋습니다. RAID 구성에서 높은 쓰기 부하(RAID-5/6 및 해당 파생 항목은 권장하지 않음)를 지원해야 합니다.
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>ATA 게이트웨이에는 NIC가 몇 개나 필요한가요?
 ATA 게이트웨이에는 최소 2개의 네트워크 어댑터가 필요합니다.<br>1. 내부 네트워크와 ATA 센터에 연결하기 위한 NIC<br>2. 포트 미러링을 통해 도메인 컨트롤러 네트워크 트래픽을 캡처하는 데 사용될 NIC<br>* 기본적으로 도메인 컨트롤러에서 사용하는 네트워크 어댑터를 모두 사용하는 ATA 경량 게이트웨이에는 적용되지 않습니다.
@@ -128,7 +128,7 @@ Microsoft Advanced Threat Analytics는 온-프레미스 제품입니다.
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>규칙을 직접 작성하고 임계값/기준을 만들어야 하나요?
 Microsoft Advanced Threat Analytics를 사용할 때는 규칙, 임계값 또는 기준을 작성한 다음 미세 조정할 필요가 없습니다. ATA는 사용자, 장치 및 리소스의 동작과 이러한 항목 간의 관계를 분석하며 의심스러운 활동과 알려진 공격을 빠르게 검색할 수 있습니다. 배포 후 3주가 지나면 ATA는 동작이 의심스러운 활동 검색을 시작합니다. 그리고 알려진 악의적 공격 및 보안 문제는 배포 직후부터 검색하기 시작합니다.
 
-## <a name="if-you-are-already-breached-will-microsoft-advanced-threat-analytics-be-able-to-identify-abnormal-behavior"></a>이미 보안이 위반된 경우 Microsoft Advanced Threat Analytics가 비정상 동작을 식별할 수 있나요?
+## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>이미 보안이 위반된 경우 Microsoft Advanced Threat Analytics가 비정상 동작을 식별할 수 있나요?
 예. ATA는 보안이 위반된 후에 설치하더라도 해커의 의심스러운 활동을 검색할 수 있습니다. ATA는 사용자 동작 자체를 확인할 뿐 아니라, 동작을 조직 보안 맵의 다른 사용자와 대조하여 확인하는 작업도 수행합니다. 초기 분석 시간 중에 확인되는 공격자의 비정상 동작은 "이상값"으로 식별되며 ATA는 비정상 동작을 계속 보고합니다. 또한 ATA는 해커가 Pass-the-Ticket 등의 방식으로 다른 사용자의 자격 증명 도용을 시도하거나 도메인 컨트롤러 중 하나에서 원격 실행을 수행하려는 경우에도 의심스러운 활동을 검색할 수 있습니다.
 
 ## <a name="does-this-only-leverage-traffic-from-active-directory"></a>ATA는 Active Directory의 트래픽만 활용하나요?

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b8979b7a032e8f44f2da3844cbcb975d4f3f5c84
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: c1be20cc147e88f55d227818331f06d409dd08e7
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-16-migration-guide"></a>버전 1.6으로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.6 업데이트에서는 다음 영역에 대한 향상된 기능을 제공합니다.
@@ -71,7 +71,7 @@ ATA 버전 1.6으로 업데이트하려면 다음 단계를 수행합니다.
 
 2.  설치 파일인 Microsoft ATA 센터 Setup.exe를 실행하고 화면의 지침에 따라 업데이트를 설치합니다.
 
-    1.  ATA 1.6을 사용하려면 .Net Framework 4.6.1을 설치해야 합니다. 아직 설치하지 않은 경우 ATA를 설치할 때 설치의 일부로 .Net Framework 4.6.1이 설치됩니다.
+    1.  ATA 1.6을 사용하려면 .Net Framework 4.6.1을 설치해야 합니다. 아직 설치하지 않은 경우 ATA를 설치할 때 설치의 일부로 .NET Framework 4.6.1이 설치됩니다.
     
         > [!NOTE] 
         > .NET Framework 4.6.1을 설치하려면 서버를 다시 시작해야 할 수 있습니다. ATA 설치는 서버를 다시 시작한 후에만 진행됩니다.
@@ -111,7 +111,7 @@ ATA Gateway 패키지를 다운로드하려면 다음 단계를 수행합니다.
 
 4.  패키지를 로컬에 저장합니다.
 
-zip 파일에는 다음 항목이 포함되어 있습니다.
+zip 파일에는 다음 파일이 포함되어 있습니다.
 
 -   ATA Gateway 설치 관리자
 

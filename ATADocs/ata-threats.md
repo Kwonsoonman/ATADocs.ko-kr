@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 858bc9874855c02ad598d89a6e85296fe98073af
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: 842b2a5d4e211c2b2fcb4cd0afc96bb33ac42311
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 09/19/2017
 
 ATA는 지능형 공격의 여러 단계(정찰, 자격 증명 손상, 측면 확대, 권한 상승, 도메인 우위 등)에 대한 검색을 제공합니다. 이러한 검색은 조직에 피해를 주기 전에 지능형 공격과 내부자 위협을 검색하는 것을 목표로 합니다.
 각 단계의 검색에서는 단계와 관련된 몇 가지 의심스러운 활동을 문제로 처리하고, 각 의심스러운 활동은 가능한 공격의 여러 특성과 상호 관련됩니다.
-이러한 적극 대처(kill-chain) 단계에서 ATA는 현재 검색 기능을 제공하며, 이 단계에 대한 설명은 아래 이미지와 같습니다.
+이러한 적극 대처(kill-chain) 단계에서 ATA는 현재 검색 기능을 제공하며, 이 단계에 대한 설명은 다음 이미지와 같습니다.
 
 ![공격에 대한 적극 대처(kill-chain)에서 측면 활동에 대한 ATA 포커스](media/attack-kill-chain-small.jpg)
 

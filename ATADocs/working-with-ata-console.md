@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/28/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 793273aeea3c78b54d4dc189acaff9bdf8ae58f9
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/28/2017
 
 ATA 콘솔을 사용하여 ATA에서 검색한 의심스러운 활동을 모니터링하고 대응할 수 있습니다.
 
-? 키를 입력하면 ATA 포털 접근성을 위한 바로 가기 키가 제공됩니다. 
+`?` 키를 입력하면 ATA Portal에 액세스하기 위한 키보드 바로 가기 키가 제공됩니다. 
 
 ## <a name="enabling-access-to-the-ata-console"></a>ATA 콘솔에 대한 액세스 설정
 ATA 콘솔에 로그인하려면 ATA 콘솔에 액세스할 수 있는 적절한 ATA 역할을 할당한 사용자로 로그인해야 합니다. ATA에서 RBAC(역할 기반 액세스 제어)에 대한 자세한 내용은 [ATA 역할 그룹 작업](ata-role-groups.md)을 참조하세요.
@@ -93,11 +93,11 @@ ATA 콘솔에 로그인하면 이 기본 시작 페이지로 이동합니다. �
 
 ![ATA 상태 관리 센터 이미지](media/ATA-Health-Issue.jpg)
 
-시스템에서 연결 오류 또는 ATA Gateway 연결 끊김 등의 문제가 발생할 때마다 상태 관리 센터 아이콘에 빨간색 점이 표시됩니다. ![ATA 상태 관리 센터 빨간색 점 이미지](media/ATA-Health-Center-Alert-red-dot.png)
+시스템에서 연결 오류 또는 ATA 게이트웨이 연결 끊김 등의 문제가 발생할 때마다 상태 관리 센터 아이콘에 빨간색 점이 표시됩니다. ![ATA 상태 관리 센터 빨간색 점 이미지](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### <a name="user-and-computer-profiles"></a>사용자 및 컴퓨터 프로필
 
-ATA에서는 네트워크의 각 사용자 및 컴퓨터에 대한 프로필을 작성합니다. 사용자 프로필에는 ATA가그룹 멤버 자격, 최근 로그인 및 최근에 액세스한 리소스와 같은 일반 정보가 표시합니다. 사용자가 VPN을 통해 연결한 위치 목록도 제공됩니다. ATA에서 중요한 것으로 간주되는 그룹 멤버 자격 목록은 아래를 참조하세요.
+ATA에서는 네트워크의 각 사용자 및 컴퓨터에 대한 프로필을 작성합니다. 사용자 프로필에는 ATA가그룹 멤버 자격, 최근 로그인 및 최근에 액세스한 리소스와 같은 일반 정보가 표시합니다. 사용자가 VPN을 통해 연결한 위치 목록도 제공됩니다. ATA에서 중요한 것으로 간주되는 그룹 멤버 자격 목록은 아래 목록을 참조하세요.
 
 ![사용자 프로필](media/user-profile.png)
 

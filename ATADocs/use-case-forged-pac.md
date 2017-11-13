@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: f3db435e-9553-40a2-a2ad-278fad4f0ef5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 842e9866c5fdb447f49600501c4486da6db902f2
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
+ms.openlocfilehash: 1820687d1340dfbef703129e5fad7d7a63cfd632
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -54,14 +54,14 @@ Kerberos PAC 콘텐츠는 두 번 서명됩니다.
 공격자에게 필요한 자격 증명과 연결이 있으면 이들은 기존 Kerberos 사용자 로그온 토큰(TGT)의 PAC(Privileged Attribute Certificate)를 수정하거나 위조할 수 있습니다. 공격자는 그룹 등록 클레임을 변경하여 더 높은 권한이 부여된 그룹(예: “Domain Administrators” 또는 “Enterprise Administrators”)을 포함합니다. 그 다음에 공격자는 수정된 PAC를 Kerberos 티켓에 포함합니다. 이 Kerberos 티켓을 사용하여 패치되지 않은 DC(도메인 컨트롤러)에서 서비스 티켓을 요청하면 도메인 및 권한 부여에서 공격자에게 수행하면 안 되는 작업을 수행할 상승된 권한이 제공됩니다. 공격자는 리소스 액세스 토큰(TGS)을 요청하여 도메인의 모든 리소스에 대한 액세스 권한을 얻기 위해 수정된 사용자 로그온 토큰(TGT)을 제공합니다. 이는 공격자가 Active Directory의 모든 사용자에 대한 권한 부여 데이터(PAC)를 위장하는 방식으로 네트워크에서 액세스를 제한하는 모든 구성된 리소스 ACL을 무시할 수 있다는 것을 의미합니다.
 
 ## <a name="discovering-the-attack"></a>공격 검색
-공격자가 권한을 상승시키려고 시도하면 ATA가 이 시도를 검색하고 심각도가 높은 경고로 표시합니다.
+공격자가 권한을 상승시키려고 시도하면 ATA가 이 시도를 감지하고 심각도가 높은 경고로 표시합니다.
 
 ![위조된 PAC의 의심스러운 활동](./media/forged-pac.png)
 
 ATA는 의심스러운 활동 경고에 위조된 권한 부여 데이터를 사용한 권한 상승이 성공 또는 실패했는지 여부를 표시합니다. 실패한 시도는 사용자 환경에 공격자가 있음을 나타낼 수 있기 때문에 성공 및 실패 경고를 둘 다 조사해야 합니다.
 
 ## <a name="investigating"></a>조사
-ATA에서 위조된 권한 부여 데이터를 사용한 권한 상승 경고를 받은 후에는 공격을 최소화하기 위해 수행해야 할 작업을 결정해야 합니다. 이 작업을 하려면 먼저 경고를 다음 중 하나로 분류해야 합니다. 
+ATA에서 위조된 권한 부여 데이터를 사용한 권한 상승 경고를 받은 후에는 공격을 최소화하기 위해 수행해야 할 작업을 결정해야 합니다. 이 작업을 하려면 먼저 경고를 다음 경고 유형 중 하나로 분류해야 합니다. 
 -   True Positive: ATA가 발견한 악의적인 작업
 -   거짓 긍정: 거짓 경고 - 위조된 권한 부여 데이터를 사용한 권한 상승이 실제로 발생하지 않음(ATA가 위조된 권한 부여 데이터를 사용한 권한 상승 공격으로 잘못 검색한 이벤트)
 -   Benign True Positive: ATA가 발견한, 침투 테스트와 같이 실재하지만 악의적이지 않은 작업
@@ -86,7 +86,7 @@ ATA에서 위조된 권한 부여 데이터를 사용한 권한 상승 경고를
 
     -   PAC를 수정할 운영 체제 또는 응용 프로그램이 알려지지 않은 경우: 
 
-        -   나열된 서비스에 자체 권한 부여 서비스가 없으면 True Positive이고 조직의 IR(인시던트 응답) 프로세스를 실행해야 합니다. 공격자가 도메인에서 권한을 상승시키는 데 실패하더라도 사용자는 네트워크에 공격자가 있는 것으로 추정할 수 있고 이들이 권한을 상승시키기 위해 다른 알려진 끈질긴 사전 공격을 시도하기 전에 가능한 한 빠르게 찾으려고 합니다. 
+        -   나열된 서비스에 자체 권한 부여 서비스가 없으면 True Positive이고 조직의 IR(인시던트 응답) 프로세스를 실행해야 합니다. 공격자가 도메인에서 권한을 상승시키는 데 실패하더라도 사용자는 네트워크에 공격자가 있는 것으로 추정할 수 있고, 이들이 권한을 상승시키기 위해 기타 알려진 고급 공격을 지속해서 시도하기 전에 최대한 빠르게 찾으려고 합니다. 
         -   경고에 나열된 서비스에 권한 부여 데이터를 요청하는 자체 권한 부여 메커니즘이 있으면 위조된 권한 부여 데이터를 사용한 권한 상승 공격으로 잘못 식별될 수 있습니다.
 
 ## <a name="post-investigation"></a>사후 조사

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 08da33114bc3f0c9aafb9914b9d77a88fac009f4
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-15"></a>ATA 버전 1.5의 새로운 기능
 이 릴리스 정보에서는 이 버전의 Advanced Threat Analytics에서 알려진 문제에 대한 정보를 제공합니다.
@@ -50,10 +50,10 @@ ATA 배포를 ATA 버전 1.5로 업데이트한 후 새 ATA 게이트웨이를 �
 <b>해결 방법:</b> <ataeval@microsoft.com>으로 전자 메일을 보내 문제 해결 단계를 요청합니다.
 ### <a name="deployment"></a>배포
 "데이터베이스 데이터 경로" 및 "데이터베이스 저널 경로"에 대해 지정된 폴더는 비어 있어야 합니다(파일 또는 하위 폴더가 없어야 함).
-비어 있지 않으면 배포가 진행되지 됩니다.
+비어 있지 않으면 배포가 진행되지 않습니다.
 
 ### <a name="installation-from-zip-file"></a>Zip 파일에서 설치
-ATA Gateway를 설치할 때 zip 파일에서 로컬 디렉터리에 파일을 추출하고 해당 디렉터리에서 설치해야 합니다. Zip 파일 내에서 직접 ATA Gateway를 설치하지 마세요. 설치가 실패합니다.
+ATA Gateway를 설치할 때 zip 파일에서 로컬 디렉터리에 파일을 추출하고 해당 디렉터리에서 설치해야 합니다. Zip 파일 내에서 직접 ATA 게이트웨이를 설치하지 마세요. 설치가 실패합니다.
 
 ### <a name="configuration"></a>구성
 ATA Gateway 구성을 설정한 후 ATA Gateway를 처음 시작할 경우 서비스가 완전히 시작될 때까지(서비스를 처음 시작할 때 최대 10분이 걸릴 수 있음) "동기화되지 않음" 레이블이 표시됩니다.

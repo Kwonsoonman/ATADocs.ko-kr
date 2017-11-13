@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 47d1125856631ecedcbc7779bf0529741c3da61f
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 70e076dea5b1ff200b1b9f2a6529a76c175c7a88
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -40,7 +40,7 @@ ATA는 의심스러운 활동을 검색한 경우 알림을 제공할 수 있습
     |---------|---------------|---------|
     |SMTP 서버 끝점(필수)|SMTP 서버의 FQDN을 입력하고 포트 번호를 선택적으로 변경합니다(기본값은 25).|예를 들면 다음과 같습니다.<br />smtp.contoso.com|
     |SSL|SMTP 서버에 SSL이 필요한 경우 SSL을 전환합니다. **참고:** SSL을 사용하도록 설정하면 포트 번호도 변경해야 합니다.|기본값은 사용 안 함입니다.|
-    |인증|SMTP 서버에 인증이 필요하면 사용하도록 설정합니다. **참고:** 인증을 사용하도록 설정하는 경우 SMTP 서버에 연결할 수 있는 권한이 있는 전자 메일 계정의 사용자 이름 및 암호를 제공해야 합니다.|기본값은 사용 안 함입니다.|
+    |인증|SMTP 서버에 인증이 필요하면 사용하도록 설정합니다. **참고:** 인증을 사용하도록 설정하는 경우 SMTP 서버에 연결할 수 있는 권한이 있는 메일 계정의 사용자 이름 및 암호를 제공해야 합니다.|기본값은 사용 안 함입니다.|
     |보낸 사람(필수)|전자 메일을 보낸 사람의 전자 메일 주소를 입력합니다.|예를 들면 다음과 같습니다.<br />ATA@contoso.com|
     ![ATA 메일 서버 설정 이미지](media/ata-email-server.png)
 

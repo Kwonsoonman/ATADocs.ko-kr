@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/23/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bc3ad332e1a8af6259eadaecc4638f27fded67c6
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 2172b6b8e1c54345841357e1f4d0a7dec2c346db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -116,7 +116,7 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 > -   경우에 따라 보고서에 대한 그래프 종류를 사용하여 전체 카운터 목록을 모니터링하는 것이 보다 편리한 경우가 있습니다(예: 모든 카운터의 실시간 모니터링).
 
 ## <a name="operating-system-counters"></a>운영 체제 카운터
-다음은 주의해야 하는 주 운영 체제 카운터 목록입니다.
+다음 표는 주의해야 하는 주 운영 체제 카운터 목록입니다.
 
 > [!div class="mx-tableFixed"]
 |카운터|설명|Threshold|문제 해결|
@@ -125,8 +125,8 @@ ATA 센터의 성능 카운터를 추가하여 ATA 센터의 실시간 성능 �
 |System\Context Switches\sec|모든 프로세서가 스레드 간에 전환된 결합된 비율입니다.|코어(물리적 코어) 5000개&#42; 미만|프로세서 시간이 예상보다 훨씬 많이 걸리는 특정 프로세스가 있는지 확인합니다.<br /><br />프로세서를 더 추가합니다.<br /><br />서버당 트래픽 양을 줄입니다.<br /><br />"Processor(_Total)\% Processor Time" 카운터는 가상 서버에서 정확도가 떨어질 수 있습니다. 부족한 프로세서 능력을 보다 정확하게 측정하는 방법은 "System\Processor Queue Length" 카운터를 사용하는 것입니다.|
 |System\Processor Queue Length|실행 준비가 완료되고 예약 대기 중인 스레드 수입니다.|코어(물리적 코어) 5개&#42; 미만|프로세서 시간이 예상보다 훨씬 많이 걸리는 특정 프로세스가 있는지 확인합니다.<br /><br />프로세서를 더 추가합니다.<br /><br />서버당 트래픽 양을 줄입니다.<br /><br />"Processor(_Total)\% Processor Time" 카운터는 가상 서버에서 정확도가 떨어질 수 있습니다. 부족한 프로세서 능력을 보다 정확하게 측정하는 방법은 "System\Processor Queue Length" 카운터를 사용하는 것입니다.|
 |Memory\Available MBytes|할당할 수 있는 실제 메모리(RAM) 양입니다.|512보다 커야 합니다.|실제 메모리를 예상보다 훨씬 많이 사용하는 특정 프로세스가 있는지 확인합니다.<br /><br />실제 메모리 양을 늘립니다.<br /><br />서버당 트래픽 양을 줄입니다.|
-|LogicalDisk(&#42;)\Avg. Disk sec\Read|디스크에서 데이터를 읽는 평균 대기 시간입니다(데이터베이스 드라이브를 인스턴스로 선택해야 함).|10밀리초 미만이어야 합니다.|데이터베이스 드라이브를 예상보다 많이 활용하는 특정 프로세스가 있는지 확인합니다.<br /><br />저장소 팀/공급업체에 이 드라이브가 10밀리초 미만의 대기 시간 동안 현재 워크로드를 전달할 수 있는지 문의합니다. 현재 워크로드는 디스크 사용률 카운터를 사용하여 확인할 수 있습니다.|
-|LogicalDisk(&#42;)\Avg. Disk sec\Write|디스크에 데이터를 쓰는 평균 대기 시간입니다(데이터베이스 드라이브를 인스턴스로 선택해야 함).|10밀리초 미만이어야 합니다.|데이터베이스 드라이브를 예상보다 많이 활용하는 특정 프로세스가 있는지 확인합니다.<br /><br />저장소 팀/공급업체에 이 드라이브가 10밀리초 미만의 대기 시간 동안 현재 워크로드를 전달할 수 있는지 문의합니다. 현재 워크로드는 디스크 사용률 카운터를 사용하여 확인할 수 있습니다.|
+|LogicalDisk(&#42;)\Avg. Disk sec\Read|디스크에서 데이터를 읽는 평균 대기 시간입니다(데이터베이스 드라이브를 인스턴스로 선택해야 함).|10밀리초 미만이어야 합니다.|데이터베이스 드라이브를 예상보다 많이 활용하는 특정 프로세스가 있는지 확인합니다.<br /><br />저장소 팀/공급업체에 이 드라이브가 10ms 미만의 대기 시간 동안 현재 워크로드를 전달할 수 있는지 문의합니다. 현재 워크로드는 디스크 사용률 카운터를 사용하여 확인할 수 있습니다.|
+|LogicalDisk(&#42;)\Avg. Disk sec\Write|디스크에 데이터를 쓰는 평균 대기 시간입니다(데이터베이스 드라이브를 인스턴스로 선택해야 함).|10밀리초 미만이어야 합니다.|데이터베이스 드라이브를 예상보다 많이 활용하는 특정 프로세스가 있는지 확인합니다.<br /><br />저장소 팀/공급업체에 이 드라이브가 10ms 미만의 대기 시간 동안 현재 워크로드를 전달할 수 있는지 문의합니다. 현재 워크로드는 디스크 사용률 카운터를 사용하여 확인할 수 있습니다.|
 |\LogicalDisk(&#42;)\Disk Reads\sec|디스크에 대한 읽기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
 |\LogicalDisk(&#42;)\Disk Read Bytes\sec|초당 디스크에서 읽은 바이트 수입니다.|임계값 없음|디스크 사용률 카운터는 저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있습니다.|
 |\LogicalDisk&#42;\Disk Writes\sec|디스크에 대한 쓰기 작업을 수행하는 비율입니다.|임계값 없음|디스크 사용률 카운터(저장소 대기 시간 문제를 해결할 때 정보를 추가할 수 있음)|

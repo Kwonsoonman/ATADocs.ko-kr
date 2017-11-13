@@ -5,25 +5,25 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 713d0070f6cc8949ceab80b2940469c1abc8adab
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
 
 # <a name="ata-capacity-planning"></a>ATA 용량 계획
-이 항목에서는 네트워크를 모니터링하는 데 필요한 ATA 서버 수를 결정하는 데 도움이 되는 정보를 제공합니다. 필요한 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이 수와 ATA 센터 및 ATA 게이트웨이에 대한 서버 용량을 이해하는 데에도 도움이 됩니다.
+이 문서에서는 네트워크를 모니터링하는 데 필요한 ATA 서버 수를 결정하는 데 도움이 되는 정보를 제공합니다. 필요한 ATA 게이트웨이 및/또는 ATA 경량 게이트웨이 수와 ATA 센터 및 ATA 게이트웨이에 대한 서버 용량을 이해하는 데에도 도움이 됩니다.
 
 > [!NOTE] 
 > 이 문서에 설명된 성능 요구 사항에 충족하기만 하면 모든 IaaS 공급 업체에 ATA Center를 배포할 수 있습니다.

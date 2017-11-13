@@ -4,7 +4,7 @@ description: "Microsoft ATA(Advanced Threat Analytics) 버전에 대한 다른 �
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/3/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -12,17 +12,17 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f1092e1cf6c991785dbf8bad3b197b68a21c0833
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: f77f8ef71765dc71d690876d4043e1b3702b9971
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Microsoft ATA(Advanced Threat Analytics)에 대한 지원
 
-Microsoft는 GA(일반 공급) 릴리스 날짜로부터 12개월 동안 지원되는 각 업데이트 버전과 함께 연간 몇 차례 ATA 업데이트를 릴리스할 계획입니다. 전체 12개월 동안 기술 지원이 제공됩니다. 그러나 당사의 지원 구조는 최신 버전의 가용성에 따라 두 가지 별도의 서비스 단계로 발전하는 동적 구조입니다.
+Microsoft는 GA(일반 공급) 릴리스 날짜로부터 12개월 동안 지원되는 각 업데이트 버전과 함께 연간 몇 차례 ATA 업데이트를 릴리스할 계획입니다. 기술 지원은 12개월 동안 계속 제공됩니다. 그러나 당사의 지원 구조는 최신 버전의 가용성에 따라 두 가지 별도의 서비스 단계로 발전하는 동적 구조입니다.
 
 -   보안 및 중요 업데이트 서비스 단계 - 최신 ATA 버전을 실행하는 경우 보안 및 중요 업데이트를 모두 받게 됩니다.
 

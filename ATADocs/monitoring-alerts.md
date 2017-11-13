@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/30/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c581bc48aa57c6eb9e0c1db6eeec81400ea9061a
-ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
+ms.openlocfilehash: 0d3b57e852a18bf9602d3a75ab627c23496f7285
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -64,12 +64,12 @@ ATA 상태 관리 센터에서는 모니터링 경고를 생성하여 ATA 배포
 ### <a name="gateway-certificate-about-to-expire"></a>게이트웨이 인증서가 곧 만료됨
 |경고|설명|해결 방법|심각도|
 |----|----|----|----|
-|ATA 게이트웨이 인증서가 3주 이내에 만료됩니다.|특정 ATA 게이트웨이에서 ATA 센터에 연결하지 못합니다. 해당 ATA 게이트웨이에서 데이터가 전송되지 않습니다.|ATA 게이트웨이 인증서가 자동으로 갱신되었어야 합니다. ATA 게이트웨이 및 ATA 센터 로그를 읽고 인증서가 자동으로 갱신되지 않은 이유를 파악합니다.|중형|
+|ATA 게이트웨이 인증서가 3주 이내에 만료됩니다.|특정 ATA 게이트웨이에서 ATA 센터에 연결하지 못합니다. 해당 ATA 게이트웨이의 데이터가 전송되지 않습니다.|ATA 게이트웨이 인증서가 자동으로 갱신되었어야 합니다. ATA 게이트웨이 및 ATA 센터 로그를 읽고 인증서가 자동으로 갱신되지 않은 이유를 파악합니다.|중형|
 
 ### <a name="gateway-certificate-expired"></a>게이트웨이 인증서가 만료됨
 |경고|설명|해결 방법|심각도|
 |----|----|----|----|
-|ATA 게이트웨이 인증서가 만료되었습니다.|이 ATA 게이트웨이에서 ATA 센터로의 연결이 없습니다. 해당 ATA 게이트웨이에서 데이터가 전송되지 않습니다.|[ATA 게이트웨이를 제거하고 다시 설치](install-ata-step3.md)합니다.|높은|
+|ATA 게이트웨이 인증서가 만료되었습니다.|이 ATA 게이트웨이에서 ATA 센터로의 연결이 없습니다. 해당 ATA 게이트웨이의 데이터가 전송되지 않습니다.|[ATA 게이트웨이를 제거하고 다시 설치](install-ata-step3.md)합니다.|높은|
 ### <a name="domain-synchronizer-not-assigned"></a>도메인 동기화 장치가 할당되지 않음
 |경고|설명|해결 방법|심각도|
 |----|----|----|----|

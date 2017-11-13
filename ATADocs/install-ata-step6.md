@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3798f7faeb62e44d3877880c2d594332502e76c5
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 2f38ee3b8a50a4776709f1a5aa1f37af869a916b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 10/09/2017
 ATA는 도메인 컨트롤러에서 보내고 받는 네트워크 트래픽을 수집 및 분석할 수 있을 뿐 아니라 Windows 이벤트를 사용하여 검색 기능을 추가로 개선할 수 있습니다. 다양한 검색을 개선하는 NTLM용 이벤트 4776과 중요한 그룹 수정 검색을 개선하는 이벤트 4732, 4733, 4728, 4729, 4756 및 4757을 사용합니다. 이 이벤트는 SIEM에서 수신될 수도 있고 도메인 컨트롤러에서 Windows 이벤트 전달을 설정하여 수신할 수도 있습니다. 수집된 이벤트는 도메인 컨트롤러 네트워크 트래픽을 통해서는 사용할 수 없는 추가 정보를 ATA에 제공합니다.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-ATA가 Syslog 서버에서 데이터를 사용할 수 있도록 하려면 다음을 수행해야 합니다.
+ATA가 Syslog 서버에서 데이터를 사용할 수 있도록 하려면 다음 단계를 수행해야 합니다.
 
 -   SIEM/Syslog 서버에서 전달되는 이벤트를 수신하고 수락하도록 ATA Gateway 서버를 구성합니다.
 > [!NOTE]
@@ -76,7 +76,7 @@ ATA는 다음 형식의 SIEM 이벤트를 지원합니다.
 
     1.  RsaSA 상수(표시되어야 함)
 
-    2.  실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인). 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 매우 중요합니다.
+    2.  실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인). 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 중요합니다.
 
     3.  Windows 이벤트 ID
 
@@ -107,7 +107,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The 
 
     -   externalId = Windows 이벤트 ID
 
-    -   rt = 실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 전송 받은 시간이 아닌지 확인). 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 매우 중요합니다.
+    -   rt = 실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인). 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 중요합니다.
 
     -   cat = Windows 이벤트 로그 이름
 
@@ -152,7 +152,7 @@ Error Code:         0x0
 
     -   SourceName = Windows 이벤트 공급자 이름
 
-    -   TimeGenerated = 실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인). 형식은 yyyyMMddHHmmss.FFFFFF와 일치해야 합니다. 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 매우 중요합니다.
+    -   TimeGenerated = 실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인). 형식은 yyyyMMddHHmmss.FFFFFF와 일치해야 합니다. 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 중요합니다.
 
     -   ComputerName = 원본 호스트 이름
 
@@ -175,7 +175,7 @@ QRadar는 에이전트를 통해 이벤트 컬렉션을 사용하도록 설정�
 - DC 정규화된 도메인 이름
 - Windows 이벤트 ID
 
-TimeGenerated는 실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인)입니다. 형식은 yyyyMMddHHmmss.FFFFFF와 일치해야 합니다. 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 매우 중요합니다.
+TimeGenerated는 실제 이벤트의 타임스탬프(SIEM에 도착한 타임스탬프 또는 ATA에 전송된 시간이 아닌지 확인)입니다. 형식은 yyyyMMddHHmmss.FFFFFF와 일치해야 합니다. 밀리초 단위의 정확도를 사용하는 것이 좋습니다. 이는 중요합니다.
 
 Message는 Windows 이벤트의 원래 이벤트 텍스트입니다.
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ebf3165973c14c45d33c95769f0e6ae47e3e795
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -35,17 +35,17 @@ ms.lasthandoff: 10/23/2017
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>포트 미러링으로 ATA 게이트웨이에 대한 WEF 구성
 
-도메인 컨트롤러에서 ATA 게이트웨이로의 미러링을 구성하고 나면 원본에서 시작된 구성을 사용하여 아래 지침에 따라 Windows 이벤트 전달을 구성합니다. 이것이 Windows 이벤트 전달을 구성하는 한 가지 방법입니다. 
+도메인 컨트롤러에서 ATA 게이트웨이로의 포트 미러링을 구성하고 나면 원본에서 시작된 구성을 사용하여 아래 지침에 따라 Windows 이벤트 전달을 구성합니다. 이것이 Windows 이벤트 전달을 구성하는 한 가지 방법입니다. 
 
 **1단계: 도메인 Event Log Readers 그룹에 네트워크 서비스 계정 추가** 
 
 이 시나리오에서는 ATA 게이트웨이가 도메인의 멤버라고 간주합니다.
 
-1.  Active Directory 사용자 및 컴퓨터를 열고 **Builtin** 폴더로 이동하여 **Event Log Readers** 그룹을 두 번 클릭합니다. 
+1.  Active Directory 사용자 및 컴퓨터를 열고 **BuiltIn** 폴더로 이동하여 **Event Log Readers** 그룹을 두 번 클릭합니다. 
 2.  **멤버**를 선택합니다.
 4.  **네트워크 서비스**가 목록에 없으면 **추가**를 클릭하고, **선택할 개체 이름을 입력하십시오** 필드에 **네트워크 서비스**를 입력합니다. **이름 확인**클릭한 다음 **확인**을 두 번 클릭합니다. 
 
-**네트워크 서비스**를 **Event Log Readers** 그룹에 추가 한 후 변경 내용을 적용하려면 도메인 컨트롤러를 다시 부팅해야 합니다.
+**네트워크 서비스**를 **Event Log Readers** 그룹에 추가한 후 도메인 컨트롤러를 다시 부팅하여 변경 내용을 적용합니다.
 
 **2단계: 대상 구독 관리자 구성 설정을 위해 도메인 컨트롤러에서 정책 만들기** 
 > [!Note] 
@@ -72,7 +72,7 @@ ms.lasthandoff: 10/23/2017
 
 1.  관리자 권한 명령 프롬프트를 열고 *wecutil qc*를 입력합니다.
 2.  **이벤트 뷰어**를 엽니다. 
-3.  마우스 오른쪽 단추로 **구독**을 클릭하고 **구독 만들기**를 클릭합니다. 
+3.  마우스 오른쪽 단추로 **구독**을 클릭하고 **구독 만들기**를 선택합니다. 
 
    1.   구독에 대한 이름과 설명을 입력합니다. 
    2.   **대상 로그**에서 **전달된 이벤트**가 선택되어 있는지 확인합니다. ATA에서 이벤트를 읽으려면 대상 로그가 **전달된 이벤트**여야 합니다. 

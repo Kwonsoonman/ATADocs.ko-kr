@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f88dcf9b2c3bb9db5d81a039e7e7ae8818c48137
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: 4c8de5a12c06b9c20f4bd665f472ed622079bf83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -43,9 +43,9 @@ ATA는 MongoDB를 데이터베이스로 사용합니다.
 |특정 날에 특정 계정에 관련된 특정 컴퓨터에서 시작된 NTLM 트래픽을 찾습니다.|`db.Ntlm_<datetime>.find({SourceComputerId: "<Id of the source computer>", SourceAccountId: "<Id of the account>"})`|&lt;원본 컴퓨터의 ID&gt; 및 &lt;계정의 ID&gt;를 가져오려면 예제와 같이 UniqueEntity 컬렉션을 쿼리할 수 있습니다.<br /><br />각 네트워크 활동 유형(예: NTLM 인증)에는 UTC 날짜마다 고유한 컬렉션이 있습니다.|
 |고급 구성을 옵션합니다. 이 예제에서 모든 ATA 게이트웨이에 대한 전송 큐 크기를 10,000으로 변경합니다.|`db.SystemProfile.update( {_t: "GatewaySystemProfile"} ,`<br>`{$set:{"Configuration.EntitySenderConfiguration.EntityBatchBlockMaxSize" : "10000"}})`|`|
 
-다음 예제에서는 위에 제공된 구문을 사용하는 샘플 코드를 제공합니다. 2015년 10월 20일에 발생한 의심스러운 활동을 조사하고 있으며 "John Doe"가 해당 날짜에 수행한 NTLM 활동에 대해 자세히 알아보려는 경우<br /><br />먼저 "John Doe"의 ID를 찾습니다.
+다음 예제에서는 앞에서 제공된 구문을 사용하는 샘플 코드를 제공합니다. 2015년 10월 20일에 발생한 의심스러운 활동을 조사하고 있으며 "John Doe"가 해당 날짜에 수행한 NTLM 활동에 대해 자세히 알아보려는 경우<br /><br />먼저 "John Doe"의 ID를 찾습니다.
 
-`db.UniqueEntity.find({Name: "John Doe"})`<br>`_id` 값으로 표시된 ID를 적어둡니다. 우리가 사용하는 예제에서는 이 ID를 `123bdd24-b269-h6e1-9c72-7737as875351`(으)로 가정합니다.<br>그런 다음, 찾는 날짜 이전의 가장 가까운 날짜에 해당하는 컬렉션을 검색합니다(현재 예제에서는 2015년 10월 20일).<br>그런 다음 John Doe의 계정 NTLM 활동을 검색합니다. 
+`db.UniqueEntity.find({Name: "John Doe"})`<br>`_id` 값으로 표시된 ID를 기록합니다. 예를 들어, ID가 `123bdd24-b269-h6e1-9c72-7737as875351`이라고 가정합니다.<br>그런 다음, 찾는 날짜 이전의 가장 가까운 날짜에 해당하는 컬렉션을 검색합니다(현재 예제에서는 2015년 10월 20일).<br>그런 다음 John Doe의 계정 NTLM 활동을 검색합니다. 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
 

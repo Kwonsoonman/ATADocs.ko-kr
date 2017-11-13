@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/16/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1f531db341f442d135b802af965f714b37f69e3a
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 06f96ad4627cd5400d822caabeaff15dfaabfb72
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/16/2017
 
 ## <a name="types-of-ata-role-groups"></a>ATA 역할 그룹 유형 
 
-ATA에서는 3가지 유형의 역할 그룹, ATA 관리자, ATA 사용자 및 ATA 뷰어를 소개합니다. 다음 표에서는 역할에 따라 사용할 수 있는 ATA의 액세스 유형에 대해 설명합니다. 할당하는 역할에 따라 다음과 같이 ATA의 다양한 화면과 메뉴 옵션을 사용할 수 있습니다.
+ATA에서는 세 가지 유형의 역할 그룹, ATA 관리자, ATA 사용자 및 ATA 뷰어를 소개합니다. 다음 표에서는 역할에 따라 사용할 수 있는 ATA의 액세스 유형에 대해 설명합니다. 할당하는 역할에 따라 다음과 같이 ATA의 다양한 화면과 메뉴 옵션을 사용할 수 있습니다.
 
 |활동 |Microsoft Advanced Threat Analytics 관리자|Microsoft Advanced Threat Analytics 사용자|Microsoft Advanced Threat Analytics 뷰어|
 |----|----|----|----|

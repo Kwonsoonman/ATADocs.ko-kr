@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 66e910c1d6d11781fa66f8386b4b3939fd49ebf7
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 4abeda5a54de771c6e6d3c73d9217113dfe88b8e
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -65,7 +65,7 @@ ATA Gateway 서버에서 다음 단계를 수행합니다.
     > [!NOTE]
     > ATA 게이트웨이를 배포할 때는 자격 증명을 제공할 필요가 없습니다. ATA 게이트웨이 설치가 Single Sign-On을 사용하여 자격 증명을 검색하지 못하는 경우(예: 이 문제는 ATA 센터가 도메인에 없는 경우, ATA 게이트웨이가 도메인에 없는 경우 또는 ATA 관리자 자격 증명이 없는 경우에 발생할 수 있음) 다음 화면에서와 같이 자격 증명을 제공하라는 메시지가 표시됩니다. 
 
-  ![ATA 게이트웨이가 자격 증명을 제공합니다.](media/ata-install-credentials.png)
+  ![ATA 게이트웨이 자격 증명을 제공하세요.](media/ata-install-credentials.png)
 
    - 설치 경로: ATA 게이트웨이를 설치할 위치입니다. 기본적으로 %programfiles%\Microsoft Advanced Threat Analytics\Gateway입니다. 기본값을 그대로 둡니다.
     
