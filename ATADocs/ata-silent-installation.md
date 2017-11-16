@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -29,11 +29,11 @@ ms.lasthandoff: 08/29/2017
 
 ATA 버전 1.8을 사용하려면 Microsoft .NET Framework 4.6.1이 설치되어 있어야 합니다. 
 
-ATA를 설치하거나 업데이트하면 Microsoft ATA 배포의 일부로 .Net Framework 4.6.1이 자동으로 설치됩니다.
+ATA를 설치하거나 업데이트하면 Microsoft ATA 배포의 일부로 .NET Framework 4.6.1이 자동으로 설치됩니다.
 
 > [!Note] 
 > .NET framework 4.6.1을 설치하려면 서버를 다시 부팅해야 할 수 있습니다. 도메인 컨트롤러에서 ATA 게이트웨이를 설치할 때 해당 도메인 컨트롤러에 대해 유지 관리 기간을 예약하는 것이 좋습니다.
-ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 자동으로 다시 시작하도록 설치 관리자가 구성됩니다(필요한 경우). Windows Installer 버그 때문에 서버가 다시 시작되지 않도록 norestart 플래그를 안정적으로 사용할 수 없으므로 유지 관리 기간 동안에만 자동 설치를 실행해야 합니다.
+ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 자동으로 다시 시작하도록 설치 관리자가 구성됩니다(필요한 경우). Windows Installer 버그 때문에 서버가 다시 시작되지 않도록 norestart 플래그를 안정적으로 사용할 수 없으므로 유지 관리 기간에만 자동 설치를 실행해야 합니다.
 
 배포 진행 상태를 추적하려면 **%AppData%\Local\Temp**에 있는 ATA 설치 관리자 로그를 모니터링합니다.
 
@@ -68,7 +68,7 @@ ATA 자동 설치 방법을 사용하는 경우 설치가 끝나면 서버를 �
 |CenterPort|CenterPort=<CenterPort>|예|ATA 센터 서비스의 네트워크 포트를 설정합니다.|
 |CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|아니요|ATA 센터 서비스에 대한 인증서 지문을 설정합니다. 이 인증서는 ATA 센터와 ATA 게이트웨이 간 보안 통신에 사용됩니다. 설정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|예|ATA 콘솔의 IP 주소를 설정합니다.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|아니요|ATA 콘솔용 인증서 지문을 지정합니다. 이 인증서는 ATA 콘솔 웹 사이트의 ID를 확인하는 데 사용됩니다. 지정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|아니요|ATA 콘솔용 인증서 지문을 지정합니다. 이 인증서는 ATA 콘솔 웹 사이트 ID의 유효성을 검사하는 데 사용됩니다. 지정하지 않으면 설치할 때 자체 서명된 인증서가 생성됩니다.|
 
 **예**: 기본 설치 경로 및 단일 IP 주소를 사용하여 ATA 센터를 설치하려면 다음을 수행합니다.
 
@@ -168,7 +168,7 @@ ATA 센터 자동 제거를 수행하려면 다음 명령을 사용합니다. **
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 이름을 설정합니다.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|예|ATA 센터에 ATA 게이트웨이를 등록하는 데 사용되는 사용자 계정(user@domain.com)의 암호를 설정합니다.|
 
-**예제**: ATA 게이트웨이를 자동으로 설치하려면 ATA 관리자 자격 증명을 사용하여 도메인에 연결된 컴퓨터에 로그인합니다. 자격 증명을 지정할 필요가 없습니다. 그렇지 않으면 지정된 자격 증명을 사용하여 ATA 센터에 등록합니다.
+**예제**: ATA 게이트웨이를 자동으로 설치하려면 ATA 관리자 자격 증명을 사용하여 도메인에 연결된 컴퓨터에 로그인합니다. 그렇게 하면 설치의 일부로 자격 증명을 지정할 필요가 없습니다. 그렇지 않으면 지정된 자격 증명을 사용하여 ATA 센터에 등록합니다.
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5beb4868fb8ced42457a8cadd1123956dd69ad7
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-16"></a>ATA 버전 1.6의 새로운 기능
 이 릴리스 정보에서는 이 버전의 Advanced Threat Analytics에서 알려진 문제에 대한 정보를 제공합니다.
@@ -120,14 +120,14 @@ ATA 1.6으로 업데이트할 때 다음 오류 코드로 인해 업데이트 �
     2.  Microsoft Advanced Threat Analytics Center
 7.  로그를 검토하여 제품이 오류 없이 실행되고 있는지 확인합니다.
 8.  "RemoveDuplicateProfiles.exe" 도구를 [다운로드](http://aka.ms/ataremoveduplicateprofiles "다운로드")하여 기본 설치 경로(%ProgramFiles%\Microsoft Advanced Threat Analytics\Center)에 복사합니다.
-9.  관리자 권한 명령 프롬프트에서 “RemoveDuplicateProfiles.exe”를 실행하고 완료될 때까지 기다립니다.
+9.  관리자 권한 명령 프롬프트에서 `RemoveDuplicateProfiles.exe`를 실행하고 완료될 때까지 기다립니다.
 10. …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin 디렉터리: **Mongo ATA**에서 다음 명령을 입력합니다.
 
-    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+          db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
 ![해결 방법 업데이트](http://i.imgur.com/Nj99X2f.png)
 
-그러면 WriteResult({ "nRemoved" : XX })가 반환됩니다. 여기서 “XX”는 검색된 의심스러운 활동의 수입니다. 숫자가 0보다 큰 경우 명령 프롬프트를 종료하고 업데이트 프로세스를 계속 진행하세요.
+그러면 `WriteResult({ "nRemoved" : XX })`가 반환됩니다. 여기서 “XX”는 삭제된 의심스러운 활동의 수입니다. 숫자가 0보다 큰 경우 명령 프롬프트를 종료하고 업데이트 프로세스를 계속 진행하세요.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>Net Framework 4.6.1에서 서버 다시 시작 요구

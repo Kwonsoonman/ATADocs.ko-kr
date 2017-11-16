@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 62ce117423a189a1c2ce00b862f323db6ed328cb
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
 
 # <a name="working-with-suspicious-activities"></a>의심스러운 활동 작업
-이 항목에서는 Advanced Threat Analytics를 사용하는 방법에 대한 기본 사항을 설명합니다.
+이 문서에서는 Advanced Threat Analytics를 사용하는 방법에 대한 기본 사항을 설명합니다.
 
 ## <a name="review-suspicious-activities-on-the-attack-time-line"></a>공격 타임라인에서 의심스러운 활동 검토
 ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동으로 열립니다. 의심스러운 활동은 최신 활동이 타임라인의 맨 위에 오도록 시간 순으로 나열됩니다.
@@ -59,7 +59,7 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
 ## <a name="filter-suspicious-activities-list"></a>의심스러운 활동 목록 필터링
 의심스러운 활동 목록을 필터링하려면
 
-1.  화면의 왼쪽의 **필터링 기준** 창에서 **모두**, **시작됨**, **마감** 또는 **표시 안 함** 중 하나를 선택합니다.
+1.  화면의 왼쪽의 **필터링 기준** 창에서 **모두**, **시작됨**, **마감** 또는 **표시 안 함** 중 한 가지 옵션을 선택합니다.
 
 2.  목록을 추가로 필터링하려면 **높음**, **중간** 또는 **낮음**을 선택합니다.
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
-ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
+ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/01/2017
 
 ATA 경고를 사용하는 방법에 대한 자세한 내용은 [의심스러운 활동 작업](working-with-suspicious-activities.md)을 참조하세요.
 
-질문이나 의견이 있으시면 [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com)에 문의하세요.
+질문이나 의견이 있으시면 [ATAEval@microsoft.com](mailto:ATAEval@microsoft.com)으로 ATA 팀에 문의하세요.
 
 ## <a name="abnormal-sensitive-group-modification"></a>비정상적인 중요한 그룹 수정
 
@@ -47,7 +47,7 @@ ATA의 중요한 그룹에 대한 정의는 [ATA 콘솔 작업](working-with-ata
 
 
 검색은 [도메인 컨트롤러에서 감사된 이벤트](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection)를 기반으로 합니다.
-[ATA 감사(AuditPol, 고급 감사 설정 적용, 경량 게이트웨이 서비스 검색)](https://aka.ms/ataauditingblog)에서 참조된 도구를 사용하여 도메인 컨트롤러에 필요한 이벤트를 감사하는지 확인합니다.
+도메인 컨트롤러가 필요한 이벤트를 감사하는지 확인하려면 [ATA 감사(AuditPol, 고급 감사 설정 적용, 경량 게이트웨이 서비스 검색)](https://aka.ms/ataauditingblog)에서 참조된 도구를 사용하세요.
 
 **조사**
 
@@ -109,7 +109,7 @@ ATA의 중요한 그룹에 대한 정의는 [ATA 콘솔 작업](working-with-ata
 
 1.  스켈레톤 키 - 도메인 컨트롤러에서 실행되며 해당 암호를 모른 채 모든 계정으로 도메인에 인증할 수 있는 맬웨어입니다. 이 맬웨어는 종종 더 약한 암호화 알고리즘을 사용하여 도메인 컨트롤러에서 사용자의 암호를 암호화합니다. 이 검색에서 원본 컴퓨터의 KRB_ERR 메시지 암호화 방법은 이전에 확인된 동작과 비교하여 다운그레이드되었습니다.
 
-2.  골든 티켓 - [골든 티켓](#golden-ticket) 경고에서 원본 컴퓨터의 TGS_REQ(서비스 요청) 메시지의 TGT 필드에 대한 암호화 방법이 이전에 확인된 동작과 비교하여 다운그레이드되었습니다. 이는 다른 Golden Ticket 검색에서와 같이 시간 이상을 기반으로 하지 않음에 유의하세요. 또한 ATA에서 검색한 위의 서비스 요청과 관련된 Kerberos 인증 요청도 없었습니다.
+2.  골든 티켓 - [골든 티켓](#golden-ticket) 경고에서 원본 컴퓨터의 TGS_REQ(서비스 요청) 메시지의 TGT 필드에 대한 암호화 방법이 이전에 확인된 동작과 비교하여 다운그레이드되었습니다. 이는 다른 Golden Ticket 검색에서와 같이 시간 이상을 기반으로 하지 않습니다. 또한 ATA에서 검색한 앞의 서비스 요청과 관련된 Kerberos 인증 요청도 없었습니다.
 
 3.  Overpass-the-Hash - 원본 컴퓨터의 AS_REQ 메시지 암호화 종류가 이전에 확인된 동작과 비교하여 다운그레이드되었습니다. 즉 컴퓨터에서 AES를 사용했습니다.
 
@@ -131,7 +131,7 @@ ATA의 중요한 그룹에 대한 정의는 [ATA 콘솔 작업](working-with-ata
 2.  Golden Ticket - 의심스러운 [골든 티켓](#golden-ticket) 활동의 지침을 따릅니다.   
     또한 골든 티켓을 만들려면 도메인 관리자 권한이 필요하므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)을 구현합니다.
 
-3.  Overpass-the-Hash - 관련된 계정이 중요하지 않으면 해당 계정의 암호를 다시 설정합니다. 이렇게 하면 공격자가 암호 해시에서 새 Kerberos 티켓을 만들지 못하게 하지만, 기존 티켓은 만료될 때까지 계속 사용할 수 있습니다. 중요한 계정인 경우 의심스러운 골든 티켓 활동과 마찬가지로 KRBTGT 계정을 두 번 다시 설정해야 합니다. KRBTGT를 두 번 다시 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다. [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침을 참조하세요. 또한 [KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51)도 참조하세요. 이는 측면 확대 기술이므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)의 모범 사례를 따릅니다.
+3.  Overpass-the-Hash - 관련된 계정이 중요하지 않으면 해당 계정의 암호를 다시 설정합니다. 이렇게 하면 공격자가 암호 해시에서 새 Kerberos 티켓을 만들지 못하게 하지만, 기존 티켓은 만료될 때까지 계속 사용할 수 있습니다. 중요한 계정인 경우 의심스러운 골든 티켓 활동과 마찬가지로 KRBTGT 계정을 두 번 다시 설정해야 합니다. KRBTGT를 다시 한번 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다. [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침을 참조하세요. 또한 [KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51)도 참조하세요. 이는 측면 확대 기술이므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)의 모범 사례를 따릅니다.
 
 ## 골든 티켓<a name="golden-ticket"></a>
 
@@ -151,7 +151,7 @@ ATA의 중요한 그룹에 대한 정의는 [ATA 콘솔 작업](working-with-ata
 
 **수정**
 
-[KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51)을 사용하여 [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침에 따라 KRBTGT(Kerberos 허용 티켓) 암호를 두 번 변경합니다. KRBTGT를 두 번 다시 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다.  
+[KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51)을 사용하여 [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침에 따라 KRBTGT(Kerberos 허용 티켓) 암호를 두 번 변경합니다. KRBTGT를 다시 한번 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다.  
 또한 골든 티켓을 만들려면 도메인 관리자 권한이 필요하므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)을 구현합니다.
 
 ## <a name="honeytoken-activity"></a>허니 토큰 활동
@@ -191,7 +191,7 @@ Pass-the-Hash는 공격자가 한 컴퓨터에서 사용자의 NTLM 해시를 �
 
 1. 관련된 계정이 중요하지 않으면 해당 계정의 암호를 다시 설정합니다. 이렇게 하면 공격자가 암호 해시에서 새 Kerberos 티켓을 만들지 못하게 하지만, 기존 티켓은 만료될 때까지 계속 사용할 수 있습니다. 
 
-2. 중요한 계정인 경우 의심스러운 골든 티켓 활동과 마찬가지로 KRBTGT 계정을 두 번 다시 설정해야 합니다. KRBTGT를 두 번 다시 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다. [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침을 참조하고, [KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51) 사용도 참조하세요. 이는 측면 확대 기술이므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)의 모범 사례를 따릅니다.
+2. 중요한 계정인 경우 의심스러운 골든 티켓 활동과 마찬가지로 KRBTGT 계정을 두 번 다시 설정해야 합니다. KRBTGT를 다시 한번 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다. [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침을 참조하고, [KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51) 사용도 참조하세요. 이는 측면 확대 기술이므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)의 모범 사례를 따릅니다.
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Pass-the-Ticket 공격을 통한 ID 도용
 
@@ -209,7 +209,7 @@ Pass-the-Ticket 공격은 공격자가 한 컴퓨터에서 Kerberos 티켓을 �
 
 1. 관련된 계정이 중요하지 않으면 해당 계정의 암호를 다시 설정합니다. 이렇게 하면 공격자가 암호 해시에서 새 Kerberos 티켓을 만들지 못하게 하지만, 기존 티켓은 만료될 때까지 계속 사용할 수 있습니다.  
 
-2. 중요한 계정인 경우 의심스러운 골든 티켓 활동과 마찬가지로 KRBTGT 계정을 두 번 다시 설정해야 합니다. KRBTGT를 두 번 다시 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다. [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침을 참조하고, [KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51) 사용도 참조하세요.  이는 측면 확대 기술이므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)의 모범 사례를 따릅니다.
+2. 중요한 계정인 경우 의심스러운 골든 티켓 활동과 마찬가지로 KRBTGT 계정을 두 번 다시 설정해야 합니다. KRBTGT를 다시 한번 설정하면 이 도메인의 모든 Kerberos 티켓이 무효화되므로 그렇게 되기 전에 계획을 세웁니다. [고객을 위해 사용할 수 있는 KRBTGT 계정 암호 재설정 스크립트(영문)](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)의 지침을 참조하고, [KRBTGT 계정 암호/키 도구 재설정(영문)](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51) 사용도 참조하세요.  이는 측면 확대 기술이므로 [Pass-the-Hash 권장 사항(영문)](http://aka.ms/PtH)의 모범 사례를 따릅니다.
 
 ## <a name="malicious-data-protection-private-information-request"></a>악성 데이터 보호 개인 정보 요청
 
@@ -351,7 +351,7 @@ DNS 프로토콜에는 여러 가지 쿼리 유형이 있습니다. ATA는 DNS�
 
 SMB(서버 메시지 블록) 열거를 통해 공격자는 사용자가 최근에 로그온한 위치에 대한 정보를 얻을 수 있습니다. 공격자가 이 정보를 갖게 되면 네트워크에서 가로로 이동하여 중요한 특정 계정으로 이동할 수 있습니다.
 
-이러한 활동은 발생되지 않아야 하므로 이 검색에서 도메인 컨트롤러에 대해 SMB 세션 열거를 수행하면 경고가 트리거됩니다.
+이러한 일은 발생하지 않아야 하므로 이 검색에서 도메인 컨트롤러에 대해 SMB 세션 열거를 수행하면 경고가 트리거됩니다.
 
 **조사**
 
@@ -417,7 +417,7 @@ SMB(서버 메시지 블록) 열거를 통해 공격자는 사용자가 최근�
 
 무차별 대입 공격의 경우 공격자가 하나 이상의 계정에 대해 올바른 암호를 찾을 때까지 다른 계정에 대해 여러 다른 암호로 인증을 시도합니다. 일단 찾았으면 공격자가 해당 계정을 사용하여 로그인할 수 있습니다.
 
-이 검색에서 많은 인증 실패가 발생하면 경고가 트리거됩니다. 이는 여러 사용자 간에 작은 암호 집합을 사용하는 '가로로'이거나 소수의 사용자만 큰 암호 집합을 사용하는 '세로로'이며, 이 두 가지 옵션을 조합하여 사용할 수도 있습니다.
+이 검색에서 많은 인증 실패가 발생하면 경고가 트리거됩니다. 이는 여러 사용자 간에 작은 암호 집합을 사용하는 ‘가로로’이거나 소수의 사용자만 큰 암호 집합을 사용하는 ‘세로로’이며, 이 두 가지 옵션을 조합하여 사용할 수도 있습니다.
 
 **조사**
 
@@ -453,7 +453,7 @@ ATA는 가변적인 3주 동안 사용자, 컴퓨터 및 리소스에 대한 엔
 
 **설명**
 
-공격자가 표준이 아닌 방식으로 다양한 프로토콜(SMB, Kerberos, NTLM)을 구현하는 도구를 사용합니다. 이러한 유형의 네트워크 트래픽은 일반적으로 Windows에서 경고 없이 허용되지만, ATA에서는 잠재적인 악의적 의도를 인식할 수 있습니다. 이 동작은 Over-Pass-the-Hash 및 무차별 대입 공격과 같은 기술뿐만 아니라 WannaCry와 같은 고급 랜섬웨어에서 사용되는 악용도 나타냅니다.
+공격자가 표준이 아닌 방식으로 다양한 프로토콜(SMB, Kerberos, NTLM)을 구현하는 도구를 사용합니다. 이러한 유형의 네트워크 트래픽은 Windows에서 경고 없이 허용되지만, ATA에서는 잠재적인 악의적 의도를 인식할 수 있습니다. 이 동작은 Over-Pass-the-Hash 및 무차별 대입 공격과 같은 기술뿐만 아니라 WannaCry와 같은 고급 랜섬웨어에서 사용되는 악용도 나타냅니다.
 
 **조사**
 

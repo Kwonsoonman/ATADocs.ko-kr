@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/6/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 7bd0f90acbb6a2d8eb84fd09bc4d859fff082273
-ms.sourcegitcommit: 5563c6861bb5db5cb73e058e5a51b4938b9a7d46
+ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -64,7 +64,7 @@ ATA 센터 이벤트 뷰어는 ATA에 대한 이벤트를 기록합니다. 이 �
 
 1017 – 트래픽을 수신하지 못한 센터 상태 경고 
 
-1018 – ATA Gateway 시작 실패 상태 경고 
+1018 – ATA 게이트웨이 시작 실패 상태 경고 
 
 1019 – ATA Gateway 메모리 부족 상태 경고 
 
@@ -74,7 +74,7 @@ ATA 센터 이벤트 뷰어는 ATA에 대한 이벤트를 기록합니다. 이 �
 
 1022 – ATA 센터 외부 IP 주소 확인 실패 상태 경고 
  
-## <a name="ata-suspicious-ctivity-events"></a>ATA 의심스러운 작업 이벤트
+## <a name="ata-suspicious-activity-events"></a>ATA 의심스러운 작업 이벤트
 
 2001 - 비정상 동작 의심스러운 작업 
 
@@ -114,9 +114,9 @@ ATA 센터 이벤트 뷰어는 ATA에 대한 이벤트를 기록합니다. 이 �
 
 2022 - 골든 티켓 의심스러운 작업 
 
-2023 – 비정상 중요 그룹 멤버 자격 변경 의심스러운 작업 
-
 2023 - 무차별 암호 대입(Brute force) 의심스러운 작업 
+
+2024 – 비정상 중요 그룹 멤버 자격 변경 의심스러운 작업  
 
 ## <a name="ata-auditing-events"></a>ATA 감사 이벤트
 

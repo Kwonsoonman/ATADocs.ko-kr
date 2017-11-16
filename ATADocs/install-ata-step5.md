@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 518153d03f41956871ec5e7bf680f72187e4919c
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 05af384d91e899c1c0bc50ec2da6147eb47adb82
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -60,16 +60,16 @@ ATA Gateway를 설치한 후에는 다음 단계를 수행하여 ATA Gateway에 
 
   > [!NOTE] 
   > 설치 후 ATA 게이트웨이 서비스를 처음 시작하는 데 몇 분 정도 걸립니다. 네트워크 캡처 파서의 캐시를 작성하기 때문입니다.
-  > 구성 변경은 ATA Gateway와 ATA Center 간의 예정된 다음 동기화 시 ATA Gateway에 적용됩니다.
+  > 구성 변경은 ATA 게이트웨이와 ATA Center 간의 예정된 다음 동기화 시 ATA 게이트웨이에 적용됩니다.
 
 3. 선택적으로 [Syslog 수신기 및 Windows 이벤트 전달 컬렉션](configure-event-collection.md)을 설정할 수 있습니다. 
 4. 이후 버전 릴리스에서 ATA 센터를 업데이트하면 이 ATA 게이트웨이가 자동으로 업데이트되도록 **ATA 게이트웨이 자동 업데이트**를 사용합니다.
 
-5. **저장**을 클릭합니다.
+5. **Save**을 클릭합니다.
 
 
 ## <a name="validate-installations"></a>설치 유효성 검사
-ATA Gateway가 성공적으로 배포되었는지 유효성을 검사하려면 다음을 확인합니다.
+ATA 게이트웨이가 성공적으로 배포되었는지 확인하려면 다음을 확인합니다.
 
 1.  **Microsoft Advanced Threat Analytics Gateway** 서비스가 실행 중인지 확인합니다. ATA 게이트웨이 설정을 저장한 후 서비스를 시작하는 데 몇 분 정도 걸릴 수 있습니다.
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 44f50b2daefb5a54c56b90289faf08b897494093
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -27,7 +27,7 @@ ATA(Advanced Threat Analytics)는 여러 유형으로 대상이 지정된 고급
 
 ## <a name="how-ata-works"></a>ATA의 작동 방법
 
-ATA는 독점 네트워크 구문 분석 엔진을 활용하여 인증 및 정보 수집을 위해 여러 프로토콜(예: Kerberos, DNS, RPC, NTLM 및 기타)의 네트워크 트래픽을 캡처하고 구문 분석합니다. 이 정보는 다음 중 하나를 통해 ATA에서 수집됩니다.
+ATA는 독점 네트워크 구문 분석 엔진을 활용하여 인증, 권한 부여 및 정보 수집을 위해 여러 프로토콜(예: Kerberos, DNS, RPC, NTLM 및 기타)의 네트워크 트래픽을 캡처하고 구문 분석합니다. 이 정보는 다음 중 하나를 통해 ATA에서 수집됩니다.
 
 -   도메인 컨트롤러와 DNS 서버에서 ATA 게이트웨이로의 포트 미러링 및/또는
 -   도메인 컨트롤러에 ATA LGW(경량 게이트웨이) 직접 배포
@@ -46,7 +46,7 @@ ATA 아키텍처에 대한 자세한 내용은 [ATA 아키텍처](ata-architectu
 
 ATA 기술에서는 다음과 같이 사이버 공격를 적극 대처하는 여러 단계에 중점을 두고 여러 의심스러운 활동을 검색합니다.
 
--   정찰. 공격자가 환경이 구축된 방법, 다음 공격 단계를 위해 일반적으로 계획을 수립하는 다른 자산과 엔터티에 대한 정보를 수집하는 동안 수행합니다.
+-   정찰. 공격자가 환경이 빌드되는 방식, 다른 자산 및 존재하는 엔터티에 대한 정보를 수집합니다. 공격자는 일반적으로 공격의 다음 단계에 대한 계획을 빌드합니다.
 -   측면 활동 주기. 공격자가 네트워크 내부에서 공격 진영을 분산하기 위해 시간과 노력을 들이는 동안 수행합니다.
 -   도메인 선점(지속성). 공격자가 다양한 진입점, 자격 증명 및 기술을 사용하여 공격 작전을 다시 시작할 수 있도록 정보를 캡처하는 동안 수행합니다. 
 
@@ -65,7 +65,8 @@ ATA는 세 가지 종류의 공격, 악의적인 공격, 비정상적인 동작,
 -   무차별 암호 대입(Brute force)
 -   원격 실행
 
-검색과 검색에 대한 설명이 포함된 전체 목록은 [ATA에서 검색할 수 있는 의심스러운 활동은 무엇인가요?](ata-threats.md)를 참조하세요.
+검색과 검색에 대한 설명이 포함된 전체 목록은 [ATA에서 검색할 수 있는 의심스러운 활동은 무엇인가요?](ata-threats.md)를 참조하세요. 
+
 ATA는 이러한 의심스러운 활동을 검색하고 누가, 무엇을, 언제, 어떻게 활동했는지 명확하게 설정하는 보기를 포함하여 ATA 콘솔에 정보를 제공합니다. 이렇게 간단하고 알기 쉬운 대시보드를 모니터링함으로써 네트워크의 클라이언트 1과 클라이언트 2 컴퓨터에서 Pass-the-Ticket 공격이 시도되었음을 ATA에서 검색하여 경고 메시지를 받게 됩니다.
 
  ![샘플 ATA 화면 Pass-the-Ticket](media/pass_the_ticket_sa.png)
@@ -79,7 +80,7 @@ ATA는 이러한 의심스러운 활동을 검색하고 누가, 무엇을, 언�
 -   중요한 그룹 수정
 
 
-이러한 종류의 의심스러운 활동은 ATA 대시보드에서 볼 수 있습니다. 다음 예에서 ATA는 사용자가 일반적으로 액세스 하지 않는 4대의 컴퓨터에 액세스한 경우(알림의 원인이 될 수 있음) 경고를 보냅니다.
+이러한 종류의 의심스러운 활동은 ATA 대시보드에서 볼 수 있습니다. 다음 예에서 ATA는 사용자가 일반적으로 액세스하지 않는 4대의 컴퓨터에 액세스한 경우(알림의 원인이 될 수 있음) 경고를 보냅니다.
 
  ![샘플 ATA 화면 비정상적인 동작](media/abnormal-behavior-sa.png) 
 

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: daaa2b3d495900d84fe7b61afb8e3bb22b3d7f72
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-15-migration-guide"></a>버전 1.5로의 ATA 업데이트 마이그레이션 가이드
 ATA 1.5로 업데이트하는 경우 다음 영역에서 기능이 개선됩니다.
@@ -89,10 +89,10 @@ ATA 버전 1.5로 업데이트하려면 다음 단계를 수행합니다.
 > [!IMPORTANT]
 > - ATA가 정상적으로 작동하도록 하려면 모든 ATA 게이트웨이를 업데이트하세요.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>2단계. ATA 게이트웨이 설치 패키지 다운로드
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>2단계. ATA Gateway 설치 패키지 다운로드
 도메인 연결 설정을 구성하고 나면 ATA Gateway 설치 패키지를 다운로드할 수 있습니다.
 
-ATA 게이트웨이 패키지를 다운로드하려면 다음 단계를 수행합니다.
+ATA Gateway 패키지를 다운로드하려면 다음 단계를 수행합니다.
 
 1.  이전에 다운로드한 ATA 게이트웨이 패키지의 이전 버전을 삭제합니다.
 
@@ -104,7 +104,7 @@ ATA 게이트웨이 패키지를 다운로드하려면 다음 단계를 수행�
 
 4.  패키지를 로컬에 저장합니다.
 
-zip 파일에는 다음 항목이 포함되어 있습니다.
+zip 파일에는 다음 파일이 포함되어 있습니다.
 
 -   ATA Gateway 설치 관리자
 

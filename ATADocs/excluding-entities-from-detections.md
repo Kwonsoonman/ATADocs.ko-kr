@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ff60b026c754a27da62c01ce6c551d206338ef4e
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: f9fce36074b5c31e35f95f028b856b18fa3bae0b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
 
 
 # <a name="excluding-entities-from-detections"></a>검색에서 엔터티 제외
-이 항목에서는 무해한 참 긍정을 최소화면서도 참 긍정을 파악하도록 트리거되는 경고에서 엔터티를 제외하는 방법에 관해 설명합니다. 특정 사용자에게 ATA가 일상적인 비즈니스 리듬의 일부가 될 수 있는 활동에 대해 불필요한 잡음이 되지 않도록 발생하는 경고에서 특정 엔터티를 최소화하거나 제외할 수 있습니다.
+이 문서에서는 무해한 참 긍정을 최소화면서도 참 긍정을 파악하도록 트리거되는 경고에서 엔터티를 제외하는 방법에 관해 설명합니다. 특정 사용자에게 ATA가 일상적인 비즈니스 리듬의 일부가 될 수 있는 활동에 대해 잡음이 되지 않도록 발생하는 경고에서 특정 엔터티를 최소화하거나 제외할 수 있습니다.
 
 예를 들어 DNS 정찰을 수행하는 보안 스캐너이거나 도메인 컨트롤러에서 원격으로 스크립트를 실행하는 관리자인 경우, 이러한 사용 권한 활동은 조직의 일반적인 IT 작업의 일부로 사용됩니다.
 
@@ -36,7 +36,7 @@ ATA에 발생하는 경고에서 엔터티를 제외하려면:
 
     ![엔터티 제외](./media/exclude-in-sa.png)
 
-- **구성 페이지에서 제외**: 설정한 모든 제외를 검토하거나 수정하려면 **구성**에서 **제외**를 클릭한 다음 **표시된 중요한 계정 자격 증명**과 같은 의심스러운 활동을 선택합니다.
+- **구성 페이지에서 제외**: 모든 제외를 검토하거나 수정하려면 **구성**에서 **제외**를 클릭한 다음 **표시된 중요한 계정 자격 증명**과 같은 의심스러운 활동을 선택합니다.
 
     ![제외 구성](./media/exclusions-config-page.png)
 

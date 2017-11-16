@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 49d0df5f3d835a879990d590b447ed3b4de88685
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -33,9 +33,9 @@ ATA를 사용하면 많은 검색에서 특정 IP 주소 또는 사용자를 제
 
 예를 들어 한 **DNS 정찰 제외**는 검색 메커니즘으로 DNS를 사용하는 보안 스캐너일 수 있습니다. 이 제외를 통해 ATA에서 이러한 스캐너를 무시할 수 있습니다. *Pass-the-Ticket* 예외의 예로는 NAT 장치가 있습니다.    
 
-ATA에서는 허니 토큰 사용자를 구성하여 악의적인 행위자에 대한 트랩으로 사용됩니다. 즉 경고를 트리거하는 이 계정(일반적으로 유휴 상태)과 연관된 인증이 됩니다.
+ATA에서는 허니 토큰 사용자를 구성하며, 이는 악의적인 행위자에 대한 트랩으로 사용됩니다. 즉 경고를 트리거하는 이 계정(일반적으로 유휴 상태)과 연관된 인증이 됩니다.
 
-이를 구성하려면 다음이 단계를 따르세요.
+이를 구성하려면 다음 단계를 따르세요.
 
 1.  ATA 콘솔에서 설정 아이콘을 클릭하고 **구성**을 선택합니다.
 

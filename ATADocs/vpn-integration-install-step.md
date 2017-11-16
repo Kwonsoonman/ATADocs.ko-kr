@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 748121a709ac05756edf34e04e13b996190e9711
-ms.sourcegitcommit: b951c64228d4f165ee1fcc5acc0ad6bb8482d6a2
+ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -42,7 +42,7 @@ ATA는 ATA Gateway로 전달되는 RADIUS 계정 이벤트를 수신하여 VPN �
 
 ## <a name="prerequisites"></a>전제 조건
 
-VPN 통합을 사용하려면 다음 항목을 설정해야 합니다.
+VPN 통합을 사용하려면 다음 매개 변수를 설정해야 합니다.
 
 -   ATA Gateways 및 ATA Lightweight Gateways에서 UDP 1813 포트 열기
 
@@ -54,7 +54,7 @@ VPN 통합을 사용하려면 다음 항목을 설정해야 합니다.
 
 ## <a name="configure-radius-accounting-on-the-vpn-system"></a>VPN 시스템에서 RADIUS 계정 구성
 
-RRAS 서버에서 다음을 수행합니다.
+RRAS 서버에서 다음 단계를 수행합니다.
  
 1.  라우팅 및 원격 액세스 콘솔을 엽니다.
 2.  서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.
@@ -76,7 +76,7 @@ ATA에서 VPN 데이터를 구성하려면 다음과 같이 합니다.
  
   ![ATA 구성 메뉴](./media/config-menu.png)
 
-2.  **Radius 계정**을 설정하고, 이전에 RRAS VPN 서버에서 구성한 **공유 암호**를 입력합니다. 그런 다음 **Save**(저장)를 클릭합니다.
+2.  **Radius 계정**을 설정하고, 이전에 RRAS VPN 서버에서 구성한 **공유 비밀**을 입력합니다. 그런 다음 **Save**(저장)를 클릭합니다.
  
 
   ![ATA VPN 구성](./media/vpn.png)

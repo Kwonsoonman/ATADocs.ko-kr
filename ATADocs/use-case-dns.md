@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 5ec554b303a19a6e7b12cd788755604f1aaf43db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -56,7 +56,7 @@ DNS를 사용한 정찰을 조사하려면 먼저 쿼리의 원인을 확인해�
 
 ![ATA를 사용한 DNS 정찰 해결](./media/dns-recon-diagram.png)
  
-1.  첫 번째 단계는 아래와 같이 경고가 발생하는 컴퓨터를 식별하는 것입니다.
+1.  첫 번째 단계는 다음 화면와 그림과 같이 경고가 발생하는 컴퓨터를 식별하는 것입니다.
  
     ![ATA에서 DNS 정찰 의심스러운 활동 보기](./media/dns-recon.png)
 2.  이 컴퓨터가 무엇인지 식별합니다. 워크스테이션, 서버, 관리 워크스테이션, 펜 테스트 스테이션 등인가요?
@@ -80,7 +80,7 @@ Microsoft 계정 팀을 통해 연락할 수 있는 전문 인시던트 응답 �
 
 ## <a name="mitigation"></a>완화 방법
 
-영역 전송을 사용하지 않도록 설정하거나 지정된 IP 주소로만 제한하여 DNS를 사용한 정찰이 발생하지 않도록 내부 DNS 서버의 보안을 설정할 수 있습니다. 영역 전송 제한에 대한 자세한 내용은 Windows Server Technet 문서 [영역 전송 제한](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx)을 참조하세요. [IPsec로 영역 전송의 보안을 설정](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx)하면 제한된 영역 전송을 추가로 잠글 수 있습니다. 영역 전송 수정은 [내부 및 외부 공격으로부터 DNS 서버 보호](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx)를 위해 처리해야 하는 검사 목록의 작업 중 하나입니다.
+영역 전송을 사용하지 않도록 설정하거나 지정된 IP 주소로만 제한하여 DNS를 사용한 정찰이 발생하지 않도록 내부 DNS 서버의 보안을 설정할 수 있습니다. 영역 전송 제한에 대한 자세한 내용은 [영역 전송 제한](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx)을 참조하세요. [IPsec로 영역 전송의 보안을 설정](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx)하면 제한된 영역 전송을 추가로 잠글 수 있습니다. 영역 전송 수정은 [내부 및 외부 공격으로부터 DNS 서버 보호](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx)를 위해 처리해야 하는 검사 목록의 작업 중 하나입니다.
 
 
 

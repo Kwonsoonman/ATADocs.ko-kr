@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/12/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 19eee0466269bbc2255d3a83e2f8c073057ba356
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 652d3a9e20737d26e8776035690a180f6bd84593
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/30/2017
 ## <a name="change-the-domain-connectivity-password"></a>도메인 연결 암호 변경
 도메인 연결 암호를 수정하는 경우 입력한 암호가 올바른지 확인합니다. 올바르지 않으면 ATA 게이트웨이 서비스가 ATA 게이트웨이에서 더 이상 실행되지 않습니다.
 
-이 문제가 발생한 것으로 의심되면 ATA 게이트웨이의 Microsoft.Tri.Gateway Errors.log 파일에서 다음을 확인합니다. `The supplied credential is invalid.`
+이 문제가 발생한 것으로 의심되면 ATA 게이트웨이의 Microsoft.Tri.Gateway Errors.log 파일에서 다음 오류를 확인합니다. `The supplied credential is invalid.`
 
 이 문제를 해결하려면 다음 절차에 따라 ATA 센터에서 도메인 연결 암호를 업데이트합니다.
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/30/2017
 
     ATA 센터에서 도메인에 연결할 수 있는 경우 **연결 테스트** 단추를 사용하여 자격 증명의 유효성을 검사합니다.
 
-5.  **저장**을 클릭합니다.
+5.  **Save**을 클릭합니다.
 
 6.  암호를 변경한 후 ATA 게이트웨이 서비스가 ATA 게이트웨이 서버에서 실행되고 있는지를 수동으로 확인합니다.
 

@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 036871da05f59e380b045139e735762c1cc8a363
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-17"></a>ATA 버전 1.7의 새로운 기능
 이 릴리스 정보에서는 이 버전의 Advanced Threat Analytics에서 알려진 문제에 대한 정보를 제공합니다.
@@ -104,9 +104,9 @@ ATA 1.7에서 ATA 1.7 업데이트 1로 업데이트할 때 자동 ATA 게이트
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>의심스러운 활동 정보를 Excel로 내보내기에 실패할 수 있음
 의심스러운 활동 정보를 Excel 파일로 내보내려고 할 때 다음과 같은 오류와 함께 작업에 실패할 수 있습니다. *오류 [BsonClassMapSerializer`1] System.FormatException: Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivity 클래스의 활동 속성을 역직렬화하는 동안 오류가 발생했습니다. 'ResourceIdentifier' 요소가 Microsoft.Tri.Common.Data.EventActivities.NtlmEvent 클래스의 속성이나 필드와 일치하지 않습니다. ---> System.FormatException: 'ResourceIdentifier' 요소가 Microsoft.Tri.Common.Data.EventActivities.NtlmEvent 클래스의 속성이나 필드와 일치하지 않습니다.*
 
-이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 위치로 이동하고 다음을 실행합니다.
-1.  **Mongo.exe ATA**(ATA는 대문자여야 함)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+이 문제를 해결하려면 관리자 권한 명령 프롬프트에서 **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** 위치로 이동하고 다음 명령을 실행합니다.
+1.  `Mongo.exe ATA`(ATA는 대문자여야 함)
+2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>사소한 변경 사항
 

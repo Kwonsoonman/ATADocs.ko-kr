@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
-ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 11/14/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -58,7 +58,7 @@ ATA 시스템은 Active Directory 포리스트 경계에서 작동하고 Windows
 
 -   ATA 게이트웨이 또는 경량 게이트웨이에 Microsoft Message Analyzer를 설치하지 마세요. Message Analyzer 드라이버는 ATA 게이트웨이 및 경량 게이트웨이 드라이버와 충돌합니다. ATA 게이트웨이에서 Wireshark를 실행하는 경우 Wireshark 캡처를 중지한 후 Microsoft Advanced Threat Analytics Gateway Service를 다시 시작해야 합니다. 그렇지 않으면 게이트웨이가 트래픽 캡처를 중지합니다. ATA 경량 게이트웨이에서 Wireshark를 실행해도 ATA 경량 게이트웨이에는 방해가 되지 않습니다.
 
--    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 항목에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
+-    권장: 사용자에게 삭제된 개체 컨테이너에 대한 읽기 전용 권한이 있어야 합니다. 그러면 ATA가 도메인에서 대량 개체 삭제를 검색할 수 있습니다. 삭제된 개체 컨테이너에 대해 읽기 전용 권한을 구성하는 방법에 대한 자세한 내용은 [디렉터리 개체에 대한 권한 보기 또는 설정](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) 문서에서 **삭제된 개체 컨테이너에 대한 권한 변경** 섹션을 참조하세요.
 
 -   선택 사항: 네트워크 활동이 없는 사용자 계정을 사용합니다. 이 계정은 ATA 허니토큰 사용자로 구성됩니다. 허니토큰 사용자를 구성하려면 사용자 이름이 아닌 사용자 계정의 SID가 필요합니다. 자세한 내용은 [IP 주소 제외 및 Honeytoken 사용자 구성](install-ata-step7.md)을 참조하세요.
 
@@ -101,7 +101,7 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 
 |프로토콜|전송|포트|끝/시작|방향|
 |------------|-------------|--------|-----------|-------------|
-|**SSL**(ATA 통신)|TCP|443 또는 구성 가능|ATA 게이트웨이|인바운드|
+|**SSL**(ATA 통신)|TCP|443|ATA 게이트웨이|인바운드|
 |**HTTP**(선택 사항)|TCP|80|회사 네트워크|인바운드|
 |**HTTPS**|TCP|443|회사 네트워크 및 ATA 게이트웨이|인바운드|
 |**SMTP**(선택 사항)|TCP|25|SMTP 서버|아웃바운드|
@@ -185,7 +185,7 @@ ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 �
         > [!NOTE]
         > ATA 게이트웨이가 도메인의 구성원이면 관리 어댑터는 자동으로 구성될 수 있습니다.
 
--   **캡처 어댑터** -도메인 컨트롤러에서 보내고 받는 트래픽을 캡처하는 데 사용됩니다.
+-   **캡처 어댑터** - 도메인 컨트롤러에서 보내고 받는 트래픽을 캡처하는 데 사용됩니다.
 
     > [!IMPORTANT]
     > -   캡처 어댑터용 포트 미러링은 도메인 컨트롤러 네트워크 트래픽의 대상으로 구성합니다. 자세한 내용은 [포트 미러링 구성](configure-port-mirroring.md)을 참조하세요. 일반적으로는 네트워킹 또는 가상화 팀과 협의하여 포트 미러링을 구성해야 합니다.
@@ -206,7 +206,7 @@ ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 �
 |DNS|TCP 및 UDP|53|DNS 서버|아웃바운드|
 |NTLM over RPC|TCP|135|네트워크의 모든 장치|아웃바운드|
 |NetBIOS|UDP|137|네트워크의 모든 장치|아웃바운드|
-|SSL|TCP|443 또는 센터 서비스용으로 구성된 포트|ATA 센터:<br /><br />-   센터 서비스 IP 주소<br />-   콘솔 IP 주소|아웃바운드|
+|SSL|TCP|443|ATA Center|아웃바운드|
 |syslog(선택 사항)|UDP|514|SIEM 서버|인바운드|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어�
 |DNS|TCP 및 UDP|53|DNS 서버|아웃바운드|
 |NTLM over RPC|TCP|135|네트워크의 모든 장치|아웃바운드|
 |NetBIOS|UDP|137|네트워크의 모든 장치|아웃바운드|
-|SSL|TCP|443 또는 센터 서비스용으로 구성된 포트|ATA 센터:<br /><br />-   센터 서비스 IP 주소<br />-   콘솔 IP 주소|아웃바운드|
+|SSL|TCP|443|ATA Center|아웃바운드|
 |syslog(선택 사항)|UDP|514|SIEM 서버|인바운드|
 
 > [!NOTE]
