@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/14/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -101,7 +101,7 @@ ATA 센터 서버, ATA 게이트웨이 서버, 도메인 컨트롤러의 시간�
 
 |프로토콜|전송|포트|끝/시작|방향|
 |------------|-------------|--------|-----------|-------------|
-|**SSL**(ATA 통신)|TCP|443 또는 구성 가능|ATA 게이트웨이|인바운드|
+|**SSL**(ATA 통신)|TCP|443|ATA 게이트웨이|인바운드|
 |**HTTP**(선택 사항)|TCP|80|회사 네트워크|인바운드|
 |**HTTPS**|TCP|443|회사 네트워크 및 ATA 게이트웨이|인바운드|
 |**SMTP**(선택 사항)|TCP|25|SMTP 서버|아웃바운드|
@@ -206,7 +206,7 @@ ATA 게이트웨이를 사용하려면 관리 어댑터와 캡처 어댑터가 �
 |DNS|TCP 및 UDP|53|DNS 서버|아웃바운드|
 |NTLM over RPC|TCP|135|네트워크의 모든 장치|아웃바운드|
 |NetBIOS|UDP|137|네트워크의 모든 장치|아웃바운드|
-|SSL|TCP|443 또는 센터 서비스용으로 구성된 포트|ATA 센터:<br /><br />-   센터 서비스 IP 주소<br />-   콘솔 IP 주소|아웃바운드|
+|SSL|TCP|443|ATA Center|아웃바운드|
 |syslog(선택 사항)|UDP|514|SIEM 서버|인바운드|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ ATA 경량 게이트웨이는 모든 도메인 컨트롤러의 네트워크 어�
 |DNS|TCP 및 UDP|53|DNS 서버|아웃바운드|
 |NTLM over RPC|TCP|135|네트워크의 모든 장치|아웃바운드|
 |NetBIOS|UDP|137|네트워크의 모든 장치|아웃바운드|
-|SSL|TCP|443 또는 센터 서비스용으로 구성된 포트|ATA 센터:<br /><br />-   센터 서비스 IP 주소<br />-   콘솔 IP 주소|아웃바운드|
+|SSL|TCP|443|ATA Center|아웃바운드|
 |syslog(선택 사항)|UDP|514|SIEM 서버|인바운드|
 
 > [!NOTE]
