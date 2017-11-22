@@ -1,1 +1,1 @@
-# [색인](index.md)
+# [인덱스](index.md)
