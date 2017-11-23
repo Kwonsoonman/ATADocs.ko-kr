@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/112017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 62bc4ad19e632550261e8cf90df53d82d878f8fc
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -47,8 +47,6 @@ ATA 콘솔에 로그인하면 **의심스러운 활동 타임라인**이 자동�
     -   의심스러운 활동에 메모를 추가합니다.
 
     -   의심스러운 활동에 대한 입력을 제공합니다.
-
--   의심스러운 활동에 대응하는 방법에 대한 권장 사항을 제공합니다.
 
 > [!NOTE]
 > -   사용자 또는 컴퓨터 위로 마우스를 가져가면 엔터티에 대한 추가 정보를 제공하고 엔터티에 연결된 의심스러운 활동 수를 포함하는 엔터티 최소 프로필이 표시됩니다.
