@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: fca262cde38ea35c431b12173b6395eed32abc54
+ms.sourcegitcommit: 261a8ed1a28089c3e40ba4aff43f287db5d9dd4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 *적용 대상: Advanced Threat Analytics 버전 1.8*
 
@@ -40,23 +40,25 @@ ms.lasthandoff: 11/07/2017
     4. 내보낸 인증서 파일을 별도 컴퓨터에 백업합니다.
 
   > [!NOTE] 
-  > 개인 키를 내보낼 수 없는 경우 [ATA 센터 인증서 변경](modifying-ata-center-configuration#the-ata-center-certificate)에 설명된 것처럼 새 인증서를 만들고 ATA에 배포한 다음 내보내야 합니다. 
+  > 개인 키를 내보낼 수 없는 경우 [ATA 센터 인증서 변경](modifying-ata-center-configuration.md)에 설명된 것처럼 새 인증서를 만들고 ATA에 배포한 다음 내보내야 합니다. 
 
 ## <a name="recover-your-ata-center"></a>ATA 센터 복구
 
 1. 이전 ATA 센터 컴퓨터와 동일한 IP 주소 및 컴퓨터 이름을 사용하여 새 Windows Server 컴퓨터를 만듭니다.
-4. 앞에서 백업한 인증서를 새 서버에 가져옵니다.
-5. 새로 만든 Windows Server에서 [ATA 센터 배포](install-ata-step1.md)에 대한 지침을 따릅니다. ATA 게이트웨이는 다시 배포하지 않아도 됩니다. 인증서에 대한 메시지가 표시되면 ATA 센터 구성을 백업할 때 내보낸 인증서를 제공하세요. 
+2. 앞에서 백업한 인증서를 새 서버에 가져옵니다.
+3. 새로 만든 Windows Server에서 [ATA 센터 배포](install-ata-step1.md)에 대한 지침을 따릅니다. ATA 게이트웨이는 다시 배포하지 않아도 됩니다. 인증서에 대한 메시지가 표시되면 ATA 센터 구성을 백업할 때 내보낸 인증서를 제공하세요. 
 ![ATA 센터 복원](media/disaster-recovery-deploymentss.png)
-6. 백업된 ATA 센터 구성을 가져옵니다.
+4. ATA Center 서비스를 중지합니다.
+5. 백업된 ATA 센터 구성을 가져옵니다.
     1. MongoDB에서 기본 ATA 센터 시스템 프로필 문서를 제거합니다. 
         1. **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**으로 이동합니다. 
         2. `mongo.exe ATA`을 실행합니다. 
-        3. 기본 시스템 프로필을 제거하려면 이 명령을 실행하세요.`db.SystemProfile.remove({})`
+        3. ATA Center 서비스를 시작합니다.
+        4. 기본 시스템 프로필을 제거하려면 이 명령을 실행하세요.`db.SystemProfile.remove({})`
     2. 1단계의 백업 파일을 사용하여 다음 명령을 실행합니다. `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`</br>
     백업 파일을 찾고 가져오는 방법에 대한 자세한 설명은 [ATA 구성 내보내기 및 가져오기](ata-configuration-file.md)를 참조하세요. 
     3. ATA 콘솔을 엽니다. [구성/게이트웨이] 탭 아래에 연결된 모든 ATA 게이트웨이가 표시됩니다. 
-    5. [**Directory services user**](install-ata-step2.md)(디렉터리 서비스 사용자)를 정의하고 [**Domain controller synchronizer**](install-ata-step5.md)(도메인 컨트롤러 동기화 장치)를 선택합니다. 
+    4. [**Directory services user**](install-ata-step2.md)(디렉터리 서비스 사용자)를 정의하고 [**Domain controller synchronizer**](install-ata-step5.md)(도메인 컨트롤러 동기화 장치)를 선택합니다. 
 
 
 
